@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .banner {
+      /* 1、宽高 */
+      /* 2、背景颜色 */
+      /* 3、文字样式 */
+      height: 500px;
+      background: #f3f3f4 url('./images/bk.png') no-repeat left bottom;
+      text-align: right;
+    }
+
+    .banner h2 {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 100px;
+      color: #333;
+    }
+
+    .banner p {
+      color: #333;
+      font-size: 20px;
+    }
+
+    .banner a {
+      width: 125px;
+      height: 40px;
+      background-color: #f06b1f;
+      /* 为了a标签可以被text-align：right控制，因此必须把a转换成行内块——》这样才能保证既可以设置宽高，而且还可以被text-align控制 */
+      /* text-align：可以控制行内元素+行内块元素，但是控制不了块级元素 */
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h2>让创造产生价值</h2>
+    <p>我们希望小游戏平台可以提供无限的可能性，让每一个创作者都可以将他们的才华和创意传递给用户。</p>
+    <a href="#">我要报名</a>
+  </div>
+</body>
+</html>

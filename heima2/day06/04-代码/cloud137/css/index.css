@@ -1,0 +1,26 @@
+/* header的样式------------------------------ */
+.header {
+  height: 40px;
+  background-color: #2b303b;
+}
+
+.header .container {
+  height: 40px;
+  /* background-color: pink; */
+}
+
+.header .container img {
+  margin-top: 10px;
+}
+
+.header .container ul li {
+  float: left;
+  line-height: 40px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.header .container ul li a {
+  padding: 0 9px;
+  color: #fff;
+}

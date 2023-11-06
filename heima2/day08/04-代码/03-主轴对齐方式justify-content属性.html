@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      /* 弹性盒子 */
+      display: flex;
+      /* 主轴对齐方式：justify-content */
+      /* 1、向主轴开始方向对齐：flex-start */
+      justify-content: flex-start;
+
+      /* 2、向主轴结束方向对齐：flex-end */
+      justify-content: flex-end;
+
+      /* 3、居中对齐：center */
+      justify-content: center;
+
+      /* 4、空白环绕：space-around   1盒子2盒子2盒子1 */
+      justify-content: space-around;
+
+      /* 5、空白只在盒子之间显示：space-between  0盒子1盒子1盒子0 */
+      justify-content: space-between;
+
+      /* 6、空白均分：space-evenly  1盒子1盒子1盒子1 */
+      justify-content: space-evenly;
+      width: 600px;
+      height: 400px;
+      border: 2px solid #000;
+      margin: 200px auto;
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color:pink;
+      border: 1px solid red;
+      /* 自动内减：css盒模型 */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son">1</div>
+    <div class="son">2</div>
+    <div class="son">3</div>
+  </div>
+</body>
+</html>

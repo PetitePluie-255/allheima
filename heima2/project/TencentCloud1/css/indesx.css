@@ -1,0 +1,165 @@
+/* ----------header 部分样式--------- */
+.hedaer {
+    height: 40px;
+    background-color: #2b303b;
+}
+.hedaer .container h1 a {
+    float: left;
+    width: 100px;
+    height: 40px;
+    background: url(../images/logo.png) no-repeat 0 center;
+}
+.hedaer .container ul {
+    float: right;
+}
+.hedaer .container ul li {
+    float: left;
+    line-height: 40px;
+    color: #fff;
+    font-size: 12px;
+}
+.hedaer .container ul li a {
+    font-size: 12px;
+    color: #fff;
+    margin: 0 9px;
+}
+
+/*----------banner部分样式---------  */
+.banner {
+    height: 480px;
+    background-color: #181c28;
+}
+.banner .container {
+    height: 480px;
+    background: url(../images/banner.png);
+}
+.banner .container ul {
+    width: 250px;
+    height: 480px;
+    background-color: #1b2a3f;
+    padding-top: 40px;
+}
+.banner .container ul li {
+    height: 40px;
+    line-height: 40px;
+}
+.banner .container ul li a {
+    color: #fff;
+    padding-left: 20px;
+}
+.banner .container ul li::after {
+    content: '>';
+    color: #fff;
+    float: right;
+    padding-right: 20px;
+}
+.banner .container ul li:hover{
+    background-color: orange;
+}
+/* ---------main 部分样式--------- */
+.main {
+    height: 560px;
+}
+.main.container {
+    padding-top: 46px;
+}
+.main.container h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main .info {
+    cursor: #000;
+    text-align: center;
+    margin-bottom: 26px;
+}
+.main .box {
+    height: 462px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 40px 50px 0;
+}
+.main .box .left {
+    float: left;
+}
+.main .box .left h3 {
+    width: 110px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    font-size: 26px;
+    font-weight: 400;
+    color: #000;
+}
+.main .box .left p {
+    width: 450px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
+.main .box .left a {
+    display: block;
+    width: 164px;
+    height: 49px;
+    border: 2px solid #ffa500;
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+    line-height: 45px;
+}
+.main .box .left a:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+.main .box .right {
+    float: right;
+    width: 580px;
+    height: 348px;
+    background: url(../images/right.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* ---------footer 部分样式-------- */
+.footer {
+    height: 400px;
+    background-color: #2e3033;
+    margin-top: 160px;
+}
+.footer .container {
+    padding-top: 32px;
+}
+.footer .container dl {
+    float: left;
+    width: 200px;
+}
+.footer .container dl dt {
+    height: 28px;
+    color: #eee;
+    font-size: 14px;
+}
+.footer .container dl dd a {
+    height: 20px;
+    color: #ccc;
+    font-size: 12px;
+}
+.footer .container .box {
+    float: right;
+    width: 190px;
+}
+.footer .container .box p {
+    font-size: 12px;
+    color: #ccc;
+    line-height: 20px;
+}
+.footer .container .box a {
+    display: block;
+    height: 35px;
+    background-color: #00a4ff;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+}

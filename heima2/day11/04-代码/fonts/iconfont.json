@@ -1,0 +1,65 @@
+{
+  "id": "4306614",
+  "name": "基础班137",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1001",
+      "name": "女人",
+      "font_class": "nvren",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "598979",
+      "name": "beautifullady-4",
+      "font_class": "beautifullady4",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "3953638",
+      "name": "py",
+      "font_class": "py",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4733465",
+      "name": "woman",
+      "font_class": "woman",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "7219731",
+      "name": "body-building",
+      "font_class": "body-building",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "11372639",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e8ab",
+      "unicode_decimal": 59563
+    },
+    {
+      "icon_id": "11372641",
+      "name": "3D眼镜",
+      "font_class": "Dyanjing",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    },
+    {
+      "icon_id": "11372642",
+      "name": "彩蛋",
+      "font_class": "caidan",
+      "unicode": "e8ad",
+      "unicode_decimal": 59565
+    }
+  ]
+}

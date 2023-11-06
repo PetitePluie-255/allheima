@@ -1,0 +1,77 @@
+/* åŸºç¡€å…¬å…±æ ·å¼ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    1. ç³»ç»Ÿå­—ä½“
+    2. å­—ä½“é»˜è®¤é¢œè‰²ï¼ˆæ ¹æ®è®¾è®¡ç¨¿æµ‹é‡ï¼‰
+    3. body çš„é»˜è®¤èƒŒæ™¯è‰²ï¼ˆæ ¹æ®è®¾è®¡ç¨¿æµ‹é‡ï¼‰
+   */
+body {
+    font: 16px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, sans-serif;
+    color: #050505;
+    background-color: #f3f5f7;
+}
+
+/*
+    å–æ¶ˆé“¾æŽ¥ä¸‹åˆ’çº¿ï¼Œè®¾ç½®é“¾æŽ¥é»˜è®¤é¢œè‰²ï¼ˆæ ¹æ®è®¾è®¡ç¨¿æµ‹é‡ï¼‰
+   */
+a {
+    text-decoration: none;
+    color: #050505;
+}
+
+/*
+    é“¾æŽ¥ hover é¢œè‰²ï¼ˆæ ¹æ®è®¾è®¡ç¨¿æµ‹é‡ï¼‰
+   */
+a:hover {
+    color: #00a4ff;
+}
+
+/*
+    å–æ¶ˆé»˜è®¤åˆ—è¡¨æ ·å¼
+   */
+li {
+    list-style: none;
+}
+
+/*
+    å€¾æ–œå­—ä½“ä¸å€¾æ–œ
+   */
+em,
+i {
+    font-style: normal;
+}
+
+/*
+    1. æ ¹æ®ç›’å­è°ƒæ•´å›¾ç‰‡å¤§å°
+    2. è®¾ç½® vertical-align é¿å…åº•éƒ¨é—´éš™é—®é¢˜
+   */
+img {
+    vertical-align: middle;
+}
+
+/*
+    è¾“å…¥æŽ§ä»¶
+   */
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*
+    æ¸…é™¤æµ®åŠ¨
+   */
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}

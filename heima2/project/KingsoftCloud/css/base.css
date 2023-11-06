@@ -1,0 +1,20 @@
+/* 基础公共样式：清除默认样式 + 设置通用样式 */
+/* 去除常见标签默认的 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 去除列表默认样式 */
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+/* 去除a标签默认下划线 */
+a {
+  text-decoration: none;
+}

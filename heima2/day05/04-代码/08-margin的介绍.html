@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 去除浏览器默认的间距影响 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+      /* 优先给上赋值，然后顺时针赋值，如果没有的看对面！ */
+      /* margin: 30px 60px; */
+
+      /* 单方向设置 */
+      /* margin-left: 100px; */
+
+      /* 拓展：
+          1、text-align只能控制行内+行内块元素的水平居中
+          2、margin:0 auto用来控制块级元素的水平居中——》哪个盒子要居中，就给这个盒子本身加
+      */
+      margin: 100px auto;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

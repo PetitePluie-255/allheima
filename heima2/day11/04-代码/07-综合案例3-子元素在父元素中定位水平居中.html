@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .father {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      background-color: pink;
+      margin: 100px auto;
+    }
+
+    .son {
+      /* 子绝父相 */
+      position: absolute;
+      top: -50px;
+      /* 1、让子元素往右走大盒子的一半 */
+      left: 50%;
+      /* 2、让子元素往左走自己的一半 */
+      transform: translateX(-50%);
+      width: 200px;
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+</html>

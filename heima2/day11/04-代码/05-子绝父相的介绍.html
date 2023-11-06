@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .father {
+      /* 父相 */
+      position: relative; 
+      width: 600px;
+      height: 600px;
+      background-color:pink;
+    }
+
+    .son {
+      /* 子绝 */
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 400px;
+      height: 400px;
+      background-color: skyblue;
+    }
+
+    .sun {
+      /* 子绝父相 */
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son">
+      <div class="sun"></div>
+    </div>
+  </div>
+  <p>我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容我是下面的内容</p>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* ------------------------cloud-header的样式 */
+.cloud-header {
+  height: 40px;
+  background-color: #2b303d;
+}
+
+.cloud-header .container {
+  height: 40px;
+  /* ps */
+  /* background-color: pink; */
+}
+
+.cloud-header .container h1 a {
+  display: block;
+  width: 78px;
+  height: 18px;
+  /* ps */
+  /* background-color: red; */
+  background: url('../images/logo.png');
+  margin-top: 11px;
+}
+
+.cloud-header ul li {
+  float: left;
+  line-height: 40px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.cloud-header ul li a {
+  font-size: 12px;
+  color: #fff;
+  margin: 0 8px;
+}
+
+
+/* ------------------------cloud-entry的样式 */
+.cloud-entry {
+  height: 480px;
+  background: #181c28 url('../images/banner.png') no-repeat center center;
+}
+
+.cloud-entry .container {
+  height: 480px;
+  /* ps */
+  /* background-color: pink; */
+}
+
+.cloud-entry .container ul {
+  width: 250px;
+  height: 480px;
+  padding-top: 40px;
+  background-color: #1b2a3f;
+  /* 自动内减 */
+  box-sizing: border-box;
+}
+
+.cloud-entry .container ul li {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 40px;
+}
+
+.cloud-entry .container ul li:hover {
+  background-color: orange;
+}
+
+.cloud-entry .container ul li a {
+  font-size: 16px;
+  color: #fff;
+}
+
+.cloud-entry .container ul li span {
+  float: right;
+  color: #fff;
+  font-family: '楷体';
+}
+
+/* -------------------------cloud-main的样式 */
+.cloud-main {
+  height: 697px;
+  /* background-color: pink; */
+  margin-top: 43px;
+}
+
+.cloud-main h3 {
+  height: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cloud-main .study {
+  height: 46px;
+  text-align: center;
+}
+
+.cloud-main .box {
+  height: 462px;
+  /* ps */
+  /* background-color: skyblue; */
+  border: 1px solid #ccc;
+  /* 边框圆角，后面会讲解 */
+  border-radius: 10px;
+  padding: 40px 50px 0;
+  /* 自动内减 */
+  box-sizing: border-box;
+}
+
+.cloud-main .box .left {
+  width: 442px;
+  height: 348px;
+  /* ps */
+  /* background-color: green; */
+}
+
+.cloud-main .box .left h4 {
+  width: 110px;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.cloud-main .box .left p {
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #666;
+}
+
+.cloud-main .box .left a {
+  display: block;
+  width: 164px;
+  height: 49px;
+  border: 2px solid #ffa500;
+  /* 自动内减 */
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 45px;
+  color: #000;
+}
+
+.cloud-main .box .left a:hover {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.cloud-main .box .right {
+  width: 580px;
+  height: 348px;
+  /* ps */
+  /* background-color: yellow; */
+}
+
+.cloud-main .box .right img {
+  width: 100%;
+  height: 100%;
+}
+
+/* -----------------------cloud-footer的样式 */
+.cloud-footer {
+  height: 400px;
+  background-color: #2e3033;
+}
+
+.cloud-footer .container {
+  height: 400px;
+  /* background-color: pink; */
+  padding-top: 34px;
+  /* 自动内减 */
+  box-sizing: border-box;
+}
+
+.cloud-footer .container dl {
+  float: left;
+  width: 198px;
+}
+
+.cloud-footer .container dl dt {
+  height: 30px;
+  font-size: 14px;
+  color: #eee;
+}
+
+.cloud-footer .container dl dd {
+  height: 20px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.cloud-footer .copyright {
+  float: left;
+  width: 190px;
+  height: 200px;
+  /* background-color: pink; */
+  font-size: 12px;
+  color: #ccc;
+  line-height: 20px;
+}
+
+.cloud-footer .copyright a {
+  display: block;
+  width: 190px;
+  height: 35px;
+  margin-top: 19px;
+  background-color: #00a4ff;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+}

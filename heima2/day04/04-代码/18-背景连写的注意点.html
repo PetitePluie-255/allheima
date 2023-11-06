@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 400px;
+      /* 连写中没写的值，其实相当于设置了默认值 */
+      /* 建议；如果要设置连写和单独的样式
+      1、要么单独的样式写在最下面
+      2、要么单独的样式写在连写的里面
+      */
+      background: pink url('./images/1.png') no-repeat center center;
+      background-size: 300px 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

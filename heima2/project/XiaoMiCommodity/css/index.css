@@ -1,0 +1,470 @@
+body {
+    background-color: #f5f5f5;
+}
+.container {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+/* ============================================= */
+.header {
+    height: 40px;
+    background-color: #333;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.header .container ul {
+    display: flex;
+} 
+.header .container li {
+    color: #444;
+        font-size: 14px;
+}
+.header .container li a {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+.header .container li span {
+    margin: 0 6px;
+}
+.header .container .right {
+    align-items: flex-end;
+    margin: 140px;
+}
+.header .container .right a {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+.header .container .right span {
+    color: #444;
+    font-size: 14px;
+    margin: 0 6px;
+}
+
+
+/* ============================================== */
+.nav {
+    height: 100px;
+    background-color: #fff;
+}
+.nav .container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100px;
+    /* background-color: red; */
+
+}
+.nav .container a h1 {
+    width: 55px;
+    height: 55px;
+    background:#ff6700 url(../images/mi-logo.png) 100%;
+    font-size: 0;
+}
+
+.nav .container ul {
+    display: flex;
+    justify-content: space-between;
+    width: 745px;
+    margin-left: 70px;
+}
+
+.nav .container ul li a {
+    font-size: 17px;
+}
+
+.nav .container ul li a:hover{
+    color: #ff6700;
+}
+
+.nav .container .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 61px;
+}
+
+.nav .container .search input {
+    width: 245px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    outline-style: none;
+}
+
+.nav .container .search span {
+    width: 51px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    color: #616161;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav .container .search .prompt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 134px;
+    width: 49px;
+    height: 18px;
+    background-color: #eee;
+    color: #757575;
+    font-size: 12px;
+    text-align: center;
+}
+
+.nav .container .search em {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 61px;
+    width: 68px;
+    height: 18px;
+    background-color: #eee;
+    color: #757575;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ============================================ */
+
+.commodity {
+    height: 1589px;
+    margin-bottom: 13px;
+}
+
+.commodity .container .title {
+    height: 40px;
+}
+
+.commodity .container .title span {
+    color: #757575;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.commodity .container .title i {
+    color: #757575;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.commodity .container .title em {
+    color: #757575;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.commodity .container .com-nav {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #fff;
+}
+
+.commodity .container .com-nav ul {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* width: 975px; */
+}
+
+.commodity .container .com-nav ul li a {
+    display: block;
+    height: 80px;
+    padding: 0 38px;
+    font-size: 12px;
+    line-height: 80px;
+}
+
+.commodity .container .com-nav .active {
+    font-weight: 700;
+    border-bottom: 1px solid #333;
+}
+
+.commodity .container .bottom {
+    margin-bottom: 14px;
+}
+
+.commodity .container .product {
+    height: 994px;
+}
+
+.commodity .container .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.commodity .container .product .item {
+    width: 606px;
+    height: 490px;
+    background-color: #fff;
+}
+
+.commodity .container .product .item img {
+    height: 360px;
+}
+
+.commodity .container .product .item .box {
+    display: flex;
+    justify-content: space-between;
+    width: 526px;
+    border-top: 1px solid #eee;
+}
+
+.commodity .container .product .item .box .left {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 292px;
+    margin-left: 38px;
+    padding-top: 24px;
+}
+
+.commodity .container .product .item .box .left h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 46px;
+}
+
+.commodity .container .product .item .box .left span {
+    margin-left: 18px;
+    color: #ff6700;
+    font-size: 18px;
+    line-height: 46px;
+}
+ 
+.commodity .container .product .item .box .left p {
+    color: #757575;
+    font-size: 14px;
+}
+
+.commodity .container .product .item .box .buy {
+    width: 160px;
+    height: 40px;
+    margin-top: 30px;
+    /* margin-left: 74px; */
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    font-size: 12px;
+    text-align: center;
+    line-height: 38px;
+}
+
+/* ============================================ */
+
+.service {
+    
+    height: 875px;
+    background-color: #fff;
+}
+
+.service .container {
+    position: relative;
+    height: 875px;
+}
+
+.service .service-info {
+    position: absolute;
+    bottom: 272px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background-color: rgba(0, 0, 0, .65);
+    padding: 45px 0 0 80px;
+}
+
+.service .service-info h2 {
+    height: 45px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.service .service-info p {
+    height: 26px;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.service .service-info a{
+    position: absolute;
+    right: 35px;
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: #ff6700 solid 1px;
+    color: #ff6700;
+    font-size: 14px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.service .service-info .home {
+    top: 25px;
+}
+
+.service .service-info .repair {
+    bottom: 25px;
+}
+
+.service .service-type {
+    display: flex;
+    align-items: center;
+    width: 1226px;
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.service .service-type li {
+    width: 244px;
+    height: 25px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.service .service-type li:last-child {
+    border: none;
+}
+
+.service .service-type li a {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.service .service-type li a i {
+    margin-right: 8px;
+    color: #616161;
+    font-size: 24px;
+}
+
+/* ================================================ */
+
+.service-links {
+    display: flex;
+    justify-content: space-between;
+    height: 210px;
+    padding-top: 40px;
+}
+
+.service-links .left {
+    display: flex;
+    justify-content: space-between;
+    width: 855px;
+}
+
+.service-links dl dt {
+    height: 44px;
+    color: #424242;
+    font-size: 14px;
+}
+
+.service-links dl dd a {
+    height: 26px;
+    color: #757575;
+    font-size: 12px;
+}
+
+.service-links dl dd a:hover {
+    color: #ff6700;
+}
+
+.service-links .right {
+    width: 250px;
+    height: 110px;
+    border-left: 1px solid #ececec;
+    text-align: center;
+}
+
+.service-links .right .number {
+    height: 34px;
+    color: #ff6700;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.service-links .right .time {
+    height: 18px;
+    color: #616161;
+    font-size: 14px;
+}
+
+.service-links .right .info {
+    color: #616161;
+    font-size: 12px;
+}
+
+/* ============================================ */
+
+.footer {
+    position: relative;
+    height: 160px;
+    background-color: #f5f5f5;
+}
+
+.footer .container {
+    position: relative;
+    display: flex;
+    padding-top: 32px;
+}
+
+.footer .container .mi-logo {
+    background-color: #ff6700;
+}
+
+.footer .container .box {
+    margin-left: 10px;
+}
+
+.footer .container .box ul {
+    display: flex;
+}
+
+.footer .container .box ul li span {
+    margin: 0 4px;
+    color: #c3b0c3;
+    font-size: 14px;
+}
+
+.footer .container .box ul li a {
+    color: #757575;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer .container .box p {
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 16px;
+    ;
+}
+
+.footer .container .box ul li a:hover {
+    color: #ff6700;
+}
+
+.footer .container .right {
+    position: absolute;
+    right: 5px;
+    width: 329px;
+    height: 26px;
+}
+
+.footer .container .right img {
+    height: 100%;
+}
+
+.footer .bottom {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+}

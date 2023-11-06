@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      background-color: pink;
+    }
+
+    .son {
+      /* 1、子绝父相 */
+      position: absolute;
+      /* 2、让子盒子往右走大盒子一半 */
+      left: 50%;
+      /* 3、让子盒子往下走大盒子一半 */
+      top: 50%;
+      /* 4、让子盒子往左+往上走自己的一半 */
+      /* transform: translateX(-50%); */
+      /* transform: translateY(-50%); */
+      /* 合写： */
+      transform: translate(-50%,-50%);
+
+      width: 200px;
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+</html>
