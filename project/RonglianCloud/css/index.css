@@ -1,0 +1,257 @@
+.container {
+    width: 1147px;
+    margin: 0 auto;
+}
+
+/* ========================================== */
+
+.header {
+    height: 72px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+.header .logo a {
+    display: block;
+    width: 134px;
+    height: 26px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 510px;
+    margin-left: 262px;
+    
+
+}
+
+.header .nav a {
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    color: #aaa;
+}
+
+.header .nav .active {
+    color: #333;
+    border-bottom: 2px solid #b8c0c6;
+}
+
+/* ============================================= */
+
+.banner {
+    height: 386px;
+    /* background: url(../images/developer_img1.jpg) no-repeat; */
+    /* background-size: 100% 100%; */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===================================================== */
+
+.introduction {
+    height: 408px;
+    background-image: linear-gradient(#04be73, #0b9878);
+    padding-top: 48px;
+}
+
+.introduction .box {
+    display: flex;
+    justify-content: space-between;
+    width: 915px;
+    height: 311px;
+    margin: 0 auto;
+}
+
+.introduction .box .item {
+    width: 216px;
+    border: 1px solid #67c3a3;
+    border-radius: 4px;
+}
+
+.introduction .box .item .pic {
+    width: 214px;
+    height: 177px;
+    background: url(../images/developer_img3.png);
+    border-bottom: 1px solid #67c3a3;
+}
+
+.introduction .box .item:nth-child(2) .pic {
+    width: 214px;
+    height: 177px;
+    background: url(../images/developer_img3.png) 0 -310px;
+    border-bottom: 1px solid #67c3a3;
+}
+
+.introduction .box .item:nth-child(3) .pic {
+    width: 214px;
+    height: 177px;
+    background: url(../images/developer_img3.png) 0 -620px;
+    border-bottom: 1px solid #67c3a3;
+}
+
+.introduction .box .item:nth-child(4) .pic {
+    width: 214px;
+    height: 177px;
+    background: url(../images/developer_img3.png) 0 -930px;
+    border-bottom: 1px solid #67c3a3;
+}
+
+.introduction .box .item p {
+    line-height: 24px;
+    margin: 32px 22px 0;
+    color: #fff;
+    font-size: 13 px;
+}
+
+/* ============================================= */
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.document {
+    width: 945px;
+    height: 742px;
+    padding-top: 80px;
+}
+
+.document .title {
+    width: 304px;
+    height: 63px;
+    border-bottom: 1px solid #e7eaec;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.document .content{
+    width: 945px;
+    height: 505px;
+    margin-top: 32px;
+    border-right: 1px solid #f1f1f1;
+}
+
+.document .content .guide {
+    height: 120px;
+}
+
+.document .content .guide p {
+    height: 48px;
+    background-color: #e7e8e8;
+    padding-left: 14px;
+    font-size: 20px;
+    text-align: left;
+    line-height: 48px;
+}
+
+.document .content .guide ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 758px;
+    height: 72px;
+    padding-left: 16px;
+}
+
+.document .content .guide ul a {
+    padding: 6px 6px 3px;
+    background-color: #f1f1f1;
+}
+
+/* -------------------------------------------- */
+
+.document .content .sdk {
+    height: 264px;
+}
+
+.document .content .sdk p {
+    height: 48px;
+    background-color: #e7e8e8;
+    padding-left: 14px;
+    font-size: 20px;
+    text-align: left;
+    line-height: 48px;
+}
+
+.document .content .sdk dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin-top: 35px;
+    padding-left: 16px;
+}
+
+.document .content .sdk dl:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+    width: 441px;
+}
+
+.document .content .sdk dl dt {
+    font-size: 18px;
+}
+
+.document .content .sdk dl dd a {
+    display: flex;
+    padding: 3px 6px 3px;
+    background-color: #f1f1f1;
+}
+
+.document .content .sdk dl dd:nth-child(2) a div {
+    width: 18px;
+    height: 21px;
+    background: url(../images/developer_img4.png);
+    margin-right: 5px;
+}
+
+.document .content .sdk dl dd:nth-child(3) a div {
+    width: 18px;
+    height: 21px;
+    background: url(../images/developer_img4.png) 0 -29px;
+    margin-right: 5px;
+}
+.document .content .sdk dl dd:nth-child(4) a div {
+    width: 18px;
+    height: 21px;
+    background: url(../images/developer_img4.png) 0 -89px;
+    margin-right: 5px;
+}
+
+/* ---------------------------------------- */
+
+.document .content .api {
+    height: 120px;
+}
+
+.document .content .api p {
+    height: 48px;
+    background-color: #e7e8e8;
+    padding-left: 14px;
+    font-size: 20px;
+    text-align: left;
+    line-height: 48px;
+}
+
+.document .content .api ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 548px;
+    height: 72px;
+    padding-left: 16px;
+}
+
+.document .content .api ul a {
+    padding: 6px 6px 3px;
+    background-color: #f1f1f1;
+}

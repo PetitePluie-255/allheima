@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      /* 1、宽高 */
+      /* 2、背景颜色 */
+      /* 3、文字样式 */
+      width: 200px;
+      height: 80px;
+      background-color: #3064bb;
+      /* 此时运行代码，发现a标签是行内元素，无法设置宽高——》需要a标签可以设置宽高，并且独占一行垂直排布——》转换成块级元素 */
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
+      line-height: 80px;
+    }
+
+    /* 设置悬停效果 */
+    a:hover {
+      background-color: #608dd9;
+    }
+  </style>
+</head>
+<body>
+  <a href="#">HTML</a>
+  <a href="#">CSS</a>
+  <a href="#">JavaScript</a>
+  <a href="#">Vue</a>
+  <a href="#">React</a>
+</body>
+</html>

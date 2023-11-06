@@ -1,0 +1,300 @@
+/* 版心 */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 给body设置背景颜色 */
+body {
+  background-color: #f3f5f7;
+}
+
+/* header的样式--------------------------- */
+.header {
+  height: 100px;
+  background-color: #fff;
+}
+
+.header .container {
+  /* 弹性盒子 */
+  display: flex;
+  /* 单行侧轴对齐方式 */
+  align-items: center;
+  height: 100px;
+}
+
+.header .logo {
+  width: 195px;
+  height: 41px;
+}
+
+.header .logo a {
+  display: block;
+  width: 195px;
+  height: 41px;
+  background: url('../images/logo.png');
+  font-size: 0;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 252px;
+  margin-left: 102px;
+}
+
+.header .nav li {
+  padding: 0 8px;
+  line-height: 38px;
+  border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.header .nav li:hover {
+  border-color: #00a4ff;
+}
+
+.header .nav a {
+  font-size: 19px;
+}
+
+.header .search {
+  width: 412px;
+  height: 40px;
+  background: #f3f5f7 url('../images/search.png') no-repeat 384px 12px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 88px;
+  padding-left: 19px;
+  /* 去除input激活之后的轮廓线 */
+  outline-style: none;
+}
+
+.header .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 116px;
+  height: 30px;
+  margin-left: 32px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* banner的样式-------------------------- */
+.banner {
+  height: 420px;
+  background-color: #0092cb;
+}
+
+.banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 420px;
+  background: url('../uploads/banner.png');
+}
+
+.banner .left {
+  display: flex;
+  /* 主轴改成垂直方向 */
+  flex-direction: column;
+  width: 191px;
+  height: 420px;
+  background-color: rgba(0,0,0,.42);
+}
+
+.banner .left li {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 20px;
+  background: url('../images/right.png') no-repeat 161px center;
+}
+
+.banner .left li:hover {
+  background-image: url('../images/right-hover.png');
+}
+
+/* 当li被hover之后，改变后代中a的样式 */
+.banner .left li:hover a {
+  color: #00a4ff;
+}
+
+.banner .left a {
+  font-size: 16px;
+  color: #fff;
+}
+
+.banner .right {
+  width: 218px;
+  height: 305px;
+  background-color: #209dd5;
+  border-radius: 10px;
+}
+
+.banner .right h2 {
+  height: 48px;
+  padding-left: 14px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.banner .right ul {
+  height: 257px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0 14px;
+}
+
+.banner .right ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 65px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.banner .right ul li h3 {
+  font-size: 14px;
+}
+
+.banner .right ul li div {
+  font-size: 12px;
+}
+
+.banner .right ul li div span:nth-child(1) {
+  color: #00a4ff;
+}
+
+.banner .right ul li div span:nth-child(2) {
+  color: #7d7d7d;
+}
+
+.banner .right ul .all {
+  border: none;
+}
+
+.banner .right ul .all a {
+  width: 190px;
+  height: 32px;
+  background-color: #00a4ff;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+}
+
+/* recommend的样式------------------------ */
+.recommend {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #fff;
+  margin-top: 11px;
+  box-shadow: 0px 1px 2px 0px 
+		rgba(211, 211, 211, 0.5);
+}
+
+.recommend h3 {
+  padding: 0 20px;
+  font-size: 18px;
+  color: #00a4ff;
+  font-weight: 400;
+}
+
+.recommend ul {
+  display: flex;
+  font-size: 17px;
+}
+
+.recommend ul span {
+  margin: 0 23px;
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+.recommend .hobby {
+  margin-left: 93px;
+  font-size: 16px;
+  color: #00a4ff;
+}
+
+
+/* product的样式------------------------ */
+.product {
+  height: 601px;
+  margin-top: 31px;
+}
+
+.product .title {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+}
+
+.product .title h2 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.product .title a {
+  padding-top: 3px;
+  padding-right: 20px;
+  color: #999;
+  background: url('../images/more.png') no-repeat right 10px;
+}
+
+.product .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 556px;
+}
+
+.product .content .item {
+  width: 228px;
+  height: 271px;
+  background-color: #fff;
+  line-height: 1;
+}
+
+.product .content .item h3 {
+  height: 53px;
+  margin: 20px 20px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.product .content .item p {
+  margin-left: 20px;
+  color: #999;
+}
+
+.product .content .item p span {
+  color: #fa6400;
+}
+
+/* fe模块的样式--------------------------- */
+.fe {
+  height: 431px;
+  margin-top: 32px;
+}
+
+.fe .title {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  background-color: skyblue;
+}
+
+.fe .title ul {
+  display: flex;
+}
+
+.fe .content {
+  height: 386px;
+  background-color: pink;
+}

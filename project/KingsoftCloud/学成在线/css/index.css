@@ -1,0 +1,390 @@
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+body {
+    background-color: #f3f5f7;
+}
+/* herder样式---------------------------------- */
+.herder {
+    height: 100px;
+    background-color: #fff;
+}
+.herder .container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.herder .logo {
+    width: 195px;
+    height: 41px;
+}
+.herder .logo a {
+    display: block;
+    width: 195px;
+    height: 41px;
+    background: url(../images/logo.png);
+    font-size: 0;
+}
+.herder .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 244px;
+    margin-left: 102px;
+}
+.herder .nav a {
+    font-size: 19px;
+}
+.header .nav li {
+    padding: 0 8px;
+    line-height: 38px;
+}
+.header .nav li:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+.herder .search {
+    width: 412px;
+    height: 40px;
+    border-radius: 20px;
+    background: #f3f5f7 url(../images/search.png) no-repeat 384px 12px;
+    border: none;
+    margin-left: 88px;
+    padding-left: 19px;
+}   
+.herder .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    color: #666;
+    margin-left: 32px;
+}
+.banner {
+    height: 420px;
+    background-color: #0092cb;
+}
+.banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 420px; */
+    background: url(../uploads/banner.png);
+}
+.banner .left {
+    display: flex;
+    flex-direction: column;
+    width: 191px;
+    height: 420px;
+    background-color: #005576;
+}
+.banner .left li {
+    width: 191px;
+    height: 46px;
+    margin-top: 20px;
+    /* line-height: 40px; */
+    padding-left: 20px;
+    background: url(../images/right.png)no-repeat 161px center;
+}
+.banner .left li:hover {
+    background-image: url(../images/right-hover.png);
+}
+.banner .left li:hover a {
+    color: #00a4ff;
+}
+.banner .left a {
+    color: #fff;
+    font-size: 14px;
+}
+.banner .right {
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+    border-radius: 10px;
+}
+.banner .right h2 {
+    height: 48px;
+    line-height: 48px;
+    padding-left: 14px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+}
+.banner .right ul {
+    height: 257px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.banner .right ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 62px;
+    border-bottom: 1px solid #e0e0e0 ;
+}
+.banner .right ul li h3 {
+    font-size: 14px;
+}
+.banner .right ul li span {
+    font-size: 12px;
+}
+.banner .right ul li a {
+    width: 190px;
+    height: 32px;
+    font-size: 14px;
+    background-color: #00a4ff;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 20px;
+}
+.banner .right ul li:nth-child(4) {
+    border: 0;
+}
+.banner .right ul li div span:nth-child(1) {
+    color: #00a4ff;
+}
+.banner .right ul li div span:nth-child(2) {
+    color: #7d7d7d;
+}
+
+
+/* by的样式--------------------- */
+.by {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    margin-top: 11px;
+}
+.by ul {
+    display: flex;
+    font-size: 17px;
+}
+.by h3 {
+    color: #00a4ff;
+    font-size: 18px;
+    padding: 0 20px;
+    font-weight: 400;
+}
+.by ul span {
+    margin: 0 22px;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+.by .interest {
+    font-size: 16px;
+    margin-left: 93px;
+    color: #00a4ff;
+}
+
+/* battle样式--------------------------- */
+.battle {
+    width: 1200px;
+    height: 601px;
+    margin-top: 31px;
+    /* background-color: pink; */
+}
+.battle .title {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+}
+.battle .title h2 {
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.battle .title .all {
+    padding-top: 5px;
+    padding-right: 20px;
+    color: #999;
+    background: url(../images/more.png) no-repeat right 10px;
+}
+.battle .conter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 556px;
+}
+.battle .item {
+    width: 228px;
+    height: 271px;
+    background-color: #fff;
+    line-height: 1;
+}
+.battle .conter .item h4 {
+    font-size: 14px;
+    height: 53px;
+    color: #333;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.battle .conter .item p {
+    font-size: 14px;
+    color: #999;
+    margin-left: 20px;
+}
+.battle .conter .item span {
+    font-size: 14px;
+    color: #fa6400;
+}
+/* web样式-------------------- */
+.web {
+    margin-top: 31px;
+    height: 431px;
+}
+
+.web .title {
+    display: flex;
+    height: 45px;
+    align-items: center;
+}
+.web .title h2 {
+    font-size: 21px;
+    font-weight: 400;
+}
+.web .title ul {
+    display: flex;
+    width: 308px;
+    justify-content: space-between;
+    align-items: center;
+}
+.web .title .all {
+    padding-top: 5px;
+    padding-right: 20px;
+    color: #999;
+    background: url(../images/more.png) no-repeat right 10px;
+}
+.web .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 431px;
+}
+.web .item {
+    width: 228px;
+    height: 271px;
+    background-color: #fff;
+    line-height: 1;
+}
+.web .content .item h4 {
+    font-size: 14px;
+    height: 53px;
+    color: #333;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.web .content .item p {
+    font-size: 14px;
+    color: #999;
+    margin-left: 20px;
+}
+.web .content .item span {
+    font-size: 14px;
+    color: #fa6400;
+}
+.web .content .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.web .content .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* people样式------------------------------ */
+.people {
+    height: 316px;
+    /* background-color: pink; */
+}
+.people .title h2 {
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.people .title ul {
+    display: flex;
+    width: 308px;
+    justify-content: space-between;
+    align-items: center;
+}.people .title .all {
+    padding-top: 5px;
+    padding-right: 20px;
+    color: #999;
+    background: url(../images/more.png) no-repeat right 10px;
+}
+.people .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.people .bottom .item h4 {
+    font-size: 14px;
+    height: 53px;
+    color: #333;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.people .bottom .item p {
+    font-size: 14px;
+    color: #999;
+    margin-left: 20px;
+}
+.people .bottom .item span {
+    font-size: 14px;
+    color: #fa6400;
+}
+
+/* footer 样式-------------------- */
+
+.tail {
+    height: 273px;
+    background-color: #fff;
+    margin-top: 60px;
+}
+.tail .container {
+    display: flex;
+    justify-content: space-between;
+    height: 273px;
+    padding-top: 60px;
+}
+.tail .left {
+    width: 432px;
+}
+.tail .left img {
+    margin-bottom: 24px;
+}
+.tail .left p {
+    font-size: 12px;
+    color: #666;
+} 
+.tail .left .app {
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    margin-top: 14px;
+    line-height: 34px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.tail .right {
+    display: flex;
+    justify-content: space-between;
+    width: 516px;
+}
+.tail .right dt {
+    height: 23px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.tail .right dd{
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}

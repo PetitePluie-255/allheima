@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 链接未访问过的状态 */
+    a:link {
+      color: green;
+    }
+
+    /* 链接访问过之后的状态 */
+    a:visited {
+      color: red;
+    }
+
+    /* 鼠标悬停的状态 */
+    a:hover {
+      color: orange;
+    }
+
+    /* 鼠标点击时的状态 */
+    a:active {
+      color: yellow;
+    }
+
+    /* lvha：你的男朋友送了你一个lv包包，你就ha哈笑 */
+    /* hover状态可以用于其他标签 */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    .box:hover {
+      width: 400px;
+      height: 400px;
+      background-color:orange;
+    }
+  </style>
+</head>
+<body>
+  <a href="#">我是一个a标签</a>
+  <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 300px;
+      background-color:skyblue;
+      background-image: url('./images/2.jpg');
+      background-repeat: no-repeat;
+      /* 背景大小 */
+      /* background-size: 400px 300px; */
+      /* 百分比取值：相对于当前盒子的宽高 */
+      /* background-size: 100% 100%; */
+
+      /* 关键词取值（了解） */
+      /* contain：包含，将背景图片进行等比例缩放，直到不会超出盒子的最大 */
+      /* background-size: contain; */
+
+      /* cover：覆盖，将背景图片进行等比例缩放，直到填满整个盒子没有空白为止 */
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

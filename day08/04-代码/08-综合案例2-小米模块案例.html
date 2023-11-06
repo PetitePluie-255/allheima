@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      /* 弹性盒子 */
+      display: flex;
+      /* 主轴对齐方式 */
+      justify-content: space-between;
+      width: 1226px;
+      height: 615px;
+      margin: 200px auto;
+    }
+
+    .box .left {
+      width: 234px;
+      background-color: #800080;
+    }
+
+    .box .right {
+      /* 弹性盒子 */
+      display: flex;
+      /* 开启换行 */
+      flex-wrap: wrap;
+      /* 主轴对齐方式 */
+      justify-content: space-between;
+      /* 多行侧轴对齐方式 */
+      align-content: space-between;
+      width: 978px;
+    }
+
+    .box .right .item {
+      width: 234px;
+      height: 300px;
+      background-color: #87ceeb;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="left"></div>
+    <div class="right">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+    </div>
+  </div>
+</body>
+</html>

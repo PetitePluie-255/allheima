@@ -1,0 +1,341 @@
+/* xtx-banner的样式----------------------- */
+.xtx-banner {
+  height: 500px;
+  background-color: #F5F5F5 ;
+}
+
+.xtx-banner .container {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* .xtx-banner .container:hover .rc {
+  transform: translateX(-2480px);
+} */
+
+.xtx-banner .rc {
+  display: flex;
+  /* transition: 2s; */
+  animation: one 3s steps(2) infinite;
+}
+
+/* 动画 */
+@keyframes one {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-2480px);
+  }
+}
+
+.xtx-banner .rc img {
+  width: 1240px;
+}
+
+.xtx-banner .aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 500px;
+  background-color: rgba(0,0,0,.42);
+}
+
+.xtx-banner .aside li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 12px 0 29px;
+}
+
+.xtx-banner .aside li:hover {
+  background-color: #00BE9A;
+}
+
+.xtx-banner .aside a {
+  color: #fff;
+}
+
+.xtx-banner .aside span {
+  margin-left: 14px;
+  font-size: 14px;
+}
+
+.xtx-banner .aside i {
+  font-size: 14px;
+  color: #fff;
+}
+
+.xtx-banner ol {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 20px;
+  bottom: 21px;
+  /* 42+14+18 */
+  width: 74px;
+  height: 14px;
+}
+
+.xtx-banner ol li {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.xtx-banner ol .active,
+.xtx-banner ol li:hover {
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+}
+
+/* xtx-new-goods的样式--------------------------------- */
+.xtx-new-goods {
+  /* 112+304+100 */
+  height: 516px;
+}
+
+.xtx-new-goods .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 112px;
+}
+
+.xtx-new-goods .title div {
+  display: flex;
+  align-items: flex-end;
+}
+
+.xtx-new-goods .title h3 {
+  margin-right: 35px;
+  font-size: 30px;
+}
+
+.xtx-new-goods .title span {
+  color: #A1A1A1;
+}
+
+.xtx-new-goods .title a {
+  color: #A1A1A1;
+}
+
+.xtx-new-goods .content {
+  display: flex;
+  justify-content: space-between;
+}
+.xtx-new-goods .content a {
+  display: block;
+  width: 304px;
+  height: 404px;
+  background-color: #EEF9F4;
+  text-align: center;
+}
+.xtx-new-goods .content img {
+  width: 304px;
+  height: 304px;
+}
+.xtx-new-goods .content h4 {
+  margin-top: 18px;
+  font-size: 20px;
+}
+.xtx-new-goods .content p {
+  margin-top: 6px;
+  font-size: 22px;
+  color: #AA2113;
+}
+.xtx-new-goods .content span {
+  font-size: 18px;
+}
+
+.xtx-new-goods .content li {
+  transition: .5s;
+}
+
+.xtx-new-goods .content li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 7px 4px rgba(0,0,0,.3);
+}
+
+/* xtx-recommend的样式------------------ */
+.xtx-recommend {
+  /* 112+304+100 */
+  height: 516px;
+}
+
+.xtx-recommend .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 112px;
+}
+
+.xtx-recommend .title div {
+  display: flex;
+  align-items: flex-end;
+}
+
+.xtx-recommend .title h3 {
+  margin-right: 35px;
+  font-size: 30px;
+}
+
+.xtx-recommend .title span {
+  color: #A1A1A1;
+}
+
+.xtx-recommend .content {
+  display: flex;
+  justify-content: space-between;
+}
+.xtx-recommend .content a {
+  display: block;
+  width: 304px;
+  height: 404px;
+  text-align: center;
+}
+.xtx-recommend .content img {
+  width: 304px;
+  height: 304px;
+}
+.xtx-recommend .content h4 {
+  margin-top: 18px;
+  font-size: 20px;
+}
+.xtx-recommend .content p {
+  margin-top: 6px;
+  color: #A1A1A1;
+}
+
+.xtx-recommend .content li {
+  transition: .5s;
+}
+
+.xtx-recommend .content li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 7px 4px rgba(0,0,0,.3);
+}
+
+/* xtx-hot-brand的样式---------------------- */
+.xtx-hot-brand {
+  height: 468px;
+  background-color: #F5F5F5;
+  margin-bottom: 20px;
+}
+.xtx-hot-brand .container {
+  height: 468px;
+}
+.xtx-hot-brand .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 122px;
+}
+.xtx-hot-brand .title .left {
+  display: flex;
+  align-items: flex-end;
+}
+.xtx-hot-brand .title h3 {
+  font-size: 30px;
+}
+.xtx-hot-brand .title span {
+  margin-left: 35px;
+  color: #A1A1A1;
+}
+.xtx-hot-brand .title .right {
+  display: flex;
+  /* 单个子元素侧轴对齐方式 */
+  align-self: flex-end;
+  margin-bottom: 15px;
+}
+.xtx-hot-brand .title i {
+  width: 20px;
+  height: 20px;
+  background-color: #00be9a;
+  margin-left: 12px;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+}
+.xtx-hot-brand .title i:hover {
+  background-color: #e2e2e2;
+}
+
+.xtx-hot-brand .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.xtx-hot-brand .content a {
+  position: relative;
+  display: block;
+  width: 244px;
+  height: 306px;
+  overflow: hidden;
+}
+
+.xtx-hot-brand .content a::after {
+  position: absolute;
+  left: -200px;
+  top: 0;
+  content: '';
+  width: 40px;
+  height: 306px;
+  /* 线性渐变 */
+  background-image: linear-gradient(to right ,transparent,#fff,transparent);
+  /* 平面转换 */
+  transform: skew(-45deg);
+}
+
+.xtx-hot-brand .content a:hover::after {
+  transition: 1s;
+  left: 400px;
+}
+
+.xtx-hot-brand .content a {
+  transition: .5s;
+}
+
+.xtx-hot-brand .content a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 7px 4px rgba(0,0,0,.3);
+}
+
+/* xtx-fresh的样式-------------------------- */
+.xtx-fresh {
+  /* 122+610-20 */
+  height: 712px;
+}
+.xtx-fresh .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 102px;
+}
+.xtx-fresh .title h3 {
+  font-size: 30px;
+}
+.xtx-fresh .title .right {
+  display: flex;
+}
+.xtx-fresh .title .right ul {
+  display: flex;
+}
+.xtx-fresh .title .right ul a {
+  padding: 0 7px;
+  margin-left: 6px;
+}
+.xtx-fresh .title .right ul a:hover {
+  background-color: #00BE9A;
+  color: #fff;
+}
+.xtx-fresh .title .right .all {
+  margin-left: 65px;
+  color: #A1A1A1;
+}

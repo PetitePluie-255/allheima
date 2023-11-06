@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 360px;
+            margin: 100px auto;
+        }
+        .box .hd {
+            width: 360px;
+            height: 35px;
+            background-color: #eee;
+            border: 1px solid #dbdee1;
+            border-left: 0;
+        }   
+
+        .box .hd a{
+            width: 49px;
+            height: 35px;
+            background-color: #fff;
+            display: block;
+            margin-top: -1px;
+            border-top: 3px solid #ff8400;
+            border-right: 1px solid #dbdee1;
+            color: #333;
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 32px;
+        }
+        .box ul {
+            list-style: none;
+            padding: 5px;
+        }
+        .box ul li {
+            height: 24px;
+            background: url(./images/square.png) no-repeat 0 center;
+            padding-left: 15px;
+        }
+        .box ul li a {
+            height: 24px;
+            background: url(./images/img.gif) no-repeat 0 center;
+            display: block;
+            padding-left: 20px;
+            font-size: 12px;
+            color: #666;
+            line-height: 24px;
+            text-decoration: none;
+        }
+        .box ul li a:hover {
+            color: #ff8400;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="hd">
+            <a href="#">新闻</a>
+        </div>
+        <ul>
+            <li><a href="#">点赞“新农人” 温暖的伸手</a></li>
+            <li><a href="#">在希望的田野上...</a></li>
+            <li><a href="#">“中国天眼”又有新发现 已在《自然》杂志发表</a></li>
+            <li><a href="#">急！这个领域，缺人！月薪4万元还不好招！啥情况？</a></li>
+            <li><a href="#">G9“带货”背后：亏损面持续扩大，竞争环境激烈</a></li>
+            <li><a href="#">多地力推二手房“带押过户”，有什么好处？</a></li>
+        </ul>
+    </div>
+</body>
+</html>

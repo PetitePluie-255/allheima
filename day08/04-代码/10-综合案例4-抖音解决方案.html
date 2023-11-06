@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* 自动内减 */
+      box-sizing: border-box;
+    }
+
+    .box {
+      /* 弹性盒子 */
+      display: flex;
+      /* 开启换行 */
+      flex-wrap: wrap;
+      /* 主轴对齐方式 */
+      justify-content: space-between;
+      /* 多行侧轴对齐方式 */
+      align-content: space-evenly;
+      width: 1200px;
+      height: 418px;
+      margin: 100px auto;
+      border: 1px solid #ddd;
+      padding: 0 33px 0 70px;
+      border-radius: 8px;
+    }
+
+    .box .item {
+      /* 弹性盒子 */
+      display: flex;
+      /* 单行侧轴对齐方式 */
+      align-items: center;
+      width: 500px;
+      height: 80px;
+    }
+
+    .box .item h3 {
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .box .item p {
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item">
+      <img src="./images/1.svg" alt="">
+      <div>
+        <h3>一键发布多端</h3>
+        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./images/1.svg" alt="">
+      <div>
+        <h3>一键发布多端</h3>
+        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./images/1.svg" alt="">
+      <div>
+        <h3>一键发布多端</h3>
+        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./images/1.svg" alt="">
+      <div>
+        <h3>一键发布多端</h3>
+        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
