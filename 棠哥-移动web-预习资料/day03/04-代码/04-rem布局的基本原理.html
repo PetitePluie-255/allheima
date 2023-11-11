@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      rem布局的效果：
+        1、屏幕越大，页面中所有元素越大
+        2、屏幕越小，页面中所有元素越小
+
+      rem布局的原理：
+        1、屏幕越大，html标签的font-size越大
+        2、屏幕越小，html标签的font-size越小
+
+      rem布局的实现：
+        1、页面中元素的单位是rem
+        2、屏幕宽度变化之后，自动改变html标签的font-size
+    */
+
+    .one {
+      width: 30rem;
+      height: 30rem;
+      background-color: pink;
+    }
+    .two {
+      width: 20rem;
+      height: 20rem;
+      background-color: orange;
+    }
+    .three {
+      width: 10rem;
+      height: 10rem;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      display: block;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #000;
+      margin: 200px auto;
+      /* 过渡 */
+      transition: 1s;
+    }
+
+    img:hover {
+      /* 
+        2d转换-旋转
+          属性名：transform
+          属性值：rotate(角度deg)
+      */
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/rotate.png" alt="">
+</body>
+</html>

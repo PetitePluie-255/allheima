@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* box是大盒子 */
+    .box {
+      /* 大盒子的大小正好和一张图片保持一致，这样同时只能显示一张图片 */
+      width: 800px;
+      height: 449px;
+      border: 3px solid orange;
+      margin: 200px auto;
+      /* 溢出隐藏 */
+      overflow: hidden;
+    }
+
+    /* ul是盒子中展示的内容 */
+    ul {
+      list-style: none;
+      /* 保证li标签每一张图片可以一行中显示，不会换行 */
+      width: 400%;
+      height: 100%;
+
+      /* 使用动画 */
+      /* 注意点：因为steps最后一张会一闪而过，因此最后一张会一闪而过看不到
+                所以此时故意设置移动四张图片的位置，并且分4步完成，这样最后一张是空白一闪而过，而主要的图片不会被闪掉
+      */
+      animation: dong 4s steps(4) infinite;
+    }
+
+    /* 鼠标移入暂停 */
+    .box:hover ul {
+    /* 暂停动画 */
+      animation-play-state: paused;
+    }
+
+    li {
+      float: left;
+    }
+
+    /* 让ul整个一次展示一张的动画 */
+    @keyframes dong {
+      from {
+        transform: translateX(0px);
+      }
+
+      to {
+        transform: translateX(-3200px);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <ul>
+      <li><img src="./images/1.jpg" alt=""></li>
+      <li><img src="./images/2.jpg" alt=""></li>
+      <li><img src="./images/3.jpg" alt=""></li>
+      <li><img src="./images/4.jpg" alt=""></li>
+    </ul>
+  </div>
+</body>
+</html>

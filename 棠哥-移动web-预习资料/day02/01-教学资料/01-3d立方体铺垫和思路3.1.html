@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>棠哥立方体演示demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+      width: 200px;
+      height: 200px;
+      margin: 200px auto;
+      position: relative;
+      transform-style: preserve-3d;
+
+    }
+
+
+    /* 改成动画 */
+    /* body:hover ul {
+      transform: rotateX(300deg) rotateY(315deg) rotateZ(319deg);
+      transition: 3s 6s;
+    } */
+
+    /* body:hover ul {
+      animation: 3s rotate 6s;
+    } */
+    ul {
+      animation: 2s rotate infinite alternate paused;
+      transform: rotateX(-43deg) rotateY(-59deg) rotateZ(-28deg);
+    }
+
+    @keyframes rotate {
+      to {
+        /* transform: rotateX(-60deg) rotateY(-45deg) rotateZ(-41deg); */
+        /* transform: rotateX(-43deg) rotateY(-59deg) rotateZ(-28deg); */
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+    }
+
+    li {
+      width: 200px;
+      height: 200px;
+      /* 子绝父相 */
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-size: 50px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 200px;
+      /* 真正的3d元素 */
+      transform-style: preserve-3d;
+    }
+    
+    li:nth-of-type(-n+6) {
+      display: none;
+    }
+
+    .wei::after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      border: 50px solid transparent;
+      border-right-color: greenyellow;
+      transform: translateZ(50px) rotateY(90deg);
+    }
+
+    .wei::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      border: 50px solid transparent;
+      border-top-color: cyan;
+      transform: translateZ(50px) rotateX(90deg);
+    }
+
+    /* --------------------------------------------------前面 */
+    li:nth-child(1) {
+      background-color: red;
+      /* transition: 3s; */
+      /* opacity:0.8; */
+    }
+
+    body:hover li:nth-child(1) {
+      /* transform: translateZ(100px); */
+      /* animation: 3s before forwards; */
+    }
+
+    li:nth-child(1) {
+      /* transform: translateZ(100px); */
+      animation: 3s before forwards paused;
+    }
+
+    /* 改写成动画，这样可以暂停 */
+    @keyframes before {
+      to {
+        transform: translateZ(100px);
+      }
+    }
+
+    /* ---------------------------------------------------------后面 */
+    li:nth-child(2) {
+      background-color: yellow;
+      /* transition: 3s 3s; */
+    }
+
+
+    body:hover li:nth-child(2) {
+      /* transform: translateZ(-100px); */
+      /* animation: 3s after 3s forwards; */
+    }
+
+    li:nth-child(2) {
+      /* transform: translateZ(-100px); */
+      animation: 3s after forwards paused;
+    }
+
+    @keyframes after {
+      to {
+        transform: translateZ(-100px);
+      }
+    }
+
+    /* -----------------------------------------------------上面 */
+    li:nth-child(3) {
+      background-color: purple;
+      /* opacity:0.8; */
+    }
+
+    /* 上面的动画 */
+    @keyframes top {
+      0% {
+        transform: rotateX(0deg) translateZ(0px);
+      }
+
+      50% {
+        transform: rotateX(90deg) translateZ(0px);
+      }
+
+      100% {
+        transform: rotateX(90deg) translateZ(100px);
+      }
+    }
+
+    /* body:hover li:nth-child(5) {
+      animation: top 3s 2s forwards;
+
+    }     */
+    li:nth-child(3) {
+      animation: top 3s forwards paused;
+
+    }
+
+    /*------------------------------------------------------------- 下面 */
+    li:nth-child(4) {
+      background-color: green;
+    }
+
+    /* 下面的动画 */
+    @keyframes bottom {
+      0% {
+        transform: rotateX(0deg) translateZ(0px);
+      }
+
+      50% {
+        transform: rotateX(-90deg) translateZ(0px);
+      }
+
+      100% {
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+    }
+
+    /* body:hover li:nth-child(6) {
+      animation: bottom 3s 3s forwards;
+    } */
+    li:nth-child(4) {
+      animation: bottom 3s forwards paused;
+    }
+
+    /* ------------------------------------------------------左面 */
+    li:nth-child(5) {
+      background-color: pink;
+      /* transition: 3s 4s; */
+    }
+
+    /* 左面的动画 */
+    @keyframes left {
+      0% {
+        transform: rotateY(0deg) translateZ(0px);
+      }
+
+      50% {
+        transform: rotateY(-90deg) translateZ(0px);
+      }
+
+      100% {
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+    }
+
+    /* body:hover li:nth-child(5) {
+      animation: left 3s 4s forwards;
+    } */
+    li:nth-child(5) {
+      animation: left 3s forwards paused;
+    }
+
+    /* ---------------------------------------------------------右面 */
+    li:nth-child(6) {
+      background-color: blue;
+      /* transition: 3s 5s; */
+      /* opacity:0.8; */
+    }
+
+    /* 右面的动画 */
+    @keyframes right {
+      0% {
+        transform: rotateY(0deg) translateZ(0px);
+      }
+
+      50% {
+        transform: rotateY(90deg) translateZ(0px);
+      }
+
+      100% {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+    }
+
+    /* body:hover li:nth-child(4) {
+      animation: right 3s 5s forwards;
+    } */
+    li:nth-child(6) {
+      animation: right 3s forwards paused;
+    }
+
+    /* 边框的盒子 */
+    li:nth-child(7) {
+      transform: translateZ(100px);
+      border: 1px solid #000;
+    }
+
+    li:nth-child(8) {
+      transform: translateZ(-100px);
+      border: 1px solid #000;
+    }
+
+    li:nth-child(9) {
+      transform: rotateY(90deg) translateZ(100px);
+      border: 1px solid #000;
+    }
+
+    li:nth-child(10) {
+      transform: rotateY(-90deg) translateZ(100px);
+      border: 1px solid #000;
+    }
+
+
+    /* 当ul被hover的时候，让动画暂停 */
+    /* ul:hover {
+      animation-play-state: paused !important;
+    }
+
+    ul:hover li {
+      animation-play-state: paused !important;
+    } */
+
+    /* 把以上改成js控制 */
+
+    button {
+      position: fixed;
+      top: 20px;
+      left: 50px;
+      /* width: 100px; */
+      padding: 0 20px;
+      height: 50px;
+      display: block;
+      font-size: 30px;
+    }
+
+    button:nth-of-type(2) {
+      top: 20px;
+      left: 200px;
+    }
+    button:nth-of-type(3) {
+      top: 90px;
+    }
+    button:nth-of-type(4) {
+      top: 90px;
+      left: 200px;
+    }
+    button:nth-of-type(5) {
+      top: 160px;
+    }
+    button:nth-of-type(6) {
+      top: 160px;
+      left: 200px;
+    }
+    button:nth-of-type(7) {
+      top: 230px;
+      left: 100px;
+    }
+    button:nth-of-type(8) {
+      top: 300px;
+      left: 94px;
+    }
+    button:nth-of-type(9) {
+      top: 370px;
+      left: 115px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="wei">前</li>
+    <li class="wei">后</li>
+    <li class="wei">上</li>
+    <li class="wei">下</li>
+    <li class="wei">左</li>
+    <li class="wei">右</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <button>前面</button>
+  <button>后面</button>
+  <button>上面</button>
+  <button>下面</button>
+  <button>左面</button>
+  <button>右面</button>
+  <button>转圈圈</button>
+  <button>去除z轴</button>
+  <button>刷新</button>
+
+  <script>
+    let btns = document.querySelectorAll('button');
+    let ul = document.querySelector('ul');
+    let lis = document.querySelectorAll('li');
+
+    // 给六个面按钮注册点击事件
+    for ( let i = 0 ; i < btns.length-1 ; i++ ) {
+      btns[i].onclick = function () {
+        lis[i].style.display = 'block';
+        console.log( this.count );
+        if ( this.count === undefined ) {
+          this.count = 0;
+        }
+        this.count++;
+        if ( this.count % 2 === 0 ) {
+          lis[i].style.animationPlayState = 'paused';
+        } else {
+          lis[i].style.animationPlayState = 'running';
+        }
+      }
+    }
+
+    // 设置转圈圈的点击事件
+    btns[6].onclick = function () {
+      console.log( this.count );
+      if ( this.count === undefined ) {
+        this.count = 0;
+      }
+      this.count++;
+      if ( this.count % 2 === 0 ) {
+        ul.style.animationPlayState = 'paused';
+        this.innerText = '转圈圈';
+      } else {
+        ul.style.animationPlayState = 'running';
+        this.innerText = '停下来';
+      }
+    }
+
+    // 去除箭头z轴
+    let weis = document.querySelectorAll('.wei');
+    var flag = true;
+    btns[7].onclick = function () {
+      if ( flag ) {
+        weis.forEach(item => item.classList.remove('wei') )
+        this.innerText = '恢复z轴';
+        flag = false;
+      } else {
+        weis.forEach(item => item.classList.add('wei') )
+        this.innerText = '去除z轴'
+        flag = true;
+      }
+
+    }
+
+    // 刷新按钮
+    btns[8].onclick = function () {
+       location.reload();
+    }
+
+  </script>
+</body>
+
+</html>

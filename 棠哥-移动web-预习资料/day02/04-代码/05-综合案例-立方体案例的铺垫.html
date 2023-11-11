@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 给img标签的父元素设置视距：perspective
+        作用：给子元素添加近大远小的视觉效果
+    */
+    body {
+      perspective: 1000px;
+    }
+
+    img {
+      display: block;
+      margin: 200px auto;
+      /* 过渡 */
+      transition: 1s;
+    }
+
+    /* 
+      立方体每一个面思路：
+        1、先旋转到面朝对应的方向
+        2、沿着面朝的方向（z轴）方向进行平移
+    */
+    img:hover {
+      /* 1、右面 */
+      /* transform: rotateY(90deg) translateZ(100px); */
+
+      /* 2、左面：
+            1、先旋转到面朝左
+            2、沿着z轴方向平移即可
+      */
+      /* transform: rotateY(-90deg) translateZ(100px); */
+
+      /* 
+        3、上面
+          1、先旋转到面朝上
+          2、沿着z轴方向平移即可
+      */
+      transform: rotateX(90deg) translateZ(100px);
+
+      /* 4、下面 */
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/face.jpg" alt="">
+</body>
+</html>

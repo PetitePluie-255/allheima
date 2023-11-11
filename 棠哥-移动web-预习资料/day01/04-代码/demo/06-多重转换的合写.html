@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多重转换的合写</title>
+  <style>
+    .box {
+      width: 800px;
+      height: 200px;
+      border: 1px solid #000;
+      margin: 200px auto;
+    }
+
+    img {
+      width: 200px;
+      transition: 8s;
+    }
+
+    /* 当鼠标移入box时，让img标签平移并且旋转 */
+    .box:hover img {
+      /* transform: translateX(600px); */
+      /* transform: rotate(360deg); */
+
+      /* 转换属性的合写 */
+      /* transform: translateX(600px) rotate(360deg); */
+      transform: rotate(360deg) translateX(600px);
+
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./images/tyre.png" alt="">
+  </div>
+</body>
+</html>

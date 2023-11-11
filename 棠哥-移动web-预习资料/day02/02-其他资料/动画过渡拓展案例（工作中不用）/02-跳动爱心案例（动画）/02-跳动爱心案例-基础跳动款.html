@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 300px auto;
+      /* 把爱心摆正 */
+      transform: rotate(-45deg);
+      /* 调用动画 */
+      animation: heart .6s infinite alternate;
+    }
+
+    .box .one,
+    .box .two {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .box .one {
+      top: -100px;
+      left: 0;
+    }
+
+    .box .two {
+      top: 0;
+      right: -100px;
+    }
+
+    /* 定义跳动的动画 */
+    @keyframes heart {
+      0% {
+        /* 注意：要保证视觉上爱心是正的，需要保证执行动画的过程中始终保证有rotate(-45deg)，如果不设置会有动画中的transform覆盖上方的默认旋转角度 */
+        transform: scale(1) rotate(-45deg);
+      }
+
+      100% {
+        transform: scale(2) rotate(-45deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="one"></div>
+    <div class="two"></div>
+  </div>
+</body>
+</html>

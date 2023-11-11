@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ul表示立方体的整体 */
+    ul {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      /* border: 1px solid #000; */
+      margin: 200px auto;
+      list-style: none;
+      /* 设置视距：让每一个面有近大远小的视觉效果——》本体默认还是一个平面
+      */
+      /* perspective: 1000px; */
+      /* 过渡 */
+      transition: 3s;
+
+      /* 真正的3d立体元素 */
+      transform-style: preserve-3d;
+    }
+
+    /* li表示立方体的每一个面 */
+    ul li {
+      /* 子绝父相 */
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 300px;
+    }
+
+    /* ------------------------------前面 */
+    ul li:nth-child(1) {
+      /* 
+        前面：
+          1、沿着z轴的正方向平移即可
+      */
+      transform: translateZ(150px);
+      background-color: red;
+    }
+    /* ------------------------------后面 */
+    ul li:nth-child(2) {
+      /* 
+        后面：
+          1、沿着z轴的负方向平移即可
+      */
+      transform: translateZ(-150px);
+      background-color: green;
+    }
+    /* ------------------------------上面 */
+    ul li:nth-child(3) {
+      /* 
+        上面：
+          1、先旋转到面朝上
+          2、沿着z轴方向进行平移
+      */
+      transform: rotateX(90deg) translateZ(150px);
+      background-color: skyblue;
+    }
+    /* ------------------------------下面 */
+    ul li:nth-child(4) {
+      /* 
+        下面：
+          1、先旋转到面朝下
+          2、沿着z轴方向进行平移
+      */
+      transform: rotateX(-90deg) translateZ(150px);
+      background-color: purple;
+    }
+    /* ------------------------------左面 */
+    ul li:nth-child(5) {
+      /* 
+        左面：
+          1、先旋转到面朝左
+          2、沿着z轴方向进行平移
+      */
+      transform: rotateY(-90deg) translateZ(150px);
+      background-color: pink;
+    }
+    /* ------------------------------右面 */
+    ul li:nth-child(6) {
+      /* 
+        右面：
+          1、先旋转到面朝右
+          2、沿着z轴方向进行平移
+      */
+      transform: rotateY(90deg) translateZ(150px);
+      background-color: orange;
+    }
+
+    /* 当ul被hover之后，让ul全面展示自己 */
+    ul:hover {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  </style>
+</head>
+<body>
+  <!-- ul：表示立方体的整体 -->
+  <!-- li：表示立方体的每个面 -->
+  <ul>
+    <li>前</li>
+    <li>后</li>
+    <li>上</li>
+    <li>下</li>
+    <li>左</li>
+    <li>右</li>
+  </ul>
+</body>
+</html>

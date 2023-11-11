@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      rem布局的步骤：
+        1、把px单位转换成rem单位 ——》除以屏幕宽度的1/10
+        2、动态设置不同屏幕的html标签的font-size ——》需要多引入一个js
+
+        
+      vw布局的步骤：
+        1、把px单位转换成vw单位 ——》除以屏幕宽度的1%
+
+        1vw = 屏幕宽度的1% = 7.5px
+    */
+    .box {
+      width: 60vw;
+      height: 60vw;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

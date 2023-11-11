@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      rem布局适配：
+        1、把px单位转换成rem单位
+            px = rem * html标签的font-size
+            ——》 rem = px / html标签的font-size  （一般开发习惯上给 屏幕宽度的十分之一）
+            ——》 ？？ = 400 / 75
+
+        2、当屏幕宽度发生改变时，自动改变html标签的font-size——》引入flexible.js
+    */
+
+    .box {
+      /* 用设计图量取的尺寸 / 当前设计图宽度的十分之一 */
+      width: 5.333rem;
+      height: 5.333rem;
+      background-color: pink;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <!-- 规范：在body标签内容的最后通过script引入js -->
+  <script src="./js/flexible.js"></script>
+</body>
+</html>

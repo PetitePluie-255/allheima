@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+      margin: 200px auto;
+      /* 过渡 */
+      /* transition: 1s; */
+
+      /* 2、调用动画 */
+      /* animation：动画名 动画的持续时间 */
+      animation: dong 1s infinite linear;
+    }
+
+    /* .box:hover {
+      transform: rotate(360deg);
+    } */
+
+    /* 
+      实现动画：
+        1、定义动画
+        2、调用动画
+    */
+
+    /* 1、定义动画 */
+    /* @keyframes 动画名 {
+      from {
+        开始状态的样式
+      }
+      to {
+        结束状态的样式
+      }
+    } */
+
+    @keyframes dong {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

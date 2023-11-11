@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 给img标签的父元素设置视距：perspective
+        作用：给子元素添加近大远小的视觉效果
+    */
+    body {
+      perspective: 10000px;
+    }
+
+    img {
+      display: block;
+      margin: 200px auto;
+      /* 过渡 */
+      transition: 1s;
+    }
+
+    img:hover {
+      /* 沿着x轴方向旋转——》如何进行旋转效果 */
+      transform: rotateX(-45deg);
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/face.jpg" alt="">
+</body>
+</html>

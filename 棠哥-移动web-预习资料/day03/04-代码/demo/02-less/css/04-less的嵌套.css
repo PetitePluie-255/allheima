@@ -1,0 +1,30 @@
+.father {
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+}
+.father .son {
+  background-color: red;
+}
+.father .son .sun {
+  background-color: skyblue;
+}
+.father > .one {
+  background-color: blue;
+}
+.father .son1,
+.father .son2 {
+  background-color: red;
+}
+.father.red {
+  background-color: red;
+}
+.father:nth-child(1) {
+  background-color: red;
+}
+.father:hover {
+  background-color: blue;
+}
+.father::after {
+  content: '';
+}

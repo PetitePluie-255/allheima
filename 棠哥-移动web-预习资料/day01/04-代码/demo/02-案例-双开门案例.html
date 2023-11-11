@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 1366px;
+      height: 600px;
+      margin: 0 auto;
+      background: url('./images/car1.jpg');
+      /* 溢出隐藏 */
+      overflow: hidden;
+    }
+
+    .box::before,
+    .box::after {
+      /* 伪元素默认是行内元素，设置浮动之后可以设置宽高 */
+      float: left;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background: url('./images/car2.jpg');
+      /* 过渡 */
+      transition: 1s;
+    }
+
+    .box::after {
+      background-position: right center;
+    }
+
+    /* 当box被hover之后，让两个伪元素分别左右平移 */
+    .box:hover::before {
+      transform: translateX(-100%);
+    }
+
+    .box:hover::after {
+      transform: translateX(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    
+  </div>
+</body>
+</html>

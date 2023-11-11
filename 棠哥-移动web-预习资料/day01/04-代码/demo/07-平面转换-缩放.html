@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 200px auto;
+      /* 过渡 */
+      transition: 1s;
+    }
+
+    .box:hover {
+      /* width: 400px; */
+      /* 
+        平面转换-缩放
+          属性名：transform
+          属性值：
+            1、scaleX(倍数)：水平缩放
+            2、scaleY(倍数)：垂直缩放
+            3、scale(水平缩放,垂直缩放)：合写
+      */
+      transform: scaleX(2);
+      transform: scaleY(2);
+      transform: scale(2,2);
+      /* 简写：如果x和y的倍数一致，此时可以简写一个 */
+      /* transform: scale(2); */
+      transform: scale(0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">我是内容</div>
+</body>
+</html>

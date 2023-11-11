@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 300px auto;
+      /* 把爱心摆正 */
+      transform: rotate(-45deg);
+    }
+
+    .box .one,
+    .box .two {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .box .one {
+      top: -100px;
+      left: 0;
+      /* background-color: orange; */
+    }
+
+    .box .two {
+      top: 0;
+      right: -100px;
+      /* background-color: yellow; */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="one"></div>
+    <div class="two"></div>
+  </div>
+</body>
+</html>

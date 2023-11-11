@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      
+      /* animation-name: one;
+      animation-duration: 1s;
+      animation-timing-function: steps(5);
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-play-state: paused; */
+
+      /* 
+        animation属性的连写：
+          属性名：animation
+          属性值：单个取值的合写
+
+        注意点：
+          1、省略问题：动画的名字animation-name + 动画的持续时间animation-duration 不能省略
+
+          2、顺序问题：第一次出现的时间，就是持续时间 animation-duration
+                    如果还有第二个时间，才是延时 animation-delay
+      */
+
+      /* animation: one 1s infinite alternate; */
+      animation: one  1s ;
+    }
+    
+
+    /* 1、定义动画 */
+    @keyframes one {
+      from {
+        width: 200px;
+      }
+
+      to {
+        width: 1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: skyblue;
+    }
+
+    div {
+      width: 174px;
+      height: 126px;
+      background: url('./images/fish-12-126.png');
+      /* 调用动画
+        如果需要给同一个标签，设置多组动画？？
+        只需要把多组动画写在一起，每组之间以逗号隔开
+       */
+      animation: one 1s steps(12) infinite , two 5s infinite;
+    }
+
+    div:nth-child(2n) {
+      animation-duration: 1s , 10s;
+    }
+
+    /* 动画一：让精灵图从第一张切换到最后一张 */
+    @keyframes one {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 0 -1512px;
+      }
+    }
+
+    /* 
+      动画二：先分析有几个状态，每一个状态的样式是什么！！
+        0% 1、初始状态
+        25% 2、第二个状态：小鱼往右游动了800px   translateX(800px)
+        50% 3、第三个状态：小鱼顺时针旋转了180deg  rotate(180deg)
+        75% 4、第四个状态：小鱼接着往左游动了800px  translateX(800px-800px)
+        100% 5、第五个状态：小鱼接着顺时针旋转了180deg  rotate(180deg+180deg)
+
+      建议：写完一个状态之后，把上一个状态复制一份出来，哪里发生了改变，只需要在上一个状态的基础上 加 或者 减 即可
+     */
+    @keyframes two {
+      0% {
+        transform: translateX(0px) rotate(0deg);
+      }
+      25% {
+        transform: translateX(800px) rotate(0deg);
+      }
+      50% {
+        transform: translateX(800px) rotate(180deg);
+      }
+      75% {
+        transform: translateX(0px) rotate(180deg);
+      }
+      100% {
+        transform: translateX(0px) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

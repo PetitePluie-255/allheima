@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /* 过渡：让元素的样式慢慢的变化 */
+      transition: 1s;
+    }
+
+    body:hover .box {
+      /* 
+        平移：
+          属性名：transform
+          属性值：
+            1、translateX(水平偏移量)：沿着水平方向平移
+            2、translateY(垂直偏移量)：沿着垂直方向平移
+            3、translate(水平偏移量,垂直偏移量)：同时沿着水平和垂直方向平移
+
+        注意点：
+          1、平移取值可以是数字+px，也可以是百分比（百分比相对于自身宽高的百分比）
+
+      */
+      /* transform: translateX(1000px); */
+      /* transform: translateY(600px); */
+      /* transform: translate(600px,600px); */
+
+      transform: translateY(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <h1>哈哈哈哈我是一个h1标签</h1>
+</body>
+</html>

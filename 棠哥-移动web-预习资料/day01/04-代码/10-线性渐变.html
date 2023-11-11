@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 1000px;
+      height: 100px;
+      border: 1px solid #000;
+      margin: 100px auto;
+    }
+    
+    div:nth-child(1) {
+      background-image: linear-gradient(yellow, green);
+    }
+
+    div:nth-child(2) {
+      background-image: linear-gradient(to left, yellow, green);
+    }
+
+    div:nth-child(3) {
+      height: 1000px;
+      background-image: linear-gradient(90deg, yellow, green);
+    }
+
+
+    div:nth-child(4) {
+      /* 
+        0%~30%：纯黄色
+        30%~70%：由黄到绿的渐变
+        70%~100%：纯绿色
+       */
+      background-image: linear-gradient(to right, yellow 30%, green 70%);
+    }
+
+    div:nth-child(5) {
+      height: 1000px;
+      background-image: linear-gradient(to bottom, transparent,rgba(0,0,0,.5) );
+    }
+
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

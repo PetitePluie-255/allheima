@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      /* 为了让ul有近大远小的视觉效果 */
+      perspective: 1000px;
+    }
+
+    /* ul表示相册的整体 */
+    ul {
+      position: relative;
+      list-style: none;
+      width: 300px;
+      height: 400px;
+      margin: 200px auto;
+      /* 让ul慢慢倒下去的过渡 */
+      transition: 1s;
+      /* 设置倒下去的转换原点 */
+      transform-origin: center bottom;
+    }
+
+    /* 
+      功能一：鼠标移入整体，让整体倒下去
+            鼠标hover到ul，让ul旋转
+     */
+    ul:hover {
+      /* 沿着x轴进行旋转 */
+      transform: rotateX(30deg);
+    }
+
+    /* li表示相册的每一页 */
+    li {
+      /* 子绝父相 */
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 400px;
+      border: 3px solid orange;
+    }
+
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    ul：表示相册的整体
+    li：表示相册的每一页
+   -->
+  <ul>
+    <li><img src="./images/01.jpg" alt=""></li>
+    <li><img src="./images/02.jpg" alt=""></li>
+    <li><img src="./images/03.jpg" alt=""></li>
+    <li><img src="./images/04.jpg" alt=""></li>
+    <li><img src="./images/05.jpg" alt=""></li>
+  </ul>
+</body>
+</html>

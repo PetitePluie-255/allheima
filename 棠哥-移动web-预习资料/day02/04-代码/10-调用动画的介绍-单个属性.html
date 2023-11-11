@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /* 2、调用动画 animation是一个复合属性 */
+      /* animation: one 1s; */
+
+      /* 1、动画的名字：animation-name */
+      animation-name: one;
+
+      /* 2、动画的持续时间：animation-duration */
+      animation-duration: 1s;
+
+      /* 3、动画的速度变化效果：animation-timing-function */
+      animation-timing-function: linear;
+      
+      /* 4、动画的延时：animation-delay */
+      /* animation-delay: 2s; */
+
+      /* 5、动画的执行次数：animation-iteration-count */
+      animation-iteration-count: infinite;
+
+      /* 6、动画的执行方向：animation-direction */
+      animation-direction: alternate;
+
+      /* 7、动画的结束状态：animation-fill-mode */
+      /* animation-fill-mode: forwards; */
+
+    }
+    
+    .box:hover {
+      /* 8、动画的播放状态：animation-play-state——》一般配合hover状态使用 */
+      animation-play-state: paused;
+    }
+
+    /* 1、定义动画 */
+    @keyframes one {
+      from {
+        width: 200px;
+      }
+
+      to {
+        width: 1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

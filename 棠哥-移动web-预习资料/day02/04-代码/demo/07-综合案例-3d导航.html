@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      width: 300px;
+      height: 40px;
+      /* border: 1px solid #000; */
+      margin: 200px auto;
+      list-style: none;
+    }
+
+    /* li标签表示：立方体的整体 */
+    ul li {
+      position: relative;
+      float: left;
+      width: 100px;
+      height: 40px;
+      /* 过渡 */
+      transition: 1s;
+      /* 真3d */
+      transform-style: preserve-3d;
+    }
+
+    /* a标签表示：立方体的每个面 */
+    ul li a {
+      /* 子绝父相 */
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 40px;
+      text-decoration: none;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+    }
+
+    ul li a:nth-child(1) {
+      background-color: green;
+      /* 前面
+          1、沿着z轴平移
+      */
+      transform: translateZ(20px);
+    }
+
+    ul li a:nth-child(2) {
+      background-color: orange;
+      /* 
+        上面：
+          1、先旋转到面朝上
+          2、沿着面朝的z轴方向平移
+      */
+      transform: rotateX(90deg) translateZ(20px);
+    }
+
+    /* 当li被hover之后，让li也就是整体进行旋转 */
+    ul li:hover {
+      transform: rotateX(-90deg);
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">首页</a>
+      <a href="#">Index</a>
+    </li>
+    <li>
+      <a href="#">登录</a>
+      <a href="#">Login</a>
+    </li>
+    <li>
+      <a href="#">注册</a>
+      <a href="#">Register</a>
+    </li>
+  </ul>
+</body>
+</html>
