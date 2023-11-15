@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 800px;
+            height: 449px;
+            border: 3px solid blue;
+            margin: 200px auto;
+             overflow: hidden;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            animation: move 4s infinite linear;
+           
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            to {
+                transform: translateX(-3200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><a href="#"><img src="./images/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/1.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+// 在网页中有很多重复的代码
+// 1、在css中，解决方法：封装公共类    ——》   给标签添加公共类即可
+// .common {
+//   width: 100px;
+//   height: 100px;
+// }
+
+// 2、在less中，解决方法：封装函数     ——》   给选择器内部使用函数
+// 语法：.函数名() {}
+// .common() {
+//   width: 200px;
+//   height: 200px;
+// }
+
+// 拓展：函数传递参数
+// .common(@value) {
+//   width: @value;
+//   height: @value;
+// }
+
+// 再拓展：函数传递多个参数
+// 写一个函数：封装函数、声明函数
+// 形参：形式参数
+.common(@one,@two) {
+  width: @one;
+  height: @two;
+}
+
+.red {
+  // 使用一个函数：调用函数
+  // 实参：实际参数
+  .common(100px,200px);
+  background-color: red;
+}
+
+.green {
+  .common(200px,300px);
+  background-color: green;
+}
+
+.blue {
+  .common(300px,400px);
+  background-color: blue;
+}

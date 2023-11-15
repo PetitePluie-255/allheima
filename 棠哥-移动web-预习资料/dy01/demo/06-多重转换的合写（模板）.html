@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多重转换的合写</title>
+  <style>
+    .box {
+      width: 800px;
+      height: 200px;
+      border: 1px solid #000;
+      margin: 200px auto;
+    }
+
+    img {
+      width: 200px;
+      transition: 3s;
+    }
+
+    .box:hover img {
+      transform: translateX(600px) rotate(360deg);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./images/tyre.png" alt="">
+  </div>
+</body>
+</html>

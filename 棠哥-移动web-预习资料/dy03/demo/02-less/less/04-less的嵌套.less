@@ -1,0 +1,49 @@
+.father {
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+
+  // 后代选择器：利用嵌套表示后代关系
+  .son {
+    background-color: red;
+
+    .sun {
+      background-color: skyblue;
+    }
+  }
+
+  // 子代选择器：利用嵌套 + > 
+  >.one {
+    background-color: blue;
+  }
+
+  // 并集选择器：可以省略父级选择器
+  .son1,
+  .son2 {
+    background-color: red;
+  }
+
+  // 交集选择器：&表示父级选择器
+  &.red {
+    background-color: red;
+  }
+
+  // 结构伪类选择器
+  &:nth-child(1) {
+    background-color: red;
+  }
+
+  // 链接伪类选择器
+  &:hover {
+    background-color: blue;
+  }
+
+  // 伪类元素
+  &::after {
+    content: '';
+  }
+
+}
+
+
+

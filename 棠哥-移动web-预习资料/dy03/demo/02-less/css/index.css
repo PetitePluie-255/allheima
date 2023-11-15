@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.father {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+.father .son {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}

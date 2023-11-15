@@ -1,0 +1,25 @@
+// 比如：当前项目的主题色是绿色——》老板现在要把主题色改成蓝色——》红色
+
+// 在less中：可以使用变量解决问题
+// 变量：可以变化的量
+// 语法：@变量名:变量值;
+
+@maincolor:red;
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: @maincolor;
+}
+
+.box2 {
+  width: 200px;
+  height: 200px;
+  background-color: @maincolor;
+}
+
+.box3 {
+  width: 300px;
+  height: 300px;
+  background-color: @maincolor;
+}

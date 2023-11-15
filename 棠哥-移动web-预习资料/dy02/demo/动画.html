@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* animation: one 7s infinite linear; */
+            animation-name: one;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-timing-function: cubic-bezier(1,1,0,0));
+        }
+
+        @keyframes one {
+            0% {    
+                width: 200px;
+                height: 200px;
+                border-radius: 0;
+                background-color: blue;
+                transform: skew(0);
+                opacity: 1;
+            }
+            20% {
+                width: 800px;
+                height: 200px;
+                border-radius: 0;
+                background-color: blue;
+                transform: skew(0);
+                opacity: 1;
+
+            }
+
+            35% {
+                width: 800px;
+                height: 800px;
+                border-radius: 0;
+                background-color: blue;
+                transform: skew(0);
+                opacity: 1;
+            }
+
+            50% {
+                width: 800px;
+                height: 800px;
+                /* border-radius: 0; */
+                background-color: blue;
+                transform: skew(0);
+                opacity: 1;
+                border-radius: 50%;
+            }
+
+            65% {
+                width: 800px;
+                height: 800px;
+                border-radius: 50%;
+                /* background-color: transparent; */
+                transform: skew(0);
+                opacity: 1;
+                background-color: brown;
+            }
+            80% {
+                width: 800px;
+                height: 800px;
+                border-radius: 50%;
+                background-color: brown;
+                /* transform: skew(0); */
+                opacity: 1;
+                transform: skew(30deg);
+            }
+            100% {
+                width: 800px;
+                height: 800px;
+                border-radius: 50%;
+                background-color: brown;
+                transform: skew(0);
+                /* opacity: 1; */
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

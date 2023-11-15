@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      css中有很多单位：比如px  em   rem
+      谷歌浏览器默认文字大小：16px
+
+        1、1em = 当前标签的font-size的大小
+        2、1rem = html标签的font-size的大小
+          root：根 ——》根标签：html
+    */
+
+    .em {
+      width: 20em;
+      height: 20em;
+      font-size: 10px;
+      background-color: pink;
+    }
+
+    html {
+      font-size: 30px;
+    }
+
+    .rem {
+      /* px = rem * html标签的font-size */
+      width: 30rem;
+      height: 30rem;
+      font-size: 20px;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="em"></div>
+  <div class="rem"></div>
+</body>
+</html>
