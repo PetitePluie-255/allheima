@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3943153 */
+  src: url('iconfont.woff2?t=1678377856785') format('woff2'),
+       url('iconfont.woff?t=1678377856785') format('woff'),
+       url('iconfont.ttf?t=1678377856785') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yunshangchuan:before {
+  content: "\e600";
+}
+
+.icon-quanbudingdan:before {
+  content: "\e601";
+}
+
+.icon-tongzhi:before {
+  content: "\e759";
+}
+
+.icon-wode:before {
+  content: "\e75e";
+}
+
+.icon-shouye:before {
+  content: "\e64f";
+}
+
+.icon-yujing:before {
+  content: "\e717";
+}
+
+.icon-xiangbaoleimu:before {
+  content: "\e6ee";
+}
+
+.icon-wodeweituo:before {
+  content: "\e617";
+}
+
+.icon-banxuepinggu:before {
+  content: "\e602";
+}
+
+.icon-jiahao:before {
+  content: "\eaf3";
+}
+
+.icon-jilu:before {
+  content: "\e648";
+}
+
+.icon-tongzhi1:before {
+  content: "\e64a";
+}
+
+.icon-jiaofeizhifu:before {
+  content: "\e69c";
+}
+
+.icon-tongji:before {
+  content: "\e608";
+}
+
+.icon-shangpinguanli:before {
+  content: "\e625";
+}
+

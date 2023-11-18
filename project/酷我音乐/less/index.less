@@ -1,0 +1,137 @@
+// out: ../css/
+
+@import "./base";
+
+
+body {
+    background-color: #f9fafb;
+    padding: 13.3333vw 4vw 0;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13.3333vw;
+    background-color: #fff;
+    padding: 0 4vw;
+
+    .left {
+        width: 62.6667vw;
+        height: 13.3333vw;
+        background: url(../assets/head.png) no-repeat;
+        background-size: contain;
+    }
+    
+    a {
+        width: 21.3333vw;
+        height: 8vw;
+        background-color: #ffe31b;
+        text-align: center;
+        border-radius: 4vw;
+        line-height: 8vw;
+        font-size: 3.7333vw;
+    }
+}
+
+.search {
+    width: 92vw;
+    height: 8.5333vw;
+    background-color: #f2f4f5;
+    color: #a1a4b3;
+    margin: 2.6667vw auto;
+    border-radius: 4.2667vw;
+    text-align: center;
+    line-height: 8.5333vw;
+    font-size: 3.7333vw;
+
+    span {
+        font-size: 4.2667vw;
+    }
+}
+.banner {
+    overflow: hidden;
+   ul {
+     display: flex;
+     animation: move 3s infinite steps(3);
+    li {
+
+        img {
+            width: 92vw;
+            height: 28.8vw;
+            border-radius: 1.3333vw;
+            object-fit: cover;
+        }
+    }
+   }
+}
+@keyframes move {
+    to {
+        transform: translateX(-276vw);
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.9333vw;
+    margin: 5.3333vw 0 4.2667vw;
+
+    h4 {
+        font-size: 5.3333vw;
+    }
+    a {
+        font-size: 3.2vw;
+        color: #a1a4b3;
+
+        span {
+            font-size: 3.2vw;
+        }
+    }
+}
+
+.rank {
+    .item {
+        
+        display: flex;
+        justify-content: space-between;
+        width: 96vw;
+        margin-top: 4.2667vw;
+        background-color: #fff;
+        border-radius: 1.3333vw;
+        img {
+            width: 28vw;
+            height: 28vw;
+            border-radius: 2.6667vw;
+        }
+       dl {
+        // width: 92vw;
+        height: 28vw;
+        margin: 0;
+        dt {
+            height: 7.6vw;
+            // margin-left: 5.0667vw;
+            font-size: 3.7333vw;
+            
+            span {
+                font-size: 3.2vw;
+            }
+        }
+        dd {
+            width: 58vw;
+            font-size: 3.2vw;
+            color: #a1a4b3;
+            height: 5.7333vw;
+            // 添加
+            margin: 0;
+        }
+       }
+    }
+    
+}
