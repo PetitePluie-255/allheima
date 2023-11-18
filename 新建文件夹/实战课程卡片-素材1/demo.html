@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实战课程卡片</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <style>
+    /* 清除默认样式 设置内减模式*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 设置网页背景色 */
+    body {
+      background-color: #E6E5E1;
+    }
+
+    /*  设置卡片样式 整体位置参照物确定 */
+    .card {
+      position: relative;
+      margin: 100px auto;
+      width: 500px;
+      height: 200px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    /* 设置伪元素的样式 */
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      left: 32px;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #E6E5E1;
+      z-index: 99;
+    }
+
+    .card::before {
+      top: -10px;
+    }
+
+    .card::after {
+      bottom: -10px;
+    }
+
+    /* 设置分割线 */
+    .card ul {
+      position: absolute;
+      left: 39px;
+      top: 5px;
+      list-style: none;
+      z-index: 99;
+    }
+
+    /* 设置小圆点 */
+    .card ul li {
+      margin: 6px 0;
+      width: 2px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #E6E5E1;
+    }
+
+    /* 设置 h2 标题样式 */
+    .card h2 {
+      z-index: 99;
+      position: absolute;
+      bottom: 0;
+      right: 130px;
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* 设置右箭头默认样式 */
+    .card .icon-youjiantou {
+      z-index: 100;
+      position: absolute;
+      right: 75px;
+      bottom: 25px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    /* 设置右侧文本样式 */
+    .card p {
+      z-index: 99;
+      position: absolute;
+      top: 20px;
+      right: 70px;
+      color: #333;
+      opacity: 0.7;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .card .pic {
+      z-index: 100;
+      width: 400px;
+      height: 200px;
+      background: url(./images/MWeb.jpg) no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    /* 设置 字体图标样式 */
+    .card .social {
+      position: absolute;
+      left: 60px;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 180px;
+      height: 64px;
+    }
+
+    .card i,
+    .card .social i {
+      opacity: 0;
+      transition: .5s;
+    }
+
+    .card:hover i {
+      opacity: 1;
+      transform: scale(1);
+      color: #fff;
+    }
+
+    /* 设置按钮默认样式 */
+    .card button {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 30px;
+      height: 30px;
+      background-color: #DA4D1D;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline: none;
+      transition: .5s;
+    }
+
+    .card:hover button {
+      transform: scale(16);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>MWeb</h2>
+    <i class="iconfont icon-youjiantou"></i>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="social">
+      <i class="iconfont icon-mengxiangtubiao"></i>
+      <i class="iconfont icon-xuexi1"></i>
+      <i class="iconfont icon-feishu_lark"></i>
+    </div>
+    <button></button>
+  </div>
+
+</body>
+
+</html>

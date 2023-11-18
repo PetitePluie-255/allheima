@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飞行动画</title>
+  <style>
+    /* 清除默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      letter-spacing: 3px;
+      /* 添加文本阴影 */
+      text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.6);
+      font-size: 40px;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px auto;
+      height: 800px;
+      background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url(./images/bg.png);
+      /* 定义背景色的混合模式 */
+      background-blend-mode: soft-light;
+      background-size: cover;
+      background-position: center center;
+      overflow: hidden;
+    }
+
+    .bird {
+      width: 88px;
+      height: 125px;
+      background-image: url(./images/bird-cells-new.svg);
+      background-size: auto 100%;
+      animation: sky 2s infinite steps(21);
+    }
+    /* 调整燕子的位置  从左侧开始出来*/
+    .bird-container {
+      position: absolute;
+      top: 20%;
+      left: -10%;
+    }
+    .bird-container-one {
+      animation: move 3s infinite linear;
+    }
+    .bird-container-two {
+      animation: move 1.5s infinite linear 2s;
+    }
+    .bird-container-three {
+      animation: move 1s infinite linear 2.3s;
+    }
+    .bird-container-four {
+      animation: move 1s infinite linear 2.5s;
+    }
+    @keyframes move {
+      to {
+        transform: translateX(2100px);
+      }
+    }
+    @keyframes sky {
+      to {
+        background-position: -1900px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Your future depends on your dreams.</h1>
+
+    <div class="bird-container bird-container-one">
+      <div class="bird bird_one"></div>
+    </div>
+
+    <div class="bird-container bird-container-two">
+      <div class="bird bird_two"></div>
+    </div>
+
+    <div class="bird-container bird-container-three">
+      <div class="bird bird_three"></div>
+    </div>
+
+    <div class="bird-container bird-container-four">
+      <div class="bird bird_four"></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

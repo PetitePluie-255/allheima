@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      
+      background-color: #E6E5E1;
+    }
+
+  
+    i {
+      opacity: 0;
+      font-size: 18px;
+      color: #fff;
+      transform: scale(0.1);
+      transition: all 0.2s ease;
+    }
+
+    .card {
+      position: relative;
+      margin: 100px auto;
+      width: 500px;
+      height: 200px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      left: 32px;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #E6E5E1;
+      z-index: 99;
+    }
+
+    .card::before {
+      top: -10px;
+    }
+
+    .card::after {
+      bottom: -10px;
+    }
+
+    .card ul {
+      position: absolute;
+      left: 39px;
+      top: 5px;
+      list-style: none;
+      z-index: 99;
+    }
+
+    .card ul li {
+      margin: 6px 0;
+      width: 2px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #E6E5E1;
+    }
+
+    .card h2 {
+      z-index: 99;
+      position: absolute;
+      bottom: 0;
+      right: 130px;
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+      /* 5. 鼠标穿透 */
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .card .icon-youjiantou {
+      z-index: 100;
+      position: absolute;
+      right: 75px;
+      bottom: 25px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .card p {
+      z-index: 99;
+      position: absolute;
+      top: 20px;
+      right: 70px;
+      color: #333;
+      opacity: 0.7;
+      font-size: 12px;
+      letter-spacing: 1px;
+      /* 3. 文字竖排 */
+      writing-mode: vertical-lr;
+      transition: all 0.2s ease;
+    }
+
+    .card .pic {
+      z-index: 100;
+      width: 400px;
+      height: 200px;
+      background: url(./images/MWeb.jpg) no-repeat center center;
+      background-size: 100% 100%;
+      /* 1. 灰度模式 */
+      filter: grayscale(100%);
+    }
+
+     
+
+
+    .card .social {
+      position: absolute;
+      left: 60px;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 180px;
+      height: 64px;
+    }
+
+    /* 4. 过渡延迟 */
+    .icon-mengxiangtubiao {
+      transition-delay: .3s;
+    }
+    .icon-xuexi1 {
+      transition-delay: .2s;
+    }
+    .icon-feishu_lark {
+      transition-delay: .1s;
+    }
+
+    .card button {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 30px;
+      height: 30px;
+      background-color: #DA4D1D;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+      /* 2. 背景混合模式 */
+      mix-blend-mode: hard-light;
+    }
+
+    .card:hover i {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .card:hover button {
+      transform: scale(16.5);
+    }
+
+    .card:hover p {
+      color: #fff;
+    }
+
+    /* 设置鼠标滑过效果 灰色填充为0 */
+     .card:hover .pic {
+      filter: grayscale(0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>MWeb</h2>
+    <i class="iconfont icon-youjiantou"></i>
+    <p>梦想起航</p>
+    <div class="pic"></div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="social">
+      <i class="iconfont icon-mengxiangtubiao"></i>
+      <i class="iconfont icon-xuexi1"></i>
+      <i class="iconfont icon-feishu_lark"></i>
+    </div>
+    <button></button>
+  </div>
+</body>
+</html>

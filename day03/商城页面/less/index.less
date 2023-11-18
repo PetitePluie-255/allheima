@@ -1,0 +1,161 @@
+//out:../css/
+@import url(../less/base.less);
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 1.333333rem;
+    background-color: #f40055;
+
+    h1 {
+        font-size: .32rem;
+        color: #fff;
+        margin-left: .4rem;
+        margin-right: .213333rem;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        width: 6rem;
+        height: .64rem;
+        background-color: #fff;
+        border-radius: .32rem;
+
+        span {
+            font-size: .426667rem;
+            margin-left: 8px;
+        }
+
+        input {
+            width: 5.44rem;
+            border-radius: .32rem;
+        }
+    }
+
+    .remind {
+        margin-left: .426667rem;
+
+        a {
+            font-size: .533333rem;
+            color: #fff;
+        }
+    }
+}
+
+.banner {
+    height: 5.546667rem;
+
+}
+
+.checkbox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 .4rem;
+
+    a {
+        display: block;
+        width: 1.706667rem;
+        height: 1.653333rem;
+        text-align: center;
+
+        span {
+            display: block;
+            width: 1.173333rem;
+            height: 1.173333rem;
+            font-size: .8rem;
+            color: #fff;
+            background-image: linear-gradient(#ff623b, #ff8061);
+            border-radius: 50%;
+            text-align: center;
+            margin-top: .4rem;
+            margin-left: .266667rem;
+        }
+
+        h5 {
+            font-size: .293333rem;
+            margin-top: .053333rem;
+
+        }
+    }
+}
+
+.banner-two {
+    position: relative;
+    height: 2.826667rem;
+    margin-top: .4rem;
+    background: #2d1778 url(../imgs/抢拍.png) no-repeat 4.08rem .266667rem;
+
+    .info {
+        position: absolute;
+        left: 2.106667rem;
+        top: .106667rem;
+        text-align: center;
+
+        height: 2.4rem;
+        color: #fff;
+
+        p {
+            font-size: 12px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .two {
+            font-size: 6px;
+        }
+
+        a {
+            display: block;
+            width: 1.68rem;
+            height: .48rem;
+            font-size: 12px;
+            background-color: orange;
+            border-radius: 9px;
+            line-height: .48rem;
+            margin: .266667rem auto 0;
+        }
+    }
+
+}
+
+.order {
+    position: fixed;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    display: flex;
+
+    width: 10rem;
+    height: 1.306667rem;
+    padding: 0 .693333rem;
+
+    a {
+        display: block;
+        width: .826667rem;
+        height: 1.12rem;
+        color: #999999;
+
+
+        span {
+            font-size: 30px;
+            line-height: 0;
+        }
+
+        h5 {
+
+            font-size: 10px;
+            text-align: center;
+            line-height: 0;
+        }
+    }
+
+    a:hover {
+        color: #2d1778;
+    }
+
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,38 +10,96 @@
   <link rel="stylesheet" href="./Bootstrap/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
 
-<!-- 导航条 -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="./assets/images/logo.png" alt="">
-    </a>
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
+  <!-- 导航条 -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">博客</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Github</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">TWeb Conf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">SuperStar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Web前端导航</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">关于</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 轮播图 -->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/uploads/banner_1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/uploads/banner_2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/uploads/banner_3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/uploads/banner_4.jpg" class="d-block w-100" alt="...">
+      </div>
     </div>
   </div>
-</nav>
 
-<!-- ================================================================================== -->
+  <!-- 产品 -->
+  <div class="product container">
+    <h3><span>OpenSource/</span>开源项目</h3>
+    <p>种类众多的开源项目，让你爱不释手</p>
+    <ul class="row">
+      <li class="col-md-6 col-lg-3">
+        <a href="#"></a>
+      </li>
+      <li class="col-md-6 col-lg-3">
+        <a href="#"></a>
+      </li>
+      <li class="col-md-6 col-lg-3">
+        <a href="#"></a>
+      </li>
+      <li class="col-md-6 col-lg-3">
+        <a href="#"></a>
+      </li>
+    </ul>
+  </div>
+  <!-- ================================================================================== -->
   <script src="./Bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>

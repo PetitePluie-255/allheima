@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+/* ----------------------------------------- */
+.bd-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bd-nav {
+    height: 39px;
+    background-color: #f2f2f2;
+}
+.bd-nav .container .left {
+    line-height: 39px;
+    /* margin-left: 24px; */
+    display: flex;
+    align-items: center;
+}
+.bd-nav .container .left li {
+    margin-left: 20px;
+    display: flex;
+}
+.bd-nav .container .left li a {
+    /* display: block; */
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+}
+
+.bd-nav .container .right {
+    display: flex;
+    line-height: 39px;
+}
+.bd-nav .container .right li {
+    display: flex;
+    margin-left: 20px;
+}
+.bd-nav .container .right li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+}
+.bd-nav .container .right li span {
+    color: #999;
+    margin: 0 10px;
+}
+
+.bd-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 142px;    
+}
+.bd-title .logo img {
+    width: 160px;
+    height: 50px;
+}
+.bd-title .search {
+    display: flex;
+    align-items: center;
+}
+.bd-title .search input {
+    justify-content: flex-end;
+    border: 2px solid #c79f54;
+    height: 40px;
+    width: 466px;
+    padding-left: 24px;
+    outline-style: none;
+}
+.bd-title .search img{
+    height: 40px;
+}
+.bd-move {
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 40px;
+}
+.bd-move .title {
+    height: 24px;
+    margin-top: 50px;
+}
+.bd-move .title h3 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.bd-move .pohot {
+
+    display: flex;
+    justify-content: space-between;
+    /* height: 610px; */
+}
+.bd-move .pohot .item {
+    position: relative;
+    margin-top: 22px;
+}
+
+.bd-move .pohot .item span{
+    width: 42px;
+    height: 20px;
+    background-color: #bf954d;
+    position: absolute;
+    bottom: 48px;
+    right: 0;
+}
+.bd-move .pohot .item h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.bd-life {
+    /* border-bottom: 1px solid #ededed; */
+    padding-bottom: 40px;
+}
+.bd-life .title {
+    height: 24px;
+    margin-top: 50px;
+}
+.bd-life .title h3 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.bd-life .pohot {
+    display: flex;
+    justify-content: space-between;
+    /* height: px;/ */
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 40px;
+}
+.bd-life .pohot .item {
+    margin-top: 22px;
+}
+.bd-life .pohot .item img {
+    width: 221px;
+    height: 155px;
+}
+.bd-life .pohot .item h4 {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: normal;
+    /* text-align: center; */
+}
+
+
+.bd-tour {
+    
+    margin-top: 22px;
+    
+}
+.bd-tour .title h3 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.bd-tour .tours img {
+    width: 385px;
+    height: 338px;
+}
+.bd-tour .tours .font h4 {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+.bd-tour .tours p {
+    font-size: 14px;
+    color: #666;
+}
+.bd-tour .tours {
+    display: flex;
+    justify-content: space-between;
+}
+.bd-tour .item {
+    position: relative;
+}
+.bd-tour .tours .font{
+    position: absolute;
+    top: 58px;
+    left: 40px;
+}
+
+.bd-footer {
+    height: 234px;
+    background-color: #f2f2f2;
+    padding-top: 50px;
+}
+.bd-footer .container {
+    height: 234px;
+    display: flex;
+}
+.bd-footer .container dl {
+    width: 241px;
+
+}
+.bd-footer .container dt {
+    height: 42px;
+    color: #222;
+    font-size: 16px;
+}
+.bd-footer .container dd {
+    color: #666;
+    font-size: 12px;
+    height: 34px;
+}
+.bd-footer .container dl:last-child dt  {
+    font-weight: 700;
+}
+.bd-footer .container dl:last-child dd a {
+    display: block;
+    width: 132px;
+    height: 38px;
+    border: 1px solid #bf954d;
+    text-align: center;
+    line-height: 36px;
+    text-decoration: none;
+    color: #bf954d;
+    border-radius: 2px;
+}

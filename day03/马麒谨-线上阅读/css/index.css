@@ -1,0 +1,178 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, PingFangSC-Regular, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #f6f5f8;
+}
+img {
+  vertical-align: bottom;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.wechat-head {
+  margin-bottom: 0.693333rem;
+}
+.header {
+  display: flex;
+  width: 10rem;
+  justify-content: space-evenly;
+  height: 1.306667rem;
+  background-color: #f6f5f8;
+}
+.header .search {
+  display: flex;
+  align-items: center;
+  width: 6.026667rem;
+  height: 1.306667rem;
+  background-color: #fff;
+  border-radius: 0.266667rem;
+}
+.header .search span {
+  width: 0.586667rem;
+  height: 0.586667rem;
+  font-size: 0.64rem;
+  margin-right: 0.293333rem;
+}
+.header .search input {
+  width: 5.066667rem;
+  height: 1.306667rem;
+  border: 0;
+  outline-style: none;
+  border-radius: 0.266667rem;
+  font-size: 0.533333rem;
+}
+.header .shopcar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 2.586667rem;
+  height: 1.306667rem;
+  background-color: #fff;
+  border-radius: 0.266667rem;
+}
+.header .shopcar span {
+  width: 0.586667rem;
+  height: 0.586667rem;
+  font-size: 0.64rem;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2.16rem;
+}
+.nav li:nth-child(6)::after {
+  display: none;
+}
+.nav li:nth-child(6) a {
+  font-size: 0.426667rem;
+  font-weight: 700;
+  color: #000000;
+}
+.nav li {
+  position: relative;
+}
+.nav li a {
+  display: block;
+  font-size: 0.4rem;
+  color: #98999a;
+}
+.nav li .tips:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.693333rem;
+  width: 0.72rem;
+  height: 0.106667rem;
+  background-image: linear-gradient(#ff5f40, #fe2f1e);
+  box-shadow: 0px 2px 8px 1px rgba(255, 50, 37, 0.44);
+  border-radius: 2px;
+}
+.banner {
+  width: 8.72rem;
+  height: 4.426667rem;
+  border-radius: 0.266667rem;
+  margin: 0 auto;
+  background: url(../uploads/轮播图.png);
+}
+.tip {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 3.626667rem;
+}
+.tip span {
+  display: block;
+  width: 1.28rem;
+  height: 1.28rem;
+  background-image: linear-gradient(#ff5f40, #fe2f1e);
+  border-radius: 50%;
+  margin-bottom: 0.32rem;
+  font-size: 0.613333rem;
+  text-align: center;
+  line-height: 1.2rem;
+  color: #fff;
+}
+.tip h5 {
+  font-size: 0.32rem;
+  text-align: center;
+  color: #999999;
+}
+.recommend {
+  height: 5.226667rem;
+  padding: 0 0.56rem;
+}
+.recommend .title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.72rem;
+}
+.recommend .title h2 {
+  font-size: 20px;
+}
+.recommend .title a {
+  font-size: 14px;
+  width: 1.306667rem;
+  height: 0.72rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 0.346667rem;
+  text-align: center;
+  line-height: 0.64rem;
+}
+.recommend .book {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 8.88rem;
+  height: 4.16rem;
+  background-color: #fff;
+  border-radius: 0.266667rem;
+  margin-top: 0.453333rem;
+}
+.recommend .book a img {
+  width: 2.266667rem;
+  height: 3.173333rem;
+}

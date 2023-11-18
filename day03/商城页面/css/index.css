@@ -1,0 +1,165 @@
+/* 去除常见标签默认的 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+  font: 16px/1.5 'PingFangSC-Regul', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+  color: #333;
+}
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 1.333333rem;
+  background-color: #f40055;
+}
+.header h1 {
+  font-size: 0.32rem;
+  color: #fff;
+  margin-left: 0.4rem;
+  margin-right: 0.213333rem;
+}
+.header .search {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 0.64rem;
+  background-color: #fff;
+  border-radius: 0.32rem;
+}
+.header .search span {
+  font-size: 0.426667rem;
+  margin-left: 8px;
+}
+.header .search input {
+  width: 5.44rem;
+  border-radius: 0.32rem;
+}
+.header .remind {
+  margin-left: 0.426667rem;
+}
+.header .remind a {
+  font-size: 0.533333rem;
+  color: #fff;
+}
+.banner {
+  height: 5.546667rem;
+}
+.checkbox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+}
+.checkbox a {
+  display: block;
+  width: 1.706667rem;
+  height: 1.653333rem;
+  text-align: center;
+}
+.checkbox a span {
+  display: block;
+  width: 1.173333rem;
+  height: 1.173333rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background-image: linear-gradient(#ff623b, #ff8061);
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 0.4rem;
+  margin-left: 0.266667rem;
+}
+.checkbox a h5 {
+  font-size: 0.293333rem;
+  margin-top: 0.053333rem;
+}
+.banner-two {
+  position: relative;
+  height: 2.826667rem;
+  margin-top: 0.4rem;
+  background: #2d1778 url(../imgs/抢拍.png) no-repeat 4.08rem 0.266667rem;
+}
+.banner-two .info {
+  position: absolute;
+  left: 2.106667rem;
+  top: 0.106667rem;
+  text-align: center;
+  height: 2.4rem;
+  color: #fff;
+}
+.banner-two .info p {
+  font-size: 12px;
+}
+.banner-two .info h3 {
+  font-size: 25px;
+  font-weight: 400;
+}
+.banner-two .info .two {
+  font-size: 6px;
+}
+.banner-two .info a {
+  display: block;
+  width: 1.68rem;
+  height: 0.48rem;
+  font-size: 12px;
+  background-color: orange;
+  border-radius: 9px;
+  line-height: 0.48rem;
+  margin: 0.266667rem auto 0;
+}
+.order {
+  position: fixed;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 10rem;
+  height: 1.306667rem;
+  padding: 0 0.693333rem;
+}
+.order a {
+  display: block;
+  width: 0.826667rem;
+  height: 1.12rem;
+  color: #999999;
+}
+.order a span {
+  font-size: 30px;
+  line-height: 0;
+}
+.order a h5 {
+  font-size: 10px;
+  text-align: center;
+  line-height: 0;
+}
+.order a:hover {
+  color: #2d1778;
+}

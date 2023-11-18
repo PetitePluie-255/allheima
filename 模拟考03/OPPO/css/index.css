@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i,em {
+    font-style: normal;
+}
+
+.container {
+    width: 1178px;
+    margin: 0 auto;
+}
+
+/* ========================================== */
+
+.oppo-header {
+    height: 28px;
+    background-color: #009b72;
+}
+
+.oppo-header ul {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    height: 28px;
+    padding-right: 12px;
+}
+
+.oppo-header ul li {
+    width: 67px;
+    height: 28px;
+    border-left: 2px solid rgba(255, 255, 255, .3);
+    text-align: center;
+    line-height: 28px;
+}
+
+.oppo-header ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ========================================== */
+
+.oppo-nav {
+    height: 78px;
+    background-color: #fff;
+    margin-bottom: 23px;
+}
+
+.oppo-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+}
+
+.oppo-nav .container .logo {
+    display: block;
+    width: 120px;
+    height: 25px;
+    background: url(../images/oppologo.png) no-repeat 0 center;
+    font-size: 0;
+}
+
+.oppo-nav .container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 532px;
+    padding-right: 22px;
+}
+
+.oppo-nav .container ul li a {
+    padding: 0 3px 6px;
+    border-bottom: 2px solid transparent;
+    color: #7b7b7b;
+    font-size: 14px;
+}
+
+.oppo-nav .container ul li .active {
+    border-bottom: 2px solid #2aae6f;
+    color: #333;
+}
+
+/* ============================================= */
+
+.oppo-product {
+    height: 768px;
+    margin-bottom: 65px;
+}
+
+.oppo-product .container {
+    height: 768px;
+}
+
+.oppo-product .container .title {
+    height: 29px;
+    color: #7b7b7b;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.oppo-product .content {
+    display: flex;
+    justify-content: space-between;
+    height: 738px;
+}
+
+.oppo-product .container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 770px;
+    height: 738px;
+}
+
+.oppo-product .container .bottom {
+    height: 362px;
+    /* background-color: #fff; */
+}
+
+.oppo-product .container .right {
+    width: 396px;
+    background-color: #2aae6f;
+}
+
+/* =================================== */
+
+.oppo-series {
+    height: 486px;
+    margin-bottom: 33px;
+}
+
+.oppo-series .container {
+    height: 486px;
+}
+
+.oppo-series .container .title .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 71px;
+}
+
+.oppo-series .container .line {
+    width: 475px;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.oppo-series .title .top h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.oppo-series .title h4 {
+    height: 29px;
+    color: #7b7b7b;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.oppo-series .title h4 span {
+    color: #333;
+}
+
+.oppo-series .content {
+    display: flex;
+    justify-content: space-between;
+    width: 879px;
+    height: 364px;
+}
+
+.oppo-series .content .item {
+    width: 286px;
+    padding-top: 60px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.oppo-series .content .item img {
+    width: 149px;
+    height: 178px;
+}
+ 
+.oppo-series .content .item .info {
+
+} 
+
+.oppo-series .content .item .info h4 {
+    padding-top: 38px;
+    padding-bottom: 6px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.oppo-series .content .item .info p {
+    color: #a1a1a1;
+    font-size: 12px;
+}
+
+/* ======================================== */
+
+
+.oppo-feature {
+    height: 379px;
+    margin-bottom: 173px;
+}
+
+.oppo-feature .container {
+    height: 379px;
+}
+.oppo-feature .container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+}
+
+.oppo-feature .container .line {
+    width: 475px;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.oppo-feature .title h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.oppo-feature .content {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+
+/* ========================================== */
+
+.oppo-links {
+    height: 176px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.oppo-links .container {
+    display: flex;
+    justify-content: space-between;
+    height: 176px;
+}
+
+.oppo-links .left {
+    display: flex;
+    justify-content: space-between;
+    width: 730px;
+}
+
+.oppo-links .left dt {
+    height: 40px;
+    color: #000;
+    font-size: 14px;
+}
+
+.oppo-links .left dd {
+    height: 26px;
+}
+
+.oppo-links .left dd a {
+    color: #363636;
+    font-size: 12px;
+}
+
+.oppo-links .right div{
+    flex-direction: column;
+    width: 160px;
+    height: 44px;
+    background: url(../images/icon-online.png);
+    background-size: 160px 44px;
+}
+
+.oppo-links .right p {
+    margin: 14px 0 5px;
+    color: #000;
+    font-size: 26px;
+}
+
+.oppo-links .right span {
+    color: #393939;
+}
+
+/* ============================================== */
+
+.oppo-footer .container {
+    display: flex;
+    justify-content: space-between;
+    height: 124px;
+    padding-top: 24px;
+}
+
+.oppo-footer .left {
+    display: flex;
+}
+
+.oppo-footer .left p {
+    font-size: 12px;
+    color: #7b7b7b;
+    line-height: 24px;
+}
+
+.oppo-footer .left div {
+    width: 24px;
+    height: 24px;
+    background: url(../images/icon-identification.png);
+    margin-left: 10px;
+}
+
+.oppo-footer .right {
+    display: flex;
+}
+
+.oppo-footer .right span {
+    font-size: 12px;
+    color: #7b7b7b;
+    line-height: 37px;
+}
+
+.oppo-footer .right div {
+    width: 110px;
+    height: 37px;
+    background: url(../images/weixin.png);
+    background-size:110px 37px;
+}
