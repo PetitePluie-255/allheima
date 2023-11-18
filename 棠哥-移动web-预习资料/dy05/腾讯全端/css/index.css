@@ -1,0 +1,7 @@
+.bg-body-tertiary {
+  background-color: aqua !important;
+}
+.bg-body-tertiary .container {
+  display: flex;
+  justify-content: space-between;
+}
