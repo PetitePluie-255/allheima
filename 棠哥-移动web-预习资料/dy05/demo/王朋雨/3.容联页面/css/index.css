@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =============================================== */
+
+.header {
+    height: 71px;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    width: 1219px;
+    height: 71px;
+    margin: 0 auto;
+}
+
+.header .container .logo {
+    display: block;
+    width: 140px;
+    height: 28px;
+    background: url(../images/logo.png) no-repeat;
+    margin-left: 15px;
+    font-size: 0;
+}
+
+.header .container .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 488px;
+    margin-left: 200px;
+}
+
+.header .container .nav a {
+    color: #000;
+}
+
+.header .container .nav a:hover {
+    color: #01af85;
+}
+
+.header .container span {
+    margin-left: 64px;
+    
+}
+
+.header .container span a {
+    color: #333;
+}
+
+.header .container span a:hover {
+    color: #01af85;
+}
+
+.header .container .login,.register {
+    width: 83px;
+    height: 31px;
+    border: 1px solid #37c6a9;
+    margin-left: 58px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 29px;
+    color: #18bd9c;
+}
+
+.header .container .register {
+    margin-left: 12px;
+}
+
+.header .container .register:hover,.login:hover {
+    background-color: #18bd9c;
+    color: #fff !important;
+}
+
+/* =========================================== */
+
+.banner {
+    position: relative;
+    height: 500px;
+    background: url(../images/index_banner4.jpg) no-repeat center ;
+    background-size: cover;
+}
+
+.banner ol {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 125px;
+    height: 16px;
+}
+
+.banner ol li {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.banner .active {
+    border-color: #fff;
+}
+
+
+/* =============================================== */
+
+.service {
+    height: 355px;
+}
+
+.service .container {
+    width: 980px;
+    height: 355px;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+.service .container h2{
+    margin: 0 auto;
+    margin-bottom: 23px;
+    text-align: center;
+}
+
+.service .container .subhead {
+    width: 248px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.service .container .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service .container .item {
+    width: 50px;
+    height: 76px;
+}
+
+.service .container .item .pic {
+    width: 50px;
+    height: 50px;
+    background: url(../images/index_new_icon.png) -21px -53px;
+    margin-bottom: 22px;
+}
+
+.service .container .item:nth-child(2) .pic {
+    width: 50px;
+    height: 50px;
+    background: url(../images/index_new_icon.png) -79px -48px;
+    margin-bottom: 22px;
+}
+
+.service .container .item:nth-child(3) .pic {
+    width: 50px;
+    height: 50px;
+    background: url(../images/index_new_icon.png) -132px -48px;
+    margin-bottom: 22px;
+}
+
+.service .container .item:nth-child(4) .pic {
+    width: 50px;
+    height: 50px;
+    background: url(../images/index_new_icon.png) -190px -48px;
+    margin-bottom: 22px;
+}
+
+.service .container .item p {
+    width: 50px;
+    text-align: center;
+}
+
+.service .container .item:nth-child(4) .pic {
+    margin: 0 auto;
+    margin-bottom: 22px;
+}
+
+.service .container .item:nth-child(4)  {
+    width: 114px;
+}
+
+.service .container .item:nth-child(4) p {
+    width: 114px;
+}
+
+/* =============================================== */
+
+.product {
+    height: 320px;
+    background-color: #2a2a2a;
+    margin-bottom: 88px;
+}
+
+.product .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1004px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.product .container .item {
+    width: 206px;
+    height: 46px;
+}
+
+.product .container .item h4 {
+    height: 32px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.product .container .item p {
+    color: #999;
+    font-size: 12px;
+}
+
+/* ============================================ */
+
+.evaluation {
+    height: 665px;
+    background: url(../images/index_bg2.png) no-repeat center;
+}
+
+.evaluation .container {
+    width: 1155px;
+    height: 408px;
+    padding-top: 96px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    border-bottom: 3px solid #efefef;
+}
+
+.evaluation .container h3 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 88px;
+}
+
+.evaluation .container .info {
+    display: flex;
+    justify-content: space-between;
+    height: 156px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.evaluation .container .info .item {
+    width: 110px;
+}
+
+.evaluation .container .item .pic {
+    width: 110px;
+    height: 110px;
+    background: url(../images/index_new_icon.png) -19px -393px;
+}
+
+.evaluation .container .item:nth-child(2) .pic {
+    width: 110px;
+    height: 110px;
+    background: url(../images/index_new_icon.png) -372px -393px;
+}
+
+.evaluation .container .item:nth-child(3) .pic {
+    width: 110px;
+    height: 110px;
+    background: url(../images/index_new_icon.png) -256px -393px;
+}
+
+.evaluation .container .item:nth-child(4) .pic {
+    width: 110px;
+    height: 110px;
+    background: url(../images/index_new_icon.png) -136px -393px;
+}
+.evaluation .container .item:nth-child(5) .pic {
+    width: 110px;
+    height: 110px;
+    background: url(../images/index_new_icon.png) -489px -393px;
+}
+.evaluation .container .item:nth-child(6) .pic {
+    width: 110px;
+    height: 110px;
+    background: url(../images/index_new_icon.png) -606px -393px;
+}
+
+.evaluation .container .info p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.evaluation .introduce {
+    width: 622px;
+    height: 63px;
+    margin: 0 auto;
+}
+
+.evaluation .introduce p {
+    width: 622px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* =========================================== */
+
+.dynamic {
+    height: 559px;
+}
+
+.dynamic .container {
+    width: 1198px;
+    height: 553px;
+    margin: 0 auto;
+    padding-top: 98px;
+}
+
+.dynamic .container h3 {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.dynamic .container .content {
+    display: flex;
+    justify-content: space-between;
+    height: 339px;
+}
+
+.dynamic .container .content .item {
+    position: relative;
+    width: 342px;
+    border: 1px solid #eee;
+}
+
+.dynamic .container .content .item h4 {
+    margin-top: 25px;
+    margin-left: 27px;
+    margin-bottom: 37px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dynamic .container .content .item span {
+    margin-left: 65px;
+    font-size: 14px;
+    color: #747474;
+}
+
+.dynamic .container .content .item::after {
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url(../images/index_new_icon.png) 0 -243px;
+}
+
+/* ======================================== */
+
+.footer {
+    height: 313px;
+    background-color: #2c2d2c;
+}
+
+.footer .container {
+    position: relative;
+    width: 1032px;
+    height: 313px;
+    padding-top: 72px;
+    margin: 0 auto;
+}
+
+.footer .container .links {
+    width: 875px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .container .links dt {
+    height: 40px;
+    color: #fff;
+    font-size: 21px;
+}
+
+.footer .container .links dd {
+    line-height: 36px;
+}
+
+.footer .container .links dd a {
+    color: #888;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+.footer .container .code {
+    position: absolute;
+    right: 0;
+    top: 120px;
+    width: 88px;
+    height: 100px;
+}
+
+.footer .container .code::before {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    content: url(../images/wximg.jpg);
+    width: 78px;
+    height: 78px;
+}
+
+.footer .container .code p {
+    position: absolute;
+    bottom: -3px;
+    left: 7px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}

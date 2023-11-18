@@ -1,0 +1,251 @@
+@import url(./base.less);
+
+body {
+    background-color: #f5f6f8;
+    font-size: 0 !important;
+}
+
+
+.header {
+    height: 2.426667rem;
+    margin-bottom: .48rem;
+    .top {
+        height: .64rem;
+        background: url(../uploads/微信头.png) no-repeat;
+        background-size: contain;
+        margin-bottom: .48rem;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+
+        .search {
+                position: relative;
+                padding-left: .56rem;
+                margin-right: .373333rem;
+        
+                // width: 6.026667rem;
+                // height: 1.306667rem;
+                // background-color: #fff;
+                input {
+                    width: 6.026667rem;
+                    height: 1.306667rem;
+                    background-color: #fff;
+                    padding-left: 1.253333rem;
+                    outline-style: none;
+                    border: none;
+                    border-radius: .266667rem;
+                    font-size: .48rem;
+                }
+        
+                span {
+                    position: absolute;
+                    left: .373333rem + .56;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: .586667rem;
+                }
+            }
+        
+            .box {
+                position: relative;
+                width: 2.586667rem;
+                height: 1.306667rem;
+                background-color: #fff;
+                border-radius: .266667rem;
+        
+                span {
+                    position: absolute;
+                    left: .453333rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: .586667rem;
+                }
+        
+                em {
+                    position: absolute;
+                    right: .346667rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: .586667rem;
+                }
+            }
+    }
+}
+
+.nav {
+    position: relative;
+    height: .986667rem;
+    margin-bottom: .72rem;
+    padding: 0 1.36rem;
+
+    ul {
+       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: .986667rem;
+        // background-color: aqua;
+        
+
+        a {
+            border-radius: .053333rem;
+            color: #98999a;
+            font-size: .4rem;
+        }
+
+        li {
+            position: relative;
+        }
+        .active::after {
+                position: absolute;
+                top: .466667rem;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                content: '';
+                width: .72rem;
+                height: .106667rem;
+                background-image: linear-gradient(#ff5f40, #fe2f1e);
+                margin: 0 auto;
+                margin-top: .186667rem;
+                border-radius: .053333rem;
+                box-shadow: 0px 2px 8px 1px rgba(255, 50, 37, 0.44);
+            }
+        .active a {
+            color: #000;
+        }
+        
+
+        
+    }
+
+    span {
+        position: absolute;
+        right: .386667rem;
+        top: 53%;
+        transform: translateY(-50%);
+        color: #000;
+        font-size: .48rem;
+        font-weight: 700;
+    }
+}
+
+.banner {
+    position: relative;
+    height: 4.426667rem;
+    // background-color: #fe2f1e;
+    text-align: center;
+    margin-bottom: .72rem;
+
+    .left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: .373333rem;
+        height: 3.946667rem;
+        background-color: #c754ed;
+        border-radius: 0 .266667rem .266667rem 0;
+    }
+
+    img {
+        width: 8.72rem;
+        height: 4.426667rem;
+        border-radius: .266667rem;
+    }
+
+    .right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: .373333rem;
+        height: 3.946667rem;
+        background-color: #2c8eea;
+        border-radius: .266667rem 0 0 .266667rem;
+    }
+}
+
+.type {
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    // background-color: #2c8eea;
+    padding: 0 .746667rem;
+    margin-bottom: .933333rem;
+
+    .item {
+        
+        height: 2rem;
+        text-align: center;
+
+        .pic {
+            width: 1.28rem;
+            height: 1.28rem;
+            background-image: linear-gradient(180deg,#ff5f40 0%,#fe2f1e 100%);
+            border-radius: 50%;
+            line-height: 1.28rem;
+            
+            span {
+                color: #fff;
+                font-size: .613333rem;
+            }
+        }
+
+        p {margin-top: .32rem;
+            color: #999999;
+            font-size: .32rem;
+        }
+    }
+}
+
+.footer {
+    height: 5.226667rem;
+    // background-color: #c754ed;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: .72rem;
+        // background-color: #2c8eea;
+        padding: 0 .586667rem;
+        margin-bottom: .453333rem;
+
+        h3 {
+            color: #2d2a2e;
+            font-size: .533333rem;
+            font-weight: 400;
+        }
+
+        .all {
+            width: 1.306667rem;
+            height: .72rem;
+            border-radius: .346667rem;
+            border: solid .026667rem #dcdcdc;
+            color: #2d2a2e;
+            font-size: .373333rem;
+            text-align: center;
+            line-height: .72rem;
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        height: 4.16rem;
+        background-color: #fff;
+        margin:  0 .573333rem;
+        padding: 0 .573333rem;
+        padding-top: .506667rem;
+        border-radius: .266667rem;
+
+        img {
+            width: 2.266667rem;
+            height: 3.173333rem;
+            border-radius: .266667rem;
+        }
+    }
+}

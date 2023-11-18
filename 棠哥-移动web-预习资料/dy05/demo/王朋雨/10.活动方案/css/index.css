@@ -1,0 +1,162 @@
+/* 去除常见标签默认的 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+  font: 18px/1 "PingFangSC-Regul", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+body {
+  background-color: #f5f3f3;
+}
+.header {
+  height: 38.9333vw;
+  width: 100vw;
+}
+.sel {
+  height: 16vw;
+}
+.sel .container {
+  width: 92vw;
+  height: 16vw;
+  margin: 0 auto;
+  padding: 0 5.6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sel .container .box {
+  width: 9.3333vw;
+  height: 9.3333vw;
+  background-color: #ff5557;
+  border-radius: 50%;
+  margin-bottom: 1.6vw;
+}
+.sel .container .box span {
+  font-size: 4.9333vw;
+  margin-left: 2vw;
+  line-height: 9.3333vw;
+}
+.main {
+  height: 34.6667vw;
+  width: 91.7333vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main .left {
+  width: 34.6667vw;
+  height: 34.6667vw;
+}
+.main .right {
+  width: 55.4667vw;
+  height: 34.6667vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.main .right .box {
+  width: 55.4667vw;
+  height: 16vw;
+}
+.main2 {
+  width: 92vw;
+  height: 18.6667vw;
+  background-color: white;
+  margin: 4vw auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.6vw;
+}
+.main2 img {
+  height: 18.6667vw;
+  width: 30.2667vw;
+}
+.main2 .zi h3 {
+  font-size: 4.8vw;
+  font-weight: 400;
+  padding-bottom: 1.3333vw;
+}
+.main2 .zi p {
+  font-size: 3.2vw;
+  color: #7f7f7f;
+}
+.main2 .commend {
+  height: 3.8667vw;
+  width: 13.3333vw;
+  background-image: linear-gradient(to right, #ff9a67 30%, #ff645f 90%);
+  border-radius: 2vw;
+  text-align: center;
+  line-height: 3.8667vw;
+  color: white;
+  font-size: 2.4vw;
+}
+.main3 {
+  width: 92vw;
+  height: 40.8vw;
+  margin: 0 auto;
+  background-color: white;
+  padding: 3.2vw 3.2vw;
+}
+.main3 .title {
+  display: flex;
+  align-items: center;
+}
+.main3 .title .gan {
+  height: 5.8667vw;
+  width: 0.5333vw;
+  background-color: black;
+}
+.main3 .title h2 {
+  padding-left: 2.6667vw;
+  font-size: 6vw;
+  font-weight: 400;
+}
+.main3 .footer {
+  width: 87.4667vw;
+  height: 19.2vw;
+  margin: 4vw auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.main3 .footer .box {
+  width: 27.4667vw;
+  height: 8.2667vw;
+  background-color: #eff2f5;
+  font-size: 3.0667vw;
+  text-align: center;
+  line-height: 8.2667vw;
+  color: #212121;
+}
