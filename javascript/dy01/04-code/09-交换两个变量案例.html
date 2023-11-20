@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>交换2个变量案例</title>
+</head>
+
+<body>
+  <script>
+    // 需求：交换2个变量
+    // 1.先定义一个临时变量 temp 用来临时存储数据作为交换数据的中转
+    // 2.定义两个变量 apple orange作为交换数据的原始变量
+    // 3.先把apple 的值赋给temp 再把orange的值赋给apple  最后把temp的值赋给orange 完成数据交换
+    // 定义临时变量temp 和 原始 变量 apple orange
+    let temp
+    let apple = '苹果汁'
+    let orange = '橙子汁'
+    temp = apple
+    apple = orange
+    orange = temp
+    console.log('apple:' + apple , 'orange:' + orange);
+  </script>
+</body>
+
+</html>
