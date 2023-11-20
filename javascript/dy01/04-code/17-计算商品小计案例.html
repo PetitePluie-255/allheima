@@ -37,7 +37,10 @@
 
   <script>
     // 需求：用户输入商品价格和数量，可以计算出小计，显示到页面中
-   
+   let price = prompt('请输入价格')
+   let num = prompt('请输入数量')
+   let amount = price * num
+   document.querySelector('#title').innerHTML = `商品单价：${price}元, 购买数量：${num}, 总计：¥${amount}`
 
 
   </script>

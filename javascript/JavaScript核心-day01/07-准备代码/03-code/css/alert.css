@@ -1,0 +1,21 @@
+.el-alert {
+  width: 500px;
+  padding: 16px;
+  margin: 50px auto;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+  background-color: #f4f4f5;
+  color: #909399;
+}
+
+.el-alert__title {
+  font-size: 18px;
+  line-height: 18px;
+}

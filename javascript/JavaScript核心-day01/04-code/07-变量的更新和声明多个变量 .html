@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>变量的更新和声明多个变量</title>
+</head>
+
+<body>
+  <script>
+
+    // 1. 更新变量
+    // let age = 10
+    // age = 20
+    // console.log(age)
+    
+    // 2. 注意: 不要多次声明同一个变量
+    // let age1 = 10
+    // let age1 = 20
+
+    // 3. 一次声明多个变量的简写方式 (了解 能认出来就可以了)
+    // let num = 10
+    // let str = '你好'
+    // let age = 50
+
+    // 阅读体验不是特别友好, 所以建议 每一行声明一个变量即可
+    // let num = 10, str = '你好', age = 50
+    // console.log(num)
+    // console.log(str)
+    // console.log(age)
+
+    // --------------------------------
+    // var和let的区别 
+    // 1. 可以先使用, 在声明 (不合理)
+    console.log(age); 
+    var age = 30
+
+    // 2. var声明的变量可以重复的去声明 (不合理)
+    // var age = 10
+    // var age = 20
+    // console.log(age);
+  </script>
+</body>
+
+</html>

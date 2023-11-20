@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>基本数据类型:布尔型、未定义和空类型</title>
+</head>
+
+<body>
+  <script>
+    // 1. 布尔型: 是用于判断真假的数据类型，主要用于判断条件是否成立 true false
+    let flag = true
+    let flag1 = false
+    console.log(typeof flag);
+    console.log(typeof flag1);
+    
+
+    // 2. 未定义数据类型  undefined  声明一个变量，未给值，则变量的默认值就是undefined
+    // 2.1 使用场景： 我们可以通过检测变量里面的值是否是undefined，如果是则代表还没有值传递进来，那我们就不能随意的拿着这个变量来处理数据了
+    let age 
+    // 写了很多的逻辑, 等待数据的回传
+    // 通过最终的age的值来判断用户回传是否成功
+
+    console.log(age)  // undefined
+    console.log(typeof age)  // undefined
+
+
+    // 3. null 空类型
+    // null 和 undefined 的区别
+    // undefined  声明未赋值
+    // null 声明并且赋值了，值是空的
+    let obj = null
+    console.log(obj);
+    console.log(typeof obj); // object 实际指的是复杂数据类型 (对象类型)
+    // null是JavaScript一直存在的一个bug, 实际还是基本数据类型 (简单数据类型)
+    // 了解即可
+
+
+
+  </script>
+</body>
+
+</html>

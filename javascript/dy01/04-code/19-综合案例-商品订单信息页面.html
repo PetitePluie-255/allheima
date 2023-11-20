@@ -71,6 +71,14 @@
 
     <script>
       // 需求：用户输入商品价格和商品数量，以及收货地址，可以自动打印订单信息
+      let price = prompt('请输入商品价格')
+      let num = prompt('请输入商品数量')
+      let address = prompt('请输入收货地址')
+      let generalPrice = price * num
+      document.querySelector('tr:nth-child(2) td:nth-child(2)').innerHTML = `${price}元`
+      document.querySelector('tr:nth-child(2) td:nth-child(3)').innerHTML = num
+      document.querySelector('tr:nth-child(2) td:nth-child(4)').innerHTML = `${generalPrice}元`
+      document.querySelector('tr:nth-child(2) td:nth-child(5)').innerHTML = address
     </script>
   </body>
 </html>

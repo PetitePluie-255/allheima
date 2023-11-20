@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>变量命名规范</title>
+  </head>
+
+  <body>
+    <script>
+      //  规则（法律） 必须遵守, 不遵守报错 =======================
+      // 1. 变量名不能是关键字
+      // let uname = '张三'
+      // let if  = '李四'
+
+      // 2. 变量名的组成: 英文字母 数字 _  $ ，不能以数字开头
+      let _uname = '张三'
+      let _uname123 = '李四'
+      let $name = '王五'
+      let nam123e = '赵六'
+
+      // 3. js严格区分大小写
+      let age = 30
+      let Age = 40
+      console.log(age)
+      console.log(Age)
+
+      //  规范（道德） =======================
+      // 1. 起名要有意义 - 更有语义化
+      // 获取用户输入的姓名
+      // let uname = prompt('xxx')
+
+
+      // 2. 命名建议采取小驼峰命名法
+      // 小驼峰: 多个单词, 首个单词小写, 后面每个单词首字母大写
+      let userName = '张三'
+      // usernameinfo
+      let userNameInfo = '张三'
+    </script>
+  </body>
+</html>

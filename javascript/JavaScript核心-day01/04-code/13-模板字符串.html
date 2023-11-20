@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模板字符串</title>
+</head>
+
+<body>
+  <script>
+    // 1. 字符串拼接
+    // 字符拼接 数字相加
+    let age = 20
+    console.log('我今年' + age + '岁了');
+    console.log('我今年${age}岁了');
+
+    // let num1 = 20
+    // let num2 = 30
+    // console.log(num1 + num2); // 50
+
+    // 2. 模板字符串 反引号
+    // 使用场景: 字符串 拼接 变量
+    let age1 = 30
+    console.log(`
+    我今年
+    ${age1}岁了
+    `);
+
+    // -----------------
+    // 模板字符串可以解析变量
+    // 单引号或者双引号中间的字符串不能换行, 会报错
+    // 模板字符串是可以换行
+
+  </script>
+</body>
+
+</html>

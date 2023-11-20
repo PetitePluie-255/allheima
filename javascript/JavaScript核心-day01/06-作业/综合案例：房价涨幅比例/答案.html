@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .title {
+      text-align: center;
+      color: #3e3e3e;
+    }
+
+    .table {
+      /* 合并相邻边框 */
+      border-collapse: collapse;
+      width: 600px;
+      height: 80px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+    }
+
+    /* 给行添加渐变背景颜色 */
+    .table thead tr:nth-child(1) {
+      background-image: linear-gradient(to right, #f46e33, #f057a5);
+    }
+
+    .table tr:nth-child(n + 1) {
+      background-image: linear-gradient(to right, #fdf0eb, #fdeff6);
+    }
+
+    .table tr:nth-child(n + 2) :last-child {
+      color: #f282bb;
+    }
+
+    .table th {
+      padding: 5px 50px;
+      color: #fff;
+    }
+
+    .table,
+    th,
+    td {
+      border: 1px solid #fff;
+      line-height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="title">房价涨幅比例</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>月份</th>
+        <th>房价</th>
+        <th>涨幅比例</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1月</td>
+        <td>8000</td>
+        <td>0%</td>
+      </tr>
+      <tr>
+        <td>2月</td>
+        <td>9500</td>
+        <td>0%</td>
+      </tr>
+      <tr>
+        <td>3月</td>
+        <td>13000</td>
+        <td>0%</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    // 1. 用户输入（四月份房价存储到变量中）
+    let priceNum = prompt('请输入四月份的房价')
+
+    // 2. 数据处理（计算每月的房价涨幅比例）
+    let num2 = (9500 - 8000) / 8000 * 100
+    let num3 = (13000 - 9500) / 9500 * 100
+    let num4 = (priceNum - 13000) / 13000 * 100
+
+    // 变量.toFixed( 小数点后几位 )
+    // console.log(num2.toFixed(2), num3.toFixed(2))
+
+    // 3. 输出结果
+    document.querySelector('.table tbody').innerHTML = `
+      <tr>
+        <td>1月</td>
+        <td>8000</td>
+        <td>0%</td>
+      </tr>
+      <tr>
+        <td>2月</td>
+        <td>9500</td>
+        <td>${num2} %</td>
+      </tr>
+      <tr>
+        <td>3月</td>
+        <td>13000</td>
+        <td>${num3} %</td>
+      </tr>
+      <tr>
+        <td>4月</td>
+        <td>${priceNum}</td>
+        <td>${num4} %</td>
+      </tr>
+    `
+  </script>
+</body>
+
+</html>

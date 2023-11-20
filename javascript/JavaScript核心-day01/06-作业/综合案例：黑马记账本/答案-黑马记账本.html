@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h3 class="title">黑马记账本</h3>
+
+    <div class="main">
+      <!-- 总体概览区域 -->
+      <ul class="panel">
+        <li>
+          <p>支出</p>
+          <p>-6000</p>
+        </li>
+        <li>
+          <p>收入</p>
+          <p>+10000</p>
+        </li>
+        <li>
+          <p>结余</p>
+          <p>+4000</p>
+        </li>
+      </ul>
+
+      <!-- 具体支出区域 -->
+      <ul class="info">
+        <li>
+          <p>饮食</p>
+          <p>-￥28</p>
+        </li>
+        <li>
+          <p>打车</p>
+          <p>-￥30</p>
+        </li>
+        <li>
+          <p>话费</p>
+          <p>-￥80</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // 1. 变量存储
+    let total = prompt('请输入本月收入:')
+    let eat = prompt('请输入本月饮食支出:')
+    let car = prompt('请输入本月打车支出:')
+    let phone = prompt('请输入本月话费支出:')
+
+    // 2. 处理数据（本月结余的计算结果）
+    let money = total - eat - car - phone
+    console.log(money)
+
+    // 3. 渲染页面
+    document.querySelector('.main').innerHTML = `
+      <!-- 总体概览区域 -->
+      <ul class="panel">
+        <li>
+          <p>支出</p>
+          <p>-${total - money}</p>
+        </li>
+        <li>
+          <p>收入</p>
+          <p>+${total}</p>
+        </li>
+        <li>
+          <p>结余</p>
+          <p>+${money}</p>
+        </li>
+      </ul>
+
+      <!-- 具体支出区域 -->
+      <ul class="info">
+        <li>
+          <p>饮食</p>
+          <p>-￥${eat}</p>
+        </li>
+        <li>
+          <p>打车</p>
+          <p>-￥${car}</p>
+        </li>
+        <li>
+          <p>话费</p>
+          <p>-￥${phone}</p>
+        </li>
+      </ul>
+    `
+  </script>
+</body>
+
+</html>

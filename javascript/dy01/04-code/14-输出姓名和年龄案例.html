@@ -56,7 +56,13 @@
 
   <script>
     // 需求：页面弹出对话框，输入名字和年龄，页面显示：员工信息
-
+    // 先定义 uname变量用来存储prompt用户输入框输入的姓名数据
+    let uname = prompt('请输入您的姓名')
+    // 在定义 age变量用来存储prompt用户输入框输入的年龄数据
+    let age = prompt('请输入您的年龄')
+    // 最后使用document.querySelector().innerHTML 输出
+    document.querySelector('#job').innerHTML = `总裁办 | ${uname} ${age}`
+    //document.querySelector('#job').innerHTML = '总裁办 | + uname + age'
   </script>
 </body>
 

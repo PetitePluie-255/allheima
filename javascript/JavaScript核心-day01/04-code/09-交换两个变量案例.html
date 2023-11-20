@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>交换2个变量案例</title>
+</head>
+
+<body>
+  <script>
+    // 需求：交换2个变量
+    // =  赋值 将 = 右侧的数据/ 值赋给左侧的变量(容器)
+    let apple = '苹果汁' 
+    let orange = '橘子汁'
+    // 1. 声明一个临时的变量 temp 
+    // 2. 将apple汁倒给temp杯子里
+    // let temp 
+    // temp = apple
+    let temp = apple
+    // 3. 将orange橘子汁倒给apple杯子里
+    apple = orange
+    // 4. 将temp临时的杯子中的苹果汁倒给orange杯子里
+    orange = temp
+    console.log(apple); // 橘子汁
+    console.log(orange); // 苹果汁
+  </script>
+</body>
+
+</html>
