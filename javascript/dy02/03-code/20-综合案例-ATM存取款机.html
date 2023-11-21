@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>综合案例-ATM存取款机</title>
+    <link rel="stylesheet" href="./css/alert.css" />
+  </head>
+
+  <body>
+    <div role="alert" class="el-alert">
+      <span class="el-alert__title" id="title"> </span>
+    </div>
+
+    <script>
+      // 综合案例 - ATM存取款机
+      // 需求：用户可以选择存钱、取钱、查看余额和退出功能
+      let money = 10000 
+      while (true) {
+        let a = +prompt(`请选择您的操作:
+        1.取款
+        2.存款
+        3.查看余额
+        4.退出`)
+
+        if (a === 1 ) {
+          // 1.取钱
+          let get = +prompt('请输入取款金额')
+          money -= get
+        } else if (a === 2) {
+          // 2.存钱
+          let add = +prompt('请输入存款金额')
+          money += add
+        } else if (a === 3) {
+          // 3.查询余额
+          alert(`您当前余额为${money}元`)
+        } else if (a === 4) {
+          // 4.退出，并打印金额
+          document.querySelector('#title').innerHTML = `您当前余额为${money}元`
+          break
+        } else {
+          alert('请正确输入')
+        }
+        
+      }
+    </script>
+  </body>
+</html>

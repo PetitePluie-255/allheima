@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>比较运算符(关系运算符)</title>
+  </head>
+
+  <body>
+    <script>
+      // 比较运算符
+      let num = 10
+      let num1 = 20
+      // console.log(num < num1);
+      // 全等 ===  类型和值完全相等
+      // console.log(1 === 1); // true
+      // 左侧的类型是number 右侧的类型是string 
+      // 左侧和右侧的值是相同
+      console.log(1 === '1'); // false
+
+      // ==  不关心类型 只关心值
+      console.log(1 == '1'); // true
+
+      // === 用的比较多 严格判断 既要判断类型 又要判断值
+
+      // ============================
+      console.log(10 == '10' ); // true
+      console.log(10 != '10' ); // false
+
+      console.log(10 === '10'); // false
+      console.log(10 !== '10'); // true
+      // ! 取反  值 是 true ! 变成了 false  / 值是false ! 变成了true
+    </script>
+  </body>
+</html>

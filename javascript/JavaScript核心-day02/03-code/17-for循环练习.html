@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for循环练习</title>
+</head>
+
+<body>
+  <script>
+    // for 循环练习
+
+    // 1. 控制台中输出年龄 (1~100岁)
+    for (let i = 1; i<= 100; i++) {
+      // console.log(`我今年${i + 1 }岁了`);
+    }
+
+
+    // 2. 控制台中输出1~100以内的偶数
+    for(let i = 1; i<= 100; i++) {
+      if (i % 2 === 0) {
+        // console.log(i);
+      }
+    }
+
+
+    // 3. 求 1~100 之间的累加和 （拿着前面 累加的值 和 下一个数字 相加）
+    // 3.1 声明一个变量 - 累加的和
+    // let sum = 0
+    // for(let i =1; i<= 100;i++) {
+    //   // sum+= i
+    //   sum = sum + i
+    // }
+    // // 等到循环结束之后, 再获取对应的值
+    // console.log(sum);
+
+
+    // 4. 求 1~100 之间的所有偶数/ 所有奇数的和
+    let sum = 0  // 偶数 
+    let sum1 = 0 // 奇数  
+    for(let i = 1; i<= 100; i++) {
+      if (i % 2 === 0) {
+        // 所有的偶数都会经过这里
+        sum += i // 
+      } else {
+        // 所有的奇数也会经过这里
+        sum1 += i
+      }
+      // if (i % 2 !== 0)
+      // if (i % 2 === 1) {
+      //   sum1 += i
+      // }
+    }
+    console.log(sum);
+    console.log(sum1);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据类型转换-数字型</title>
+  </head>
+
+  <body>
+    <script>
+      // // 第一个数字
+      let num1 = +prompt('请输入第一个月工资:')
+      // 第二个数字
+      let num2 = +prompt('请输入第二个月工资:')
+      // 输出求和结果
+      console.log(num1 + num2); // 200
+      // console.log(typeof (num1 + num2)); // string
+
+      // //  显示转换 Number() 把其他类型转换为数字型
+      // // 最常用的一种方式 推荐
+      // // 1. 把字符串转换为数字型
+      // console.log(Number(num1 + num2))  // 错误
+      console.log(Number(num1) + Number(num2))  // 正确);
+
+      // console.log(Number('12px'));
+      // 2. 把布尔值转换为数字型 true false
+      // console.log(Number(true)); 
+      // console.log(Number(false)); 
+
+      // // 3. 把 null undefined 转换为数字型
+      // console.log(Number(null)); // 0
+      // console.log(Number(undefined)); // NaN
+
+      //  显示转换 parseInt()、parseFloat()
+      // console.log(parseInt('12px')); // 12
+      // console.log(parseInt('px12')); // NaN
+      // console.log(parseInt('12.88')); // 12 
+
+      // console.log(parseFloat('12px')); // 12
+      // console.log(parseFloat('px12')); // NaN
+      // console.log(parseFloat('12.88')); // 12.88
+
+      // 注意点: 
+      // Number() 如果数据里包含了非数字 比如英文中文, 其他标点符合 --- , 结果就是NaN
+    </script>
+  </body>
+</html>
