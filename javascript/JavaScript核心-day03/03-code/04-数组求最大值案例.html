@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组求最大值案例</title>
+</head>
+
+<body>
+  <script>
+    // 需求：求数组[2, 6, 1, 25, 7] 中的最大值
+    let arr = [20, 6, 100, 125, 7]
+    // 1. 先定义一个变量max - 取数组中的第一项 (假设它是最大的)
+    let max = arr[0]
+    // let min = arr[0]
+    // 2. 遍历数组, 遍历的过程中, 依次和max做比较, 如果比较发现比max大, 进行替换/赋值
+    for(let i = 1; i< arr.length; i++) {
+      if (arr[i] > max) {
+        max = arr[i]
+      } 
+      // if (arr[i] < min) {
+      //   min = arr[i]
+      // }
+    }
+    // 3. 等到循环结束, 输出这个max
+    console.log('数组中的最大项', max);
+    // console.log('数组中的最小项', min);
+
+ 
+
+
+  </script>
+</body>
+
+</html>

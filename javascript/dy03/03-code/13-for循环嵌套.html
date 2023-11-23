@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for 循环嵌套</title>
+</head>
+
+<body>
+  <script>
+    // for 循环嵌套
+
+    // 需求：假如每天记住5个单词，连续3天，代码如何实现？
+
+    for (let i = 1; i <= 3; i++) { // 外层循环，控制天数   
+      console.log(`第${i}天`)
+      for (let j = 1; j <= 5; j++) { // 内层循环，控制每天记住的单词数   
+        console.log(`记住第${j}个单词`)
+      }
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

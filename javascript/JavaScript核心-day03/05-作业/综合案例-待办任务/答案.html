@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      list-style-type: none;
+    }
+
+    i {
+      font-style: normal !important;
+    }
+
+    body {
+      background-color: #fcfcfc;
+      padding: 30px 0;
+    }
+
+    .main h3 {
+      text-align: center;
+      margin: 50px auto;
+      font-size: 20px;
+    }
+
+    .main ul {
+      margin: 0 auto;
+      width: 400px;
+      background: white;
+      border-radius: 15px;
+      padding: 1em;
+      box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .main li {
+      padding: 20px;
+      border-left: 3px solid #999999;
+      background-color: #f2f9fc;
+      border-color: #5bc0de;
+      color: #444444;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h3>待办任务</h3>
+
+    <ul>
+      <!-- <li>
+        <p>xxxxxx</p>
+      </li> -->
+    </ul>
+  </div>
+
+  <script>
+    let arr = ['学习javascript', '学习Vue', '学习React']
+
+    let todo = prompt('请输入你的待办任务')
+    arr.unshift(todo)
+
+    let str = ''
+    for (let i = 0; i < arr.length; i++) {
+      str += `
+        <li>
+          <p>${arr[i]}</p>
+        </li>
+      `
+    }
+
+    document.querySelector('.main ul').innerHTML = str
+  </script>
+</body>
+
+</html>

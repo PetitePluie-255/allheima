@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组求和以及平均值案例</title>
+</head>
+
+<body>
+  <script>
+    // 需求：数组求和以及平均值  [2, 6, 1, 7, 4] 
+    let arr = [2, 6, 1, 7, 4, 15, 25, 30]
+
+    // 思路：先求和，再求平均值
+    // 1. 先定义一个变量 求和 sum
+    // 2. 再定义一个变量 平均值 average 
+    // 3. 遍历数组 - 累加给sum
+    // 4. 计算出平均值 sum / 数组的长度 
+
+    let sum = 0
+    let average = 0 
+    for (let i = 0; i < arr.length; i++) {
+      // sum = sum + arr[i]
+      sum += arr[i]
+    }
+    // 等到循环结束之后, 可以获取到累加的值
+    console.log('累加的和', sum);
+    average = sum / arr.length
+    console.log('平均值', average);
+
+  </script>
+</body>
+
+</html>

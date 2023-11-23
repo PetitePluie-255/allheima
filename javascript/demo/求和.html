@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let seats = [
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 1, 1, 1, 1, 0, 0],
+            [0, 0, 1, 1, 0, 1, 1, 0, 0],
+            [0, 1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0, 0],
+        ]
+        let cinema = document.querySelector('.cinema');
+        for (let i = 0; i < seats.length; i++) {
+            let str = ''
+            for (let k = 0; k < seats[i].length; k++) {
+                if (seats[i][k] === 1) {
+                    str += `<i class="iconfont icon-zuowei"></i>`
+                }
+            }
+            cinema.innerHTML += str;
+        }
+
+        // 需求：根据 seats 数组来生成电影院座位
+    </script>
+</body>
+
+</html>

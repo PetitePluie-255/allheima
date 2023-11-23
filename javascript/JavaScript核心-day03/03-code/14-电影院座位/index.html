@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电影院座位</title>
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="movie"></div>
+  <div class="cinema">
+    <!-- row 每一行 -->
+    <!-- 小座位 (图标) -->
+    <div class="row">
+      <i class="iconfont icon-zuowei"></i>
+    </div>
+  </div>
+
+  <script>
+    let seats = [
+      [0, 2, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+    ]
+
+    // let cinema = document.querySelector('.cinema')
+
+    // 需求：根据 seats 数组来生成电影院座位
+    // 1. 外层循环 - 得到电影院座位表的 ---行数
+    let cinemaStr = ''
+    for (let i = 0; i < seats.length; i++) {
+      console.log('每一行的数据', seats[i]);
+      cinemaStr += '<div class="row">'
+    
+      // 2. 内层循环 - 每一行的座位数
+      for (let k = 0; k < seats[i].length; k++)  {
+        console.log('每一行的座位数', seats[i][k]);
+        cinemaStr += `<i class="iconfont icon-zuowei"></i>`
+      }
+      cinemaStr += '</div>'
+    }
+    console.log(cinemaStr);
+    // cinema.innerHTML = cinemaStr
+    document.querySelector('.cinema').innerHTML = cinemaStr
+  </script>
+</body>
+
+</html>

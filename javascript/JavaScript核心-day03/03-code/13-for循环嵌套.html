@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for 循环嵌套</title>
+</head>
+
+<body>
+  <script>
+    // for 循环嵌套
+
+    // 需求：假如每天记住5个单词，连续3天，代码如何实现？
+
+    for (let i = 0; i < 3; i++) {
+      console.log(`第${i + 1}天`);
+      // console.log(`我今天记住了1个单词`);
+      // console.log(`我今天记住了2个单词`);
+      // console.log(`我今天记住了3个单词`);
+      // console.log(`我今天记住了4个单词`);
+      // console.log(`我今天记住了5个单词`);
+      for (let i = 0 ; i < 5; i++ ) {
+        console.log(`记住第${i + 1}个单词`);
+      }
+    }
+    
+  </script>
+</body>
+
+</html>

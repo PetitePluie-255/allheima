@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>筛选数组大于10的案例</title>
+</head>
+
+<body>
+  <script>
+    // 需求：将数组 [2, 0, 6, 1, 77, 0, 52, 0, 25, 7] 中大于等于10的元素选出，放入新数组中
+    let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    // 1. 声明一个新数组
+    let newArr = []
+    debugger
+    // 2. 遍历之前的数组
+    for (let i = 0; i< arr.length; i ++) {
+      // console.log(arr[i]);
+      // 3. 判断当前的元素是否大于等于10
+      if (arr[i] >= 10) {
+        console.log('大于等于10的元素', arr[i]);
+        newArr.push(arr[i])
+      }
+    }
+    // 4. 等到循环结束之后, 可以获取到一个新的数组 (条件是大于等于10)
+    console.log(newArr);
+
+
+
+  </script>
+</body>
+
+</html>

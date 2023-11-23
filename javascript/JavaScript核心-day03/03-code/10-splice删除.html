@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>splice 删除和增加数组元素</title>
+  </head>
+
+  <body>
+    <script>
+      // 需求：通过 splice 删除数组元素
+      let arr = ['迪丽热巴', '古力娜扎', '佟丽丫丫', '玛尔扎哈']
+      // arr.splice(从哪开始删, 删几个, 新增的项1, 新增的项2, ...)
+      // arr.splice(1, 1) // 从下标1开始删, 删除1个
+
+      // arr.splice(1, 2)
+      // arr.splice(1, 3)
+      // arr.splice(1) // 从下标1开始, 删除到最后
+
+      // 将数组中的第二项删除掉, 新增一项 '马尔扎哈2'
+      arr.splice(1, '马尔扎哈2')
+      // arr[1] = '马尔扎哈2'
+      console.log(arr);
+     
+    </script>
+  </body>
+</html>

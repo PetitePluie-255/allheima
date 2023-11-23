@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电影院座位</title>
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="movie"></div>
+  <div class="cinema">
+    <div class="row">
+      <i class="iconfont icon-zuowei"></i>
+    </div>
+  </div>
+
+  <script>
+    let seats = [
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 1, 1, 1, 1, 0, 0],
+      [0, 0, 1, 1, 0, 1, 1, 0, 0],
+      [0, 1, 1, 1, 1, 0],
+      [0, 0, 0, 0, 0, 0],
+    ]
+
+    let cinema = document.querySelector('.cinema')
+
+    // 需求：根据 seats 数组来生成电影院座位
+
+    // 做法1：
+    // 实现步骤：
+    // 1. 声明cinemaHTML变量来存储座位（行 和 列）结构
+    // 2. 外层for循环生成行结构
+    //      2.1 cinemaHTML变量 += 拼接row行结构的开始标签
+    // 3. 里层for循环生成列结构（座位图标）
+    //      3.1 cinemaHTML变量 += 拼接 列结构
+    // 4. 里层循环结束之后，cinemaHTML变量 拼接 row行结构的结束标签
+    // 5. 外层循环结束之后，将cinemaHTML变量内容放到页面上展示
+    {
+      // 1.
+      let cinemaHTML = ''
+
+      // 2. 
+      for (let i = 0; i < seats.length; i++) {
+        // 2.1 
+        cinemaHTML += `<div class="row">`
+        // 3. 
+        for (let j = 0; j < seats[i].length; j++) {
+          // 3.1
+          cinemaHTML += `<i class="iconfont icon-zuowei"></i>`
+        }
+        // 4
+        cinemaHTML += `</div>`
+      }
+
+      // 5. 
+      cinema.innerHTML = cinemaHTML
+    }
+
+
+    // 做法2：（老师自行选择）
+    // 实现步骤：
+    // 1. 声明cinemaHTML变量来存储座位（行 和 列）结构
+    // 2. 外层for循环生成行结构
+    //      2.1 行结构拼接到 cinemaHTML变量
+    //      2.2 声明 cols 变量来存储 列结构内容
+    // 3. 里层for循环生成列结构（座位图标），并拼接到 cols 变量
+    // 4. 里层循环结束之后，将列结构放到行结构中
+    // 5. 外层循环结束之后，将cinemaHTML变量内容放到页面上展示
+
+    {
+      // 1. 
+      let cinemaHTML = ''
+
+      // 2. 
+      for (let i = 0; i < seats.length; i++) {
+        // 2.2 
+        let cols = ''
+
+        // 3. 
+        for (let j = 0; j < seats[i].length; j++) {
+          cols += '<i class="iconfont icon-zuowei"></i>'
+        }
+
+        // 2.1  && 4
+        cinemaHTML += `<div class="row">${cols}</div>`
+      }
+
+      // 5. 
+      cinema.innerHTML = cinemaHTML
+    }
+  </script>
+</body>
+
+</html>

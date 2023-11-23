@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  1.[10, 11, 22, 24, 8, 6, 7, 25] 求数组中所有偶数的和
+        let arr = [10, 11, 22, 24, 8, 6, 7, 25]
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                sum += arr[i]
+            }
+        }
+        console.log(sum);
+
+        // 2. [1,5,8,11,20,15,13,17,6] 求数组中所有奇数的和
+        let arr1 = [1, 5, 8, 11, 20, 15, 13, 17, 6]
+        let sum1 = 0
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 !== 0) {
+                sum1 += arr1[i]
+            }
+        }
+        console.log(sum1);
+        // 3. [12,80,60,7,8,5,3,14,16,4] 求数组中被2整除的数,放到新数组中
+        let arr2 = [12, 80, 60, 7, 8, 5, 3, 14, 16, 4]
+        let newArr = []
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i] % 2 === 0) {
+                newArr.push(arr2[i])
+            }
+        }
+        console.log(newArr);
+        // 4. [7,11,15,10,30,15,100,9] 求数组中最小的值
+        let arr3 = [7, 11, 15, 10, 30, 15, 100, 1, 9]
+        let min = arr3[0]
+        for (let i = 1; i < arr3.length; i++) {
+            if (arr3[i] < min) {
+                min = arr3[i]
+            }
+        }
+        console.log(min);
+        // 5. [2,50,4,112,5,8,13,19,7,6] 求数组中小于10的数, 放到新数组中
+        let arr4 = [2, 50, 4, 112, 5, 8, 13, 19, 7, 6]
+        let newArr1 = []
+        for (let i = 0; i < arr4.length; i++) {
+            if (arr4[i] < 10) {
+                newArr1.push(arr4[i])
+            }
+        }
+        console.log(newArr1);
+        // 6.['小米', '小华', '小果', '小锤'] 删除数组中的 '小果', 打印删除后的数组
+        let arr5 = ['小米', '小华', '小果', '小锤']
+        for (let i = 0; i < arr5.length; i++) {
+            if (arr5[i] === '小果') {
+                arr5.splice(i, 1)
+            }
+        }
+        console.log(arr5);
+        // 7. 一直弹框让用户输入姓名, 把姓名放到数组中, 当数组的长度大于等于5时, 关闭弹出, 控制台打印数组 * /
+        let arr6 = []
+        for (;;) {
+            let uname = prompt('输入姓名')
+            arr6.push(uname)
+            if (arr6.length >= 5) {
+                console.log(arr6)
+                break
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    while (true) {
+      let option = prompt(`
+        1.输入 + - * / 计算两个数字的结果
+        2.如果输入q则是退出`)
+        // 加法
+      if (option === '+') {
+        let num = +prompt('请您输入第一个数字:')
+        let num1 = +prompt('请您输入第二个数字:')
+        let result = num + num1
+        alert(`您计算求和结果是:${result}`)
+        // 减法
+      } else if (option === '-') {
+        let num = +prompt('请您输入第一个数字:')
+        let num1 = +prompt('请您输入第二个数字:')
+        let result = num - num1
+        alert(`您计算求差结果是:${result}`)
+        // 乘法
+      } else if (option === '*') {
+        let num = +prompt('请您输入第一个数字:')
+        let num1 = +prompt('请您输入第二个数字:')
+        let result = num * num1
+        alert(`您计算求积结果是:${result}`)
+        // 除法
+      } else if (option === '/') {
+        let num = +prompt('请您输入第一个数字:')
+        let num1 = +prompt('请您输入第二个数字:')
+        if (num1 === 0) {
+           alert("除数不可为0")
+           continue
+          }
+        let result = num / num1
+        alert(`您计算求商结果是:${result}`)
+           // 退出
+      } else if (option === 'q') {
+        break
+        // 错误值
+      } else {
+        alert('请正确输入')
+      }
+    }
+  </script>
+</body>
+
+</html>

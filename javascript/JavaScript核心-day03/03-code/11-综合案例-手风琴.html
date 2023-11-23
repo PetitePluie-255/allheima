@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .accordion {
+      display: flex;
+      overflow: hidden;
+      width: 1120px;
+      height: 260px;
+      margin: 50px auto;
+    }
+
+    .accordion>div {
+      width: 120px;
+      border: 1px solid #fff;
+      transition: all 0.5s;
+    }
+
+    .accordion>div:hover {
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="accordion box">
+    <!-- <div><img src="./images/1.jpg" alt=""></div>
+    <div><img src="./images/2.jpg" alt=""></div>
+    <div><img src="./images/3.jpg" alt=""></div>
+    <div><img src="./images/4.jpg" alt=""></div>
+    <div><img src="./images/5.jpg" alt=""></div>
+    <div><img src="./images/6.jpg" alt=""></div>
+    <div><img src="./images/7.jpg" alt=""></div> -->
+  </div>
+
+  <script>
+    let arr = [
+      './images/1.jpg',
+      './images/2.jpg',
+      './images/3.jpg',
+      './images/4.jpg',
+      './images/5.jpg',
+      './images/6.jpg',
+      './images/7.jpg',
+    ]
+
+    // 需求： 利用循环生成手风琴图片
+    // 1. 定义一个空的字符串 
+    // 2. 循环遍历数组 
+    // 2.1 每遍历一次, 生成一个<div><img src="./images/2.jpg" alt=""></div>
+    // 3. 循环结束之后, 得到了7个div的拼接 - 字符串
+    // 4. 找到对应的盒子, 将字符串进行渲染即可
+
+    
+
+    let str = ''
+    for(let i = 0; i< arr.length; i++) {
+      console.log(arr[i]);
+      // 模板字符串 可以解析变量 ${变量}
+      // str += `<div><img src="${arr[i]}" alt=""></div>`
+      str += `<div><img src="./images/${i + 1 }.jpg" alt=""></div>`
+    }
+    console.log(str);
+    document.querySelector('.box').innerHTML = str
+
+
+
+  </script>
+</body>
+
+</html>
