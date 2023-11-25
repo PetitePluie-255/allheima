@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>查询属性的另外写法</title>
+</head>
+
+<body>
+  <script>
+    // 查询属性的另外写法  对象['属性'] 这个属性必须加引号
+
+    let pig = {
+      'name': '佩奇',
+      'age': 4,
+      'sex-sex': '女'
+    }
+    // 结论: 访问的属性是多词(短横线-拼接) 或者是解析变量 - 中括号语法
+    // 其他都可以通过.语法来实现
+    // 访问对象属性的两种方式
+    // 1. 对象.属性名
+    // 2. 对象['属性名'] - 属性名外需要加引号
+    console.log(pig.name);
+    console.log(pig.age);
+    // console.log(pig.sex-sex); 错误写法
+    console.log(pig['age']);
+    console.log(pig['name']);
+    console.log(pig['sex-sex']);
+
+
+  </script>
+</body>
+
+</html>

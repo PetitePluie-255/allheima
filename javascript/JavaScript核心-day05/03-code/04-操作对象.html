@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>操作对象</title>
+  </head>
+
+  <body>
+    <script>
+      // 操作对象：对数据 查、增、改、删
+      let pig = {
+        uname: '佩奇',
+        sing: function () {
+          console.log('唱歌')
+        }
+      }
+
+      //  查 对象.属性名
+      console.log(pig.uname);
+      pig.sing()
+
+      //  增 对象.属性名 = 属性值
+      // console.log(pig.age);// undefined 
+      // pig.age = 4
+      // console.log(pig.age);// 4
+      // pig.age ++
+      // console.log(pig.age);// 5
+
+      //  改 对象.属性名 = 属性值
+      pig.sex = '女' // 增
+      pig.uname = '小猪佩奇' // 改
+      pig.play = function() {
+        console.log('玩游戏');
+      }
+      console.log(pig);
+      pig.play()
+
+      // 修改和新增的区别
+      // 如果对象中包含某属性, 则修改该属性值
+      // 否则对象中没有该属性，则新增该属性
+
+      //  删 delete 对象.属性名
+      delete pig.sex
+      console.log(pig);
+      console.log(pig.sex);
+
+      // 访问一个不存在的属性, 结果是undefined
+    </script>
+  </body>
+</html>

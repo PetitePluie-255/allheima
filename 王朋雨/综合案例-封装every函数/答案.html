@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 2. 明确函数的形参和实参
+    function every(ele, arr = []) {
+      // 3.1 声明一个flag变量，里面先存储 true （表示数组的每一项都符合条件）
+      let flag = true
+
+      // 3.2 遍历循环如果找到了不符合条件的，则修改 flag 里面的值为false
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < ele) {
+          flag = false
+          // 3.3 break中断循环
+          break
+        }
+      }
+
+      // 4. 返回这个 falg变量
+      return flag
+    }
+
+    console.log(every(10, [10, 20, 30]))
+    console.log(every(10, [10, 2, 30]))
+  </script>
+</body>
+
+</html>

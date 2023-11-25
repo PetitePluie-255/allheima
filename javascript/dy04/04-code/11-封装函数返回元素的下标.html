@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>封装函数返回元素的下标</title>
+</head>
+
+<body>
+  <script>
+    // 需求：封装函数返回元素的下标  [1, 5, 10, 22, 8, 7]
+    function findIndex(ele, arr = []) {
+      let index = -1
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ele) {
+          index = i
+          break
+        }
+      }
+      return index
+    }
+    let arr = [1, 5, 10, 22, 8, 7]
+    console.log(findIndex(10, arr));
+    let arr1 = [651, 56165, 561651, 55]
+    console.log(findIndex(55, arr1));
+    console.log(findIndex(550, arr1));
+  </script>
+</body>
+
+</html>

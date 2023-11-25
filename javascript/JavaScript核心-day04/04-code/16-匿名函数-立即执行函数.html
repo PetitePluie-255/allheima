@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>匿名函数-立即执行函数</title>
+  </head>
+
+  <body>
+    <script>
+      // 匿名函数 - 立即执行函数
+      // 作用防止全局变量污染
+
+      // 语法
+      /*
+      (function() {})()
+
+      (function() {}())
+      */ 
+
+    // 方式一:   
+    (function() {
+      let age = 20
+      console.log(age);
+    })();
+
+    // 方式二:
+    (function() {
+      let age = 20
+      console.log(age);
+    }())
+
+    // //  自己写的
+    //   let age = 20
+    //   console.log(age);
+    // // 别人写的 
+    // let age1 = 21
+    // console.log(age1);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/inputnumber.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>���ﳵ</title>
+</head>
+
+<body>
+  <div class="app-container" id="app">
+    <!-- ����banner -->
+    <div class="banner-box"><img src="./img/fruit.jpg" alt="" /></div>
+    <!-- ���м -->
+    <div class="breadcrumb">
+      <span>??</span>
+      /
+      <span>���ﳵ</span>
+    </div>
+    <!-- ���ﳵ���� -->
+    <div class="main">
+      <div class="table">
+        <!-- ͷ�� -->
+        <div class="thead">
+          <div class="tr">
+            <div class="th">ѡ��</div>
+            <div class="th th-pic">ͼƬ</div>
+            <div class="th">����</div>
+            <div class="th num-th">����</div>
+            <div class="th">С��</div>
+            <div class="th">����</div>
+          </div>
+        </div>
+        <!-- ���� -->
+        <div class="tbody">
+          <div class="tr active">
+            <div class="td"><input type="checkbox" checked /></div>
+            <div class="td"><img src="./img/������.png" alt="" /></div>
+            <div class="td">6</div>
+            <div class="td">
+              <div class="my-input-number">
+                <button class="decrease"> - </button>
+                <span class="my-input__inner">2</span>
+                <button class="increase"> + </button>
+              </div>
+            </div>
+            <div class="td">12</div>
+            <div class="td"><a href="javascript:del(0);">ɾ��</a></div>
+          </div>
+          <!-- ��Ҫ��Ⱦ���б� ���Ĵ������� -->
+          <div class="tr">
+            <div class="td"><input type="checkbox" /></div>
+            <div class="td"><img src="./img/��֦.png" alt="" /></div>
+            <div class="td">7</div>
+            <div class="td">
+              <div class="my-input-number">
+                <button disabled class="decrease"> - </button>
+                <span class="my-input__inner">1</span>
+                <button class="increase"> + </button>
+              </div>
+            </div>
+            <div class="td">14</div>
+            <div class="td"><a href="javascript:del(0);">ɾ��</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- �ײ� -->
+      <div class="bottom">
+        <!-- ȫѡ -->
+        <label class="check-all">
+          <input type="checkbox" />
+          ȫѡ
+        </label>
+        <div class="right-box">
+          <!-- ������Ʒ�ܼ� -->
+          <span class="price-box">�ܼ�&nbsp;&nbsp;:&nbsp;&nbsp;��&nbsp;<span class="price">24</span></span>
+          <!-- ���㰴ť -->
+          <button class="pay">����( 6 )</button>
+        </div>
+      </div>
+    </div>
+    <!-- �ճ� -->
+    <div class="empty">??�տ���Ҳ</div>
+  </div>
+  <script>
+    const fruit = [
+      {
+        icon: './img/������.png',
+        num: 2,
+        price: 6,
+        sum: 0,
+      },
+      {
+        icon: './img/��֦.png',
+        num: 7,
+        price: 20,
+        sum: 0,
+      },
+      {
+        icon: './img/����.png',
+        num: 3,
+        price: 40,
+        sum: 0,
+      },
+      {
+        icon: './img/Ѽ��.png',
+        num: 10,
+        price: 3,
+        sum: 0,
+      },
+      {
+        icon: './img/ӣ��.png',
+
+        num: 20,
+        price: 34,
+        sum: 0,
+      }
+    ]
+
+
+
+    function render(arr) {
+      let str = ''
+      for (let i = 0; i < arr.length; i++) {
+        str += `
+    <div class="tr">
+        <div class="td"><input type="checkbox" /></div>
+        <div class="td"><img src="${arr[i]['icon']}" alt="" /></div>
+        <div class="td">${arr[i]['num']}</div>
+        <div class="td">
+          <div class="my-input-number">
+            <button  class="decrease" onclick="del(${i})"> - </button>
+            <span class="my-input__inner">${arr[i]['sum']}</span>
+            <button class="increase" onclick="add(${i})"> + </button>
+          </div>
+        </div>
+        <div class="td">${arr[i]['price'] * arr[i]['sum']}</div>
+        <div class="td"><a href="javascript:del(0);">删除</a></div>
+      </div>`
+      }
+      document.querySelector('.tbody').innerHTML = str
+    }
+    render(fruit)
+
+    function result() {
+      src = ''
+
+      src += `  <span class="price-box">总价&nbsp;&nbsp;:&nbsp;&nbsp;��&nbsp;<span class="price">${arr[i]['price'] * arr[i]['sum']}*${fruit.length}</span></span>`
+
+      render(fruit)
+
+    }
+
+    function add(index) {
+      fruit[index].sum++
+      render(fruit)
+    }
+
+    function del() {
+      fruit[index].sum - 1
+      render(fruit)
+    }
+
+
+
+  </script>
+</body>
+
+</html>

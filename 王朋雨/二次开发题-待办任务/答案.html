@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="main">
+    <h3>待办任务</h3>
+
+    <a href="javascript:;" onclick="add()" class="icon">+</a>
+
+    <ul>
+      <!-- <li>
+        <p>xxxxxx</p>
+        <a class="close" href="javascript:;" onclick="del()">×</a>
+      </li> -->
+    </ul>
+  </div>
+
+  <script>
+    let arr = ['学习javascript', '学习Vue', '学习React']
+
+    // 1. 新增功能
+    function add() {
+      // 1.1 新增功能（出现弹框）
+      let todo = prompt('请输入你的待办任务')
+      // 1.2 新增功能（弹框内容添加到数组中作为第一项）
+      arr.unshift(todo)
+      // 1.3 复用渲染业务
+      render()
+    }
+
+    // 2. 封装渲染函数
+    function render() {
+      // 2.1 封装渲染函数（将准备的渲染代码使用函数进行封装，以便复用）
+      let str = ''
+      for (let i = 0; i < arr.length; i++) {
+        str += `
+      <li>
+        <p>${arr[i]}</p>
+			
+        <!-- 3.1 删除功能（循环的下标i就是开始删除位置的下标，将下标i作为del函数的实参进行传递） -->
+        <a class="close" href="javascript:;" onclick="del(${i})">×</a>
+      </li>
+    `
+      }
+      document.querySelector('.main ul').innerHTML = str
+    }
+
+    // 2.2 封装渲染函数（封装好之后，记得先调用一次）
+    render()
+
+    // 3.2 删除功能（ index形参进行接收到下标）
+    function del(index) {
+      // 3.3 删除功能（数组的`splice` 来删除数据）
+      arr.splice(index, 1)
+
+      // 3.4 删除功能（调用渲染函数，渲染即可）
+      render()
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const profile = {
+      id: "1692458770417848321",
+      nickname: "哈哈2",
+      account: "用户13212345678",
+      avatar: "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/avatar/2023-08-19/3b16b9f2-f0f7-4d4d-b86c-ca3c61445790.jpeg",
+      gender: "男",
+      birthday: "2019-05-16",
+      fullLocation: "河北省 秦皇岛市 抚宁区",
+      profession: "asdas"
+    }
+    const addressArr = profile.fullLocation.split(' ') // ['河北省', '秦皇岛市', '抚宁区']
+    console.log(addressArr)
+
+
+    // 新注册的用户，fullLocation的结果为null
+    const profile2 = {
+      id: "1692458770417848321",
+      nickname: "哈哈2",
+      account: "用户13212345678",
+      avatar: "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/avatar/2023-08-19/3b16b9f2-f0f7-4d4d-b86c-ca3c61445790.jpeg",
+      gender: "男",
+      birthday: "2019-05-16",
+      fullLocation: null,
+      profession: "asdas"
+    }
+
+    // 需要避免以下代码报错
+    const addressArr2 = profile2.fullLocation.split(' ')
+  </script>
+</body>
+
+</html>

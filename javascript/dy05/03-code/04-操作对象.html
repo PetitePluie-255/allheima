@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>操作对象</title>
+  </head>
+
+  <body>
+    <script>
+      // 操作对象：对数据 查、增、改、删
+      let pig = {
+        uname: '佩奇',
+        sing: function () {
+          console.log('唱歌')
+        }
+      }
+
+      //  查
+      pig.sing
+      console.log(pig.uname)
+      //  增
+      pig.age = 5
+      pig.play=function () {
+        console.log('玩耍');
+      }
+      //  改
+      pig.uname = '小猪佩奇'
+      //  删
+      delete pig.age
+
+      console.log(pig)
+      pig.play()
+      pig.sing()
+    </script>
+  </body>
+</html>

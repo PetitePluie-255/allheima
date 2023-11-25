@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>封装函数查看数组是否存在某个元素</title>
+</head>
+
+<body>
+  
+  <script>
+    // 需求：封装函数查看数组是否存在某个元素  ['苹果', '香蕉', '橘子', '荔枝', '梨子']
+
+    function some(ele, arr = []) {
+      let flag = false
+      // 1. 假设性原则 - 数组中没有找到某个元素 
+
+      // 2. 判断是否存在于数组中
+      for (let i = 0; i < arr.length; i ++) {
+        // console.log('ixxxx', i); // 0 
+        if (ele === arr[i]) {
+          // 找到了 - 元素存在于数组中 
+          flag = true
+          // 中断循环
+          break
+        } 
+      }
+      // 3. 返回结果
+      return flag
+    }
+    let fruitsArr = ['苹果', '香蕉', '橘子', '荔枝', '梨子']
+    // console.log(some('苹果', fruitsArr));
+    // console.log(some('荔枝', fruitsArr));
+    console.log(some('香蕉', fruitsArr));
+    console.log(some('榴莲', fruitsArr));
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. every 函数声明
+        function every(num, arr = []) {
+            // 补充代码
+            let flag = true
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 10) {
+                    flag = false
+                    break
+                }
+            }
+            return flag
+        }
+
+        // 2. every 函数的调用
+        console.log(every(10, [10, 20, 30]))
+        console.log(every(10, [10, 2, 30]))
+    </script>
+</body>
+
+</html>

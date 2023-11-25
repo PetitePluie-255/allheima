@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对象属性和方法的简写</title>
+</head>
+
+<body>
+  <script>
+    // 对象属性和方法的简写
+    // 1. 属性名和属性值的变量同名的时候，可以只写属性名
+    // 2. 对象方法的简写, 省略 :function
+
+    let uname = '小明'
+
+    let person = {
+      // uname: uname,
+      uname,
+      age: 20,
+      sex: '男',
+      sayHi: function() {
+        console.log('大家好');
+      },
+      // 函数的简写  ---  方法名() {}
+      play(gameName) {
+        console.log('玩游戏', gameName);
+      },
+    }
+
+    console.log(person.uname);
+    person.sayHi()
+    person.play('王者荣耀')
+
+
+  </script>
+</body>
+
+</html>

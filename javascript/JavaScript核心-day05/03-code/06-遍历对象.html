@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>遍历对象</title>
+</head>
+
+<body>
+  <script>
+    //  遍历对象 for in
+    //  语法：
+    //    for(let k in 对象名){
+    //        k 属性名
+    //        对象名[k]
+    //    }
+
+    let pig = {
+      sex: '女',
+      age: 4,
+      uname: '佩奇',
+      weight: 12.6,
+      // k: '我没K'
+    }
+    console.log(pig.sex);
+    console.log(pig['sex']);
+
+    for (let k in pig) {
+      // k 属性名 sex age uname ....
+      // console.log(k);
+      // console.log(pig.k); // undefined
+      // 对象[属性名]  属性值 女 4 ...
+      console.log(pig[k]);
+      // console.log(pig['k']);
+    }
+    // 对象访问属性的时候, =====中括号可以解析变量=====
+
+
+    
+
+  </script>
+</body>
+
+</html>

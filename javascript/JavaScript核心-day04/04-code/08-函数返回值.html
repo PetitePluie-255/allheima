@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>函数返回值细节</title>
+  </head>
+
+  <body>
+    <script>
+      // 函数返回值细节
+      // 函数内部直接return 后面没有跟任何的表达式 - 结果也是undefined
+      function getSum(x, y) {
+        // 执行代码, 并不想要函数内部的返回结果 - 可以不加return
+        return
+        x + y
+        console.log('你好'); // 无效代码
+        console.log('hello'); // 无效代码
+        let a = 10 // 无效代码
+        let b = 20 // 无效代码
+        return a + b // 无效代码
+
+      }    
+      console.log(getSum(1, 2));
+
+
+      //  return 结束函数，return 下面的代码不会执行了
+
+      //  return 和被返回的结果不要换行
+
+      //  如果函数没有return 则默认返回的是 undefined
+    </script>
+  </body>
+</html>

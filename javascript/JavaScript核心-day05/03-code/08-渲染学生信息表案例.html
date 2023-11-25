@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渲染学生信息表案例</title>
+  <style>
+    h2,
+    p {
+      text-align: center;
+    }
+
+    .student {
+      overflow: hidden;
+      margin: 0 auto;
+      /* 合并相邻边框 */
+      border-collapse: collapse;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+
+    }
+
+    .student tr {
+      cursor: pointer;
+    }
+
+    .student th {
+      padding: 5px 50px;
+      color: #fff;
+    }
+
+    .student,
+    th,
+    td {
+      border: 1px solid #fff;
+      line-height: 45px;
+    }
+
+    /* 给行添加渐变背景颜色 */
+    .student thead tr {
+      background-image: linear-gradient(to right, #f46e33, #f057a5);
+    }
+
+    /* 从第2行开始修改背景颜色 */
+    .student tbody tr {
+      background-image: linear-gradient(to right, #fdf0eb, #fdeff6);
+    }
+
+    /* 从第2行开始 最后一个单元格颜色变化 */
+    .student tbody tr :last-child {
+      color: #f282bb;
+    }
+
+    /* 第一行鼠标经过不要变颜色 */
+    .student tbody tr:hover {
+      background-image: linear-gradient(to right, #f9e3da, #f9d6e8);
+
+    }
+  </style>
+</head>
+
+<body>
+  <h2>学生信息</h2>
+  <p>将数组中存储的学生信息，以表格的形式把数据渲染到页面中...</p>
+
+  <table class="student">
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>家乡</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>1</td>
+        <td>小明</td>
+        <td>18</td>
+        <td>男</td>
+        <td>河北省</td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <div class="box"></div>
+  <script>
+    // 数据
+    let students = [
+      { name: '小明', age: 18, sex: '男', hometown: '河北省' },
+      { name: '小红', age: 19, sex: '女', hometown: '河南省' },
+      { name: '小刚', age: 17, sex: '男', hometown: '山西省' },
+      { name: '小丽', age: 18, sex: '女', hometown: '山东省' },
+      { name: '小强', age: 18, sex: '男', hometown: '北京市' }
+    ]
+
+    // 需求：根据以上数据渲染生成表格
+    
+    function render(arr = [], ele) {
+      // 1. 遍历学生数组 
+      let str = ''
+      for (let i = 0; i < arr.length; i ++) {
+        str += `<tr>
+          <td>${i + 1}</td>
+          <td>${arr[i].name}</td>
+          <td>${arr[i].age}</td>
+          <td>${arr[i].sex}</td>
+          <td>${arr[i].hometown}</td>
+        </tr>`
+      }
+      document.querySelector(ele).innerHTML = str
+    }
+
+    render(students, 'tbody')
+ 
+    console.log(document.querySelector('.box'));
+    console.log(document.querySelector('.box1'));
+
+    document.querySelector('.box').innerHTML = '我是一个盒子123'
+
+    let age 
+    console.log(age);
+    let arr1 = []
+    console.log(arr1[0]);
+    let obj = { name: 'jack' }
+    console.log(obj.age);
+
+
+  </script>
+</body>
+
+</html>

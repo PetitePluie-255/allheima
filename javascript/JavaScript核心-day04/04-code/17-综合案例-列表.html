@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .box {
+      width: 600px;
+      height: 300px;
+      margin: 50px auto;
+    }
+
+    .box li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 100px;
+      line-height: 100px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <button onclick="函数名(实参)">按钮</button> -->
+  <button onclick="fn(10)">按钮</button>
+  <div class="box">
+    <ul>
+    </ul>
+  </div>
+  <script>
+    let list = ['敲代码', '挣大钱', '迎娶白富美']
+    // 1. 渲染功能
+    function render() {
+      let str = '' // 目的: 为了拼接
+      for (let i = 0; i < list.length; i++) {
+        str += `<li>
+          <p>${list[i]}</p>
+          <a href="#" onclick="del(${i})">x</a>
+        </li>`
+      }
+      document.querySelector('ul').innerHTML = str
+    }
+    render()
+
+    // 2. 点击功能
+    // 点击功能 webAPi  
+    function fn(age) {
+      console.log('123456', age);
+      let num = 10
+      console.log( num * 10);
+    }
+
+    // 3. 删除功能
+    function del(index) {
+      // 3.1 获取下标
+      console.log('删除的项的下标', index);
+      // 3.2 删除数组中的该元素 
+      // list.splice(从哪删, 删几个)
+      list.splice(index, 1)
+      console.log(list);
+      // 3.3 重新渲染
+      render()
+    }
+  </script>
+</body>
+
+</html>

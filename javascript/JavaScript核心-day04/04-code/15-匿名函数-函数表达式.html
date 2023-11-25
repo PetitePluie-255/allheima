@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>匿名函数-函数表达式</title>
+  </head>
+
+  <body>
+    <script>
+      // 具名函数 - 函数声明
+      // function fn() {
+      //   // 函数体
+      // }
+      // fn()
+
+      // 匿名函数 - 函数表达式
+      //  函数表达式基本使用
+      // 将函数表达式赋值给一个变量  - 需要调用 
+      // fn()
+      // let fn = function () {
+      //   console.log('我是一个匿名函数');
+      // }
+
+      fn()
+      function fn() {
+        console.log('我是一个函数声明');
+      }
+      // 1. 预解析 提前解析 var 函数声明 function fn() {}
+      // 提前加载
+
+
+      //  注意事项
+
+      // 1. 函数表达式必须先声明后使用（不能在函数声明之前使用）
+
+      // 2. 函数表达式可以传递参数还可以有返回值，使用方法和前面具名函数类似
+    </script>
+  </body>
+</html>

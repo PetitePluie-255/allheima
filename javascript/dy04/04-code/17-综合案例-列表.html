@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .box {
+      width: 600px;
+      height: 300px;
+      margin: 50px auto;
+    }
+
+    .box li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 100px;
+      line-height: 100px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="text">
+  <button id="btn">按钮</button>
+  <div class="box">
+    <ul>
+      <!-- <li>
+          <p>xx</p>
+          <a href="#">x</a>
+        </li>
+        <li>
+          <p>xx</p>
+          <a href="#">x</a>
+        </li>
+        <li>
+          <p>xx</p>
+          <a href="#">x</a>
+        </li> -->
+    </ul>
+  </div>
+  <script>
+    let list = ['敲代码', '挣大钱', '迎娶白富美']
+    // 渲染
+    function render() {
+      let str = ''
+      for (let i = 0; i < list.length; i++) {
+        str += `<li>
+          <p>${list[i]}</p>
+          <a href="#" onclick="del(${i})">x</a>
+        </li>`
+        console.log(list);
+        document.querySelector('ul').innerHTML = str
+        console.log(str);
+      }
+    }
+    render()
+
+    // 点击
+    document.getElementById('btn').onclick = function () {
+      let a = document.getElementById('text').value
+      list.push(a)
+      render()
+    }
+    function del(index) {
+      console.log(list);
+      console.log(list[index]);
+      list.splice(index, 1)
+      console.log(list);
+      render()
+    }
+
+  </script>
+</body>
+
+</html>

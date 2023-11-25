@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="main">
+    <h3>待办任务</h3>
+
+    <!-- 新增任务按钮 -->
+    <a href="javascript:;" onclick="add()" class="icon">+</a>
+
+    <ul>
+      <!-- <li>
+        <p>xxxxxx</p>
+        <a class="close" href="javascript:;" onclick="del()">×</a>
+      </li> -->
+    </ul>
+  </div>
+
+  <script>
+    let arr = ['学习javascript', '学习Vue', '学习React']
+
+    // 新增功能
+    function add() {
+      let task = prompt('请输入你的待办任务')
+      arr.unshift(task)
+      render()
+    }
+
+    // 删除功能
+    function del(index) {
+      console.log(index)
+      arr.splice(index,1)
+      render()
+    }
+
+    // 渲染
+    function render () {
+      let str = ''
+      for (let i = 0; i < arr.length; i++) {
+        str += `
+        <li>
+          <p>${arr[i]}</p>
+          <a class="close" href="javascript:;" onclick="del(${i})">×</a>
+        </li>
+      `
+      }
+      document.querySelector('.main ul').innerHTML = str
+    }
+    render()
+  </script>
+</body>
+
+</html>

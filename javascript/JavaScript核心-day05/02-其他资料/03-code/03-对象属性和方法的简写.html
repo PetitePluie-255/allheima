@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对象属性和方法的简写</title>
+</head>
+
+<body>
+  <script>
+    // 对象属性和方法的简写
+    // 属性名和属性值的变量名相同的时候，可以只写属性名
+    // 对象方法的简写, 省略 :function
+
+    const username = '小红'
+
+    const obj = {
+      username: username,
+      age: 19,
+      sayHi: function () {
+        console.log('hi~')
+      }
+    }
+
+    // 省略写法
+    const obj2 = {
+      username,
+      age: 19,
+      sayHi() {
+        console.log('hi~')
+      }
+    }
+  </script>
+</body>
+
+</html>

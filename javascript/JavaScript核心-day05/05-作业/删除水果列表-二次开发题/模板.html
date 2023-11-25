@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/inputnumber.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>购物车</title>
+</head>
+
+<body>
+    <div class="app-container" id="app">
+        <!-- 顶部banner -->
+        <div class="banner-box"><img src="./img/fruit.jpg" alt="" /></div>
+        <!-- 面包屑 -->
+        <div class="breadcrumb">
+            <span>🏠</span>
+            /
+            <span>购物车</span>
+        </div>
+        <!-- 购物车主体 -->
+        <div class="main">
+            <div class="table">
+                <!-- 头部 -->
+                <div class="thead">
+                    <div class="tr">
+                        <div class="th">选中</div>
+                        <div class="th th-pic">图片</div>
+                        <div class="th">单价</div>
+                        <div class="th num-th">个数</div>
+                        <div class="th">小计</div>
+                        <div class="th">操作</div>
+                    </div>
+                </div>
+                <!-- 身体 -->
+                <div class="tbody">
+                    <div class="tr active">
+                        <div class="td"><input type="checkbox" checked /></div>
+                        <div class="td"><img src="./img/火龙果.png" alt="" /></div>
+                        <div class="td">6</div>
+                        <div class="td">
+                            <div class="my-input-number">
+                                <button class="decrease"> - </button>
+                                <span class="my-input__inner">2</span>
+                                <button class="increase"> + </button>
+                            </div>
+                        </div>
+                        <div class="td">12</div>
+                        <div class="td"><a href="javascript:del(0);">删除</a></div>
+                    </div>
+                    <!-- 需要渲染的列表 核心代码区域 -->
+                    <div class="tr">
+                        <div class="td"><input type="checkbox" /></div>
+                        <div class="td"><img src="./img/荔枝.png" alt="" /></div>
+                        <div class="td">7</div>
+                        <div class="td">
+                            <div class="my-input-number">
+                                <button disabled class="decrease"> - </button>
+                                <span class="my-input__inner">1</span>
+                                <button class="increase" onclick="add()"> + </button>
+                            </div>
+                        </div>
+                        <div class="td">14</div>
+                        <div class="td"><a href="javascript:del(0);" >删除</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部 -->
+            <div class="bottom">
+                <!-- 全选 -->
+                <label class="check-all">
+                    <input type="checkbox" />
+                    全选
+                </label>
+                <div class="right-box">
+                    <!-- 所有商品总价 -->
+                    <span class="price-box">总价&nbsp;&nbsp;:&nbsp;&nbsp;¥&nbsp;<span class="price">24</span></span>
+                    <!-- 结算按钮 -->
+                    <button class="pay">结算( 6 )</button>
+                </div>
+            </div>
+        </div>
+        <!-- 空车 -->
+        <div class="empty">🛒空空如也</div>
+    </div>
+    <script>
+
+        const fruit = [
+
+            {
+                icon: './img/火龙果.png',
+                num: 2,
+                price: 6,
+            },
+            {
+                icon: './img/荔枝.png',
+                num: 7,
+                price: 20,
+            },
+            {
+                icon: './img/榴莲.png',
+                num: 3,
+                price: 40,
+            },
+            {
+                icon: './img/鸭梨.png',
+                num: 10,
+                price: 3,
+            },
+            {
+                icon: './img/樱桃.png',
+                num: 20,
+                price: 34,
+            }
+        ]
+        function render(arr) {
+            let str = ''
+            let str1 = ''
+            let total = 0
+            let num = 0
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i]
+                total += item.price * item.num
+                num += item.num
+                console.log(`总价${total}`);
+                console.log(`数量${num}`);
+                str += `<div class="tr">
+          <div class="td"><input type="checkbox" /></div>
+          <div class="td"><img src="${item.icon}" alt="" /></div>
+          <div class="td">${item.price}</div>
+          <div class="td">
+            <div class="my-input-number">
+              <button class="decrease" onclick="del(${item.num},${i})"> - </button>
+              <span class="my-input__inner">${item.num}</span>
+              <button class="increase" onclick="add(${item.num},${i})"> + </button>
+            </div>
+          </div>
+          <div class="td">${item.price * item.num}</div>
+          <div class="td"><a href="javascript:del(0);" onclick="delr(${i})">删除</a></div>
+        </div>`
+                str1 = `<span class="price-box">总价&nbsp;&nbsp;:&nbsp;&nbsp;¥&nbsp;<span class="price">${total}</span></span>
+          <!-- 结算按钮 -->
+          <button class="pay">结算( ${num} )</button>`
+
+            }
+            document.querySelector('.tbody').innerHTML = str
+            document.querySelector('.right-box').innerHTML = str1
+        }
+        render(fruit)
+        function add(num, index) {
+            fruit[index].num++;
+            render(fruit)
+        }
+        function del(num, index) {
+            fruit[index].num--;
+            render(fruit)
+        };
+        function delr (index) {
+            fruit.splice(index,1)
+            console.log(fruit);
+            render(fruit)
+        }
+    </script>
+</body>
+
+</html>

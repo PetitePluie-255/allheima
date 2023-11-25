@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>函数的参数</title>
+  </head>
+
+  <body>
+    <script>
+      // function fn(形参1, 形参2, ...) {
+      // }
+      // fn(实参1, 实参2)
+      // 执行的过程: 函数在调用的时候, 会将实参传递给形参 - 供函数内部使用
+        function getSum(a, b, c) {
+          // 形参过多, 会自动填上undefined
+          console.log('c的值',c);
+          console.log('a的值',a);
+          console.log('b的值',b);
+          return a + b
+        }
+        // 实参过多, 多余的参数也会被忽略
+        getSum(10, 20, 30, 40, 50)
+        getSum(100, 200, 300)
+
+
+
+      // 函数的参数  形参和实参个数不匹配
+
+      // 形参个数过多 会自动补充 undefined
+
+      // 实参个数过多 则多余的实参会被忽略
+    </script>
+  </body>
+</html>

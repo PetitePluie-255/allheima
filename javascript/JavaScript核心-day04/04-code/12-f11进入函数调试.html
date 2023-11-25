@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>f11进入函数内部调试</title>
+</head>
+
+<body>
+  <script>
+    // 需求：借助于 f11 或 通过debugger 进入函数内部调试看执行过程
+    function fn(a, b) {
+      console.log(a);
+      console.log(b);
+      return a * b
+    }
+    console.log(fn(10, 20));
+    console.log(fn(100, 200));
+  </script>
+</body>
+
+</html>

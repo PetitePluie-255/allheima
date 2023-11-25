@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作用域</title>
+</head>
+
+<body>
+  <script>
+    // for (let i = 0; i < 2; i ++) {
+    //   console.log('循环中的', i);
+    // }
+
+    // console.log(i); //  i is not defined
+    // function fn () {
+    //   let flag = true
+    //   console.log(flag);
+    // }
+    // fn()
+    // console.log(flag);  //  flag is not defined
+
+
+
+    // 作用域：全局作用域和局部作用域
+    // 1.1 全局作用域： script标签/ js文件
+    // 1.2 局部作用域： 函数作用域 和 块级作用域 { }
+
+
+    //  全局变量 
+    let age  = 20 // 全局变量
+    let str = '我是一个字符串' // 全局变量
+
+    
+    //  局部变量 
+    // 1. 函数内部声明的变量
+     function fn() {
+      // console.log(age);
+      // console.log(str);
+      let num = 100 
+      console.log('局部定义的变量', num);
+     } 
+     fn()
+    //  console.log(num);
+
+    // 2. 在大括号内声明的变量
+    for (let i = 0; i < 2; i ++) {
+      let num2 = 500
+      console.log(num2);
+    }
+    {
+      let num1 = 50
+      console.log(num1);
+    }
+    // console.log(num1);
+    // console.log(num2);
+    
+
+    //  注意点 
+    // 1. 函数内部的变量，如果没有声明直接赋值，则当全局变量来看
+    function fn1() {
+      // 没有声明 直接赋值 强烈不推荐 代码隐患
+      let num3 = 200
+      console.log(num3);
+    }
+    fn1()
+    // console.log(num3);
+
+
+    // 2. 函数内部的形参，当局部变量来看
+    function fn2(x, y) {
+      console.log(x);
+      console.log(y);
+    }
+    fn2(10, 20)
+    console.log(x);
+    console.log(y);
+
+  </script>
+</body>
+
+</html>

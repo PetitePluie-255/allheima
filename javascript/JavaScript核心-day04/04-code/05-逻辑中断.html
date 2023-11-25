@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>逻辑中断</title>
+  </head>
+
+  <body>
+    <script>
+      // 逻辑中断   && ||
+      // && 一假则假 如果&&左侧为false, 则不再执行右侧的代码 
+      // || 一真则真 如果||左侧为true, 则不再执行右侧的代码
+
+
+      // function sum(x, y) {
+      //   // console.log('x的值',x);
+      //   // console.log('y的值',y);
+      //   x = x || 0
+      //   y = y || 0
+
+      //   return x + y
+      // }
+      // // console.log(sum(10, 20));
+      // // console.log(sum());
+      // console.log(sum(100));
+      // console.log(sum(100, 200, 300));
+
+      console.log(!false); // true
+      console.log(!true); // false
+      
+      function sum(x, y) {
+        // false '' 0 undefined null NaN
+        // (条件是否成立)
+        if (!x) {
+          x = 0
+        }
+        if (!y) y = 0
+        return x + y
+      }
+      console.log(sum('', ''));
+      console.log(sum(100, 200));
+
+      //  逻辑与
+
+      //  逻辑或
+    </script>
+  </body>
+</html>
