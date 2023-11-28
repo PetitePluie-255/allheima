@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字符串trim方法</title>
+</head>
+
+<body>
+  <script>
+    // 字符串trim方法: 可以去除字符串两侧(首尾)的空格
+    const str = ' pi nk '
+    console.log(str);
+    console.log(str.trim());
+
+    const str1 = 'ni hao '
+    // ni hao
+    console.log(str1.trim()); 
+
+
+    // 需求：判断用户输入的内容是否为空
+    const uname = prompt('请输入用户名')
+    if (uname.trim() === 'tom') {
+      alert('输入正确')
+    } else {
+      alert('输入错误')
+    }
+    
+
+  </script>
+</body>
+
+</html>

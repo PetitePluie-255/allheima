@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学成在线</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="course wrapper">
+    <div class="info">
+      <div class="avatar">
+        <img src="./uploads/logo.avif" alt="">
+        <span class="bili-avatar-icon"></span>
+      </div>
+      <p class="desc">
+        <a class="user-name" href="https://space.bilibili.com/37974444" target="_blank">黑马程序员</a>
+        <span>传智教育旗下官方账号</span>
+      </p>
+    </div>
+
+    <div class="search">
+      <p class="line">
+        <span class="tip">筛 选</span>
+        <a href="javascript:;" onclick="allVueCourses()">查找所有Vue课程</a>
+        <a href="javascript:;" onclick="findFirst5K()">查找最先超过5K学习人数的课程</a>
+        <a href="javascript:;" onclick="render()">查看所有</a>
+      </p>
+      <p class="line">
+        <span class="tip">判 断</span>
+        <a href="javascript:;" onclick="isAdvancedCourses()">是否都是高级课程</a>
+        <a href="javascript:;" onclick="isOver50kLearners()">是否有超过5万学习人数的课程</a>
+      </p>
+    </div>
+
+    <!-- 精品课程 -->
+    <div class="hd">
+      <h3>精品推荐</h3>
+    </div>
+    <div class="bd">
+      <ul class="common">
+        <!-- <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality01.png" alt=""></div>
+            <h4>JavaScript数据看板项目实战</h4>
+            <p><span>高级</span> · <i>1125</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality02.png" alt=""></div>
+            <h4>Vue.js实战——面经全端项目</h4>
+            <p><span>高级</span> · <i>2726</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality03.png" alt=""></div>
+            <h4>玩转Vue全家桶，iHRM人力资源项目</h4>
+            <p><span>高级</span> · <i>9456</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality04.png" alt=""></div>
+            <h4>Vue.js实战医疗项目——优医问诊</h4>
+            <p><span>高级</span> · <i>7192</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality05.png" alt=""></div>
+            <h4>小程序实战：小兔鲜电商小程序项目</h4>
+            <p><span>高级</span> · <i>2703</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality06.png" alt=""></div>
+            <h4>前端框架Flutter开发实战</h4>
+            <p><span>高级</span> · <i>2841</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality07.png" alt=""></div>
+            <h4>熟练使用React.js——极客园H5项目</h4>
+            <p><span>高级</span> · <i>95682</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality08.png" alt=""></div>
+            <h4>熟练使用React.js——极客园PC端项目</h4>
+            <p><span>高级</span> · <i>904</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality09.png" alt=""></div>
+            <h4>前端实用技术，Fetch API 实战</h4>
+            <p><span>高级</span> · <i>1516</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="pic"><img src="./uploads/quality10.png" alt=""></div>
+            <h4>前端高级Node.js零基础入门教程</h4>
+            <p><span>高级</span> · <i>2766</i>人在学习</p>
+            <span class="date">2088年8月8日</span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    let data = [
+      {
+        src: './uploads/quality01.png',
+        title: 'JavaScript数据看板项目实战',
+        num: 1125,
+        tag: 'javascript',
+        type: '高级',
+        time: 1650988800000
+      },
+      {
+        src: './uploads/quality02.png',
+        title: 'Vue.js实战——面经全端项目',
+        num: 2726,
+        tag: 'vue',
+        type: '高级',
+        time: 1668816000000
+      },
+      {
+        src: './uploads/quality03.png',
+        title: '玩转Vue全家桶，iHRM人力资源项目',
+        num: 9456,
+        tag: 'vue',
+        type: '高级',
+        time: 1687017600000
+      },
+      {
+        src: './uploads/quality04.png',
+        title: 'Vue.js实战医疗项目——优医问诊',
+        num: 7192,
+        tag: 'vue',
+        type: '高级',
+        time: 1678809600000
+      },
+      {
+        src: './uploads/quality05.png',
+        title: '小程序实战：小兔鲜电商小程序项目',
+        num: 2703,
+        tag: '小程序',
+        type: '高级',
+        time: 1691424000000
+      },
+      {
+        src: './uploads/quality06.png',
+        title: '前端框架Flutter开发实战',
+        num: 2841,
+        tag: 'flutter',
+        type: '高级',
+        time: 1648742400000
+      },
+      {
+        src: './uploads/quality07.png',
+        title: '熟练使用React.js——极客园H5项目',
+        num: 95682,
+        tag: 'react',
+        type: '高级',
+        time: 1651852800000
+      },
+      {
+        src: './uploads/quality08.png',
+        title: '熟练使用React.js——极客园PC端项目',
+        num: 904,
+        tag: 'react',
+        type: '高级',
+        time: 1646150400000
+      },
+      {
+        src: './uploads/quality09.png',
+        title: '前端实用技术，Fetch API 实战',
+        num: 1516,
+        tag: 'fetch',
+        type: '高级',
+        time: 1660060800000
+      },
+      {
+        src: './uploads/quality10.png',
+        title: '前端高级Node.js零基础入门教程',
+        num: 2766,
+        tag: 'nodejs',
+        type: '高级',
+        time: 1675008000000
+      }
+    ]
+
+    // ======================= 查找所有Vue视频 =======================
+    function allVueCourses() {
+
+    }
+
+    // ======================= 查找最先超过5K学习人数 =======================
+    function findFirst5K() {
+
+    }
+
+    // ======================= 判断是否都是高级内容 =======================
+    function isAdvancedCourses() {
+
+    }
+
+    // ======================= 判断是否有超过5万学习人数的内容 =======================
+    function isOver50kLearners() {
+
+    }
+
+
+    // 渲染函数
+    render()
+    function render(arr = data) {
+      const str = arr.map(item => {
+        const { src, title, num, time } = item
+
+        return `
+          <li>
+            <a href="#">
+              <div class="pic">
+                <img src="${src}" alt="">
+              </div>
+              <h4>${title}</h4>
+              <p><span>高级</span> · <i>${num}</i>人在学习</p>
+              <span class="date">2088年8月8日</span>
+            </a>
+          </li>
+        `
+      }).join('')
+
+      document.querySelector('.bd ul').innerHTML = str
+    }
+  </script>
+</body>
+
+</html>

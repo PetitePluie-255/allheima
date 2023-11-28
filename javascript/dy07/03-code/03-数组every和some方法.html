@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组every和some方法</title>
+</head>
+
+<body>
+  <script>
+    // 数组every和some方法: 检测元素是否满足条件，返回布尔型
+    const arr = [10, 20, 30,4]
+
+    //  every(每一个) 
+    //  所有数组元素满足条件则返回true，否则返回false
+    const flag = arr.every(ele => ele >= 10)
+    console.log(flag);
+
+
+    //  some(某一些) 
+    //  只要有1个数组元素满足条件则返回 true，都不满足则返回false
+    const flag1 = arr.some(ele => ele >= 10)
+    console.log(flag1);
+
+
+  </script>
+</body>
+
+</html>

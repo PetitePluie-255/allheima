@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/car.css">
+</head>
+
+<body>
+  <div class="list">
+    <div class="item">
+      <img src="https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg" alt="">
+      <p class="name">称心如意手摇咖啡磨豆机咖啡豆研磨机 <span class="tag">【赠品】10优惠券</span> <span class="time">2088/8/8</span>
+      </p>
+      <p class="spec">白色/10寸</p>
+      <p class="price">289.90</p>
+      <p class="count">x2</p>
+      <p class="sub-total">579.80</p>
+    </div>
+  </div>
+  <div class="total">
+    <div>
+      合计：
+      <span class="amount">1000.00</span>
+    </div>
+  </div>
+  <script>
+    const goodsList = [
+      {
+        id: '4001172',
+        name: '称心如意手摇咖啡磨豆机咖啡豆研磨机',
+        price: 289.9,
+        picture:
+          'https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg',
+        count: 2,
+        spec: { color: '白色' }
+      },
+      {
+        id: '4001009',
+        name: '竹制干泡茶盘正方形沥水茶台品茶盘',
+        price: 109.8,
+        picture:
+          'https://yanxuan-item.nosdn.127.net/2d942d6bc94f1e230763e1a5a3b379e1.png',
+        count: 3,
+        spec: { size: '40cm*40cm', color: '黑色' }
+      },
+      {
+        id: '4001874',
+        name: '古法温酒汝瓷酒具套装白酒杯莲花温酒器',
+        price: 488,
+        picture:
+          'https://yanxuan-item.nosdn.127.net/44e51622800e4fceb6bee8e616da85fd.png',
+        count: 1,
+        spec: { color: '青色', sum: '一大四小' },
+        gift: '500g茶叶,羽毛球'
+      },
+      {
+        id: '4001649',
+        name: '大师监制龙泉青瓷茶叶罐',
+        price: 139,
+        picture:
+          'https://yanxuan-item.nosdn.127.net/4356c9fc150753775fe56b465314f1eb.png',
+        count: 2,
+        spec: { size: '小号', color: '紫色' },
+        gift: '50g茶叶,清洗球'
+      },
+    ]
+
+
+    // 渲染业务
+    document.querySelector('.list').innerHTML = goodsList
+      .map((ele) => {
+        // 对象解构
+        const { name, price, picture, count, spec, gift } = ele
+
+        return `
+        <div class="item">
+          <img src="${picture}" alt="">
+          <p class="name">${name}</p>
+          <p class="price">${price}</p>
+          <p class="count">x${count}</p>
+          <p class="sub-total">${price * count}</p>
+        </div>
+        `
+      })
+      .join('')
+
+    // 总价业务
+    const total = goodsList.reduce(
+      (prev, current) => prev + (current.price * current.count),
+      0
+    )
+
+    document.querySelector('.amount').innerHTML = total.toFixed(2)
+  </script>
+</body>
+
+</html>

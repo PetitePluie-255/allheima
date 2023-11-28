@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arguments对象</title>
+  </head>
+
+  <body>
+    <script>
+      // arguments对象
+      function fn() {
+        // arguments只存在于普通函数中 (不包括箭头函数)
+        // console.log(arguments);
+        // arguments 是一个伪数组
+        // 可以for循环遍历
+        // 有长度, 有下标
+        // 但是它不能使用数组的一些方法, 比如push pop() 等
+        // arguments.push(10) 错误写法
+        // console.log(arguments.length);
+        console.log(arguments[0]);
+        // 求和
+        let sum = 0
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i]
+        }
+        console.log('累加的和为:', sum);
+      }
+      fn(1,2)
+      fn(1,2,3)
+      fn(1,2,3,4)
+
+
+
+
+
+      // arguments对象获取所有实参
+      //  arguments 只存在于普通函数中
+      // 箭头函数里面没有 arguments
+      //  arguments 本质：伪数组
+    </script>
+  </body>
+</html>

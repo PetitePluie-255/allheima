@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对象解构赋值</title>
+  </head>
+
+  <body>
+    <script>
+      // const username = '小力'
+
+      // const user = {
+      //   username: '小明',
+      //   age: 18
+      // }
+      // const username = user.username
+      // const age = user.age
+      // console.log(username, age);
+      // 解构时重命名
+      //  username: uname (1)解构 (2) 重命名
+      /*
+        const { username: uname } = user 等价于 cost uname = user.username
+      */ 
+
+      // const { username: uname, age } = user
+      // console.log(username);
+      // console.log(uname);
+
+
+
+
+      //  对象解构赋值-基本使用
+
+      //  更改解构变量名（重命名）
+
+      //  对象数组解构
+      const arr = [
+        {
+          username: '小明',
+          age: 18
+        }
+      ]
+
+      const [{
+        username: username1,
+        age: age1
+      }] = arr 
+      console.log(username1, age1);
+
+    </script>
+  </body>
+</html>

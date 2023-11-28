@@ -1,0 +1,157 @@
+$box_width: 250px;
+$box_height: 350px;
+$box_bRadius: 10px;
+$box_background: white;
+$box_shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+$text_color: black;
+$links_color: #626262;
+$bottom_box_bg: #f5f5f5;
+
+@mixin createBox($width, $radius, $background, $shadow) {
+  width: $width;
+  border-radius: $radius;
+  background-color: $background;
+  box-shadow: $shadow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  font-family: Roboto, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  // justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+    color: #08b395;
+    transition: all 0.3s;
+
+    i.iconfont {
+      font-size: 23px;
+    }
+  }
+
+  .title {
+    // padding: 10px 50px 10px 10px;
+    padding: 10px 50px;
+    background-color: #f0eefc;
+    // border-left: 3px solid #08b395;
+    color: #08b395;
+    margin: 60px 0 0;
+    font-size: 22px;
+    border-radius: 5px;
+  }
+
+  .tools {
+    margin: 20px 0 50px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+
+    a {
+      margin: 0 10px;
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .icon-Reset {
+      font-size: 17px;
+    }
+  }
+
+  .items {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    // width: 80vw;
+    padding: 0 5vw;
+  }
+
+  .item {
+    position: relative;
+    padding: 10px 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    overflow: hidden;
+    @include createBox($box_width, $box_bRadius, $box_background, $box_shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: $box_bRadius;
+    border-top-right-radius: $box_bRadius;
+
+    a {
+      // display: none;
+      position: absolute;
+      right: -70px;
+      top: -30px;
+    }
+
+    .profile,
+    .name,
+    .job {
+      margin: 5px;
+    }
+
+    .profile {
+      width: 80px;
+      height: 80px;
+      // border: 4px solid white;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      z-index: 2;
+      overflow: hidden;
+      transition: all 0.5s;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .job {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+
+      a {
+        // display: block;
+        transform: rotate(360deg);
+        right: 10px;
+        top: 10px;
+      }
+
+      .profile {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

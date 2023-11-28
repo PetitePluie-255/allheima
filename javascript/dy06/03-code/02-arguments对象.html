@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arguments对象</title>
+</head>
+
+<body>
+  <script>
+    // arguments对象
+    // arguments对象获取所有实参
+    function getSum() {
+      let sum = 0
+      for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+
+      }
+      console.log(sum);
+    }
+    //  arguments 只存在于普通函数中
+
+    // 箭头函数里面没有 arguments
+
+    //  arguments 本质：伪数组
+    getSum(1, 2, 3)
+    getSum(1, 2, 3, 4)
+    getSum(1, 2, 3, 4, 5)
+  </script>
+</body>
+
+</html>

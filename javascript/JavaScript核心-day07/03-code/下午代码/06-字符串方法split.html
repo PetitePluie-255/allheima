@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字符串方法split</title>
+  </head>
+
+  <body>
+    <script>
+      // 数组 转 字符串 join()
+      // 字符串 转 数组 split()
+
+      // 字符串方法split
+      const str = '40*40/红色'
+      // console.log(str.split('/')); //['40*40', '红色']
+      // console.log(str.split('*')); //['40', '*40/红色']
+
+
+      // 需求：请把 传智教育 四个字翻转为 育教智传
+      const it = '传智教育'
+      // 1. 将字符串 转成 数组 split()
+      // console.log(it.reverse());
+      const arr = it.split('')
+      // 2. 将数组进行翻转 reverse()
+      // console.log(arr.reverse()); // ['育', '教', '智', '传']
+      // 3. 将数组 转成 字符串 join()
+      console.log(arr.reverse().join(''));
+
+      // 实现步骤
+      // 1. split('分隔符')  把字符串转换为数组
+      // 2. reverse()       数组翻转
+      // 3. join('分隔符')   可以把数组转换为字符串
+    </script>
+  </body>
+</html>

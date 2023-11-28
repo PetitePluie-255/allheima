@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多维数组解构赋值</title>
+</head>
+
+<body>
+  <script>
+    // 多维数组解构赋值  
+    // ['小米', ['华为', '苹果']]
+
+    // const arr = ['小米', ['华为', '苹果']]
+    // const [a, b] = arr
+    // console.log(a); // 小米
+    // console.log(b); // ['华为', '苹果']
+
+    // const [c, d] = b
+    // console.log(c);
+    // console.log(d);
+
+    // ----------------------------------------
+    // 解构时, 左侧的数据结构必须和右侧保持一致
+    const arr = ['小米', ['华为', '苹果']]
+    const [a, [c, d]] = arr
+    console.log(a); // 小米
+    console.log(c, d); // c === '华为' d ==== '苹果'
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <section class="container">
+    <div class="department">
+      <h3>本公司所有员工</h3>
+      <ul>
+        <!-- <li>
+          <img class="avatar" src="./imgs/user3.jpg" alt="">
+          <span class="username">Jack</span>
+          <span class="born-time">2023-10-1</span>
+          <span class="sex">男</span>
+        </li>
+        <li>
+          <img class="avatar" src="./imgs/user1.jpg" alt="">
+          <span class="username">Tim</span>
+          <span class="born-time">2023-10-1</span>
+          <span class="sex">男</span>
+        </li> -->
+      </ul>
+    </div>
+  </section>
+  <script>
+    const treeData = [
+      {
+        id: 1,
+        departmentName: '人力资源部',
+        parentId: null,
+        children: [
+          {
+            id: 12,
+            username: '张三',
+            avatar: './imgs/user1.jpg',
+            sex: '男',
+            birth: 1693039237877,
+            parentId: 1,
+            children: [],
+          },
+          {
+            id: 13,
+            username: '张浩',
+            avatar: './imgs/user3.jpg',
+            sex: '男',
+            birth: 1693039237877,
+            parentId: 1,
+            children: [],
+          },
+        ],
+      },
+      {
+        id: 2,
+        departmentName: '技术部',
+        parentId: null,
+        children: [
+          {
+            id: 24,
+            username: '李四',
+            avatar: './imgs/user2.jpg',
+            sex: '男',
+            birth: 1693039237877,
+            parentId: 2,
+            children: [],
+          },
+        ],
+      },
+    ]
+
+    // 树形转列表
+    function treeToList(tree) {
+      let list = []
+      tree.forEach((item) => {
+        const { children, ...obj } = item
+        list.push(obj)
+
+        if (children.length > 0) {
+          const res = treeToList(children)
+          list.push(...res)
+        }
+      })
+      return list
+    }
+
+    const list = treeToList(treeData)
+    console.log(list)
+
+    render(list)
+    function render(list) {
+      // 过滤出来是员工的
+      list = list.filter(item => item.parentId)
+
+      // 在渲染员工
+      let str = list
+        .map((item) => {
+          return `
+            <li>
+              <img src="${item.avatar}" class="avatar" alt="avatar">
+              <span class="username">${item.username}</span>
+              <span class="born-time">${formatTime(item.birth)}</span>
+              <span class="sex">${item.sex}</span>
+            </li>
+          `
+        })
+        .join('')
+      document.querySelector('.department ul').innerHTML = str
+    }
+
+    // 格式化年月日
+    function formatTime(timeStamp) {
+      const date = new Date(timeStamp)
+      const year = date.getFullYear()
+      const month = date.getMonth() + 1
+      const day = date.getDate()
+      return `${year}-${month}-${day}`
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>赠品小案例</title>
+    <style>
+      .tag {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="name">
+      <!-- <span class="tag">【赠品】xx</span> -->
+    </p>
+    <script>
+      // 赠品小案例
+      const gift = '50g茶叶,清洗球'
+
+      // 实现步骤
+      // 1. 先把字符串拆分为数组
+      // 2. 利用数组渲染页面 map + join
+
+      const arr = gift.split(',') // ['50g茶叶', '清洗球']
+      // console.log(arr);
+      const newArr = arr.map(ele=> {
+        return `<span class="tag">【赠品】${ele}</span>`
+      })
+      console.log(newArr);
+      const str = newArr.join('')
+      console.log(str);
+      document.querySelector('.name').innerHTML = str
+
+    </script>
+  </body>
+</html>

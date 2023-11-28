@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 第一题：能够实现map 映射得到新数组
+    fn1()
+    function fn1() {
+      // 原数组
+      const input = [
+        '生煎',
+        '灌汤包',
+        '水饺',
+        '汉堡',
+      ]
+
+      // 请把input数组转换为以下格式：
+      const output = [
+        {
+          label: '生煎',
+          value: '生煎',
+        },
+        {
+          label: '灌汤包',
+          value: '灌汤包',
+        },
+        {
+          label: '水饺',
+          value: '水饺',
+        },
+        {
+          label: '汉堡',
+          value: '汉堡',
+        },
+      ]
+
+      // 填入代码
+    }
+
+
+    // 第二题：
+    fn2()
+    function fn2() {
+      //  已知有以下数据：
+      const data = [
+        {
+          sku: '1001',
+          name: 'iPhone 7 Plus 128G 玫瑰金色 移动联通电信4G手机',
+          is5G: false,
+          price: 6188,
+          count: 100, // 库存
+          suggestions: [
+            '1002',
+            '1003',
+            '1004',
+          ], // 相关推荐
+        },
+        {
+          sku: '1002',
+          name: 'iPhone 14 Pro 256G 深空灰色 移动联通电信5G手机',
+          is5G: true,
+          price: 9999,
+          count: 100,
+          suggestions: [
+            '1001',
+            '1003',
+          ],
+        },
+        {
+          sku: '1003',
+          name: 'iPhone 14 Pro Max 256G 深空灰色 移动联通电信5G手机',
+          is5G: true,
+          price: 10999,
+          count: 0,
+          suggestions: [
+            '1001',
+            '1002',
+          ],
+        },
+        {
+          sku: '1004',
+          name: 'iPhone 14 Pro Max 256G 白色 移动联通电信5G手机',
+          is5G: true,
+          price: 10999,
+          count: 9,
+          suggestions: [
+            '1001',
+          ],
+        },
+      ]
+
+      // 请完成以下需求：
+      // 1. 找出所有5G手机
+      // 2. 找出所有有货的手机
+      // 3. 找出所有有货的5G手机
+      // 4. 找出所有有货的5G手机的总价格（数量 * 单价）
+    }
+
+    // 第三题：
+    fn3()
+    function fn3() {
+      // 有如下数据
+      const data = [
+        {
+          id: '1faa0e81', // 快递单号
+          from: { // 发件人信息
+            name: '张三',
+            id: '1412908431238',
+            phone: '13800138000',
+            address: '北京市朝阳区望京soho',
+          },
+          to: { // 收件人信息
+            name: '李四',
+            id: '1412908431239',
+            phone: '13800138001',
+            address: '北京市海淀区西二旗',
+          },
+          timestamp: 1610000000000, // 时间戳
+          status: 'pending', // 状态 pending在途中 resolved已签收 rejected拒签
+          goodsType: 'food', // 类型 food食品 electronic电子
+          price: 18,  // 价格
+          type: '次日达', // 快递类型
+        },
+        {
+          id: '1faa0e82',
+          from: {
+            name: '张武',
+            id: '1412908431240',
+            phone: '13800138002',
+            address: '重庆市渝中区渝中路',
+          },
+          to: {
+            name: '李六',
+            id: '1412908431241',
+            phone: '13800138003',
+            address: '重庆市渝北区渝北路',
+          },
+          timestamp: 1610000123123,
+          status: 'resolved',
+          goodsType: 'electronics',
+          price: 188,
+          type: '次日达',
+        },
+        {
+          id: '1faa0e83',
+          from: {
+            name: '赵信',
+            id: '1412908431242',
+            phone: '13800138004',
+            address: '上海市浦东新区张江高科',
+          },
+          to: {
+            name: '王9',
+            id: '1412908431243',
+            phone: '13800138005',
+            address: '深圳市南山区科技园',
+          },
+          timestamp: 1610000123124,
+          status: 'pending',
+          goodsType: 'food',
+          price: 18,
+          type: '次日达',
+        },
+        {
+          id: '1faa0e84',
+          from: {
+            name: '蛮王',
+            id: '1412908431244',
+            phone: '13800138006',
+            address: '重庆市渝中区千与千寻小区',
+          },
+          to: {
+            name: '艾希',
+            id: '1412908431245',
+            phone: '13800138007',
+            address: '重庆市渝北区中央公园',
+          },
+          timestamp: 1610000123125,
+          status: 'rejected',
+          goodsType: 'flowers',
+          price: 99,
+          type: '隔日达',
+        },
+      ]
+
+      // 请完成以下需求
+
+      // 1. 找出所有food类型的订单
+
+
+      // 2. 找出所有次日达的订单
+
+
+      // 3. 找出所有次日达的food类型的订单
+
+
+      // 4. 统计快递的拒签率(rejected为退回)
+
+
+      // 5. 找出所有在途中的订单(即pending状态的订单)
+
+    }
+
+
+
+    // --------------------------------------------------------------
+    // 封装函数，求得数组中的最大值
+    function getMax(arr) {
+      // 填入代码
+    }
+    let arr = [1, 6, 2, 8, 11, 5]
+    let max = getMax(arr)
+
+
+    // --------------------------------------------------------------
+    // 封装函数，求得传入数组元素的和
+    function getSum(arr) {
+      // 填入代码
+    }
+    let arr2 = [3, 9, 9, 2, 7, 5]
+    let sum2 = getSum(arr2)
+
+
+    // --------------------------------------------------------------
+    // 封装函数，求得传入数组⾥⼤于 5 的和
+    function getLargeSum(arr) {
+      // 填入代码
+    }
+
+    let arr3 = [4, 9, 6, 90, 3, 11]
+    let sum3 = getLargeSum(arr3)
+
+    // --------------------------------------------------------------
+    // 封装函数，对数组，按照价格进行升序排序
+    function sortByAsc(arr) {
+      // 填入代码
+    }
+    const arr4 = [
+      { id: 1, name: '茶杯', price: 18 },
+      { id: 2, name: '电视机', price: 2000 },
+      { id: 3, name: '牙刷', price: 8 },
+      { id: 4, name: '电脑', price: 5000 },
+    ]
+    const res4 = sortByAsc(arr4)
+    console.log(res4)
+
+    // ---------------------------------------------------------------
+    // 封装函数，将学生数组中的所有姓名，存入成一个新数组，并过滤掉小强 => 得到 ['小明', '小丽', '小美']
+    function getNames(arr) {
+      // 填入代码
+    }
+    const arr5 = [
+      { id: 1, name: '小强', score: 18 },
+      { id: 2, name: '小明', score: 2000 },
+      { id: 3, name: '小丽', score: 8 },
+      { id: 4, name: '小美', score: 5000 },
+    ]
+    const res5 = getNames(arr)
+    console.log(res5)
+  </script>
+</body>
+
+</html>

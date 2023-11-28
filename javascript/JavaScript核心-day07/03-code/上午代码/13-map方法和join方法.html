@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组map方法和join方法</title>
+</head>
+
+<body>
+  <script>
+    const arr = ['red', 'blue', 'pink']
+
+    //  数组 map方法 
+    //  处理数据并且 返回一个数组
+    const newArr =  arr.map(function(ele, index) {
+      // console.log(ele);
+      // console.log(index);
+      return ele + index
+    })
+    console.log(newArr);
+
+    const numArr = [2, 5, 10]
+    // [4, 25, 100]
+    // const numArr1 = numArr.map(function(ele) {
+    //   return ele * ele
+    // })
+
+    // 箭头函数
+    const numArr1 = numArr.map(ele => ele * ele)
+    console.log(numArr1);
+
+
+
+    //  数组join方法 
+    //  把数组转换为字符串
+    // 需求1: 得到一个字符串 redbluepink 
+    const str1 = arr.join('')
+    console.log(str1);
+    // 需求2: 得到一个字符串 red/blue/pink  
+    const str2 = arr.join('-')
+    console.log(str2);
+
+
+  </script>
+</body>
+
+</html>

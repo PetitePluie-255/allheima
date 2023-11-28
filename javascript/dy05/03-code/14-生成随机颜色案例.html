@@ -6,9 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>生成随机颜色案例</title>
+  <style>
+    button {
+      width: 200px;
+      height: 80px;
+      border: 0;
+    }
+  </style>
 </head>
 
-<body>
+<body onclick="getRandomColor(4)">
+  <button class="btn" onclick="getRandomColor(4)">变色</button>
   <script>
     // 需求：封装颜色函数 getRandomColor 来生成随机颜色
     // 要求：
@@ -16,8 +24,31 @@
     // 2. 如果参数传递的是 true 或者无参数，则输出 一个随机十六进制的颜色
     // 3. 如果参数传递的是 false ，则输出 一个随机rgb的颜色
 
-    // let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
-
+    function getRandomColor(flag = true) {
+      let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+      if (flag) {
+        let str = '#'
+        for (let i =0;i<6;i++) {
+          let random = Math.floor(Math.random() * arr.length)
+          str += `${arr[random]}`
+        }
+        document.querySelector('body').style.backgroundColor = str
+        document.querySelector('.btn').style.backgroundColor = str
+        return str
+         
+      } else {
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        let a = Math.random()
+        let str = `rgba(${r},${g},${b},${a})`
+        document.querySelector('body').style.backgroundColor = str
+        document.querySelector('.btn').style.backgroundColor = str
+      }
+    }
+    // console.log(getRandomColor(4));
+    // console.log(getRandomColor());
+    // console.log(getRandomColor(false));
   </script>
 </body>
 

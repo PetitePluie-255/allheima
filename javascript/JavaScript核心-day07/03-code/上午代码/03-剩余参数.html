@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>剩余参数获得多余的实参</title>
+</head>
+
+<body>
+  <script>
+    //  剩余参数作用 
+    // 应用于普通函数和箭头函数中 
+    // function fn(a, ...other) {
+    //   console.log(a);
+    //   console.log(other);
+    // }
+    // fn(1, 2, 3, 4)
+    // fn(1, 2, 3)
+
+    // 获得剩余的实参，返回真数组
+    // 需求：使用箭头函数封装求和函数
+    function fn(...other) {
+      // 真数组, 可以使用数组的一些方法, 方便使用
+      console.log(other);
+      let sum = 0
+      for (let i = 0; i < other.length; i++) {
+        sum += other[i]
+      }
+      console.log('累加的和为:', sum);
+    }
+    fn(1, 10, 20)
+    fn(1, 10, 20, 100)
+
+
+  </script>
+</body>
+
+</html>

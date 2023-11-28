@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数组解构变量和值不匹配的情况</title>
+</head>
+
+<body>
+  <script>
+    // 数组解构变量和值不匹配的情况
+    // (1) 变量多，值少的情况
+    // 后面的变量的结果为undefined 
+    // 如何解决: 给变量设置默认值
+    // const arr = ['小米', '华为', '苹果']
+    // const [x, y, z, h] = arr
+    // console.log(x, y, z, h);
+
+    // 默认值的替换逻辑, 判断是否有值
+    // 如果有值, 则使用原来的值, 如果没有值, 则使用默认值
+    // const arr = ['小米', '华为', '苹果']
+    // const [x = 'xm', y = 'hw', z = 'pg', h = 'vivo'] = arr
+    // console.log(x, y, z, h);
+
+    // (2) 变量少, 值多的情况
+    // 如何解决: 剩余参数 ...变量名
+    // const arr = ['小米', '华为', '苹果', 'vivo', '三星', 'oppo']
+    // const [x, y, ...other] = arr
+    // console.log(x, y);
+    // console.log(other); // ['苹果', 'vivo', '三星', 'oppo']
+
+    // (3) 按需导入 直接忽略某些值
+    const arr = ['小米', '华为', '苹果', 'vivo']
+    const [x, ,z, h] = arr
+    console.log(x,  z, h);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 变量多，值少的情况
+    // ['小米', '华为', '苹果']
+    //  防止undefined
+    //  变量少，值多的情况
+    //  利用剩余参数解决变量少值多的情况
+
+
+    //  按需导入，忽略某些值
+    // ['小米', '华为', '苹果', 'vivo']
+  </script>
+</body>
+
+</html>

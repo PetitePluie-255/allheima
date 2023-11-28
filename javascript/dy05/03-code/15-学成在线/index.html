@@ -157,8 +157,21 @@
     ]
 
     // 需求：利用对象数组的数据渲染页面
-    
- 
+    function render(arr = [], ele = 'ul') {
+      let str = ''
+      for (let i = 0; i < arr.length; i++) {
+        str += `<li>
+          <a href="#">
+            <div class="pic"><img src="${arr[i].src}" alt=""></div>
+            <h4>${arr[i].title}</h4>
+            <p><span>高级</span> · <i>${arr[i].num}</i>人在学习</p>
+          </a>
+        </li>`
+      }
+      document.querySelector(ele).innerHTML = str
+    }
+    render(data,'ul')
+
 
 
 

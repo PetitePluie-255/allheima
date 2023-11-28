@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  font-family: Roboto, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.container a {
+  text-decoration: none;
+  color: #08b395;
+  transition: all 0.3s;
+}
+.container a i.iconfont {
+  font-size: 23px;
+}
+.container .title {
+  padding: 10px 50px;
+  background-color: #f0eefc;
+  color: #08b395;
+  margin: 60px 0 0;
+  font-size: 22px;
+  border-radius: 5px;
+}
+.container .tools {
+  margin: 20px 0 50px;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.container .tools a {
+  margin: 0 10px;
+}
+.container .tools a:hover {
+  color: #fff;
+}
+.container .tools .icon-Reset {
+  font-size: 17px;
+}
+.container .items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 5vw;
+}
+.container .item {
+  position: relative;
+  padding: 10px 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+  overflow: hidden;
+  width: 250px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.container .item a {
+  position: absolute;
+  right: -70px;
+  top: -30px;
+}
+.container .item .profile,
+.container .item .name,
+.container .item .job {
+  margin: 5px;
+}
+.container .item .profile {
+  width: 80px;
+  height: 80px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.container .item .profile img {
+  width: 100%;
+}
+.container .item .name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.container .item .job {
+  font-size: 14px;
+  font-weight: 400;
+}
+.container .item:hover {
+  transform: translateY(-5px);
+}
+.container .item:hover a {
+  transform: rotate(360deg);
+  right: 10px;
+  top: 10px;
+}
+.container .item:hover .profile {
+  transform: scale(1.1);
+}

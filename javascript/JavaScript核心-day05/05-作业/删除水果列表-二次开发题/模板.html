@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="td">14</div>
-                        <div class="td"><a href="javascript:del(0);" >删除</a></div>
+                        <div class="td"><a href="javascript:del(0);">删除</a></div>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                 price: 34,
             }
         ]
-        function render(arr) {
+        function render(arr = [],ele,ele1) {
             let str = ''
             let str1 = ''
             let total = 0
@@ -145,22 +145,22 @@
           <button class="pay">结算( ${num} )</button>`
 
             }
-            document.querySelector('.tbody').innerHTML = str
-            document.querySelector('.right-box').innerHTML = str1
+            document.querySelector(ele).innerHTML = str
+            document.querySelector(ele1).innerHTML = str1
         }
-        render(fruit)
+        render(fruit,'.tbody','.right-box')
         function add(num, index) {
             fruit[index].num++;
-            render(fruit)
+            render(fruit, '.tbody','.right-box')
         }
         function del(num, index) {
             fruit[index].num--;
-            render(fruit)
+            render(fruit, '.tbody','.right-box')
         };
-        function delr (index) {
-            fruit.splice(index,1)
+        function delr(index) {
+            fruit.splice(index, 1)
             console.log(fruit);
-            render(fruit)
+            render(fruit, '.tbody','.right-box')
         }
     </script>
 </body>
