@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>filter筛选数组元素</title>
+</head>
+
+<body>
+  <script>
+    // filter 筛选数组元素
+    // 将符合条件的留下, 不符合条件的过滤出去
+    const arr = [10, 20, 30, 40]
+
+    //  需求：
+    // 筛选出来所有大于等于 15 的数据
+    // const newArr = arr.filter(function(ele, index) {
+    //   // return 条件
+    //   return ele >= 15
+    // })
+    // console.log(newArr);
+    //  箭头函数写法：
+    const newArr = arr.filter(ele => ele >= 15)
+    console.log(newArr);
+
+
+    // -------------------------------------------
+    const data = [
+      {uname: '迪丽热巴', flag: 1},
+      {uname: '古力娜扎', flag: 0},
+      {uname: '马尔扎哈', flag: 1},
+      {uname: '赵丽颖', flag: 0}
+    ]
+    // 求一个新数组, 数组中保留flag为1的项
+    const newData = data.filter(ele => ele.flag === 1)
+    console.log(newData);
+  </script>
+</body>
+
+</html>

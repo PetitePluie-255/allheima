@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const arr = [1, 10, 20, 50, 100]
+    const arr = [{ name: 'jack', score: 90 }, { name: 'rose', score: 100 }  ]
+    // 求和 
+    // 1. forEach + 声明sum 实现
+
+    // 2. reduce() 
+    const total = arr.reduce((prev, curr) => {
+      console.log(prev);
+      return prev + curr.score
+    })
+    console.log(total);
+  </script>
+</body>
+</html>

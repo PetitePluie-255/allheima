@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object三种静态方法</title>
+  </head>
+
+  <body>
+    <script>
+      // Object 三种静态方法
+      const o = { name: '佩奇', age: 6, gender: '女' }
+
+      //  Object.keys() - 所有的键 - 返回值是一个数组
+      const arr = Object.keys(o)
+      console.log(arr);
+
+      //  Object.values() - 所有的值 - 返回值是一个数组
+      const arr1 = Object.values(o)
+      console.log(arr1);
+
+      //  Object.assign(目标对象, 源对象)
+      //  对象的拷贝 - 浅拷贝 拷贝对象的一层属性
+      const obj = {} 
+      // obj 和 o 指向的地址不一致 
+      Object.assign(obj, o)
+      obj.name = '乔治'
+      console.log(obj);
+      console.log(o);
+
+      // obj1 和 obj2 指向的是同一个地址
+      const obj1 = { name: 'jack' }
+      const obj2 = obj1
+    </script>
+  </body>
+</html>

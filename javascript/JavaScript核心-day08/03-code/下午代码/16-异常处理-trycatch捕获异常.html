@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try/catch 捕获错误信息</title>
+  </head>
+
+  <body>
+    <p>我是测试文字</p>
+    <script>
+      // try/catch 捕获错误信息
+
+      try {
+        // 执行的代码 - 可能出现错误的代码
+        const p = document.querySelector('p')
+        console.log(p);
+        p.style.color = 'hotpink'
+      } catch(error) {
+        // 捕获到的错误信息 error
+        console.log(error);
+      } finally {
+        // 无论是否出现错误, 都会执行这些代码
+        console.log('finally');
+      }
+
+
+
+      console.log('执行的其他的逻辑代码, 100行 - 非常重要');
+    </script>
+  </body>
+</html>

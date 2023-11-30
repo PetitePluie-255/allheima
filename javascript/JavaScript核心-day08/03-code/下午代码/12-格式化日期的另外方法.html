@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>格式化日期的另外方法</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 40px;
+      border: 1px solid pink;
+      text-align: center;
+      line-height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    const date = new Date()
+    // 1. 日期对象的字符串 - 包括日期和时间 
+    console.log(date.toLocaleString());
+    // 1. 日期对象的字符串 - 包括日期部分
+    console.log(date.toLocaleDateString());
+    // 1. 日期对象的字符串 - 包括时间部分
+    console.log(date.toLocaleTimeString());
+    // 2023-11-30 10/33/01
+
+  </script>
+</body>
+
+</html>

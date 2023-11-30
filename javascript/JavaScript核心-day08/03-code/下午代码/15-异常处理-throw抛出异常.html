@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>异常处理-throw抛出异常</title>
+  </head>
+
+  <body>
+    <script>
+      // 异常处理 - throw抛出异常
+      function sum(x, y) {
+        // 判断处理 - 异常情况 x 或者 y 漏传
+        if (!x || !y) {
+          // 抛出异常 - 方便自己或者其他前端快速的定位问题, 发现问题
+          throw new Error('x或y漏传了')
+        }
+        return x + y
+      }
+
+      console.log(sum(1, 2));
+      console.log(sum(10, 20));
+    </script>
+  </body>
+</html>

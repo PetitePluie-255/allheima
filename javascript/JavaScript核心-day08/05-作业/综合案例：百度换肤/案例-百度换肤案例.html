@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-image: url(./images/bg1.jpg);
+    }
+
+    #mask {
+      background-color: rgba(255, 255, 255, 0.3);
+      height: 200px;
+      text-align: center;
+    }
+
+    #mask img {
+      width: 200px;
+      height: 110px;
+      margin-top: 35px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mask">
+    <img src="./images/bg1.jpg" alt="" />
+    <img src="./images/bg2.jpg" alt="" />
+    <img src="./images/bg3.jpg" alt="" />
+    <img src="./images/bg4.jpg" alt="" />
+    <img src="./images/bg5.jpg" alt="" />
+  </div>
+
+  <script>
+    // 1. 获取所有的img图片
+    const imgs = document.querySelectorAll('img')
+
+    // 2. 循环遍历所有图片，给每张图片绑定click事件
+    for (let i = 0; i < imgs.length; i++) {
+      imgs[i].addEventListener('click', function () {
+        // 3.1 获取到点击的那个图片的src
+        let src = this.src
+        // 3.2 修改body的背景图片为上一步获取到的src
+        document.body.style.backgroundImage = `url(${src})`
+      })
+    }
+  </script>
+</body>
+
+</html>

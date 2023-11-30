@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach遍历数组</title>
+  </head>
+
+  <body>
+    <script>
+      //  forEach遍历数组
+      const arr = ['pink', 'red', 'blue']
+      // for (let i = 0; i < arr.length; i++) {
+      //   // 下标
+      //   console.log(i);
+      //   // 每一项
+      //   console.log(arr[i]);
+      // }
+
+      // forEach 遍历数组 没有返回值
+      /*
+        语法: 
+        arr.forEach(匿名函数)
+        arr.forEach(function(ele, index) {
+          ele - 每一项
+          index - 每一项对应的索引/下标
+        })
+      */ 
+     arr.forEach(function(index, ele) {
+      // 参数1: 每一项
+      // 参数2： 索引
+      // console.log(ele);
+      console.log(index);
+     })
+
+    //  arr.forEach(ele => console.log(ele))
+    </script>
+  </body>
+</html>

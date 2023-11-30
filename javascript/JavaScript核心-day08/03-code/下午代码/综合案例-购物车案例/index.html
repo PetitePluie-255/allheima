@@ -75,17 +75,25 @@
       .map((ele) => {
         // 对象解构
         const { name, price, picture, count, spec, gift } = ele
+        // console.log(spec);
+        // 规格信息
+        // 1. 将对象转成数组 - 只需要对象中的属性值
+        // 2. 再将数组转成字符串
         const arr = Object.values(spec)
-        const arrStr = arr.join('/')
+        const specStr = arr.join('/')
+        // console.log(specStr);
 
+        // 赠品信息
         const giftArr = gift ? gift.split(',') : []
         const giftStr = giftArr.map(ele => `<span class="tag">【赠品】${ele}</span>`).join('')
+        console.log(giftStr);
+
 
         return `
         <div class="item">
           <img src="${picture}" alt="">
-          <p class="name">${name} ${giftStr}
-          <p class="spec">${arrStr}</p>
+          <p class="name">${name} ${giftStr}</p>
+          <p class="spec">${specStr}</p>
           <p class="price">${price}</p>
           <p class="count">x${count}</p>
           <p class="sub-total">${price * count}</p>

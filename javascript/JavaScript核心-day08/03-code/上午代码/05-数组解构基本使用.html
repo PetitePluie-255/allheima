@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数组解构</title>
+  </head>
+
+  <body>
+    <script>
+      // 数组解构
+      // 基本语法
+      const arr = [10, 100, 1000]
+      // const first = arr[0]
+      // const sec = arr[1]
+      // const third = arr[2]
+      // console.log(first, sec, third);
+
+      // 赋值的动作, 将右侧的值依次赋值给左侧的变量
+      const [sec, first, third] = [10, 100, 1000] 
+      console.log(first, sec, third);
+
+      // 需求:交换2个变量的值
+      let x = 1
+      let y = 2
+      ;[x, y] = [y, x]
+      console.log(x);
+      console.log(y);
+
+      // js中以小括号或者中括号开头的语句, 需要通过分号;  进行分割, 否则会报错
+
+      // ------------------------------------
+
+      // const pc = ['海尔', '联想', '小米', '方正']
+      // const [ hr, lx, mi, fz ] = pc
+      // console.log(hr, lx, mi, fz);
+
+      function getValue() {
+        return [100, 60]
+      }
+      console.log(getValue());
+      // const max = getValue()[0]
+      // const min = getValue()[1]
+      const [ max, min ] = getValue()
+      console.log(max, min);
+      
+    </script>
+  </body>
+</html>

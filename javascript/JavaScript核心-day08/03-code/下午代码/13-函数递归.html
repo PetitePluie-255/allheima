@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>函数递归</title>
+</head>
+
+<body>
+  <script>
+    // 函数自己调用自己，称为递归
+    // 特点: 函数内部自己调用自己, 造成死循环 / 栈溢出
+    // 注意事项: 一定需要有出口 / 退出条件 return 
+    //  利用函数递归打印3句话 
+
+    let i = 0
+
+    function fn() {
+      i ++
+      console.log('从前有座山', i);
+      console.log('山里有座庙');
+      console.log('庙里有个老和尚');
+      console.log('老和尚给小和尚讲故事');
+      if ( i >= 3) {
+        return // 结束语句的条件
+      }
+      fn() // 函数内部自己调用自己
+    }
+    fn()
+  </script>
+</body>
+
+</html>

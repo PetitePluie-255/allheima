@@ -1,0 +1,185 @@
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size : 62%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : sans-serif;
+  color          : #333;
+  line-height    : 1.5;
+  height         : 100vh;
+  position       : relative;
+  display        : flex;
+  align-items    : flex-start;
+  justify-content: flex-start;
+  background     : #F6F6F6;
+}
+
+.box {
+  width           : 296px;
+  height          : 326px;
+  padding         : 0 10px;
+  margin          : 20px auto;
+  border-radius   : 4px;
+  background-color: #fff;
+}
+
+.box .icontfont {
+  margin-right: 4px;
+}
+
+.box header {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  height         : 52px;
+  font-size      : 15px;
+}
+
+.h-right {
+  font-size: 12px;
+}
+
+.box nav {
+  height         : 92px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+nav .item {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  cursor        : pointer;
+}
+
+.item .iconfont {
+  width        : 40px;
+  height       : 40px;
+  border-radius: 20px;
+  text-align   : center;
+  line-height  : 40px;
+  margin-bottom: 12px;
+}
+
+.item:nth-child(1) .iconfont {
+  background-color: #E5ECFD;
+  color           : #2A64F6;
+}
+
+.item:nth-child(2) .iconfont {
+  background-color: #FDF3E7;
+  color           : #F19B39;
+  font-weight     : bold;
+}
+
+.item:nth-child(3) .iconfont {
+  background-color: #FCF8E8;
+  color           : #EDCA45;
+  font-weight     : bold;
+}
+
+.item:nth-child(4) .iconfont {
+  background-color: #EBF7F7;
+  color           : #5DBCBE;
+  font-weight     : bold;
+}
+
+img {
+  width: 276px;
+}
+
+.add {
+  box-sizing       : border-box;
+  margin           : 0px 0px 18px;
+  min-width        : 0px;
+  -webkit-box-pack : center;
+  justify-content  : center;
+  -webkit-box-align: center;
+  align-items      : center;
+  display          : flex;
+  border           : 1px solid rgba(5, 109, 232, 0.5);
+  color            : rgb(5, 109, 232);
+  border-radius    : 4px;
+  cursor           : pointer;
+  height           : 40px;
+  font-size        : 14px;
+  width            : 100%;
+  background-color : #fff;
+}
+
+
+.close-modal {
+  position  : absolute;
+  top       : .5rem;
+  right     : 2rem;
+  font-size : 5rem;
+  color     : #333;
+  cursor    : pointer;
+  border    : none;
+  background: none;
+}
+
+h1 {
+  font-size    : 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.content {
+  border       : 1px solid rgb(235, 235, 235);
+  border-radius: 4px;
+  height: 199px;
+  margin-bottom: 20px;
+}
+.submit {
+  width: 100px;
+  line-height: 30px;
+  padding: 0px 14px;
+  color: white;
+  border: none;
+  background-color: #97B5EF;
+  float: right;
+  border-radius: 4px;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position : absolute;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+  width    : 40%;
+
+  background-color: white;
+  padding         : 6rem 3rem 2rem 3rem;
+  border-radius   : 5px;
+  box-shadow      : 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index         : 10;
+}
+
+.overlay {
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter : blur(3px);
+  z-index         : 5;
+}
