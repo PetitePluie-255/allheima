@@ -10,8 +10,18 @@
 
 <body>
   <script>
+    let i = 0
     // 函数自己调用自己，称为递归
-
+    function fn() {
+      console.log(1);
+      console.log(2);
+      console.log(3);
+      for (i; i < 3; ) {
+        i++
+        fn()
+      }
+    }
+    fn()
     //  利用函数递归打印3句话 
 
   </script>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>员工系统</title>
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">员工系统</div>
+
+    <!-- 工具栏 -->
+    <div class="tools">
+      <a href="javascript:;" onclick="add()" title="添加员工">
+        <i class="iconfont icon-add"></i>
+      </a>
+      <a href="javascript:;" onclick="searchFn()" title="查询员工">
+        <i class="iconfont icon-search"></i>
+      </a>
+      <a href="javascript:;" onclick="reRender()" title="重新渲染所有员工">
+        <i class="iconfont icon-Reset"></i>
+      </a>
+    </div>
+
+    <!-- 员工信息栏 -->
+    <div class="items">
+      <div class="item">
+        <div class="profile"><img src="./images/1.jpg"></div>
+        <h1 class="name">Adem ilter</h1>
+        <p class="job">前端开发工程师</p>
+        <a href="javascript:;" onclick="del()"><i class="iconfont icon-guanbi"></i></a>
+      </div>
+      <div class="item">
+        <div class="profile"><img src="./images/3.jpg" alt=""></div>
+        <h1 class="name">Adem ilter</h1>
+        <p class="job">后端开发工程师</p>
+        <a href="javascript:;" onclick="del()"><i class="iconfont icon-guanbi"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 工种
+    let jobs = [
+      '软件工程师',
+      '前端开发工程师',
+      '后端开发工程师',
+      '全栈工程师',
+      '数据分析师',
+      '网络工程师',
+      '系统管理员',
+      '数据库管理员',
+      'UI/UX设计师',
+      '产品经理',
+      '测试工程师',
+      'DevOps工程师',
+      '云计算工程师',
+      '人工智能工程师',
+      '区块链开发工程师',
+      '游戏开发工程师',
+      '网络安全专家',
+      '机器学习工程师',
+      '物联网工程师',
+      '项目经理',
+    ]
+
+    /*
+        员工数组
+        每个员工对象都有一个唯一的ID。
+        员工头像在 images 文件夹内，准备了 1 - 15 图片，可以按照下标随机取
+    */
+    let jsonData = [
+      {
+        id: 101,
+        name: '李芳',
+        avatar: './images/14.jpg',
+        job: jobs[0],
+      },
+      {
+        id: 102,
+        name: '张伟',
+        avatar: './images/1.jpg',
+        job: jobs[1],
+      },
+      {
+        id: 103,
+        name: '王丽',
+        avatar: './images/6.jpg',
+        job: jobs[2],
+      },
+      {
+        id: 104,
+        name: '王刚',
+        avatar: './images/2.jpg',
+        job: jobs[3],
+      },
+      {
+        id: 105,
+        name: '李勇',
+        avatar: './images/8.jpg',
+        job: jobs[4],
+      },
+    ]
+    function fetchData () {
+      const newJsonData = []
+      jsonData.forEach(ele => {
+        newJsonData.push(ele)
+      })
+      return newJsonData
+    }
+    ///渲染所有数据到页面中
+    function render(arr = jsonData) {
+      const render = arr.map(ele => `<div class="item">
+        <div class="profile"><img src="${ele.avatar}"></div>
+        <h1 class="name">${ele.name}</h1>
+        <p class="job">${ele.job}</p>
+        <a href="javascript:;" onclick="del()"><i class="iconfont icon-guanbi"></i></a>
+      </div>`).join('')
+      document.querySelector('.items').innerHTML = render
+    }
+    render()
+    // 添加功能
+    function add () {
+      const uname = prompt('请输入')
+      let id = Math.floor(Math.random() * 200)
+      let pic = Math.floor(Math.random() * 15) + 1
+      let job = Math.floor(Math.random() * 16)
+    }
+    // 删除功能
+ 
+    // 查找功能
+{
+  let a =1 
+  console.log(a);
+}
+console.log(a);
+  </script>
+</body>
+
+</html>

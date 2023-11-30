@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-           let num = Math.floor(Math.random() * 10)
-
-            while (true) {
-                let num2 = +prompt('请输入一个数:')
-                if (num === num2) {
-                    alert('猜对了')
-                    break
-
-                } else {
-                    if (num2 > num) {
-                        alert('猜大了!')
-                    } else if (num2 < num) {
-                        alert('猜小了!')
-                    }
-
-                }
-                版本: 1.84.2(user setup)
-                提交: 1a5daa3a0231a0fbba4f14db7ec463cf99d7768e
-                日期: 2023 - 11 -09T10: 51: 52.184Z
-                Electron: 25.9.2
-                ElectronBuildId: 24603566
-                Chromium: 114.0.5735.289
-                Node.js: 18.15.0
-                V8: 11.4.183.29 - electron.0
-                OS: Windows_NT x64 10.0.25947
+        function add(arr, item, index) {
+                let arr1 = [...arr]
+                arr1.splice(index, 0, item)
             }
+            add([1, 2, 3, 4], 'z', 2)
     </script>
 </body>
+
 </html>

@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>日期对象</title>
-    <style>
-      .box {
-        width: 300px;
-        height: 40px;
-        border: 1px solid pink;
-        text-align: center;
-        line-height: 40px;
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div class="box"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日期对象</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 40px;
+      border: 1px solid pink;
+      text-align: center;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
 
-    <script>
-      //  实例化日期对象
+<body>
+  <div class="box"></div>
 
-      //  格式化日期对象
-      //  转换成开发中常见的日期和时间格式
+  <script>
+    //  实例化日期对象
+    // const data = new Date()
+    // console.log(data);
+    //  格式化日期对象
+    const data1 = new Date('2020/01/10')
+    console.log(data1);
+    //  转换成开发中常见的日期和时间格式
+    // const data = new Date(yy/mm/dd)
+    // console.log(data.getFullYear());
+    // console.log(data.getMonth() + 1);
+    // console.log(data.getDate());
+    // console.log(data.getDay());
+    // console.log(data.getHours());
+    // console.log(data.getMinutes());
+    // console.log(data.getSeconds());
+    // document.querySelector('.box').innerHTML = data
+    //  页面上展示年月日、时分秒
+    setInterval(() => {
+      const data = new Date()
+      const year = data.getFullYear()
+      const month = data.getMonth() + 1
+      const day = data.getDate()
+      let hour = data.getHours()
+      let minutes = data.getMinutes()
+      let seconds = data.getSeconds()
+      hour = hour < 10 ? '0' + hour : hour
+      minutes = minutes < 10 ? '0' + minutes : minutes
+      seconds = seconds < 10 ? '0' + seconds : seconds
+      let str = `${year}/${month}/${day} ${hour}:${minutes}:${seconds}`
+      document.querySelector('.box').innerHTML = str, 1000
+    })
 
-      //  页面上展示年月日、时分秒
-    </script>
-  </body>
+
+  </script>
+</body>
+
 </html>

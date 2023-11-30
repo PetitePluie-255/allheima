@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>try/catch 捕获错误信息</title>
-  </head>
 
-  <body>
-    <p>我是测试文字</p>
-    <script>
-      // try/catch 捕获错误信息
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>try/catch 捕获错误信息</title>
+</head>
+
+<body>
+  <p>我是测试文字</p>
+  <script>
+    // try/catch 捕获错误信息
+    try {
+      function sum(x, y) {
+        if (!x || !y) {
+          throw new Error('参数漏传');
+        }
+        return x + y
+      }
+
+      console.log(sum());
+    } catch (error) {
+      console.log(error);
+    }finally {
+      console.log(123);
+    }
+
+  </script>
+</body>
+
 </html>

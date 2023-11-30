@@ -75,7 +75,35 @@
 
 
     // 需求：通过递归将树形结构数据转换为扁平化的员工列表，并展示到页面中
+    function trablateToTreeDate(data) {
+      const list = []
+      data.forEach(ele => {
+        const { children, ...obj } = ele
+        list.push(obj)
+        if (children.length > 0) {
+          const res = trablateToTreeDate(children)
+          console.log(res);
+          list.push(...res)
+        }
+      })
+      return list
+    }
 
+    let list1 = trablateToTreeDate(treeData)
+    const date = new Date()
+
+
+    const arr = list1.map(ele => {
+      if (ele.parentId !== null) {
+        return `<li>
+          <img class="avatar" src="${ele.avatar}" alt="">
+          <span class="username">${ele.username}</span>
+          <span class="born-time">${date.toLocaleDateString() }</span>
+          <span class="sex">${ele.sex}</span>
+        </li>`
+      }
+    })
+    document.querySelector('ul').innerHTML = arr.join('')
 
 
   </script>

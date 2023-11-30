@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机显示图片案例</title>
+  <style>
+    img {
+      width: 600px;
+    }
+
+    button {
+      font-size: 16px;
+      height: 40px;
+      border-radius: 40px;
+      padding: 6px 15px;
+      color: white;
+      background-color: #1677ff;
+      box-shadow: 0 2px 0 rgba(5, 145, 255, .1);
+      outline: none;
+      display: inline-block;
+      font-weight: 400;
+      white-space: nowrap;
+      text-align: center;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4096ff;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./images/1.png" alt="">
+  <button>切换图片</button>
+  <script>
+    // 需求：点击按钮，随机显示图片案例
+
+    // 图片地址
+    const arr = [
+      './images/1.png',
+      './images/2.png',
+      './images/3.png',
+      './images/4.png'
+    ]
+
+    // 获取图片元素 和 按钮
+    const img = document.querySelector('img')
+    const btnEl = document.querySelector('button')
+
+
+    // 实现步骤：
+    // ①：监听按钮的点击事件
+    // ②：利用随机数抽取数组中的一个图片地址
+    // ③：修改图片元素的src地址（把图片地址赋值给src属性）
+
+
+
+
+  </script>
+</body>
+
+</html>

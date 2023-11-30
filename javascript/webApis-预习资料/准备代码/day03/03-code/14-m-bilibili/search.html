@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./iconfonts/iconfont.css">
+  <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+  <div class="m-search">
+    <div class="form">
+      <i class="iconfont icon-search"></i>
+      <input type="text" placeholder="凡人修仙传" class="search-input">
+      <i class="iconfont icon-guanbi"></i>
+    </div>
+    <a href="javascript:void(0);" class="cancel">取消</a>
+  </div>
+  <div class="search-hot">
+    <h2>大家都在搜</h2>
+    <div class="list">
+      <span class="hotword-item">开学前一天的中国速度</span>
+      <span class="hotword-item">LOL新英雄大招全图范围</span>
+      <span class="hotword-item">央视曝光飙车炸街产业链</span>
+    </div>
+  </div>
+  <div class="gap"></div>
+  <div class="history">
+    <h2>历史搜索</h2>
+    <ul>
+      <!-- 
+        <li>
+          <i class="iconfont icon-lishijilu_o"></i>
+          <span>凡人修仙传</span>
+        </li>
+      -->
+    </ul>
+    <div class="clear-history">
+      <a href="javascript:void(0);" class="clear">清除历史记录</a>
+    </div>
+  </div>
+
+  <!-- 搜索列表展示 -->
+  <ul class="recommend-list hide">
+    <li class="list-item">xxxx</li>
+  </ul>
+  <script>
+    const cancelEl = document.querySelector('.cancel')
+    const searchIptEl = document.querySelector('.search-input')
+    const closeEl = document.querySelector('.icon-guanbi')
+    const historyEl = document.querySelector('.history')
+    const historyUlEl = document.querySelector('.history ul')
+    const clearHistoryEl = document.querySelector('.clear-history')
+
+    // 需求：本地存储历史搜索记录案例
+
+
+
+  </script>
+</body>
+
+</html>

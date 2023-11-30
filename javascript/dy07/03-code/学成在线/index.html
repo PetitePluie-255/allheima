@@ -263,7 +263,7 @@
               </div>
               <h4>${title}</h4>
               <p><span>高级</span> · <i>${num}</i>人在学习</p>
-              <span class="date">2088年8月8日</span>
+              <span class="date">${getDate()}</span>
             </a>
           </li>
         `
@@ -272,6 +272,17 @@
 
       document.querySelector('.bd ul').innerHTML = str
     }
+
+    // 日期
+    function getDate () {
+      const date = new Date()
+      const year  = date.getFullYear()
+      const month  = date.getMonth()+1
+      const day  = date.getDate()
+
+      return `${year}年${month}月${day}日`
+    }
+    console.log(getDate());
   </script>
 </body>
 

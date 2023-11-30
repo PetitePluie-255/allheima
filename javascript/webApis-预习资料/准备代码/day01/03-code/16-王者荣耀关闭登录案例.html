@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀关闭登录案例</title>
+  <style>
+    .pop {
+      display: block;
+      visibility: visible;
+      position: fixed;
+      z-index: 9999;
+      left: 50%;
+      top: 50%;
+      width: 530px;
+      height: 254px;
+      margin-top: -127px;
+      margin-left: -265px;
+      background: url(./images/login.webp) no-repeat;
+    }
+
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+    }
+
+    @keyframes slideUp {
+      to {
+        height: 0;
+      }
+    }
+
+    @keyframes hidden {
+      to {
+        display: none;
+      }
+    }
+
+    .hide {
+      animation: slideUp .3s linear forwards, hidden .3s .3s forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pop">
+    <a href="javascript:;" class="close"></a>
+  </div>
+  <script>
+    // 需求：点击关闭按钮可以关闭父盒子
+
+    // 分析：
+    // ①：事件源： 关闭按钮 a链接
+    // ②：事件类型：鼠标点击 click
+    // ③：事件处理程序：关闭的是父盒子
+    // 核心：利用提供的 hide 类名 来实现隐藏功能
+
+    // 实现步骤：
+    //  1. 获取父盒子、 a链接
+    //  2. 给a链接注册事件
+    //  3. 关闭父盒子 （添加hide类名操作）
+
+
+
+
+  </script>
+</body>
+
+</html>

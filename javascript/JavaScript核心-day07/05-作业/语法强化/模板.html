@@ -21,28 +21,34 @@
       ]
 
       // 请把input数组转换为以下格式：
-      const output = [
-        {
-          label: '生煎',
-          value: '生煎',
-        },
-        {
-          label: '灌汤包',
-          value: '灌汤包',
-        },
-        {
-          label: '水饺',
-          value: '水饺',
-        },
-        {
-          label: '汉堡',
-          value: '汉堡',
-        },
-      ]
+      // const output = [
+      //   {
+      //     label: '生煎',
+      //     value: '生煎',
+      //   },
+      //   {
+      //     label: '灌汤包',
+      //     value: '灌汤包',
+      //   },
+      //   {
+      //     label: '水饺',
+      //     value: '水饺',
+      //   },
+      //   {
+      //     label: '汉堡',
+      //     value: '汉堡',
+      //   },
+      // ]
 
       // 填入代码
+      //   const output = input.map((ele) => {
+      //     return {
+      //       label:ele,
+      //       value:ele
+      //     }
+      //   })
+      //   console.log(output);
     }
-
 
     // 第二题：
     fn2()
@@ -97,9 +103,27 @@
 
       // 请完成以下需求：
       // 1. 找出所有5G手机
+      const lookup5g = data.filter(ele => ele.is5G === true)
+      console.log(lookup5g);
       // 2. 找出所有有货的手机
+      const inStock = data.filter(ele => ele.count > 0)
+      console.log(inStock);
       // 3. 找出所有有货的5G手机
+      function inStock5g() {
+        const inStock = data.filter(ele => ele.is5G === true && ele.count > 0)
+        console.log(inStock);
+      }
+      inStock5g()
       // 4. 找出所有有货的5G手机的总价格（数量 * 单价）
+      const inStock1 = data.filter(ele => ele.is5G === true && ele.count > 0)
+      console.log(inStock1);
+      let total = 0
+      const arr = []
+      inStock1.forEach(ele => {
+        arr.push(ele.price)
+        total = arr.reduce((prev, ele) => +prev + ele, 0)
+      })
+      console.log(total)
     }
 
     // 第三题：
@@ -192,19 +216,35 @@
       // 请完成以下需求
 
       // 1. 找出所有food类型的订单
-
+      const food = data.filter(ele => ele.goodsType === 'food')
+      console.log(food);
 
       // 2. 找出所有次日达的订单
-
+      const reach = data.filter(ele => ele.type === '次日达')
+      console.log(reach);
 
       // 3. 找出所有次日达的food类型的订单
-
+      const reachandfood = data.filter(ele => ele.type === '次日达' && ele.goodsType === 'food')
+      console.log(reachandfood);
 
       // 4. 统计快递的拒签率(rejected为退回)
+      let i = 0
+
+      const refusal = data.filter(ele => {
+        ele.status === 'rejected'
+
+        if (ele.status === 'rejected') {
+          i++
+        }
+
+      })
+      let a = (i / data.length) * 100
+      console.log(a + '%');
 
 
       // 5. 找出所有在途中的订单(即pending状态的订单)
-
+      const pending = data.filter(ele => ele.status === 'pending')
+      console.log(pending);
     }
 
 
@@ -213,6 +253,7 @@
     // 封装函数，求得数组中的最大值
     function getMax(arr) {
       // 填入代码
+      console.log(Math.max(...arr))
     }
     let arr = [1, 6, 2, 8, 11, 5]
     let max = getMax(arr)
@@ -222,6 +263,7 @@
     // 封装函数，求得传入数组元素的和
     function getSum(arr) {
       // 填入代码
+      console.log(arr.reduce((prve, ele) => prve + ele, 0))
     }
     let arr2 = [3, 9, 9, 2, 7, 5]
     let sum2 = getSum(arr2)
@@ -231,6 +273,8 @@
     // 封装函数，求得传入数组⾥⼤于 5 的和
     function getLargeSum(arr) {
       // 填入代码
+      const newArr = arr.filter(ele => ele > 5)
+      console.log(newArr.reduce((prve, ele) => prve + ele, 0));
     }
 
     let arr3 = [4, 9, 6, 90, 3, 11]
@@ -240,6 +284,14 @@
     // 封装函数，对数组，按照价格进行升序排序
     function sortByAsc(arr) {
       // 填入代码
+      const newArr = []
+      arr.forEach(ele => {
+        newArr.push(ele.price)
+      })
+      function ascendingOrder(a, b) {
+        return a - b
+      }
+      return newArr.sort(ascendingOrder)
     }
     const arr4 = [
       { id: 1, name: '茶杯', price: 18 },
@@ -254,6 +306,10 @@
     // 封装函数，将学生数组中的所有姓名，存入成一个新数组，并过滤掉小强 => 得到 ['小明', '小丽', '小美']
     function getNames(arr) {
       // 填入代码
+      const newArr = arr.filter((ele, index) => {
+        return ele.name !== '小强'
+      })
+      return newArr
     }
     const arr5 = [
       { id: 1, name: '小强', score: 18 },
@@ -261,7 +317,7 @@
       { id: 3, name: '小丽', score: 8 },
       { id: 4, name: '小美', score: 5000 },
     ]
-    const res5 = getNames(arr)
+    const res5 = getNames(arr5)
     console.log(res5)
   </script>
 </body>

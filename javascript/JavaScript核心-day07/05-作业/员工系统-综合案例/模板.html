@@ -105,18 +105,79 @@
         job: jobs[4],
       },
     ]
-
-    // 渲染所有数据到页面中
-      
-
+    // const newJsonData =[]
+    // jsonData.forEach(ele => {
+    //   newJsonData.push(ele)
+    // })
+    ///渲染所有数据到页面中
+    // function render1() {
+    //     const render = jsonData.map((ele, index) => {
+    //       const { name, avatar, job } = ele
+    //       return `<div class="item">
+    //     <div class="profile"><img src="${avatar}" alt=""></div>
+    //     <h1 class="name">${name}</h1>
+    //     <p class="job">${job}</p>
+    //     <a href="javascript:;" ><i class="iconfont icon-guanbi"></i></a>
+    //   </div>`
+    //     }).join('')
+    //     document.querySelector('.items').innerHTML = render
+    //   }
+    //   render1()
+    // 
+    function render(arr = jsonData) {
+      const render = arr.map((ele, index) => {
+        const { name, avatar, job } = ele
+        return `<div class="item">
+        <div class="profile"><img src="${avatar}" alt=""></div>
+        <h1 class="name">${name}</h1>
+        <p class="job">${job}</p>
+        <a href="javascript:;" onclick="del(${index})"><i class="iconfont icon-guanbi"></i></a>
+      </div>`
+      }).join('')
+      document.querySelector('.items').innerHTML = render
+    }
+    render()
     // 添加功能
-   
+    function add() {
+      let name = prompt('请输入名字')
+      let random = Math.floor(Math.random() * 200)
+      let pic = Math.floor(Math.random() * 15) + 1
+      let job = Math.floor(Math.random() * 16)
+      const obj = {
+        id: random,
+        name: name,
+        avatar: `./images/${pic}.jpg`,
+        job: jobs[job],
+      }
+      jsonData.push(obj)
+      console.log(jsonData);
+      render()
+    }
 
     // 查找功能
-  
+    function searchFn() {
+      const unaem = prompt('请输入要查找的名字')
+      if (unaem) {
+        const arr = jsonData.filter(ele => ele.name.includes(unaem))
 
+        if (arr.length) {
+          console.log(arr);
+          render(arr)
+        } else {
+          alert('查无此人')
+        }
+      } else {
+        render()
+      }
+
+      //   })
+    }
+    //  searchFn()
     // 删除功能
-    
+    function del(index) {
+      jsonData.splice(index, 1)
+      render()
+    }
   </script>
 </body>
 

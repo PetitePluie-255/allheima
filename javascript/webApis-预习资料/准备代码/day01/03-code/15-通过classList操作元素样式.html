@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通过classList操作元素样式</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all .3s;
+    }
+
+    /* 准备类使用 */
+    .circle {
+      background-color: skyblue;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box circle">点击通过classList操作样式</div>
+  <script>
+    const box = document.querySelector('.box')
+    box.addEventListener('click', function () {
+      // 通过classList操作元素样式(推荐)
+      // 1. 追加类名
+
+
+      // 2. 删除类名
+
+
+      // 3. 切换类名
+
+
+      // 4. 判断是否有指定的类名
+
+
+    })
+  </script>
+</body>
+
+</html>
