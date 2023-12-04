@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通过style操作元素样式</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all .3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">你好</div>
+  <script>
+    // 通过style操作元素样式
+    const box = document.querySelector('.box')
+
+    box.addEventListener('click', function () {
+      // 需求：点击box容器，通过style来从操作样式
+      // style对象修改元素的属性 
+      // 必须通过style去查找对应的属性
+      this.style.color = 'white'
+      this.style.backgroundColor = 'hotpink'
+      this.style.width = '300px'  // 记得加单位px
+
+
+
+      
+    })
+
+  </script>
+</body>
+
+</html>

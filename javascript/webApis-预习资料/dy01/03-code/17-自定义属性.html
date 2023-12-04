@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自定义属性</title>
+</head>
+
+<body>
+  <div class="box" data-id="1" data-name="box"></div>
+  <script>
+    // 自定义属性
+    const box = document.querySelector('.box')
+    box.dataset.fv = 'sf'
+    console.log(box.dataset);
+    // 得到自定义属性值
+  </script>
+</body>
+
+</html>

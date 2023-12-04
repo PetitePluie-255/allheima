@@ -1,0 +1,97 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  color: #3e3e3e;
+}
+
+.order {
+  width: 100%;
+  /* 合并相邻边框 */
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+/* 给行添加渐变背景颜色 */
+.order thead tr {
+  /* background-image: linear-gradient(to right, #f46e33, #f057a5); */
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.order tbody tr {
+  /* background-image: linear-gradient(to right, #fdf0eb, #fdeff6); */
+  /* background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); */
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+}
+
+.order th {
+  padding: 5px 50px;
+  color: #fff;
+}
+
+.order,
+th,
+td {
+  border: 1px solid #fff;
+  line-height: 50px;
+}
+
+.username {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #04c9be;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 9px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.edit {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+
+.del {
+  color: #fff;
+  background-color: #f56c6c;
+  border-color: #f56c6c;
+  margin-left: 10px;
+}
+
+.add {
+  float: right;
+  margin: 20px 0;
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}

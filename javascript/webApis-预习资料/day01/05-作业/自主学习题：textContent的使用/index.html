@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    div.hide {
+      background-color: red;
+      display: none;
+    }
+  </style>
+  <script src="index.js"></script>
+
+  <div class="hide">
+    <div>看不见的div</div>
+
+    <span>   看不到的span</span>
+  </div>
+
+  <script>
+    console.log(document.body.innerText)
+    console.log(document.body.textContent);
+  </script>
+</body>
+</html>

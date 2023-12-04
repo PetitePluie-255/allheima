@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>反馈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <!-- <div class="bold">谢谢您的支持!</div>
+    <div class="bold">您的反馈为: ${selectedRating}</div>
+    <p>您反馈的建议，将成为我们日后改进工作的重要参考内容。</p> -->
+    <h1 class="heading">反馈</h1>
+    <div class="ratings-container" id="ratings-container">
+      <div class="rating">
+        <img src="./imgs/sad.png" />
+        <small>不满意</small>
+      </div>
+      <div class="rating">
+        <img src="./imgs/normal.png" />
+        <small>一般吧</small>
+      </div>
+      <div class="rating">
+        <img src="./imgs/smile.png" />
+        <small>很满意</small>
+      </div>
+    </div>
+    <button class="btn" id="btn">确定反馈</button>
+  </div>
+  <!-- <script src="index.js"></script> -->
+    <script>
+    let selectedRating = ''
+    const arr = document.querySelectorAll('.rating')
+    console.log(arr);
+    arr.forEach((ele,index) =>{
+      ele.addEventListener('click',function(){
+        const active = document.querySelector('.active')
+        console.log(index);
+        console.log(ele);
+        if(active) {
+          active.classList.remove('active')
+        }
+        console.log(arr[index]);
+        arr[index].classList.add('active')
+        selectedRating = arr[index].innerText
+      })
+      
+    })
+    const btn = document.querySelector('#btn')
+    btn.addEventListener('click',function(){
+      if(!selectedRating) {
+        alert('请选择一个选项！')
+      } else {
+        document.querySelector('#container').innerHTML = `<div class="bold">谢谢您的支持!</div>
+    <div class="bold">您的反馈为: ${selectedRating}</div>
+    <p>您反馈的建议，将成为我们日后改进工作的重要参考内容。</p>`
+      }
+    })
+  </script> 
+</body>
+
+</html>

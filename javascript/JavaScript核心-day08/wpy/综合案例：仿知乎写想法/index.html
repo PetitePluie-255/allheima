@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <title>Modal</title>
+</head>
+
+<body>
+  <div class="box">
+    <header>
+      <div class="h-left">
+        <span class="iconfont icon-user"></span>
+        <span>创作者中心</span>
+      </div>
+      <span class="h-right">草稿箱（0）</span>
+    </header>
+
+    <nav>
+      <div class="item">
+        <span class="iconfont icon-wendang"></span>
+        <span>回答问题</span>
+      </div>
+      <div class="item">
+        <span class="iconfont icon-shipin"></span>
+        <span>发视频</span>
+      </div>
+      <div class="item">
+        <span class="iconfont icon-tianxie"></span>
+        <span>发文章</span>
+      </div>
+      <div class="item show-modal">
+        <span class="iconfont icon-lightbulb"></span>
+        <span>写想法</span>
+      </div>
+    </nav>
+    <img src="./imgs/www.zhihu.com_ (1).png" alt="">
+
+    <button class="add">
+      <span class="iconfont icon-add"></span>
+      开始创作
+    </button>
+  </div>
+
+  <div class="modal hidden">
+    <button class="close-modal">&times;</button>
+    <div class="content"></div>
+    <button class="submit">发布</button>
+
+  </div>
+  <div class="overlay hidden"></div>
+
+  <!-- <script src="./data.js"></script> -->
+  <script>
+    const body = document.querySelector('body')
+    // 获取写想法元素
+      const item = document.querySelector('.show-modal');
+      // 获取隐藏元素
+      const modal = document.querySelector('.modal')
+      // 注册写想法的点击事件
+      item.addEventListener('click', function () {
+        // 移除hidden类让盒子显示
+        modal.classList.remove('hidden')
+        body.classList.add('overlay')
+      })
+      // 获取发布盒子元素
+      const close = document.querySelector('.close-modal');
+      // 注册点击事件
+      close.addEventListener('click', function () {
+        // 添加hidden类隐藏盒子
+        modal.classList.add('hidden');
+        body.classList.remove('overlay')
+      })
+
+  </script>
+</body>
+
+</html>

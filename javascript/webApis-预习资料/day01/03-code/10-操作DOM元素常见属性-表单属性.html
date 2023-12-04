@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>操作表单属性</title>
+</head>
+
+<body>
+  <input type="text" name="username" value="用户名">
+  <button>按钮</button>
+  <input type="checkbox"  name="agree">
+  <select name="areacode" id="">
+    <option value="023" selected>重庆</option>
+    <option value="010" >北京</option>
+  </select>
+  <script>
+    // 操作DOM元素常见属性-表单属性
+
+    const input = document.querySelector('input')
+    const btn = document.querySelector('button')
+    const checbox = document.querySelector('[name="agree"]')
+    // console.log(checbox.checked);
+    console.log(input.value);
+    //  操作表单 type 和 value 属性 
+    // 1. 修改type属性
+    // 2. 操作表单的 value 属性
+    console.log(btn.disabled);
+    btn.addEventListener('click', function() {
+      console.log(input.value); // 获取用户名
+      input.value = 'jack' // 修改用户名
+      input.type = 'password' // 修改type属性
+      console.log(btn.disabled);
+    })
+    //  禁用按钮或者是勾选复选框  布尔型 
+    // 1. 禁用按钮
+    btn.disabled = true // 禁用按钮
+    // 2. 勾选复选框
+    checbox.checked = true // 复选框的选中状态转为true
+    const select = document.querySelector('[name="areacode"]')
+    console.log(select.value);
+
+
+  </script>
+</body>
+
+</html>

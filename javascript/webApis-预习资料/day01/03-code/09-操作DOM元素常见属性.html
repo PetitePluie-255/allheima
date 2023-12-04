@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>操作DOM元素常见属性</title>
+  <style>
+    img {
+      width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./images/1.png" alt="我是播仔">
+  <button>切换波仔</button>
+  <script>
+    // 操作DOM元素常见属性
+    // 增删改查
+
+    // 1. 找对象 / 获取元素
+    // 1.1 img button 两个元素
+    const img = document.querySelector('img')
+    const btn = document.querySelector('button')
+    console.log(img.src);
+    // console.log(img.alt);
+
+    // 2. 给button按钮注册点击事件
+    btn.addEventListener('click', function() {
+      // 3. 通过点语法修改img的src属性
+      img.src = './images/3.png'
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事件委托</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="./data.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <button type="button" class="btn add" id="btn-add">
+      <span>添加员工</span>
+    </button>
+
+    <table class="order">
+      <thead>
+        <tr>
+          <th>头像</th>
+          <th>姓名</th>
+          <th>工号</th>
+          <th>入职时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><span class="username">管</span></td>
+          <td>管理员</td>
+          <td>10000</td>
+          <td>2022-10-24</td>
+          <td>
+            <button class="btn edit">编辑</button>
+            <button class="btn del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="username">孙</span></td>
+          <td>孙彩</td>
+          <td>10000</td>
+          <td>2022-09-24</td>
+          <td>
+            <button class="btn edit">编辑</button>
+            <button class="btn del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="username">罗</span></td>
+          <td>罗晓晓</td>
+          <td>10002</td>
+          <td>2022-08-24</td>
+          <td>
+            <button class="btn edit">编辑</button>
+            <button class="btn del">删除</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    // 需求： 点击每个删除按钮，都会弹出询问框确认是否删除
+
+    // 给tbody注册点击事件
+    const tbody = document.querySelector('tbody')
+
+    tbody.addEventListener('click', function (e) {
+      // alert('我会弹窗')
+
+      // 3. 利用事件对象.target 得到目标元素
+      // console.log(e.target)
+      // e.target.style.color = 'red'
+
+      if (e.target.classList.contains('del')) {
+        confirm('确认删除吗？')
+      }
+    })
+
+
+    // 新增功能（素材代码，课上无需实现，课上只需讲解事件委托代码即可）
+    document.querySelector('#btn-add').addEventListener('click', function () {
+      // 随机用户名
+      const uname = createRandomName()
+      // 随机工号
+      const workNum = createWorkNum()
+      // 新增一行内容
+      tbody.innerHTML += `
+        <tr>
+          <td><span class="username">${uname[0]}</span></td>
+          <td>${uname}</td>
+          <td>${workNum}</td>
+          <td>2021-03-13</td>
+          <td>
+            <button class="btn edit">编辑</button>
+            <button class="btn del">删除</button>
+          </td>
+        </tr>
+      `
+    })
+  </script>
+</body>
+
+</html>

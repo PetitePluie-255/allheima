@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>计数器</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <div>
+      <h1>计数器</h1>
+      <span class="value">0</span>
+      <div>
+        <button data-type="decrease" class="btn btn-danger decrease"><i class="fa fa-minus"
+            aria-hidden="true"></i></button>
+        <button class="btn btn-secondary reset" data-type="reset">重置</button>
+        <button class="btn btn-success increase" data-type="increase"><i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+  <!-- <script src="index.js"></script> -->
+  <script>
+    const divclick = document.querySelector('div div')
+    const valueEl = document.querySelector('.value')
+    let num = valueEl.innerHTML
+    divclick.addEventListener('click', function (e) {
+      const btn = e.target
+      if (btn.tagName === 'BUTTON') {
+        console.log(btn);
+        const reduce = btn.dataset.type
+        if (reduce === 'decrease') {
+          num--
+          if (num < 0) {
+            valueEl.style.color = 'red'
+          }
+        } else if (reduce === 'increase') {
+          num++
+          if (num > 0) {
+            valueEl.style.color = 'green'
+          }
+        } else if (reduce === 'reset') {
+          num = 0
+        }
+        valueEl.innerHTML = num
+        if (num === 0) {
+          valueEl.style.color = 'black'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

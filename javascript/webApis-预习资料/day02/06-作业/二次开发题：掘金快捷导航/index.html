@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f4f5f5;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    nav {
+      padding-top: 16px;
+      padding-bottom: 24px;
+      background: #3f7ef7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav .txt {
+      background-color: #588ff8;
+      padding: 0px 11px 0 4px;
+      color: white;
+      height: 26px;
+      font-size: 14px;
+      border-radius: 13px;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search {
+      background-color: #3f7ef7;
+      text-align: center;
+      padding-top: 24px;
+      margin: 0 auto;
+    }
+
+    .search-wrapper {
+      margin: 0 auto;
+      width: 40%;
+      position: relative;
+    }
+
+    input {
+      padding-left: 60px;
+      width: 100%;
+      height: 40px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+    }
+
+    header {
+      width: 1440px;
+      height: 54px;
+      margin: 0 auto;
+    }
+
+    header img {
+      width: 1440px;
+      height: 54px;
+      display: block;
+    }
+
+    .web-icon {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
+
+    .web-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .triangle {
+      position: absolute;
+      top: 12px;
+      left: 38px;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      color: #c3c8d0;
+      font-size: 12px;
+      transition: all .3s;
+      cursor: pointer;
+    }
+
+    .triangle.active {
+      transform: rotate(180deg);
+    }
+
+    .txt .iconfont {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      color: white;
+      background-color: black;
+      text-align: center;
+      line-height: 20px;
+      margin-right: 6px;
+    }
+
+    .icon-github {
+      color: white;
+      background-color: black;
+    }
+
+    .nav-list {
+      width: 100%;
+      margin-top: 10px;
+      background-color: #fff;
+      padding: 8px;
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      display: none;
+    }
+
+    .nav-list.show {
+      display: block;
+      backdrop-filter: blur(20px);
+    }
+
+    .item {
+      float: left;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .item.checked::after {
+      content: '✓';
+      display: block;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #3f7ef7;
+      color: white;
+      font-size: 12px;
+    }
+
+    .item:hover {
+      background-color: #eaf3fe;
+    }
+
+    .item:hover span {
+      color: #3f7ef7;
+    }
+
+    .item.checked {
+      background-color: #eaf3fe;
+      color: #3f7ef7;
+    }
+
+    .item img {
+      width: 36px;
+      height: 36px;
+      pointer-events: none;
+    }
+
+    .item span {
+      font-size: 12px;
+      margin-top: 8px;
+      color: rgb(29, 33, 41);
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./imgs/juejin.png" alt="">
+  </header>
+  <div class="search">
+    <div class="search-wrapper">
+      <input type="text" id="ipt" placeholder="输入关键词 ｜ tab键切换搜索引擎">
+      <div class="web-icon">
+        <img src="./imgs/chrome.png" class="curr-nav" alt="">
+      </div>
+      <!-- 三角 -->
+      <span class="triangle iconfont icon-xiangxia"></span>
+
+      <ul class="nav-list">
+        <li class="item checked" data-src="./imgs/chrome.png">
+          <img src="./imgs/chrome.png" alt="">
+          <span>谷歌</span>
+        </li>
+        <li class="item" data-src="./imgs/toutiao.png">
+          <img src="./imgs/toutiao.png" alt="">
+          <span>头条</span>
+        </li>
+        <li class="item" data-src="./imgs/baidu.png">
+          <img src="./imgs/baidu.png" alt="">
+          <span>百度</span>
+        </li>
+        <li class="item" data-src="./imgs/bing.png">
+          <img src="./imgs/bing.png" alt="">
+          <span>必应</span>
+        </li>
+        <li class="item" data-src="./imgs/github.png">
+          <img src="./imgs/github.png" alt="">
+          <span>github</span>
+        </li>
+        <li class="item" data-src="./imgs/npm.png">
+          <img src="./imgs/npm.png" alt="">
+          <span>npm</span>
+        </li>
+        <li class="item" data-src="./imgs/stack.png">
+          <img src="./imgs/stack.png" alt="">
+          <span>stack overflow</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav>
+    <span class="txt">
+      <span>+</span>
+      xxx
+    </span>
+  </nav>
+  <script src="./1.js"></script>
+  <!-- <script src="./index.js"></script> -->
+  <!-- <script>
+    const items = document.querySelectorAll('.item')
+    const icon = document.querySelector('.web-icon img')
+    const triangle = document.querySelector('.triangle')
+    const ul = document.querySelector('ul')
+    triangle.addEventListener('click', function () {
+      ul.classList.toggle('show')
+      triangle.classList.toggle('active')
+    })
+    ul.addEventListener('click', function (e) {
+      const target = e.target
+      if (target.tagName === 'LI') {
+        const checked = document.querySelector('.checked')
+        checked && checked.classList.remove('checked')
+        target.classList.add('checked')
+        // =============
+        const src = target.dataset.src
+        console.log(src);
+        icon.src = src
+      }
+    })
+    let itemIndex = 0
+
+    document.addEventListener('keyup', function (e) {
+      e.stopPropagation()
+      if (e.key !== 'Tab') {
+        return e.preventDefault()
+      }
+      ipt.focus();
+      itemIndex++
+      if (itemIndex === items.length) {
+        itemIndex = 0
+      }
+      // console.log(items);
+      // console.log(items[0]);
+      icon.src = items[itemIndex].dataset.src
+    }, false)
+
+
+  </script> -->
+</body>
+
+</html>

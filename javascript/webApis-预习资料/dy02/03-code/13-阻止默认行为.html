@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阻止默认行为</title>
+</head>
+
+<body>
+  <form action="">
+    姓名: <input type="text" name="username">
+    <button>提交</button>
+  </form>
+  <a href="http://www.baidu.com">点击跳转</a>
+  <script>
+    // 阻止默认行为
+    const form = document.querySelector('form')
+    const link = document.querySelector('a')
+    const input = document.querySelector('[name=username]')
+
+    //  阻止表单的默认行为 
+    form.addEventListener('submit', function (e) {
+      e.preventDefault()
+      alert('form')
+    })
+
+
+
+
+    //  阻止a链接的默认行为 
+    link.addEventListener('click', function (e) {
+      e.preventDefault()
+      alert('link')
+    })
+
+
+
+  </script>
+</body>
+
+</html>
