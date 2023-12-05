@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./iconfonts/iconfont.css">
+  <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+  <div class="m-search">
+    <div class="form">
+      <i class="iconfont icon-search"></i>
+      <input type="text" placeholder="凡人修仙传" class="search-input">
+      <i class="iconfont icon-guanbi"></i>
+    </div>
+    <a href="javascript:void(0);" class="cancel">取消</a>
+  </div>
+  <div class="search-hot">
+    <h2>大家都在搜</h2>
+    <div class="list">
+      <span class="hotword-item">开学前一天的中国速度</span>
+      <span class="hotword-item">LOL新英雄大招全图范围</span>
+      <span class="hotword-item">央视曝光飙车炸街产业链</span>
+    </div>
+  </div>
+  <div class="gap"></div>
+  <div class="history">
+    <h2>历史搜索</h2>
+    <ul>
+      
+        <!-- <li>
+          <i class="iconfont icon-lishijilu_o"></i>
+          <span>凡人修仙传</span>
+        </li> -->
+     
+    </ul>
+    <div class="clear-history">
+      <a href="javascript:void(0);" class="clear">清除历史记录</a>
+    </div>
+  </div>
+
+  <!-- 搜索列表展示 -->
+  <ul class="recommend-list hide">
+    <li class="list-item">xxxx</li>
+  </ul>
+  <script>
+    const cancelEl = document.querySelector('.cancel')
+    const searchIptEl = document.querySelector('.search-input')
+    const closeEl = document.querySelector('.icon-guanbi')
+    const historyEl = document.querySelector('.history')
+    const historyUlEl = document.querySelector('.history ul')
+    const clearHistoryEl = document.querySelector('.clear-history')
+
+
+    // 需求：本地存储历史搜索记录案例
+    // 每次打开页面, 从本地存储中取出arr数据, 进行赋值
+    let arr = JSON.parse(localStorage.getItem('arr')) || []
+    console.log(arr);
+    // 1. 回车非空判断
+    searchIptEl.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        // 1.1 获取输入框的值
+        const content = this.value.trim()
+        // 1.2. 非空判断
+        if (!content) {
+          this.value = ''
+          alert('请输入内容')
+          return
+        }
+        // 1.3 清除输入框内容
+        this.value = ''
+        // 2. 本地存储数据 - 去重处理
+        // 2.1 定义一个数组
+        // 2.2 unshift添加到数组的开头
+        arr.unshift(content)
+        // 2.3 去重 new Set()
+        arr = [...new Set(arr)]
+        // console.log('去重后', arr);
+        // 2.4 转成JSON字符串 && 存储到本地
+        console.log(arr);
+        localStorage.setItem('arr', JSON.stringify(arr))
+        // 渲染
+        render()
+      }
+    })
+
+    // 3. 封装渲染函数
+    function render() {
+      historyUlEl.innerHTML = arr.map(ele => {
+        return `<li>
+          <i class="iconfont icon-lishijilu_o"></i>
+          <span>${ele}</span>
+        </li>`
+      }).join('')
+
+      // 判断arr的长度 显示/隐藏 清除历史记录的状态
+      // arr.length > 0 
+      // if (arr.length) {
+      //   clearHistoryEl.style.display = 'block'
+      // } else {
+      //   clearHistoryEl.style.display = 'none'
+      // }
+
+      clearHistoryEl.style.display = arr.length ? 'block' : 'none'
+    }
+    render()
+
+    // 4. 清除历史记录
+    // 4.1 注册点击事件
+    // 4.2 清除本地存储中的数据
+    // 4.3 arr 变成一个空的数组
+    // 4.4 重新渲染
+    clearHistoryEl.addEventListener('click', function() {
+      localStorage.removeItem('arr')
+      arr = []
+      render()
+    })
+  </script>
+</body>
+
+</html>

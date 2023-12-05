@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>histroy对象</title>
+</head>
+
+<body>
+  <button class="back">←后退</button>
+  <button class="forward">前进→</button>
+  <script>
+    // history对象
+    // history 是window提供的对象 可以实现前进和后退
+    // 历史记录栈
+    //  前进 
+    const forward = document.querySelector('.forward')
+    forward.addEventListener('click', function () {
+      history.forward()
+      // history.go(1) // 1 前进一次 / 2 前进2次  
+      // -1 后退一次 / -2 后退2次
+    })
+
+    //  后退 
+    const back = document.querySelector('.back')
+    back.addEventListener('click', function () {
+      history.back()
+    })
+  </script>
+</body>
+
+</html>

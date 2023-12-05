@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本地存储复杂数据类型</title>
+</head>
+
+<body>
+  <script>
+    // 本地存储复杂数据类型
+    const goods = {
+      name: '小米',
+      price: 1999,
+      isFlag: true
+    }
+
+    // 需求：本地存储 goods 数据
+    // 1. 本地存储不能直接存储复杂数据类型, 包括数组和对象
+
+    // 步骤: 
+    // 存的过程
+    // 1. 先将对象转成json字符串 将属性名和字符串类型的属性值进行双引号包裹
+
+    // 2. 在进行存储
+    const objString = JSON.stringify(goods)
+    // console.log(objString);
+    localStorage.setItem('goods', objString)
+
+    // 取的过程
+    // 1. 获取本地存储中的数据 - json字符串
+    // 2. JSON.parse(字符串) -> js对象 / js数组
+    console.log(JSON.parse(localStorage.getItem('goods')));
+
+
+
+  </script>
+</body>
+
+</html>

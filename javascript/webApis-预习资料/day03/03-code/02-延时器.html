@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>定时器之延时器</title>
+</head>
+
+<body>
+  <script>
+    // 延时器
+    /*
+      语法: 
+      setTimeout(回调函数, 延时时间毫秒数)
+      1s = 1000ms 
+    */ 
+
+    //  开启延时器 
+    // 1. 延时器返回的还是一个正整数数字，表示延时器的编号
+    // 2. 延时器需要等待时间，所以后面的代码优先执行
+    // console.log(1);
+    // setTimeout(function() {
+    //   console.log('lalala');
+    // }, 2000)
+    // console.log(2);
+
+
+    //  关闭延时器 
+    // 通过延时器id 
+    let timer = setTimeout(() => {
+      console.log('延时器执行了');
+    }, 2000)
+    console.log(timer); // 正整数 代表了延时器的编号
+    // clearTimeout(延时器的id) // 关闭延时器
+    clearTimeout(timer) // 关闭延时器
+  </script>
+</body>
+
+</html>

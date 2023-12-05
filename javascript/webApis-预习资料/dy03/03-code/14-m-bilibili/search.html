@@ -55,9 +55,52 @@
     const clearHistoryEl = document.querySelector('.clear-history')
 
     // 需求：本地存储历史搜索记录案例
+    console.log(JSON.parse(localStorage.getItem('content')));
+    let arr = JSON.parse(localStorage.getItem('content')) || []
+    searchIptEl.addEventListener('keyup', function (e) {
+      if (e.key === 'Enter') {
+
+
+        const content = searchIptEl.value.trim()
+        if (!content) {
+          this.value = ''
+          alert('输入内容')
+          return
+        }
+        arr.unshift(this.value)
+        this.value = ''
+        console.log(content);
+        arr = [...new Set(arr)]
+        localStorage.setItem('content', JSON.stringify(arr))
+        render()
+      }
+    })
+
+
+    function render() {
+      historyUlEl.innerHTML = arr.map(ele => `<li>
+          <i class="iconfont icon-lishijilu_o"></i>
+          <span>${ele}</span>
+        </li>`).join('')
 
 
 
+
+
+
+
+      clearHistoryEl.style.display = arr.length ? 'block' : 'none'
+    }
+    render()
+
+    clearHistoryEl.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        console.log(e.target.tagName);
+        arr = []
+        localStorage.removeItem('content')
+        render()
+      }
+    })
   </script>
 </body>
 

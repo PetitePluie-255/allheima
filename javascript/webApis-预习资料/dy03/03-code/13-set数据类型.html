@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <script>
-      // 新增set 数据类型， set数据里面是不能出现重复数据   借助于该特性，实现数组去重
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+</head>
 
-      //  创建set数据类型
+<body>
+  <script>
+    // 新增set 数据类型， set数据里面是不能出现重复数据   借助于该特性，实现数组去重
 
-      //  添加数据
+    //  创建set数据类型
+    const arr = [1, 1, 11, 1, 1, 1, 1, 52, 55, 4, 5, 545, 4, 5, 4, 445, 44, 87, 8, 9, 87, 2]
+    //  添加数据
+    const data = new Set(arr)
+    console.log(data);
+    //  删除数据
+    data.delete(1)
+    //  总数 表示set数据的个数
+    data.size
+    //  实现数组的去重
+    const newArr = [...data]
+    console.log(newArr);
+  </script>
+</body>
 
-      //  删除数据
-
-      //  总数 表示set数据的个数
-
-      //  实现数组的去重
-    </script>
-  </body>
 </html>

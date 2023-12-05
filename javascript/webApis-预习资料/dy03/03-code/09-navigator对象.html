@@ -18,8 +18,11 @@
       const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
       const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
       // 如果是Android或iPhone，则跳转至移动站点
+      // console.log(android);
       if (android || iphone) {
         // ...
+        location.reload()
+        location.href = 'https://www.baidu.com'
       }
     })()
   </script>

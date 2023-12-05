@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>定时器之间隔函数</title>
+</head>
+
+<body>
+  <button>关闭定时器</button>
+  <script>
+    // 定时器
+    // 每个一段时间, 就执行一段代码
+    //  开启定时器 
+    // 语法: setInterval(回调函数, 间隔时间)
+
+    function fn() {
+      console.log('定时器执行了');
+    }
+
+    // setInterval(function() {
+    //   console.log('定时器执行了');
+    // }, 1000)
+    let timer = setInterval(fn, 1000)
+
+      
+    //  关闭定时器 
+    // 语法: clearInterval(定时器id)  // 
+    document.querySelector('button').addEventListener('click', function() {
+      clearInterval(timer)
+    })
+
+    // 注意点: 之后不会开启定时器, 立马清除, 而是符合某种条件之后
+  </script>
+</body>
+
+</html>

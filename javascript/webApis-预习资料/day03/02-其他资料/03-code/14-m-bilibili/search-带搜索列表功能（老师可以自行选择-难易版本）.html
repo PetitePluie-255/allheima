@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./iconfonts/iconfont.css">
+  <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+  <div class="m-search">
+    <div class="form">
+      <i class="iconfont icon-search"></i>
+      <input type="text" placeholder="凡人修仙传" class="search-input">
+      <i class="iconfont icon-guanbi"></i>
+    </div>
+    <a href="javascript:void(0);" class="cancel">取消</a>
+  </div>
+  <div class="search-hot">
+    <h2>大家都在搜</h2>
+    <div class="list">
+      <span class="hotword-item">开学前一天的中国速度</span>
+      <span class="hotword-item">LOL新英雄大招全图范围</span>
+      <span class="hotword-item">央视曝光飙车炸街产业链</span>
+    </div>
+  </div>
+  <div class="gap"></div>
+  <div class="history">
+    <h2>历史搜索</h2>
+    <ul>
+      <!-- 
+        <li>
+          <i class="iconfont icon-lishijilu_o"></i>
+          <span>凡人修仙传</span>
+        </li>
+      -->
+    </ul>
+    <div class="clear-history">
+      <a href="javascript:void(0);" class="clear">清除历史记录</a>
+    </div>
+  </div>
+
+  <!-- 搜索列表展示 -->
+  <ul class="recommend-list hide">
+    <li class="list-item">xxxx</li>
+  </ul>
+  <script>
+    const cancelEl = document.querySelector('.cancel')
+    const searchIptEl = document.querySelector('.search-input')
+    const closeEl = document.querySelector('.icon-guanbi')
+    const historyEl = document.querySelector('.history')
+    const historyUlEl = document.querySelector('.history ul')
+    const clearHistoryEl = document.querySelector('.clear-history')
+    const recommendListEl = document.querySelector('.recommend-list')
+
+    function setHistories() {
+      localStorage.setItem('histories', JSON.stringify(historyList))
+    }
+    function getHistories() {
+      return JSON.parse(localStorage.getItem('histories')) || []
+    }
+
+    let recommendList = ['斗破苍穹', '斗罗大陆', '凡人修仙传', '雾山五行', '鬼灭之刃']
+    // 搜索历史记录
+    let historyList = getHistories()
+    // 渲染搜索历史记录列表
+    renderHistory(historyList)
+
+    // 取消按钮，返回上一页
+    cancelEl.addEventListener('click', () => history.back())
+
+    // 监听输入框的keyup事件
+    searchIptEl.addEventListener('keyup', function (e) {
+      let { value } = e.target
+
+      // 判断是否需要显示叉号
+      if (value.length > 0) {
+        showCloseAndRecommend()
+      } else {
+        // 隐藏叉号
+        hideCloseAndRecommend()
+      }
+
+      if (e.key === 'Enter') {
+        // 如果为空
+        if (!value.trim()) return alert('请输入内容')
+        // 添加到数组
+        historyList.unshift(value)
+        // 去重
+        historyList = [...new Set(historyList)]
+        // 渲染页面
+        renderHistory(historyList)
+        // 隐藏搜索页面
+        recommendListEl.classList.add('hide')
+        // 本地存储
+        setHistories()
+        // 清空输入框
+        searchIptEl.value = ''
+      }
+
+      // 渲染推荐结果
+      renderRecommend(value.trim())
+    })
+
+    // 叉号
+    closeEl.addEventListener('click', function () {
+      searchIptEl.value = ''
+      hideCloseAndRecommend()
+    })
+
+    // 点击推荐列表项（事件委托）
+    recommendListEl.addEventListener('click', function (e) {
+      // 如果点击的是推荐列表项
+      if (e.target.classList.contains('list-item')) {
+        // 将值渲染到input框
+        searchIptEl.value = e.target.innerText
+        // 隐藏列表
+        recommendListEl.classList.add('hide')
+        historyList.unshift(searchIptEl.value)
+        historyList = [...new Set(historyList)]
+        renderHistory(historyList)
+        setHistories()
+      }
+    })
+
+    // 清除历史记录（事件委托）
+    historyEl.addEventListener('click', function (e) {
+      if (e.target.classList.contains('clear')) {
+        historyList = []
+        renderHistory(historyList)
+        setHistories()
+      }
+    })
+
+    // 显示隐藏叉号、推荐列表
+    function showCloseAndRecommend() {
+      closeEl.style.display = 'block'
+      recommendListEl.classList.remove('hide')
+    }
+    function hideCloseAndRecommend() {
+      closeEl.style.display = 'none'
+      recommendListEl.classList.add('hide')
+    }
+
+    // 渲染搜索历史
+    function renderHistory(historyList) {
+      let str = historyList.map(history => {
+        return `
+          <li>
+            <i class="iconfont icon-lishijilu_o"></i>
+            <span>${history}</span>
+          </li>
+        `
+      }).join('')
+
+      // 渲染到ul列表中
+      historyUlEl.innerHTML = str
+
+      // 决定是否显示 （清除历史记录按钮）
+      clearHistoryEl.style.display = str ? 'block' : 'none'
+    }
+
+    // 渲染推荐结果
+    function renderRecommend(search) {
+      let str = recommendList
+        .filter(item => item.includes(search))
+        .map(item => (`<li class="list-item">${item}</li>`))
+        .join('')
+      recommendListEl.innerHTML = str
+    }
+  </script>
+</body>
+
+</html>

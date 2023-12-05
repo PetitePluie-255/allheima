@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular,
+    Hiragino Sans GB, Microsoft Yahei, sans-serif;
+  font-size: 16px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 26.666666667vw;
+}
+.m-search {
+  display: flex;
+  height: 0.44rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.1rem;
+}
+.form {
+  background-color: #f4f4f4;
+  flex: 1;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  padding: 0 0.1rem;
+  margin-right: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+i.iconfont {
+  font-size: 0.2rem;
+  color: #a0a0a0;
+  vertical-align: middle;
+}
+.icon-guanbi {
+  display: none;
+}
+input {
+  color: #505050;
+  font-size: 0.14rem;
+  border: none;
+  outline: none;
+  background-color: #f4f4f4;
+  -webkit-appearance: none;
+  flex: 1;
+  user-select: none;
+}
+
+.cancel {
+  color: #fb7299;
+  font-size: 0.14rem;
+}
+.search-hot {
+  margin-top: 0.2rem;
+  padding: 0 0.1rem;
+  height: 1.2rem;
+  overflow: hidden;
+}
+h2 {
+  color: #999;
+  font-size: 0.14rem;
+  font-weight: 400;
+}
+.list {
+  height: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.hotword-item {
+  height: 0.34rem;
+  line-height: 0.34rem;
+  border-radius: 0.17rem;
+  padding: 0 0.1rem;
+  border: 1px solid #ccc;
+  margin-top: 0.1rem;
+  margin-right: 0.1rem;
+  font-size: 0.13rem;
+}
+
+.gap {
+  height: 10px;
+  background-color: #f4f4f4;
+}
+
+.history h2 {
+  height: 0.46rem;
+  line-height: 0.46rem;
+  padding-left: 0.1rem;
+}
+.history ul {
+  padding: 0 0.1rem;
+}
+.history ul li {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  font-size: 0.14rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.history span {
+  margin-left: 0.1rem;
+}
+
+.clear-history {
+  height: 0.46rem;
+  line-height: 0.46rem;
+  text-align: center;
+  font-size: 0.14rem;
+  color: #f4f4f4;
+}
+
+.recommend-list {
+  padding: 0 0.1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0.44rem;
+  background-color: #f4f4f4;
+}
+.recommend-list li {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  font-size: 0.14rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.hide {
+  display: none;
+}

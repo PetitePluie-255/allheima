@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5秒倒计时跳转页面</title>
+  <style>
+    span {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="http://www.itcast.cn">支付成功<span>5</span>秒钟之后跳转到首页</a>
+  <script>
+    // 需求： 5秒之后自动跳转，要求里面有秒数倒计时
+    // 1. 定时器实现需求
+    // 1.1 开启定时器
+    // 1.2 声明变量 i = 5
+    // 1.3 定时器中递减
+    // 1.4 i的值符合条件 《=0 
+    // 1.4.1 清除定时器
+    // 1.4.2 跳转
+
+
+    let i = 5
+    let timer = setInterval(() => {
+      i --
+      console.log(i);
+      document.querySelector('span').innerHTML = i
+      if (i <= 0) {
+        // 1. 进行跳转
+        location.href = 'http://www.itcast.cn'
+        // 2. 清除定时器
+        clearInterval(timer)
+      }
+    }, 1000);
+
+
+    // 执行时机: 5s后才执行 && 执行一次
+    // setTimeout(() => {
+    //   console.log('5s才执行');
+    // }, 5000);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>location对象</title>
+</head>
+
+<body>
+  <form>
+    <input type="text" name="search"> <button>搜索</button>
+  </form>
+  <a href="#/music">音乐</a>
+  <a href="#/download">下载</a>
+
+  <button class="reload">刷新页面</button>
+  <script>
+    // location 对象  
+
+    //  href属性 
+    //  （重点） 得到完整地址，赋值则是跳转到新地址
+    console.log(location.href);
+    // 跳转
+    // location.href = 'https://www.baidu.com'
+
+    document.querySelector('[href="#/music"]').addEventListener('click', function() {
+      window.location.href = 'https://music.163.com/'
+    })
+
+
+    //  search属性 - 后期项目传参会涉及
+    // 得到 ? 后面的地址 
+    console.log(location.search);
+
+
+
+    //  hash属性 哈希值
+    // 得到 # 后面的地址
+    console.log(location.hash);
+
+
+    //  reload 方法 
+    // 刷新页面
+    document.querySelector('.reload').addEventListener('click', function () {
+      location.reload()
+    })
+  </script>
+</body>
+
+</html>
