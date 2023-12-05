@@ -10,22 +10,43 @@
 
 <body>
   <script>
-    // 元字符之范围  []  
-    //  [abc] 匹配包含的单个字符 
+      // 元字符之范围  []  
+    // 1. [abc] 匹配包含的单个字符， 多选1
     const reg1 = /^[abc]$/
+    console.log(reg1.test('a'))  
+    console.log(reg1.test('b'))  
+    console.log(reg1.test('c'))  
+    console.log(reg1.test('d'))  
+    console.log(reg1.test('ab')) 
+
+    // 2. [a-z] 连字符 单个
+    // const reg2 = /^[a-z]$/
+    // console.log(reg2.test('a')) 
+    // console.log(reg2.test('p')) 
+    // console.log(reg2.test('0')) 
+    // console.log(reg2.test('A')) 
 
 
-
-    //  [a-z] 连字符 单个 
-    // 1. 想要包含小写字母，大写字母 ，数字
-    // 2. 用户名可以输入英文字母，数字，可以加下划线，要求 6~16位
+    // 想要包含小写字母，大写字母 ，数字
+    // const reg3 = /^[a-zA-Z0-9]$/
+    // console.log(reg3.test('B'))  
+    // console.log(reg3.test('b'))  
+    // console.log(reg3.test(9))    
+    // console.log(reg3.test(','))  
 
     
+    // 用户名可以输入英文字母，数字，可以加下划线，要求 6~16位
+    // const reg4 = /^[a-zA-Z0-9_]{6,16}$/
+    // console.log(reg4.test('abcd1'))   
+    // console.log(reg4.test('abcd12'))  
+    // console.log(reg4.test('ABcd12'))  
+    // console.log(reg4.test('ABcd12_')) 
 
-
-    //  [^a-z] 取反符 
-
-
+    // 3. [^a-z] 取反符
+    // const reg5 = /^[^a-z]$/
+    // console.log(reg5.test('a')) 
+    // console.log(reg5.test('A')) 
+    // console.log(reg5.test(8))  
   </script>
 </body>
 

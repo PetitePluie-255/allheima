@@ -88,8 +88,22 @@
   </dl>
   <script>
     // 需求：用户名要求用户英文字母,数字,下划线或者短横线组成，并且用户名长度为 6~16 位
-
-
+    const input = document.querySelector('.uname')
+    const tip = document.querySelector('.tip')
+    const span = document.querySelector('span')
+    input.addEventListener('change', function () {
+      const reg = /^[a-zA-Z0-9-_]{6,16}$/;
+      const reg1 = reg.test(input.value)
+      if (!reg1) {
+        span.className='wrong'
+        tip.style.display = 'block'
+        // input.value = ''
+      } else {
+        span.className='right'
+        tip.style.display = 'none'
+      }
+    })
+    
   </script>
 </body>
 

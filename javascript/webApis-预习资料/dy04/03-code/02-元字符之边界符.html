@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>元字符之边界符</title>
-  </head>
 
-  <body>
-    <script>
-      // 元字符之边界符
-      //  匹配开头的位置 ^
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>元字符之边界符</title>
+</head>
 
-      //  匹配结束的位置 $
+<body>
+  <script>
+    // 元字符之边界符
+    // 1. 匹配开头的位置 ^
+    const reg = /^web/
+    console.log(reg.test('web前端'))  
+    console.log(reg.test('前端web'))  
+    console.log(reg.test('前端web学习'))  
+    console.log(reg.test('we'))  
 
-      //  精确匹配 ^ $
-    </script>
-  </body>
+    // 2. 匹配结束的位置 $
+    // const reg1 = /web$/
+    // console.log(reg1.test('web前端'))  
+    // console.log(reg1.test('前端web'))  
+    // console.log(reg1.test('前端web学习'))  
+    // console.log(reg1.test('we'))    
+
+    // 3. 精确匹配 ^ $
+    // const reg2 = /^web$/
+    // console.log(reg2.test('web前端'))  
+    // console.log(reg2.test('前端web'))  
+    // console.log(reg2.test('前端web学习'))  
+    // console.log(reg2.test('we'))   
+    // console.log(reg2.test('web'))  
+    // console.log(reg2.test('webweb')) 
+  </script>
+</body>
+
 </html>

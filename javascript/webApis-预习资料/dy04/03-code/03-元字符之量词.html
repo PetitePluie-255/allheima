@@ -9,21 +9,55 @@
 
   <body>
     <script>
-      // 元字符之量词
-      //  * 重复次数 >= 0 次
+    // 元字符之量词
+    // 1. * 重复次数 >= 0 次
+    const reg1 = /^w*$/
+    console.log(reg1.test(''))  
+    console.log(reg1.test('w'))  
+    console.log(reg1.test('ww'))  
+    console.log('-----------------------')
 
-      //  + 重复次数 >= 1 次
+    // 2. + 重复次数 >= 1 次
+    // const reg2 = /^w+$/
+    // console.log(reg2.test(''))  
+    // console.log(reg2.test('w'))  
+    // console.log(reg2.test('ww'))  
+    // console.log('-----------------------')
 
-      //  ? 重复次数  0 || 1
+    // 3. ? 重复次数  0 || 1 
+    // const reg3 = /^w?$/
+    // console.log(reg3.test(''))  
+    // console.log(reg3.test('w'))  
+    // console.log(reg3.test('ww'))  
+    // console.log('-----------------------')
 
-      //  {n} 重复 n 次
 
-      //  {n,} 重复次数 >= n
+    // 4. {n} 重复 n 次
+    // const reg4 = /^w{3}$/
+    // console.log(reg4.test(''))  
+    // console.log(reg4.test('w'))  
+    // console.log(reg4.test('ww'))  
+    // console.log(reg4.test('www'))  
+    // console.log(reg4.test('wwww'))  
+    // console.log('-----------------------')
 
-      //  {n,m} n =< 重复次数 <= m
+    // 5. {n,} 重复次数 >= n 
+    // const reg5 = /^w{2,}$/
+    // console.log(reg5.test(''))  
+    // console.log(reg5.test('w'))  
+    // console.log(reg5.test('ww'))  
+    // console.log(reg5.test('www'))  
+    // console.log('-----------------------')
 
-      //  注意事项：
-      //  逗号两侧千万不要加空格否则会匹配失败
+    // 6. {n,m}   n =< 重复次数 <= m
+    // const reg6 = /^w{2,4}$/
+    // console.log(reg6.test('w'))  
+    // console.log(reg6.test('ww'))  
+    // console.log(reg6.test('www'))  
+    // console.log(reg6.test('wwww'))  
+    // console.log(reg6.test('wwwww'))  
+
+    // 7. 注意事项： 逗号两侧千万不要加空格否则会匹配失败
     </script>
   </body>
 </html>
