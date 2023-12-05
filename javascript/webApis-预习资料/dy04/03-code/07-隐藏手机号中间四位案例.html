@@ -36,9 +36,11 @@
     const tel = '13611112222'
 
     // 1. 利用正则划分手机号
-
-
-
+    const reg= tel.replace(/^(\d{3})\d{4}(\d{4})$/ , '$1****$2')
+    const reg1 = tel.replace(/^\d{3}\d{4}(\d{4})$/,`${'*'.repeat(7)}$1`)
+    console.log(reg);
+    console.log(reg1);
+    document.querySelector('.phone').innerHTML = reg
     // 2. 利用replace 替换
     //  $1 可以得到正则中第一个小括号里面的内容
     //  $2 可以得到正则中第二个小括号里面的内容

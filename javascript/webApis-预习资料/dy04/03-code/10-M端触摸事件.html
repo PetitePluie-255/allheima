@@ -20,16 +20,22 @@
   <script>
     // 触摸事件
     const box = document.querySelector('.box')
-    
+
     // 1. 手指触屏开始事件 touchstart
-    
+    box.addEventListener('touchstart', function (e) {
+      console.log('开始');
+    })
 
     // 2. 手指触屏滑动事件 touchmove
-    
-    
+    box.addEventListener('touchmove', function (e) {
+      console.log('滑动');
+    })
+
     // 3. 手指触屏结束事件  touchend
-    
-    
+    box.addEventListener('touchend', function (e) {
+      console.log('结束');
+    })
+
   </script>
 </body>
 

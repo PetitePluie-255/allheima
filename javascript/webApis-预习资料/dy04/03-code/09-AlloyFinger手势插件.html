@@ -30,12 +30,22 @@
 <body>
   <div class="nav">
     <div class="item">
-      AlloyFinger是腾讯AlloyTeam 开发
-    </div>
+      AlloyFinger是腾讯AlloyTeam    </div>
   </div>
+  <script src="./alloy_finger.js"></script>
 
   <script>
-
+    const item = document.querySelector('.item')
+    new AlloyFinger(item, {
+      swipe: function (e) {
+        console.log(e.direction);
+        if (e.direction === 'Left') {
+          item.classList.add('active')
+        } else {
+          item.classList.remove('active')
+        }
+      }
+    })
 
   </script>
 </body>
