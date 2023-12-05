@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通讯录案例</title>
+  <link rel="stylesheet" href="./iconfont/iconfont.css" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <div class="address-header">
+    通讯录
+    <i class="iconfont icon-tianjiayonghu"></i>
+  </div>
+  <div class="address-book">
+    <!-- 添加item 核心区域-->
+
+  </div>
+
+  <button id="add" class="btn-add">添加联系人</button>
+
+  <!-- 添加联系人 -->
+  <div class="dialog-container" id="modal" aria-hidden="true" aria-labelledby="my-dialog-title"
+    aria-describedby="my-dialog-description">
+    <div class="dialog-overlay" data-a11y-dialog-hide></div>
+    <div class="dialog-content" role="document">
+      <h1 id="my-dialog-title" class="title">
+        添加联系人
+        <button type="button" aria-label="Close this dialog window" class="el-dialog__headerbtn dialog-close"
+          data-a11y-dialog-hide>
+          取消
+        </button>
+      </h1>
+
+      <!-- 联系人表单 -->
+      <div class="address-footer">
+        <input id="name" type="text" placeholder="请输入姓名" />
+        <input id="tel" type="text" placeholder="请输入手机号" />
+        <button class="btn-ok" id="btnOK">确认</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入手势插件 -->
+  <script src="./js/alloy_finger.js"></script>
+  <script src="./js/a11y-dialog.js"></script>
+  <script>
+    // 初始化数据
+    const arr = [
+      {name: '周杰伦', tel: '13411112222'},
+      {name: '刘德华', tel: '13511112222'},
+      {name: '张学友', tel: '13711112222'},
+      {name: '岳云鹏', tel: '13911112222'},
+      {name: '迪丽热巴', tel: '13911112222'}
+    ]
+
+    // 1. 渲染业务
+    const addressBook = document.querySelector('.address-book')
+    function render() {
+      addressBook.innerHTML = arr.map((ele, index) => {
+        const {name, tel} = ele
+        const lastName = name.substring(name.length - 1)
+        return `<div class="item">
+        <p class="circle">${lastName}</p>
+        <p class="name">${name}</p>
+        <p class="tel">${tel}</p>
+        <a class="del" href="javascript:;">
+          <i data-index=${index} class="iconfont icon-shanchutianchong"></i>
+        </a>
+      </div>`
+      }).join('')
+      // 实现滑动
+      initSwipe()
+    }
+    render()
+
+    // 2. 滑动效果
+    // 2.1 找到所有的item 
+    function initSwipe() {
+      const items = document.querySelectorAll('.item')
+      console.log(items);
+      items.forEach(ele => {
+        // 2.2 添加滑动效果
+        new AlloyFinger(ele, {
+          swipe: function (e) {
+            console.log(e);
+            // 判断是否左滑
+            if (e.direction === 'Left') {
+              // 排他思想
+              const activeBox = document.querySelector('.address-book .active')
+              // 逻辑与
+              activeBox && activeBox.classList.remove('active')
+              // 左滑 - 添加active类
+              ele.classList.add('active')
+            } else {
+              // 非左滑 - 移出active类
+              ele.classList.remove('active')
+            }
+          }
+        })
+      })
+    }
+
+    // 3. 新增业务
+    // 3.1 找到添加按钮
+    // 3.2 点击按钮 - 显示模态框
+    // 3.3 找到模态框盒子 && 初始化
+    const modal = document.querySelector('#modal')
+    const dialog = new A11yDialog(modal)
+    const btnAdd = document.querySelector('.btn-add')
+    const btnOK = document.querySelector('#btnOK')
+    const nameIpt = document.querySelector('#name')
+    const telIpt = document.querySelector('#tel')
+    btnAdd.addEventListener('click', function() {
+      dialog.show() // 显示模态框
+    })
+
+    // 4. 找确认按钮 && 注册点击事件
+    btnOK.addEventListener('click', function() {
+      // 判断输入的姓名和手机号是否为空
+      if (nameIpt.value.trim() === '') {
+        alert('姓名不能为空')
+        return 
+      }
+      // if (nameIpt.value.trim() === '') return alert('姓名不能为空')
+      if (telIpt.value.trim() === '') return alert('手机号不能为空')  
+      // 通过定义的正则进行判断
+      const nameReg = /^(?:[\u4e00-\u9fa5·]{2,4})$/
+      const telReg = /^(?:(?:\+|00)86)?1\d{10}$/
+      if (!nameReg.test(nameIpt.value)) {
+        return alert('姓名不符合规则')
+      }
+      if (!telReg.test(telIpt.value)) {
+        return alert('手机号不符合规则')
+      }  
+      // 收集用户输入的信息 - 添加到arr数组中
+      const newObj = {
+        name: nameIpt.value,
+        tel: telIpt.value
+      }
+      arr.push(newObj)
+      // 重新渲染
+      render()
+      // 清空手机号和姓名 && 对话框关闭
+      nameIpt.value = ''
+      telIpt.value = ''
+      dialog.hide()
+    })
+
+    // 5. 删除功能
+    // 事件委托 - 动态添加的元素绑定事件
+    addressBook.addEventListener('click', function(e) {
+      const target = e.target
+      // console.log(target);
+      if (target.tagName === 'I') {
+        // 获取索引
+        // 给i标签绑定自定义属性
+        const index = target.dataset.index
+        console.log(index);
+        // 删除
+        // arr.splice(index, 1)
+        arr.splice(index, 1)
+        // 渲染
+        render()
+      }
+    })
+  </script>
+</body>
+
+</html>

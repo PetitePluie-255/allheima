@@ -1,0 +1,151 @@
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 26.666667vw;
+}
+
+body {
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+  position  : relative;
+  overflow  : hidden;
+}
+
+header {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  background-color: #3376CD;
+  color           : white;
+  font-size       : 20px;
+  height          : 56px;
+  padding         : 20px;
+}
+
+header img {
+  width           : 24px;
+  height          : 24px;
+  display         : block;
+  background-color: #fff;
+  border-radius   : 12px;
+}
+
+.group {
+  width   : 100%;
+  padding : 8px 16px 12px 16px;
+  height  : 80px;
+  position: relative;
+}
+
+.status {
+  position        : absolute;
+  height          : 80px;
+  width           : 80px;
+  font-size       : 16px;
+  left            : -80px;
+  line-height     : 80px;
+  text-align      : center;
+  background-color: #3376CD;
+  color           : white;
+  transition      : all .3s ease;
+}
+
+.active .status {
+  left: 0;
+}
+
+article {
+  width     : 100%;
+  transition: all .3s ease;
+  position  : relative;
+}
+
+.active article {
+  transform: translateX(80px);
+}
+
+.group article {
+  display    : flex;
+  align-items: center;
+  height     : 60px;
+}
+
+article::before {
+  content         : '';
+  position        : absolute;
+  width           : 8px;
+  height          : 8px;
+  border-radius   : 4px;
+  background-color: #3376CD;
+  left            : -12px;
+}
+
+.unread article::before {}
+
+.read article::before {
+  display: none;
+}
+
+article img {
+  width           : 40px;
+  height          : 40px;
+  background-color: #3376CD;
+  border-radius   : 20px;
+  margin-right    : 16px;
+}
+
+.mail-info {
+  flex : 1;
+  width: calc(100% - 56px);
+}
+
+.mail-info>div {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.mail-info .from {
+  font-weight: bold;
+  font-size  : 16px;
+  color      : black;
+}
+
+.mail-info time {
+  margin-left: 12px;
+  color      : #0078d4;
+  font-size  : 12px;
+}
+
+.mail-info p {
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+  width        : 100%;
+}
+
+
+
+
+
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(40px);
+  }
+
+  100% {
+    transform: translateX(30px);
+  }
+}

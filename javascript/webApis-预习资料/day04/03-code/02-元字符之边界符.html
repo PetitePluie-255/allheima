@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>元字符之边界符</title>
+</head>
+
+<body>
+  <script>
+    // 元字符之边界符
+    // 1. 匹配开头的位置 ^
+    // const reg = /^web/
+    // console.log(reg.test('web前端'))  // t 
+    // console.log(reg.test('前端web'))  // f  
+    // console.log(reg.test('前端web学习'))  // f
+    // console.log(reg.test('we'))   // f 
+
+    // 2. 匹配结束的位置 $
+    // const reg1 = /web$/
+    // console.log(reg1.test('web前端'))   // f 
+    // console.log(reg1.test('前端web'))   // t 
+    // console.log(reg1.test('前端web学习'))  // f
+    // console.log(reg1.test('we'))      // f
+
+    // 3. 精确匹配 ^ $
+    // 同时出现 ^ $ 精准限制个数
+    const reg2 = /^web$/ // 匹配的只能是web
+    console.log(reg2.test('web前端'))  // f
+    console.log(reg2.test('前端web'))  // f
+    console.log(reg2.test('前端web学习'))  // f
+    console.log(reg2.test('we'))   // f
+    console.log(reg2.test('web'))  // t
+    console.log(reg2.test('webweb')) // f 
+  </script>
+</body>
+
+</html>

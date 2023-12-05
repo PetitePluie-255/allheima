@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 26.66667vw;
+  background-color: #e3e3e3;
+  padding: 10px;
+}
+
+section {
+  height: 2.2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 0.18rem;
+  padding: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item {
+  flex-basis: 20%;
+  height: .6rem;
+  font-size: 0.12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.item .iconfont {
+  font-size: 0.24rem;
+  margin-bottom: .05rem;
+  color: #52b3f7;
+}
+
+.item .orange {
+  color: #ed682c;
+}
+p {
+  font-size: 0.12rem;
+}
+
+.sortable-drag {
+  opacity: 0 !important;
+}

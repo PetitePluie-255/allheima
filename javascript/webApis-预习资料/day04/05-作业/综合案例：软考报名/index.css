@@ -1,0 +1,142 @@
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: '微软雅黑';
+}
+
+header {
+  height          : 60px;
+  background-color: #5683DC;
+  color           : white;
+  padding         : 0 20px;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+}
+
+h1 {
+  font-size      : 16px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+header img {
+  display: block;
+}
+
+header .address {
+  margin-left: 100px;
+}
+
+.hello {
+  font-size: 14px;
+  color    : rgba(255, 255, 255, .7);
+}
+
+main {
+  width : 1150px;
+  margin: 0 auto;
+}
+
+main section {
+  padding: 10px;
+}
+
+main h3 {
+  font-size: 18px;
+  color    : #5683DC;
+  margin   : 10px 0;
+}
+
+main .form-item {
+  display    : flex;
+  align-items: center;
+  width      : 500px;
+}
+
+.form-item-content {
+  width   : 100%;
+  position: relative;
+}
+
+.form-item.is-required {
+  margin-bottom: 22px;
+}
+
+.form-error {
+  color      : #f56c6c;
+  font-size  : 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position   : absolute;
+  top        : 100%;
+  left       : 0;
+}
+
+label {
+  min-width  : 90px;
+  text-align : right;
+  font-size  : 14px;
+  color      : #606266;
+  line-height: 40px;
+  padding    : 0 12px 0 0;
+}
+
+label::before {
+  content     : "*";
+  color       : #f56c6c;
+  margin-right: 4px;
+}
+
+main .hm-input {
+  -webkit-appearance: none;
+  background-color  : #fff;
+  background-image  : none;
+  border-radius     : 4px;
+  border            : 1px solid #dcdfe6;
+  box-sizing        : border-box;
+  color             : #606266;
+  display           : inline-block;
+  font-size         : inherit;
+  height            : 40px;
+  line-height       : 40px;
+  outline           : none;
+  padding           : 0 15px;
+  transition        : border-color .2s cubic-bezier(.645, .045, .355, 1);
+  width             : 100%;
+}
+
+mian .hm-input:focus {
+  outline     : none;
+  border-color: #409eff;
+}
+
+.submit {
+  margin-left     : 90px;
+  display         : inline-block;
+  line-height     : 1;
+  white-space     : nowrap;
+  cursor          : pointer;
+  background      : #fff;
+  border          : 1px solid #dcdfe6;
+  color           : #606266;
+  text-align      : center;
+  box-sizing      : border-box;
+  outline         : none;
+  transition      : .1s;
+  font-weight     : 500;
+  padding         : 12px 20px;
+  font-size       : 14px;
+  border-radius   : 4px;
+  color           : #fff;
+  background-color: #409eff;
+  border-color    : #409eff;
+}
+
+.hide {
+  display: none;
+}

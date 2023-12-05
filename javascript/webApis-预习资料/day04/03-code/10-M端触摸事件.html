@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M端触摸事件</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    // 触摸事件
+    const box = document.querySelector('.box')
+
+    // 1. 手指触屏开始事件 touchstart
+    box.addEventListener('touchstart', function (e) {
+      console.log('开始事件');
+    })
+
+    // 2. 手指触屏滑动事件 touchmove
+    box.addEventListener('touchmove', function (e) {
+      console.log('移动事件');
+    })
+
+    // 3. 手指触屏结束事件  touchend
+    box.addEventListener('touchend', function (e) {
+      console.log('结束事件');
+    })
+
+
+  </script>
+</body>
+
+</html>

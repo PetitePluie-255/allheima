@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元字符之范围</title>
+</head>
+
+<body>
+  <script>
+    // [] 匹配的是单个或者一个
+      // 元字符之范围  []  
+    // 1. [abc] 匹配包含的单个字符， 多选1
+    // const reg1 = /^[abc]$/
+    // console.log(reg1.test('a'))   // t
+    // console.log(reg1.test('b'))   // t
+    // console.log(reg1.test('c'))   // t
+    // console.log(reg1.test('d'))   // f
+    // console.log(reg1.test('ab'))  // f
+
+    // 2. [a-z] 连字符 单个
+    // const reg2 = /^[a-z]$/
+    // console.log(reg2.test('a')) // t
+    // console.log(reg2.test('p')) // t
+    // console.log(reg2.test('0')) // f
+    // console.log(reg2.test('A')) // f
+    // console.log(reg2.test('ab')) // f
+
+
+    // 想要包含小写字母，大写字母 ，数字
+    // const reg3 = /^[a-zA-Z0-9]$/
+    // console.log(reg3.test('B'))  // t
+    // console.log(reg3.test('b'))  // t
+    // console.log(reg3.test(9))    // t
+    // console.log(reg3.test(','))  // f
+    // console.log(reg3.test('-'))  // f
+
+    
+    // 用户名可以输入英文字母，数字，可以加下划线，要求 6~16位
+    // const reg4 = /^[a-zA-Z0-9_]{6,16}$/
+    // console.log(reg4.test('abcd1'))   // f
+    // console.log(reg4.test('abcd12'))  // t
+    // console.log(reg4.test('ABcd12'))  // t
+    // console.log(reg4.test('ABcd12_')) // t
+
+    // 3. [^a-z] 取反符
+    const reg5 = /^[^a-z]$/
+    // 匹配的是单个字符 并且不能出现a-z中间的任何一个字符
+    console.log(reg5.test('a')) // f
+    console.log(reg5.test('A')) // t
+    console.log(reg5.test('Aa')) // f
+    console.log(reg5.test(8))  // t
+  </script>
+</body>
+
+</html>
