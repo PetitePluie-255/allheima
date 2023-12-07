@@ -13,13 +13,13 @@
   <div class="none">我要隐藏</div>
   <script>
     // 1. 删除节点, remove 会从dom树中删除这个元素
-    const remove = document.querySelector('.remove')
-
+    const removeDiv = document.querySelector('.remove')
+    removeDiv.remove()
 
 
     // 2. display:none 隐藏元素，页面看不见，但是dom树中还存在这个标签
     const none = document.querySelector('.none')
-
+    none.style.display = 'none'
 
 
   </script>

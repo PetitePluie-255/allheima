@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./阶段案例：后台管理系统/css/element-ui.css" />
-    <link rel="stylesheet" href="./阶段案例：后台管理系统/css/index.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .box {
-        width: 200px;
-        height: 500px;
-        margin: 100px auto;
-        text-align: center;
-      }
-      .box input {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .box button {
-        width: 50px;
-        margin-right: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 轻提示 添加 slideDown 类名 可以实现向下展示的动画 -->
-    <!-- <div class="el-message el-message--success slideDown">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./阶段案例：后台管理系统/css/element-ui.css" />
+  <link rel="stylesheet" href="./阶段案例：后台管理系统/css/index.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 200px;
+      height: 500px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .box input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .box button {
+      width: 50px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 轻提示 添加 slideDown 类名 可以实现向下展示的动画 -->
+  <!-- <div class="el-message el-message--success slideDown">
       <i class="el-message__icon el-icon-success"></i>
       <p class="el-message__content">恭喜你，这是一条成功消息</p>
     </div> -->
-    <div class="box">
-      <input type="text" placeholder="请输入用户名" />
-      <input type="password" placeholder="请输入密码" />
-      <button class="btn1">登录</button><button class="btn2">注册</button>
-    </div>
+  <div class="box">
+    <input type="text" placeholder="请输入用户名" />
+    <input type="password" placeholder="请输入密码" />
+    <button class="btn1">登录</button><button class="btn2">注册</button>
+  </div>
 
-    <script></script>
-  </body>
+  <script>
+    function prompt(txt) {
+      // 创建元素
+      const divBox = document.createElement('div')
+      // 添加类名
+      divBox.className = 'el-message el-message--success slideDown'
+      // 添加内容
+      divBox.innerHTML = `<i class="el-message__icon el-icon-success"></i>
+      <p class="el-message__content">${txt}</p>`
+      // 添加元素
+      document.body.prepend(divBox)
+      // 移除元素
+      setTimeout(()=>{
+        divBox.remove()
+      },3000)
+    }
+    document.querySelector('.btn1').addEventListener('click',function(){
+      prompt('登陆成功')
+    })
+    document.querySelector('.btn2').addEventListener('click', function () {
+        prompt('注册成功')
+      })
+      console.log(document.querySelector('.btn1'));
+      console.log(document.querySelector('.btn2'));
+  </script>
+</body>
+
 </html>

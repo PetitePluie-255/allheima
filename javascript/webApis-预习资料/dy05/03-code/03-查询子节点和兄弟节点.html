@@ -18,12 +18,14 @@
   <script>
     // 1. 查询子节点
     const ul = document.querySelector('ul')
-
+    console.log(ul.children);
 
 
     // 2. 查询兄弟节点
     const li2 = document.querySelector('ul li:nth-child(2)')
-
+    console.log(li2.previousElementSibling);
+    console.log(li2.nextElementSibling);
+    console.log(li2.nextElementSibling.nextElementSibling);
 
 
   </script>

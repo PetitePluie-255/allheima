@@ -22,7 +22,10 @@
     // 2.2 prepend放到 ul 的最前面 类似css的 before伪元素
 
     const ul = document.querySelector('ul')
-
+    const li = document.createElement('li')
+    li.innerHTML = 11111
+    ul.append(li)
+    ul.prepend(li)
 
 
   </script>
