@@ -1,71 +1,124 @@
-// 渲染页面
-render()
-
+const list = document.querySelector(".mail-list");
 function render() {
-  // 获取邮件渲染的容器元素
-  let mailList = document.querySelector('.mail-list')
-  // 拼接字符串并通过给li添加unread或者read类名来显示邮件的状态
-  let str = mails.map(item => (`
-    <li class=${item.readStatus}>
+  list.innerHTML = mails
+    .map((ele) => {
+      const {
+        id,
+        from: { username, avatar },
+        time,
+        content,
+        readStatus,
+      } = ele;
+      console.log(readStatus === "unread" ? "已读" : "未读");
+      return `<li class="unread">
       <div class="group">
-        <div class="status" data-id=${item.id}>
-          标记${item.readStatus === 'unread' ? '已读' : '未读'}
+        <div data-id='${id}' class="status ">
+          标记${readStatus === "unread" ? "已读" : "未读"}
         </div>
         <article>
-          <img src="${item.from.avatar}" alt="">
+          <img src="${avatar}" alt="">
           <div class="mail-info">
             <div>
-              <span class="from">${item.from.username}</span>
-              <time>${item.time}</time>
+              <span class="from">${username}</span>
+              <time>${time}</time>
             </div>
-            <p>${item.content}</p>
+            <p>${content}</p>
           </div>
         </article>
       </div>
-    </li>
-  `))
-    .join('')
-  // 将字符串赋值给容器元素的innerHTML属性完成渲染
-  mailList.innerHTML = str
-
-  // 1. 初始化AlloyFinger插件
-  initSwipe()
-
-  // 2. 处理状态区块
-  handleStatus()
+    </li>`;
+    })
+    .join("");
 }
+render();
+const items = document.querySelectorAll("li");
 
-function initSwipe() {
-  // 2.1 为每一个li标签创建AlloyFinger实例，并传递配置项
-  let lis = document.querySelectorAll('.mail-list li')
-  lis.forEach(item => {
-    // 2.2 在配置项中判断，如果是右滑，li标签添加active类名，如果是左滑，li标签移除active类名
-    new AlloyFinger(item, {
-      swipe: (evt) => {
-        if (evt.direction === 'Right') {
-          item.classList.add('active')
-        }
-        if (evt.direction === 'Left') {
-          item.classList.remove('active')
+console.log(items);
+// 遍历伪数组为所有item添加滑动效果
+items.forEach((ele) => {
+  new AlloyFinger(ele, {
+    swipe: function (e) {
+      console.log(e.direction);
+      if (e.direction === "Right") {
+        // // 排他
+        // const active = document.querySelector(".active");
+        // active && active.classList.remove("active");
+        // 添加active类实现左滑
+        ele.classList.add("active");
+      } else {
+        // 移除active类
+        ele.classList.remove("active");
+      }
+    },
+  });
+});
+
+
+
+
+
+items.forEach((ele) => {
+  ele.addEventListener("click", function (e) {
+    const target = e.target;
+    console.log(ele);
+    if (target.tagName === "DIV") {
+      console.log(e.target);
+      const id = e.target.dataset.id;
+      if (ele.classList.contains("unread")) {
+        ele.className = "read ";
+        mails[id - 1].readStatus =
+          mails[id - 1].readStatus === "unread" ? "read" : "unread";
+          
+          
+        } else {
+          ele.className = "unread";
+          mails[id - 1].readStatus =
+          mails[id - 1].readStatus === "unread" ? "read" : "unread";
+          // document.querySelector(`[data-id='${id}']`).innerHTML = `标为未读`;
+      }
+      if (mails[1].readStatus === "read") {
+        document.querySelector(`[data-id='${id}']`).innerHTML = `标为已读`;
+      } else {
+        document.querySelector(`[data-id='${id}']`).innerHTML = `标为未读`;
+      }
+        if (mails[id - 1].readStatus === "unread") {
+          document.querySelector(`[data-id='${id}']`).innerHTML = `标为已读`;
+        } else {
+          document.querySelector(`[data-id='${id}']`).innerHTML = `标为未读`;
         }
       }
-    })
-  })
-}
-
-function handleStatus() {
-  let statusEls = document.querySelectorAll('.status')
-  // 2.1 给所有邮件项绑定点击事件
-  statusEls.forEach(status => {
-    status.addEventListener('click', function (e) {
-      // 2.2 点击事件中根据邮件id找到对应邮件
-      let id = +e.target.dataset.id
-      let mail = mails.find(item => item.id === id)
-      // 2.3 修改对应邮件的状态
-      mail.readStatus = mail.readStatus === 'unread' ? 'read' : 'unread'
-      // 2.4 让状态区块缩回去之后再重新渲染页面
-      e.target.parentNode.parentNode.classList.remove('active')
-      setTimeout(() => { render() }, 300)
-    })
-  })
-}
+      console.log(mails);});
+    });
+// }
+//   ele.addEventListener("click", function (e) {
+//     const target = e.target;
+//     console.log(ele);
+//     if (target.tagName === "DIV") {
+//       console.log(e.target);
+//       const id = e.target.dataset.id;
+//       if (ele.classList.contains("unread")) {
+//         ele.className = "read ";
+//         mails[id - 1].readStatus =
+//           mails[id - 1].readStatus === "unread" ? "read" : "unread";
+          
+          
+//         } else {
+//           ele.className = "unread";
+//           mails[id - 1].readStatus =
+//           mails[id - 1].readStatus === "unread" ? "read" : "unread";
+//           // document.querySelector(`[data-id='${id}']`).innerHTML = `标为未读`;
+//       }
+//       if (mails[1].readStatus === "read") {
+//         document.querySelector(`[data-id='${id}']`).innerHTML = `标为已读`;
+//       } else {
+//         document.querySelector(`[data-id='${id}']`).innerHTML = `标为未读`;
+//       }
+//         if (mails[id - 1].readStatus === "unread") {
+//           document.querySelector(`[data-id='${id}']`).innerHTML = `标为已读`;
+//         } else {
+//           document.querySelector(`[data-id='${id}']`).innerHTML = `标为未读`;
+//         }
+//       }
+//       console.log(mails);});
+//     });
+    

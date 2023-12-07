@@ -56,8 +56,27 @@
       </div>
     </div>
   </section>
+  <script src="./Sortable-1.15.1/Sortable.min.js"></script>
   <script src="./sortable.js"></script>
-  <script src="index.js"></script>
+  <script>
+    const nav = document.querySelector('.nav')
+    new Sortable(nav, {
+      swapThreshold: 1,
+      animation: 150,
+      store: {
+        get: function (sortable) {
+          let order = localStorage.getItem("LISTNAME");
+          return order ? order.split("|") : [];
+        },
+        set: function (sortable) {
+          // 这里是获取每次排序后新的排序数组，并将其放到本地缓存中
+          let order = sortable.toArray();
+          localStorage.setItem("LISTNAME", order.join("|"));
+        }
+      },
+    })
+  </script>
+  <!-- <script src="index.js"></script> -->
 </body>
 
 </html>

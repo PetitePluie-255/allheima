@@ -19,9 +19,10 @@ btnEl.addEventListener("click", calculateBMI);
 clearBtn.addEventListener("click", clearBMIHistory);
 
 function renderBMIHistory() {
-  arr = JSON.parse(localStorage.getItem("arr")) || [];
-  console.log(arr);
+
   // 1.1 TODO:获取本地存储的BMI数据
+  const arr1 = JSON.parse(localStorage.getItem("bmi"));
+  console.log(arr1);
   let bmiData = [
     {
       time: 1697695106171,
@@ -30,7 +31,7 @@ function renderBMIHistory() {
       bmi: "24.69",
     },
   ];
-
+  bmiData = arr1 || []
   let str = "";
   if (bmiData.length > 0) {
     // 1.2 如果有历史记录，则根据数据生成字符串
@@ -58,6 +59,7 @@ function formatTime(timeStamp) {
   let date = time.getDate();
   return `${year}-${month}-${date}`;
 }
+
 
 function clearBMIHistory() {
   // 3.1 移除localStorage中的BMI数据
@@ -99,19 +101,16 @@ function calculateBMI() {
     obesity.classList.add("active");
   }
   // 2.4 TODO:创建当前BMI数据对象，存储当前BMI数据
-
+  const date1 = +new Date();
   const bmi = {
-    time: formatTime("2023-12-04"),
+    time: formatTime(date1),
     height: `${heightValue}`,
     weight: `${weightValue}`,
     bmi: bmiValue,
   };
-  arr.push(Object.values(bmi));
-  // const arr1 = new Set(...arr)
-  // console.log([...arr1]);
- 
-  localStorage.setItem("arr", JSON.stringify([...arr1]));
-  renderBMIHistory();
+  arr.push(bmi);
   // 2.5 渲染更新后的BMI历史记录
+  console.log(arr);
+  localStorage.setItem('bmi',JSON.stringify(arr))
   renderBMIHistory();
 }

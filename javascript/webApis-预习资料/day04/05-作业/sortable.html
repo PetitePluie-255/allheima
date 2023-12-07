@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 900px;
+            display: flex;
+            justify-content: space-around;
+            margin: 200px auto;
+        }
+        .list-group {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        #example1 .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: -1px;
+            background-color: #03337a;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        #example2 .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: -1px;
+            background-color: #db0808;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"><div id="example1" class="list-group">
+        <div class="list-group-item">Item 1</div>
+        <div class="list-group-item">Item 2</div>
+        <div class="list-group-item">Item 3</div>
+        <div class="list-group-item">Item 4</div>
+        <div class="list-group-item">Item 5</div>
+        <div class="list-group-item">Item 6</div>
+    </div>
+    <div id="example2" class="list-group">
+        <div class="list-group-item">Item 1</div>
+        <div class="list-group-item">Item 2</div>
+        <div class="list-group-item">Item 3</div>
+        <div class="list-group-item">Item 4</div>
+        <div class="list-group-item">Item 5</div>
+        <div class="list-group-item">Item 6</div>
+    </div></div>
+    <script src="./Sortable-1.15.1/Sortable.min.js"></script>
+    <script>
+        new Sortable(example1, {
+            group: 'shared', // set both lists to same group
+            animation: 150
+        });
+
+        new Sortable(example2, {
+            group: 'shared',
+            animation: 150
+        });
+        Sortable.create(example1, {
+                group: "localStorage-example",
+                store: {
+                    /**
+                     * Get the order of elements. Called once during initialization.
+                     * @param   {Sortable}  sortable
+                     * @returns {Array}
+                     */
+                    get: function (sortable) {
+                        var order = localStorage.getItem(sortable.options.group.name);
+                        return order ? order.split('|') : [];
+                    },
+
+                    /**
+                     * Save the order of elements. Called onEnd (when the item is dropped).
+                     * @param {Sortable}  sortable
+                     */
+                    set: function (sortable) {
+                        var order = sortable.toArray();
+                        localStorage.setItem(sortable.options.group.name, order.join('|'));
+                    }
+                }
+            })
+    </script>
+</body>
+
+</html>
