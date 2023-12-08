@@ -1,0 +1,17 @@
+@charset "UTF-8";
+:export {
+  menuText: #ffffff;
+  menuActiveText: #409eff;
+  subMenuActiveText: #f4f4f5;
+  menuBg: transparent;
+  menuHover: #ffffff;
+  subMenuBg: #1f2d3d;
+  subMenuHover: #001528;
+  sideBarWidth: 145px;
+}
+
+/* 改变 icon 字体路径变量，必需 */
+.el-input__inner,
+.el-button {
+  border-radius: 2px;
+}/*# sourceMappingURL=variables.css.map */

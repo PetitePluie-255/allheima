@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./阶段案例：后台管理系统/css/element-ui.css" />
+  <link rel="stylesheet" href="./阶段案例：后台管理系统/css/index.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 200px;
+      height: 500px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .box input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .box button {
+      width: 50px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 轻提示 添加 slideDown 类名 可以实现向下展示的动画 -->
+  <!-- <div class="el-message el-message--success slideDown">
+      <i class="el-message__icon el-icon-success"></i>
+      <p class="el-message__content">恭喜你，这是一条成功消息</p>
+    </div> -->
+  <div class="box">
+    <input type="text" placeholder="请输入用户名" />
+    <input type="password" placeholder="请输入密码" />
+    <button class="btn1">登录</button><button class="btn2">注册</button>
+  </div>
+
+  <script>
+    // 1. 动态创建标签 div
+    // 1.1 添加类名
+    // 1.2 添加内容
+    // 2. 添加到页面中 body append() prepend()
+
+    
+
+    // 3. 封装函数
+    function tip(msg) {
+      const divBox = document.createElement('div')
+      divBox.className = 'el-message el-message--success slideDown'
+      divBox.innerHTML = `<i class="el-message__icon el-icon-success"></i>
+      <p class="el-message__content">${msg}</p>`
+      document.body.prepend(divBox)
+      // 3s后自动消失
+      setTimeout(() => {
+        // divBox.style.display = 'none'
+        divBox.remove() 
+      }, 3000);
+    }
+    // tip() 触发时机 - 点击登录之后
+
+    document.querySelector('.btn1').addEventListener('click', function() {
+      // 1. 内容自定义
+      // 2. 提示框不能自动消失
+      tip('登录成功')
+    })
+
+    document.querySelector('.btn2').addEventListener('click', function() {
+      // 1. 内容自定义
+      // 2. 提示框不能自动消失
+      tip('注册成功')
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/element-ui.css" />
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <div class="navbar">
+      <h1>智慧园区-后台</h1>
+      <div class="avatar-container">
+        <img src="./images/defaultHead.png" class="user-avatar" />
+        <span class="name">管理员</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="opeate-tools">
+        <button type="button" class="el-button el-button--primary" id="btn-add">
+          <span>添加员工</span>
+        </button>
+      </div>
+      <div class="el-table hm-table">
+        <div class="el-table__header-wrapper">
+          <table class="el-table__header">
+            <colgroup>
+              <col width="250" />
+              <col width="250" />
+              <col width="250" />
+              <col width="250" />
+              <col width="250" />
+            </colgroup>
+            <thead class="has-gutter">
+              <tr>
+                <th class="is-center is-leaf">
+                  <div class="cell">头像</div>
+                </th>
+                <th class="is-leaf">
+                  <div class="cell">姓名</div>
+                </th>
+                <th class="is-leaf" id="sortByWorkNumber">
+                  <div class="cell">
+                    工号
+                  </div>
+                </th>
+                <th class="is-leaf" id="sortByTime">
+                  <div class="cell">
+                    入职时间
+                  </div>
+                </th>
+                <th class="is-leaf">
+                  <div class="cell">操作</div>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="el-table__body-wrapper">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body">
+            <colgroup>
+              <col width="250" />
+              <col width="250" />
+              <col width="250" />
+              <col width="250" />
+              <col width="250" />
+            </colgroup>
+
+            <tbody id="tbody">
+              <tr class="el-table__row">
+                <td class="is-center">
+                  <div class="cell"><span class="username">黑</span></div>
+                </td>
+                <td>
+                  <div class="cell">管理员</div>
+                </td>
+                <td>
+                  <div class="cell">HEIMA00001</div>
+                </td>
+                <td>
+                  <div class="cell">2022-10-24</div>
+                </td>
+                <td>
+                  <div class="cell">
+                    <button type="button" class="el-button hm-text btn-edit">编辑</button>
+                    <button type="button" class="el-button hm-text btn-del">删除</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 添加和编辑的模态框 -->
+  <div class="dialog-container" id="modal" aria-hidden="true" aria-labelledby="my-dialog-title"
+    aria-describedby="my-dialog-description">
+    <div class="dialog-overlay" data-a11y-dialog-hide></div>
+    <div class="dialog-content" role="document">
+      <button type="button" aria-label="Close this dialog window" class="el-dialog__headerbtn dialog-close"
+        data-a11y-dialog-hide>
+        <i class="el-dialog__close el-icon el-icon-close"></i>
+      </button>
+
+      <h1 id="my-dialog-title">添加员工信息</h1>
+
+      <form class="el-form modal-form" id="form">
+        <div class="el-form-item">
+          <label for="name">姓名</label>
+          <div class="el-input">
+            <input type="text" autocomplete="off" class="el-input__inner username">
+          </div>
+        </div>
+
+        <div class="el-form-item">
+          <label for="name">工号</label>
+          <div class="el-input">
+            <input type="text" autocomplete="off" disabled class="el-input__inner workNumber">
+          </div>
+        </div>
+
+        <div class="el-form-item">
+          <label for="description">入职时间</label>
+          <div class="el-textarea">
+            <input type="date" class="el-input__inner time">
+          </div>
+        </div>
+        <div class="el-form-item hm-btns">
+          <button type="button" class="el-button el-button--primary" id="btn-ok">确定</button>
+          <button type="button" class="el-button el-button--default" data-a11y-dialog-hide>取消</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- 确认删除吗 -->
+  <div class="dialog-container" id="modal-del" aria-hidden="true" aria-describedby="my-dialog-description">
+    <div class="dialog-overlay"></div>
+    <div class="dialog-content" role="document">
+      <button type="button" aria-label="Close this dialog window" class="el-dialog__headerbtn dialog-close"
+        data-a11y-dialog-hide>
+        <i class="el-dialog__close el-icon el-icon-close"></i>
+      </button>
+
+      <h1 id="my-dialog-title">确认删除该员工信息？</h1>
+
+      <div class="btn-box">
+        <button type="button" class="el-button hm-model-btn1" id="del-ok">
+          <span>确认</span></button>
+        <button type="button" class="el-button hm-model-btn2" data-a11y-dialog-hide>
+          <span>取消</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 轻提示 -->
+  <!--
+    <div class="el-message el-message--success" style="z-index: 2020;">
+      <i class="el-message__icon el-icon-success"></i>
+      <p class="el-message__content">恭喜你，这是一条成功消息</p>
+    </div>
+  -->
+  <script src="./js/a11y-dialog.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

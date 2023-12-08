@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀关闭登录案例</title>
+  <style>
+    .pop {
+      display: block;
+      visibility: visible;
+      position: fixed;
+      z-index: 9999;
+      left: 50%;
+      top: 50%;
+      width: 530px;
+      height: 254px;
+      margin-top: -127px;
+      margin-left: -265px;
+      background: url(./images/login.webp) no-repeat;
+    }
+
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+    }
+
+    @keyframes slideUp {
+      to {
+        height: 0;
+      }
+    }
+
+    @keyframes hidden {
+      to {
+        display: none;
+      }
+    }
+
+    .hide {
+      animation: slideUp .3s linear forwards, hidden .3s .3s forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pop">
+    <a href="javascript:;" class="close"></a>
+  </div>
+  <script>
+    // 需求：点击关闭按钮可以关闭父盒子
+    const closeBtn = document.querySelector('.close')
+
+    // 利用孩子选取父节点, 返回的也是一个元素对象
+    closeBtn.addEventListener('click', function () {
+      // 1. 直接找div
+      // document.querySelector('.pop').classList.add('hide')
+      // 2. 利用当前元素, 通过parentNode 找到它的父节点
+      console.log(this.parentNode.parentNode);
+      this.parentNode.classList.add('hide')
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>增加节点</title>
+</head>
+
+<body>
+  <ul>
+    <li>我是小li</li>
+  </ul>
+  <script>
+    // 1. 创建节点
+    // const li = document.createElement('标签名')
+    const li = document.createElement('li')
+    li.innerHTML = '我是大li'
+    console.log(li);
+
+
+    // 2. 追加给父元素
+    // 2.1 append 放到ul 的最后面 类似css的 after伪元素
+    // 2.2 prepend放到 ul 的最前面 类似css的 before伪元素
+
+    const ul = document.querySelector('ul')
+    // ul.append(li) // 正常排队 - 排在队伍的后面
+ 
+    ul.prepend(li)  // 插队 - 插到队伍的前面
+
+
+  </script>
+</body>
+
+</html>
