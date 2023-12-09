@@ -7,6 +7,7 @@ function prompt(txt) {
   divBox.innerHTML = `<i class="el-message__icon el-icon-success"></i>
       <p class="el-message__content">${txt}</p>`;
   // 添加元素
+  divBox.style.zIndex = 100000
   document.body.prepend(divBox);
   // 移除元素
   setTimeout(() => {

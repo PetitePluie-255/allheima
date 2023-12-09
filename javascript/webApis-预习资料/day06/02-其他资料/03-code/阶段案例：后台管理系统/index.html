@@ -38,25 +38,11 @@
             </colgroup>
             <thead class="has-gutter">
               <tr>
-                <th class="is-center is-leaf">
-                  <div class="cell">头像</div>
-                </th>
-                <th class="is-leaf">
-                  <div class="cell">姓名</div>
-                </th>
-                <th class="is-leaf" id="sortByWorkNumber">
-                  <div class="cell">
-                    工号
-                  </div>
-                </th>
-                <th class="is-leaf" id="sortByTime">
-                  <div class="cell">
-                    入职时间
-                  </div>
-                </th>
-                <th class="is-leaf">
-                  <div class="cell">操作</div>
-                </th>
+                <th class="is-center is-leaf">头像</th>
+                <th class="is-leaf">姓名</th>
+                <th class="is-leaf">工号</th>
+                <th class="is-leaf">入职时间</th>
+                <th class="is-leaf">操作</th>
               </tr>
             </thead>
           </table>
@@ -73,27 +59,16 @@
 
             <tbody id="tbody">
               <tr class="el-table__row">
-                <td class="is-center">
-                  <div class="cell"><span class="username">黑</span></div>
-                </td>
+                <td class="is-center"><span class="username">黑</span></td>
+                <td>管理员</td>
+                <td>HEIMA00001</td>
+                <td>2022-10-24</td>
                 <td>
-                  <div class="cell">管理员</div>
-                </td>
-                <td>
-                  <div class="cell">HEIMA00001</div>
-                </td>
-                <td>
-                  <div class="cell">2022-10-24</div>
-                </td>
-                <td>
-                  <div class="cell">
-                    <button type="button" class="el-button hm-text btn-edit">编辑</button>
-                    <button type="button" class="el-button hm-text btn-del">删除</button>
-                  </div>
+                  <button type="button" class="el-button hm-text btn-edit">编辑</button>
+                  <button type="button" class="el-button hm-text btn-del">删除</button>
                 </td>
               </tr>
             </tbody>
-
           </table>
         </div>
       </div>
@@ -101,12 +76,10 @@
   </div>
 
   <!-- 添加和编辑的模态框 -->
-  <div class="dialog-container" id="modal" aria-hidden="true" aria-labelledby="my-dialog-title"
-    aria-describedby="my-dialog-description">
+  <div class="dialog-container" id="modal">
     <div class="dialog-overlay" data-a11y-dialog-hide></div>
-    <div class="dialog-content" role="document">
-      <button type="button" aria-label="Close this dialog window" class="el-dialog__headerbtn dialog-close"
-        data-a11y-dialog-hide>
+    <div class="dialog-content">
+      <button type="button" class="el-dialog__headerbtn dialog-close" data-a11y-dialog-hide>
         <i class="el-dialog__close el-icon el-icon-close"></i>
       </button>
 
@@ -143,11 +116,10 @@
 
 
   <!-- 确认删除吗 -->
-  <div class="dialog-container" id="modal-del" aria-hidden="true" aria-describedby="my-dialog-description">
+  <div class="dialog-container" id="modal-del">
     <div class="dialog-overlay"></div>
-    <div class="dialog-content" role="document">
-      <button type="button" aria-label="Close this dialog window" class="el-dialog__headerbtn dialog-close"
-        data-a11y-dialog-hide>
+    <div class="dialog-content">
+      <button type="button" class="el-dialog__headerbtn dialog-close" data-a11y-dialog-hide>
         <i class="el-dialog__close el-icon el-icon-close"></i>
       </button>
 
@@ -162,17 +134,14 @@
     </div>
   </div>
 
-  <!-- 轻提示 -->
-  <!--
-    <div class="el-message el-message--success" style="z-index: 2020;">
-      <i class="el-message__icon el-icon-success"></i>
-      <p class="el-message__content">恭喜你，这是一条成功消息</p>
-    </div>
-  -->
-  <script src="./js/prompt.js"></script>
+  <!-- 轻提示 添加 slideDown 类名 可以实现向下展示的动画 -->
+  <!-- <div class="el-message el-message--success slideDown">
+    <i class="el-message__icon el-icon-success"></i>
+    <p class="el-message__content">恭喜你，这是一条成功消息</p>
+  </div> -->
+
   <script src="./js/a11y-dialog.min.js"></script>
-  <!-- <script src="./js/index.js"></script> -->
-  <script src="./css/indexx.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

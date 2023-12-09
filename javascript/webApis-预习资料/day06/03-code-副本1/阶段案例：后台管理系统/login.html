@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/element-ui.css" />
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <div class="logo"></div>
+      <div class="form">
+        <h1>智慧园区-登录</h1>
+
+        <!-- tab栏切换 -->
+        <div class="el-tabs el-tabs--border-card">
+          <div class="el-tabs__header">
+            <div class="el-tabs__item"><span>二维码登录</span></div>
+            <div class="el-tabs__item active"><span>账号登录</span></div>
+
+            <!-- 横线 -->
+            <div class="line"></div>
+          </div>
+          <div class="el-tabs__content">
+            <!-- 二维码 -->
+            <div class="code el-tab-pane">
+              <img src="./images/itcast.png" alt="传智教育" />
+            </div>
+
+            <!-- 表单 -->
+            <div class="el-tab-pane show">
+              <form class="el-form">
+                <div class="el-form-item">
+                  <div class="el-input">
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="请输入手机号"
+                      name="phone"
+                      class="el-input__inner"
+                    />
+                    <!-- 错误提示 -->
+                    <div class="el-form-item__error phoneErr"></div>
+                  </div>
+                </div>
+                <div class="el-form-item">
+                  <div class="el-input el-input--suffix">
+                    <input
+                      type="password"
+                      autocomplete="off"
+                      placeholder="密码 admin123"
+                      name="password"
+                      class="el-input__inner"
+                    />
+                    <!-- 错误提示 -->
+                    <div class="el-form-item__error pwdErr"></div>
+
+                    <!-- 密码显示切换 -->
+                    <span
+                      class="iconfont icon-eye-open password"
+                      id="togglePass"
+                    ></span>
+                  </div>
+                </div>
+                <div class="el-form-item agreeCk">
+                  <label class="el-checkbox"
+                    ><input type="checkbox" id="agree" />用户平台使用协议</label
+                  >
+
+                  <!-- 错误提示 -->
+                  <div class="el-form-item__error agreeMsg"></div>
+                </div>
+                <div class="el-form-item">
+                  <button
+                    type="button"
+                    class="el-button el-button--primary login"
+                    id="btn-login"
+                  >
+                    登录
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/tip.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

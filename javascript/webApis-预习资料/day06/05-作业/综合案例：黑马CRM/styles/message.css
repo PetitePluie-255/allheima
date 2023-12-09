@@ -1,0 +1,46 @@
+.message {
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 380px;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ebeef5;
+  position: fixed;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  background-color: #edf2fc;
+  padding: 15px 15px 15px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+  z-index: 2020;
+}
+
+.icon-checked {
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: middle;
+  color: #67c23a;
+  margin-right: 10px;
+}
+
+.message__content {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  color: #67c23a;
+}
+
+.slideDown {
+  animation: slide 0.5s 0.1s forwards;
+}
+
+@keyframes slide {
+  to {
+    top: 20px;
+  }
+}
