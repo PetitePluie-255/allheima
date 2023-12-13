@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <style>
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- file标签 -->
+  <input type="file" class="upload">
+
+  <!-- 渲染服务器返回的图片URL -->
+  <img src="" class="img" alt="">
+
+  <!-- 导入axios -->
+  <script src="../lib/axios.js"></script>
+  <script>
+    document.querySelector('.upload').addEventListener('change',function(e){
+      const data  = new FormData()
+      data.append('img',e.target.files[0])
+      axios({
+        method:'post',
+        url: 'https://hmajax.itheima.net/api/uploadimg',
+        data
+      }).then(res=>{
+        console.log(res);
+        const url = res.data.data.url
+        document.querySelector('.img').src = url
+      })
+    })
+  </script>
+</body>
+
+</html>

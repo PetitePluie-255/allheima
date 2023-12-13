@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+            height: 20px;
+        }
+
+        button {
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>查询</button>
+    <script src="./axios.js"></script>
+    <script>
+        document.querySelector('button').addEventListener('click', function () {
+            const message = document.querySelector('input').value
+
+            axios({
+                method: 'get',
+                url: 'https://api.ecylt.top/ai/gpt/api.php',
+                params: {
+                    message
+                }
+            }).then(res => {
+                console.log(res);
+                // const data = res.data.data.forecasts
+                // const { casts, city, province, reporttime } = data[0]
+                // console.log(casts);
+                // console.log(city);
+                // console.log(province);
+                // console.log(reporttime);
+            })
+        })
+    </script>
+</body>
+
+</html>

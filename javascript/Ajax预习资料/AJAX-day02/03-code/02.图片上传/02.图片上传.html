@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- file标签 -->
+  <input type="file" class="upload">
+
+  <!-- 渲染服务器返回的图片URL -->
+  <img src="" class="img" alt="">
+
+  <!-- 导入axios -->
+  <script src="../lib/axios.js"></script>
+  <script>
+    // 1. 给input注册change事件
+    // 2. 获取上传的文件内容 
+    // 3. 创建内置对象FormData
+    // 4. 将文件添加到FormData对象中
+    // 5. 结合接口文档, 来完成上传
+    document.querySelector('.upload').addEventListener('change', function(e) {
+      // console.log(e.target.files[0]);
+      const data = new FormData()
+      data.append('img', e.target.files[0])
+      axios({
+        url: 'https://hmajax.itheima.net/api/uploadimg',
+        method: 'POST',
+        data
+      }).then(res => {
+        console.log(res);
+        const url = res.data.data.url
+        document.querySelector('.img').src = url
+      })
+    })
+  </script>
+</body>
+
+</html>
