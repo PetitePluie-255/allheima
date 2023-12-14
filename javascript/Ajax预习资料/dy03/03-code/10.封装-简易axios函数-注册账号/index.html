@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>封装-简易axios函数-注册用户</title>
+</head>
+
+<body>
+  <h2>封装-简易axios函数-注册用户</h2>
+  <button class="btn">注册用户</button>
+  <script>
+    /**
+    * 封装-简易axios函数-注册用户
+    * 请求地址: http://hmajax.itheima.net/api/register
+    * 请求方式: POST
+    * 请求体参数 
+    * username
+    * password
+   */
+    function hmAxios(config) {
+      console.log(config);
+      return new Promise((resolve, rejcet) => {
+        const xhr = new XMLHttpRequest()
+        if (config.params) {
+          const params = new URLSearchParams(config.params)
+          const query = params.toString()
+          config.url += `?${query}`
+        }
+        xhr.open(config.method || 'get', config.url)
+        xhr.addEventListener('loadend', () => {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            resolve(JSON.parse(xhr.response))
+          } else {
+            rejcet(new Error(xhr.response))
+          }
+        })
+        if (config.data) {
+          xhr.setRequestHeader('Content-Type', 'application/json')
+          xhr.send(JSON.stringify(config.data))
+        } else {
+          xhr.send()
+        }
+      })
+    }
+
+
+
+    document.querySelector('.btn').addEventListener('click', () => {
+      hmAxios({
+        method: 'post',
+        url: 'https://hmajax.itheima.net/api/register',
+        data: {
+          username: 'adminseaswf12',
+          password: '123456'
+        }
+      }).then(res => {
+        console.log(res);
+        // document.querySelector('.box').innerHTML = res.list
+      }).catch(err => {
+        console.log(err);
+        // document.querySelector('.box').innerHTML = err
+
+      })
+    })
+  </script>
+</body>
+
+</html>

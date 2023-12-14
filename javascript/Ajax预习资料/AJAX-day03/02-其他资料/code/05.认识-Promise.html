@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>认识-Promise</title>
+</head>
+
+<body>
+  <h2>认识-Promise</h2>
+  <script>
+    /**
+     * Promise
+     *  浏览器的内置对象，管理异步操作，接收成功或失败的结果
+     * */
+    // 1. 实例化Promise对象
+    const p = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // resolve(100)
+        resolve(100)
+      }, 2000);
+    })
+    // 2. 执行异步操作，并传递结果
+
+    // 3. 接收结果
+    p.then(res => {
+      console.log('res',res);
+    }).catch(err => {
+      console.log('catch',err);
+    })
+
+
+
+  </script>
+</body>
+
+</html>

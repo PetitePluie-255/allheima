@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案例-使用 Promise+XHR 获取省份列表</title>
+</head>
+
+<body>
+  <h2>案例-使用 Promise+XHR 获取省份列表</h2>
+  <div class="box"></div>
+  <script>
+    /**
+     * 需求:
+     *  Promise + XHR 获取省份数据并渲染
+     *  请求地址: http://hmajax.itheima.net/api/province 
+     *  请求方式: GET
+     *  1. 核心功能
+     *  2. 异常处理
+     * */
+    
+    //  1. 核心功能 - 数据获取&&渲染
+    const p = new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest()
+      xhr.open('get', 'http://hmajax.itheima.net/api/provinc')
+      xhr.addEventListener('loadend', () => {
+        console.log(xhr);
+        // 状态码 
+        // 大于等于200 && 小于300 成功 - 否则一律按照失败进行处理
+        if (xhr.status >= 200 && xhr.status < 300) {
+          // 成功 - 执行resolve()
+          resolve(JSON.parse(xhr.response))
+        } else {
+          // 失败 - 执行reject
+          // 生成错误对象 new Error(错误信息)
+          reject(new Error(xhr.response))
+        }
+      })
+      xhr.send() 
+    })
+    p.then(res => {
+      console.log(res);
+      document.querySelector('.box').innerHTML = res.list
+    }).catch(err => {
+      // console.log(err);
+      console.dir(err) // 以对象的方式查看错误信息, 更清晰, 更直接
+      document.querySelector('.box').innerHTML = err.message
+      // console.log( typeof err);
+    })
+  </script>
+</body>
+
+</html>

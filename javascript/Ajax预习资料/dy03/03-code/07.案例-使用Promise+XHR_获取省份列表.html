@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案例-使用 Promise+XHR 获取省份列表</title>
+</head>
+
+<body>
+  <h2>案例-使用 Promise+XHR 获取省份列表</h2>
+  <div class="box"></div>
+  <script>
+    /**
+     * 需求:
+     *  Promise + XHR 获取省份数据并渲染
+     *  请求地址: http://hmajax.itheima.net/api/province 
+     *  请求方式: GET
+     *  1. 核心功能
+     *  2. 异常处理
+     * */
+    const p = new Promise((resolve, rejcet) => {
+      const xhr = new XMLHttpRequest()
+      xhr.open('get', 'http://hmajax.itheima.net/api/provinc')
+      xhr.addEventListener('loadend', () => {
+        console.log(xhr.status);
+        if (xhr.status >= 200 && xhr.status < 300) {
+          resolve(JSON.parse(xhr.response))
+        } else {
+          const err = new Error(xhr.response)
+          rejcet(err)
+        }
+      })
+      xhr.send()
+    })
+    p.then((res) => {
+      console.log(res);
+      document.querySelector('.box').innerHTML = res.list
+    }).catch((err) => {
+      console.dir(err);
+      document.querySelector('.box').innerHTML = err.message
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest-查询参数</title>
+</head>
+
+<body>
+  <h2>XMLHttpRequest-查询参数</h2>
+  <p class="city">
+    <!-- 城市渲染到这里 -->
+  </p>
+  <script>
+    /**
+     * 需求：通过 XMLHttpRequest 获取某个省份的所有城市，渲染到页面上
+     * 请求地址: http://hmajax.itheima.net/api/city
+     * 请求方式: GET
+     * 查询参数: pname
+    */
+    // 1. 创建 XMLHttpRequest对象
+    const xhr = new XMLHttpRequest()
+    // 2. 设置请求方法 和 请求URL
+    xhr.open('get', 'http://hmajax.itheima.net/api/city?pname=江苏省')
+    // 3. 监听 loadend 事件，接收响应结果
+    xhr.addEventListener('loadend', () => {
+      const data = JSON.parse(xhr.response)
+      console.log(data.list);
+      document.querySelector('.city').innerHTML = data.list
+    })
+    // 4. 发起请求
+    xhr.send()
+  </script>
+</body>
+
+</html>

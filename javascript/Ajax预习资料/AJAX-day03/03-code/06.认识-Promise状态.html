@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>认识Promise状态</title>
+</head>
+
+<body>
+  <h2>Promise的状态</h2>
+  <script>
+    /**
+     * Promise的状态
+     *  1. pending 待定（默认状态）: 实例化
+     *  2. fulfilled 已兑现（成功）: resolve-》then
+     *  3. rejected 已拒绝（失败） : reject-》catch
+     * 
+     * Promise对象的状态发生改变之后，无法再次改变
+     * */
+    // promise的状态一旦变更, 就会出现状态凝固 
+     const p = new Promise((resolve, reject) => {
+      // 一般在函数内部， 执行的是异步操作 比如 ajax请求， 定时器，延时器。。。
+      setTimeout(() => {
+        resolve('已成功') // pending -> fulfilled  
+        // reject('已失败')  // 无效代码
+        // reject('已失败1234')  // 无效代码
+      }, 2000);
+     })
+    //  console.log(p); // pending 状态 - 等待
+    p.then(res => {
+      // console.log(res);
+      console.log(p); // fulfilled 状态 - 已成功
+    }).catch(err => {
+      console.log(p);
+      console.log(err);
+    })
+  </script>
+</body>
+
+</html>

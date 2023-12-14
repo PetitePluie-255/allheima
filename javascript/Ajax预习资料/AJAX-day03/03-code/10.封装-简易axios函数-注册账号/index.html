@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>封装-简易axios函数-注册用户</title>
+</head>
+
+<body>
+  <h2>封装-简易axios函数-注册用户</h2>
+  <button class="btn">注册用户</button>
+  <script>
+    /**
+    * 封装-简易axios函数-注册用户
+    * 请求地址: http://hmajax.itheima.net/api/register
+    * 请求方式: POST
+    * 请求体参数 
+    * username
+    * password
+   */
+    function hmAxios(config) {
+      // 2. 返回一个promise对象
+      return new Promise((resolve, reject) => {
+        // 3. xhr 创建 / 设置请求方式,请求地址 / 监听返回结果/ 发送请求 
+        const xhr = new XMLHttpRequest()
+        // 生成查询参数
+        // 判断params是否存在
+        if (config.params) {
+          const params = new URLSearchParams(config.params)
+          const query = params.toString()
+          config.url += `?${query}`
+        }
+        xhr.open(config.method || 'get', config.url)
+        xhr.addEventListener('loadend', () => {
+          // console.log(xhr.response);
+          // 4. 根据状态执行不同的函数 
+          if (xhr.status >= 200 && xhr.status < 300) {
+            resolve(JSON.parse(xhr.response))
+          } else {
+            reject(new Error(xhr.response))
+          }
+        })
+        // 判断data属性是否存在
+        if (config.data) {
+          // 1. 设置请求头 
+          xhr.setRequestHeader('Content-Type', 'application/json')
+          // 2. 请求体数据携带 - 转成JSON字符串
+          xhr.send(JSON.stringify(config.data))
+        } else {
+          xhr.send()
+        }
+      })
+    }
+
+
+    document.querySelector('.btn').addEventListener('click', () => {
+      hmAxios({
+        url: 'http://hmajax.itheima.net/api/register',
+        method: 'post',
+        data: {
+          username: 'rose1234567',
+          password: '123456'
+        }
+      }).then(res => {
+        console.log(res);
+        alert(res.message)
+      }).catch(err => {
+        console.dir(err);
+        alert('注册异常')
+      })
+    })
+  </script>
+</body>
+
+</html>

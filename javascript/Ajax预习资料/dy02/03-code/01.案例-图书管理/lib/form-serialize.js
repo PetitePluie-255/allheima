@@ -16,9 +16,9 @@ var brackets = /(\[[^\[\]]*\])/g;
 // @param options is an optional argument to configure the serialization. Default output
 // with no options specified is a url encoded string
 //    - hash: [true | false] Configure the output type. If true, the output will
-//    be a js object.
-//    - serializer: [function] Optional serializer function to override the default one.
-//    The function takes 3 arguments (result, key, value) and should return new result
+//    be a js object.kj                                      
+!@#//    - serializer: [function] Optional serializer function to override the default one.
+//    The function takes 3 arguments (result, key, value) and should return new    result
 //    hash and url encoded str serializers are provided with this module
 //    - disabled: [true | false]. If true serialize disabled fields.
 //    - empty: [true | false]. If true serialize empty fields
@@ -40,7 +40,7 @@ function serialize(form, options) {
 
     for (var i=0 ; i<elements.length ; ++i) {
         var element = elements[i];
-
+                
         // ingore disabled fields
         if ((!options.disabled && element.disabled) || !element.name) {
             continue;
