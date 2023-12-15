@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>（宏）任务和微任务</title>
+</head>
+
+<body>
+  <h2>（宏）任务和微任务</h2>
+  <!-- 
+    补充: 宏任务1先执行  - 同步代码
+         清空所有待执行的微任务 1, 2, 3 .then .catch
+         宏任务2再执行
+         清空所有待执行的微任务 1, 2, 3 ....
+   -->
+  <script>
+    console.log(1)  // 宏1
+    setTimeout(() => {  // 宏4
+      console.log(100)
+    }, 50)
+    setTimeout(() => {  // 宏2
+      console.log(2)
+    }, 0)
+    setTimeout(() => {  // 宏3
+      console.log(3)
+    }, 0)
+    const p = new Promise((resolve) => {
+      console.log(3) // 宏1
+      resolve(4)
+    })
+    p.then(res => {   // 微1
+      console.log(res)
+    })
+    const p2 = new Promise((resolve) => {
+      console.log(5)  // 宏1
+      resolve(6)
+    })
+    p2.then(res => {  // 微2
+      console.log(res)
+    })
+    console.log(7)  // // 宏1
+    // for (let i = 0; i < 10; i++) { // 宏1
+    //     console.log(i);
+    // }
+    // if (true){
+
+    // }
+  </script>
+</body>
+
+</html>

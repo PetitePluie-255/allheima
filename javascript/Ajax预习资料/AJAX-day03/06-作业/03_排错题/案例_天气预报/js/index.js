@@ -7,11 +7,12 @@
 function getWeather(cityCode) {
   // 1.1 获取北京市天气数据
   myAxios({
-    url: 'http://hmajax.itheima.net/api/waether',
+    // 1
+    url: "https://hmajax.itheima.net/api/weather",
     params: {
-      city: cityCode
-    }
-  }).then(result => {
+      city: cityCode,
+    },
+  }).then((result) => {
     console.log(result)
     const wObj = result.data
     // 1.2 数据展示到页面
@@ -20,9 +21,9 @@ function getWeather(cityCode) {
     <span class="calendar">农历&nbsp;
       <span class="dateLunar">${wObj.dateLunar}</span>
     </span>`
-    document.querySelector('.title').innerHTML = dateStr
+    document.querySelector(".title").innerHTML = dateStr
     // 城市名字
-    document.querySelector('.area').innerHTML = wObj.area
+    document.querySelector(".area").innerHTML = wObj.area
     // 当天气温
     const nowWStr = `<div class="tem-box">
     <span class="temp">
@@ -44,7 +45,7 @@ function getWeather(cityCode) {
       <li class="windPower">${wObj.windPower}</li>
     </ul>
   </div>`
-    document.querySelector('.weather-box').innerHTML = nowWStr
+    document.querySelector(".weather-box").innerHTML = nowWStr
     // 当天天气
     const twObj = wObj.todayWeather
     const todayWStr = `<div class="range-box">
@@ -75,12 +76,13 @@ function getWeather(cityCode) {
       <span class="sunsetTime">${twObj.sunsetTime}</span>
     </li>
   </ul>`
-    document.querySelector('.today-weather').innerHTML = todayWStr
+    document.querySelector(".today-weather").innerHTML = todayWStr
 
     // 7日天气预报数据展示
     const dayForecast = wObj.dayForecast
-    const dayForecastStr = dayForecast.map(item => {
-      return `<li class="item">
+    const dayForecastStr = dayForecast
+      .map((item) => {
+        return `<li class="item">
       <div class="date-box">
         <span class="dateFormat">${item.dateFormat}</span>
         <span class="date">${item.date}</span>
@@ -97,14 +99,16 @@ function getWeather(cityCode) {
         <span class="windPower">${item.windPower}</span>
       </div>
     </li>`
-    }).join('')
+      })
+      .join("")
     // console.log(dayForecastStr)
-    document.querySelector('.week-wrap').innerHTML = dayForecastStr
+    document.querySelector(".week-wrap").innerHTML = dayForecastStr
   })
 }
 
 // 默认进入网页-就要获取天气数据（北京市城市编码：'110100'）
-getWeather('1101001')
+// 2
+getWeather('110100')
 
 /**
  * 目标2：搜索城市列表
@@ -136,9 +140,11 @@ document.querySelector('.search-city').addEventListener('input', (e) => {
  *  3.2 调用获取并展示天气的函数
  */
 // 3.1 绑定城市点击事件，获取城市code值
-document.querySelector('.city-item').addEventListener('click', e => {
-  if (e.target.classList.contains('city-item')) {
+// 2
+document.querySelector(".search-list").addEventListener("click", (e) => {
+  if (e.target.classList.contains("city-item")) {
     // 只有点击城市li才会走这里
+    console.log(1)
     const cityCode = e.target.dataset.code
     console.log(cityCode)
     // 3.2 调用获取并展示天气的函数
