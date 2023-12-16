@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图片搜索App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./axios.js"></script>
+</head>
+
+<body>
+  <h1>图片搜索</h1>
+  <form>
+    <input type="text" id="search-input" placeholder="搜索图片" />
+    <button id="search-button">搜索</button>
+  </form>
+  <div class="search-results">
+    <!-- <div class="search-result">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+        alt="image" />
+      <a href="https://unsplash.com/photos/g-7X6T7vAI4" target="_blank" rel="noopener noreferrer">an image of a
+        beach</a>
+    </div>
+    <div class="search-result">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+        alt="image" />
+      <a href="https://unsplash.com/photos/g-7X6T7vAI4" target="_blank" rel="noopener noreferrer">an image of a
+        beach</a>
+    </div>
+    <div class="search-result">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+        alt="image" />
+      <a href="https://unsplash.com/photos/g-7X6T7vAI4" target="_blank" rel="noopener noreferrer">an image of a
+        beach</a>
+    </div> -->
+  </div>
+  <button id="show-more-button">显示更多</button>
+  <script>
+    let _page = 1
+    function render(data) {
+      if (data.length !== 0) {
+        // document.querySelector('.search-results').innerHTML = ''
+        document.querySelector('.search-results').innerHTML += data.map(ele => {
+          return `<div class="search-result">
+      <img
+        src="${ele.url}"
+        alt="image" />
+      <a href="${ele.thumbnailUrl}" target="_blank" rel="noopener noreferrer">${ele.title}</a>
+    </div>`
+        }).join('')
+        document.querySelector('#show-more-button').style.display = 'block'
+      } else {
+        document.querySelector('.search-results').innerHTML = ''
+        document.querySelector('.search-results').innerHTML = `<div style="width:100%;text-align:center">没有搜到任何相关数据!请换一个关键词</div>`
+        document.querySelector('#show-more-button').style.display = 'none'
+      }
+    }
+
+
+    async function imageSearch() {
+      const title_like = document.querySelector('#search-input').value
+      const res = await axios({
+        url: 'https://jsonplaceholder.typicode.com/photos',
+        params: {
+          _page,
+          _limit: 6,
+          title_like
+        }
+      })
+      return res
+    }
+
+
+
+    document.querySelector('#search-button').addEventListener('click', async function (e) {
+      e.preventDefault()
+      if (!document.querySelector('#search-input').value) return alert('请输入内容再点击搜索')
+      const res = await imageSearch()
+      const data = res.data
+      document.querySelector('.search-results').innerHTML = ''
+      render(data)
+    })
+
+    document.querySelector('#show-more-button').addEventListener('click', async function (e) {
+      _page++
+      const res = await imageSearch()
+      const data = res.data
+      render(data)
+    })
+
+
+
+
+  </script>
+</body>
+
+</html>
