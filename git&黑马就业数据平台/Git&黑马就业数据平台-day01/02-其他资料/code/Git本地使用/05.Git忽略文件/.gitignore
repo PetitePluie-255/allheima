@@ -1,0 +1,4 @@
+# Git忽略 .vscode文件夹
+.vscode
+# Git忽略 index.html页面
+index.html

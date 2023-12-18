@@ -40,6 +40,9 @@ document.querySelector('#btn-register').addEventListener('click', async () => {
     const res = await axios.post('/register', { username, password })
     // console.log(res)
     showToast(res.message)
+    setTimeout(() => {
+      location.href = './login.html'
+    }, 1000);
   } catch (error) {
     // console.dir(error)
     showToast(error.response.data.message)
