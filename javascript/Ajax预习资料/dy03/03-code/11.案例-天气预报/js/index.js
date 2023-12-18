@@ -4,21 +4,20 @@
  *  2. 查询北京天气
  *  3. 渲染天气
  * */
-function weatherForecast(city) {
-  hmAxios({
+async function weatherForecast(city) {
+  const res = await hmAxios({
     url: "https://hmajax.itheima.net/api/weather",
     params: {
       city,
     },
-  }).then((res) => {
-    const data = res.data
-    console.log(data)
-    document.querySelector(".area").innerHTML = data.area
-    document.querySelector(".title").innerHTML = ` <span class="date">${data.date}</span>
+  })
+  const data = res.data
+  document.querySelector(".area").innerHTML = data.area
+  document.querySelector(".title").innerHTML = ` <span class="date">${data.date}</span>
         <span class="calendar">农历&nbsp;
           <span class="dateLunar">${data.dateLunar}</span>
         </span>`
-    document.querySelector(".weather-box").innerHTML = `<div class="tem-box">
+  document.querySelector(".weather-box").innerHTML = `<div class="tem-box">
         <span class="temp">
           <span class="temperature">${data.temperature}</span>
           <span>°</span>
@@ -38,8 +37,8 @@ function weatherForecast(city) {
           <li class="windPower">${data.windPower}</li>
         </ul>
       </div>`
-    const { todayWeather } = data
-    document.querySelector(".today-weather").innerHTML = ` <div class="range-box">
+  const { todayWeather } = data
+  document.querySelector(".today-weather").innerHTML = ` <div class="range-box">
         <span>今天：</span>
         <span class="range">
           <span class="weather">${todayWeather.weather}</span>
@@ -67,10 +66,10 @@ function weatherForecast(city) {
           <span class="sunsetTime">${todayWeather.sunsetTime}</span>
         </li>
       </ul>`
-    const { dayForecast } = data
+  const { dayForecast } = data
 
-    document.querySelector(".week-wrap").innerHTML = dayForecast.map((ele) => {
-      return `<li class="item">
+  document.querySelector(".week-wrap").innerHTML = dayForecast.map((ele) => {
+    return `<li class="item">
           <div class="date-box">
             <span class="dateFormat">${ele.dateFormat}</span>
             <span class="date">${ele.date}</span>
@@ -87,7 +86,6 @@ function weatherForecast(city) {
             <span class="windPower">${ele.windPower}</span>
           </div>
         </li>`
-    })
   })
 }
 weatherForecast("110100")
@@ -100,28 +98,22 @@ weatherForecast("110100")
  *  4. 渲染城市
  */
 function cityQuery() {
-  document.querySelector(".search-city").addEventListener(
-    "input",
-    _.debounce(function () {
-      // console.log(1);
-      let city = document.querySelector(".search-city").value
-      console.log(city)
-      if (city) {
-        hmAxios({
-          url: "https://hmajax.itheima.net/api/weather/city",
-          params: {
-            city,
-          },
-        }).then((res) => {
-          console.log(res.data)
-          const data = res.data
-          document.querySelector(".search-list").innerHTML = data
-            .map((ele) => `<li data-id = ${ele.code} class="city-item">${ele.name}</li>`)
-            .join("")
-        })
-      }
-    }, 600)
-  )
+  document.querySelector(".search-city").addEventListener("input", _.debounce(async function () {
+    // console.log(1);
+    let city = document.querySelector(".search-city").value
+    console.log(city)
+    if (city) {
+      const res = await hmAxios({
+        url: "https://hmajax.itheima.net/api/weather/city",
+        params: {
+          city,
+        },
+      })
+      console.log(res.data)
+      const data = res.data
+      document.querySelector(".search-list").innerHTML = data.map((ele) => `<li data-id = ${ele.code} class="city-item">${ele.name}</li>`).join("")
+    }
+  }, 600))
 }
 cityQuery()
 /**
