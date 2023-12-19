@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #main {
+      border: 1px solid #000;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+  <div id="main" style="width: 800px;height:600px;"></div>
+  <!-- 下包+导包 -->
+  <script src="./lib/echarts.min.js"></script>
+  <script>
+    // 食物数据
+    const foodArr = [
+      {name: '西兰花', price: 150},
+      {name: '西瓜', price: 230},
+      {name: '西葫芦', price: 224},
+      {name: '西北风', price: 34},
+      {name: '西红柿', price: 135},
+      {name: '西芹', price: 147},
+      {name: '西洋菜', price: 260},
+    ]
+
+    // 基于准备好的dom，初始化echarts实例
+    const myChart = echarts.init(document.querySelector('#main'))
+
+    // 指定图表的配置项和数据
+    const option = {
+      // 标题组件
+      title: {
+        // 主标题文本
+        text: '食物售价'
+      },
+      // 图例组件
+      legend: {
+        // 系列数据series中的项name属性有关联
+        data: ['价格1'],
+        right: '15'
+      },
+      // 直角坐标系内绘图网格
+      grid: {
+        // grid 组件离容器左侧的距离
+        left: '25%', 
+      },
+      // x轴
+      xAxis: {
+        // data: ['裤子', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子', '西蓝花']
+        data: foodArr.map(ele => ele.name)
+      },
+      // y轴
+      yAxis: {
+        splitLine: {
+          lineStyle: {
+            color: ['pink', 'teal'],
+            type: 'dashed' // 虚线
+          }
+        }
+      },
+      // 提示框组件
+      tooltip: {
+        // 触发类型 默认是item 
+        trigger: 'axis'
+      },
+      // 调色盘列表
+      color: ['#86cce9', 'teal'],
+      // 背景色
+      backgroundColor: 'pink',
+      // 系列数据
+      series: [
+        {
+          // 系列名称，用于tooltip的显示，legend 的图例筛选
+          name: '价格1',
+          // 决定了图形的类型. 比如pie 饼图 ...
+          type: 'bar',
+          data: foodArr.map(ele => ele.price)
+        },
+        {
+          name: '销量',
+          type: 'bar',
+          data: [150, 100, 160, 200, 300, 140, 56]
+        }
+      ]
+    }
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option)
+  </script>
+</body>
+
+</html>
