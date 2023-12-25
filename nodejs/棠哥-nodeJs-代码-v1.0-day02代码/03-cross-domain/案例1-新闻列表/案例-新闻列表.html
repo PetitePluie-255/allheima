@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <!-- 导入样式表 -->
+  <link rel="stylesheet" href="./assets/news.css" />
+</head>
+
+<body>
+
+  <!-- 新闻列表 -->
+  <div id="news-list">
+    <!-- 新闻的 item 项 -->
+
+  </div>
+  <!-- 导入axios -->
+  <script src="./lib/axios.js"></script>
+  <!-- 
+    目标:
+      1. 获取数据
+         通过 axios 发送请求 get
+         请求地址: http://ajax-base-api-t.itheima.net/api/news
+      2. 渲染页面
+  -->
+  <script>
+    // 获取大容器对象
+    let box = document.querySelector('#news-list')
+
+    // 发送请求 通过axios 
+    // ------封装函数 --- 渲染新闻列表
+    renderNewsList()
+    function renderNewsList() {
+      axios({
+        method: 'GET',
+        // url: 'http://ajax-base-api-t.itheima.net/api/news'
+        url: 'http://localhost:3000/api/news'
+      }).then(({ data: res }) => {
+        // 1. 先通过形参获取数据
+        // 2. 在进行解构重命名
+        // let { data: res } = result
+
+        // 优化 形参解构 -> 通过形参获取数据的同时, 直接进行解构重命名
+        console.log(res); // {code, data, msg...}
+
+        // 1. 定义一个变量 - 字符串
+        let htmlStr = ''
+        // 2. 遍历数组 
+        res.data.forEach(item => {
+          // console.log(item);
+          // 3. 进行拼接
+          htmlStr += `<div class="news-item">
+            <img class="thumb" src="http://ajax-base-api-t.itheima.net${item.img}" alt="" />
+            <div class="right-box">
+              <!-- 新闻标题 -->
+              <h1 class="title">${item.title}</h1>
+              <div class="footer">
+                <div>
+                  <!-- 新闻来源 -->
+                  <span>${item.source}</span>&nbsp;&nbsp;
+                  <!-- 发布日期 -->
+                  <span>${item.time}</span>
+                </div>
+                <!-- 评论数量 -->
+                <span>评论数：${item.cmtcount}</span>
+              </div>
+            </div>
+          </div>`
+        })
+        // 4. 循环结束之后, 进行页面的渲染 -> innerHTML 
+        // console.log(htmlStr);
+        box.innerHTML = htmlStr
+      })
+    }
+  </script>
+</body>
+
+</html>
