@@ -11,9 +11,9 @@
   <div id="app">
     <h3>小黑的书架</h3>
     <ul>
-      <li>
-        <span>《红楼梦》</span>
-        <span>曹雪芹</span>
+      <li v-for="item in booksList">
+        <span>{{item.name}}</span>
+        <span>{{item.author}}</span>
         <button>删除</button>
       </li>
     </ul>
