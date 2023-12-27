@@ -9,8 +9,8 @@
 <body>
 
   <div id="app">
-    账户：<input type="text"> <br><br>
-    密码：<input type="password"> <br><br>
+    账户：<input type="text" v-model="username"> <br><br>
+    密码：<input type="password" v-model="password"> <br><br>
     <button>登录</button>
     <button>重置</button>
   </div>
@@ -19,7 +19,8 @@
     const app = new Vue({
       el: '#app',
       data: {
-        
+        username:'',
+        password:''
       }
     })
   </script>

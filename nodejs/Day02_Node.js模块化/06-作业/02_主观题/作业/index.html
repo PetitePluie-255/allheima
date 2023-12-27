@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            width: 200px;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+    <h2></h2>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script>
+        axios({
+            url: "http://127.0.0.1:3000/api/rand",
+        }).then(res=>{
+            document.querySelector('h2').innerHTML = res.data
+        })
+    </script>
+</body>
+</html>

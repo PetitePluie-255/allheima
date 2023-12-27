@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端-网页</title>
+</head>
+<body>
+  <h2>
+    测试跨域问题
+  </h2>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 目标：请求本机 Web 服务提供的省份列表数据
+    axios({
+      url: 'http://localhost:3000/api/province'
+      // url: 'https://hmajax.itheima.net/api/province'
+    }).then(res => {
+      console.log('省份列表', res);
+    }).catch(err => {
+      console.log('请求出错了');
+    })
+  </script>
+</body>
+</html>
