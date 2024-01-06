@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h3>小黑水果店</h3>
+    <ul>
+      <!-- 遍历数组 -->
+      <li v-for="(item, index ) in list">{{ item }} --- {{ index }}</li>
+    </ul>
+    <!-- 遍历对象 -->
+    <p v-for="(item, index) in obj">{{ item }}  --- {{ index }}</p>
+    <!-- 遍历数字 -->
+    <p v-for="(item, index) in num">{{ item }}  -- {{ index }}</p>
+  </div>
+
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        list: ['西瓜', '苹果', '鸭梨'],
+        obj: {
+          name: 'zs',
+          age: 20
+        },
+        num: 10
+      }
+    })
+  </script>
+</body>
+
+</html>

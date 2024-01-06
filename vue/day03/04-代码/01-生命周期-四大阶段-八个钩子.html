@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h3>{{ title }}</h3>
+    <div>
+      <button @click="count--">-</button>
+      <span>{{ count }}</span>
+      <button @click="count++">+</button>
+    </div>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    /*
+      vue生命周期: 实例从创建到销毁的过程
+      四个阶段&八个钩子函数
+      1. 创建阶段 beforeCreate  / created  * 初始化数据 (发请求)
+      2. 挂载阶段 beforeMount  / mounted   * 操作dom
+      3. 更新阶段 beforeUpdate / updated   数据更新前后 
+      4. 销毁阶段 beforeDestory / destroyed 销毁前vue实例以外的工作 (清除定时器 / 延时器 / 事件监听等等)
+    */ 
+    const app = new Vue({
+      // 挂载点
+      el: '#app',
+      // 提供数据 - 响应式数据
+      data: {
+        count: 100,
+        title: '计数器',
+        list: []
+      },
+      // 数据创建阶段 - 前
+      beforeCreate() {
+        console.log('生命周期钩子函数beforeCreate', this.count);
+      },
+      // 数据创建阶段 - 后
+      // 发送请求 (数据)- 越早越好
+      created() {
+        console.log('生命周期钩子函数created', this.count);
+      },
+      // dom挂载 - 前 (dom没有渲染好)
+      beforeMount() {
+        console.log('生命周期钩子函数beforeMount', document.querySelector('span').innerHTML );
+      },
+      // dom挂载 - 后
+      mounted() {
+        console.log(this.count); // 100
+        // const myChart = echarts.init(dom对象)
+        console.log('生命周期钩子函数mounted', document.querySelector('span').innerHTML );
+      },
+      beforeUpdate() {
+        console.log('生命周期钩子函数beforeUpdate' );
+      },
+      updated() {
+        console.log('生命周期钩子函数updated' );
+      },
+      beforeDestory() {
+        console.log('生命周期钩子函数beforeDestory' );
+      },
+      destroyed() {
+        console.log('生命周期钩子函数destroyed' );
+      },
+
+      // 计算属性 
+      // computed: {},
+      // 侦听器 
+      // watch: {},
+      // 函数 - 事件相关
+      // methods: {}
+    })
+  </script>
+</body>
+
+</html>

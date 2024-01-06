@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in list" :key="item.id">{{item.num}} <button @click="del(item.id)">删除</button></li>
+        </ul>
+        <button @click="generate">生成</button>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                list: [
+                    { id: 1, num: 1 },
+                    { id: 2, num: 2 },
+                    { id: 3, num: 1 }
+                ]
+            },
+            methods: {
+                generate() {
+                    this.list.push({ id: Date.now(), num: Math.floor(Math.random() * 20) })
+                },
+                del(id){
+                    this.list=this.list.filter(item=>item.id!==id)
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    姓：<input v-model="first" type="text"><br>
+    名：<input v-model="last" type="text"><br>
+    <p>姓名：{{full}}</p>
+    <button @click="modify">修改姓名</button>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        first: '',
+        last: ''
+      },
+      computed: {
+        full: {
+          get() {
+            return this.first + this.last
+          },
+          set(value){
+            this.first = value.substring(0, 1)
+            this.last = value.substring(1)
+          }
+        }
+      },
+      methods: {
+        modify() {
+          this.full = '周海露'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

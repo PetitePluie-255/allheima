@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 插值表达式: 作用: 利用表达式进行插值，渲染到页面中 -->
+  <!-- 表达式: 一段可以被求值的代码 js引擎会计算出对应的结果 -->
+  <!-- 注意点
+    1. 必须得在data中提供数据, 否则会报错
+    2. 不能在插值内部写语句, 比如 if / for...
+    3. 不能在标签属性中使用表达式
+  -->
+  <div id="app">
+    <h3>{{ msg }}</h3>
+    <p>{{ money >= 80 ? '有钱' : '没钱' }}</p>
+    <p>姓名: {{ obj.name }}</p>
+    <p>年龄: {{ obj.age }}</p>
+    <p>注意点 ---</p>
+    <!-- <p>{{ if (money) {} }}</p> -->
+    <!-- <p class="{{ title }}"></p> -->
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'hello vue',
+        money: 100,
+        obj: {
+          name: 'jack',
+          age: 40
+        },
+        title: 'aaa'
+      }
+    })
+  </script>
+
+</body>
+
+</html>

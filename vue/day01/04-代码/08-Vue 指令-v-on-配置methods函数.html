@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="testFn">测试按钮</button>
+    <!-- <button @click="flag = !flag">切换显示隐藏</button> -->
+    <button @click="toggle">切换显示隐藏</button>
+    <h1 v-show="flag">黑马程序员</h1>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    /*
+      Vue 指令v-on
+      作用：注册事件 = 添加监听+提供处理逻辑
+      语法： 
+      ①  v-on:事件名 = "内联语句"
+      ②  v-on:事件名 = "methods中的函数名"
+      简写：@事件名
+      注意：methods函数内的 this 指向 Vue 实例
+    */
+    const app = new Vue({
+      el: '#app',
+      data: {
+        flag: true
+      },
+      // vue中所有的方法 - 统一放到methods节点中进行管理
+      methods: {
+        testFn() {
+          console.log('测试按钮点击了');
+        }, 
+        toggle() {
+          // methods中函数内部 可以通过this获取到当前的vue实例 
+          // console.log(this.flag);
+          this.flag = !this.flag
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

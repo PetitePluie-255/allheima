@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,16 @@
       text-align: center;
       width: 300px;
     }
-    th,td {
+
+    th,
+    td {
       border: 1px solid #000;
     }
+
     h3 {
       position: relative;
     }
+
     span {
       position: absolute;
       left: 145px;
@@ -31,6 +36,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div id="app">
@@ -46,7 +52,7 @@
       </tr>
     </table>
 
-    <p>礼物总数：{{ totalCount }} 个</p>
+    <p>礼物总数：{{ totalCount }},{{getSum()}} 个</p>
   </div>
   <script src="./vue.js"></script>
   <script>
@@ -60,8 +66,13 @@
           { id: 3, name: '铅笔', num: 5 },
         ]
       },
+      methods: {
+        getSum() {
+          return this.list.reduce((num, item) => num + item.num, 0)
+        }
+      },
       computed: {
-        totalCount () {
+        totalCount() {
           let total = this.list.reduce((sum, item) => sum + item.num, 0)
           return total
         }
@@ -69,4 +80,5 @@
     })
   </script>
 </body>
+
 </html>

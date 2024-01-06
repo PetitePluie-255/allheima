@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    {{ msg }}
+  </div>
+
+  <script src="./vue.js"></script>
+
+  <script>
+    // 响应式: 数据一旦发生变化, 视图自动更新
+    // data中的数据挂载到了实例对象中
+    // 访问数据: 实例.属性名
+    // 修改数据: 实例.属性名 = '值'
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'hello 黑马'  // msg 是响应式数据
+      }
+    })
+    console.log(app);
+    // 获取data选项中的属性值
+    console.log(app.msg);
+    // 设置....
+    app.msg = 'hello vue'
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <span>姓名:</span>
+            <input type="text" v-model.trim="username" />
+        </div>
+        <div>
+            <span>年龄:</span>
+            <input type="number" v-model.number="age" />
+        </div>
+        <div>
+            <span>性别:</span>
+            <select v-model="gender">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div>
+            <button @click="fn">添加/修改</button>
+        </div>
+        <div>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>操作</th>
+                </tr>
+                <tr v-for="(item,index) in arr" :key="item.id">
+                    <td>{{index+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>
+                        <button @click="del(item.id)">删除</button>
+                        <button @click="edit(item.id)">编辑</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                rowId: null,
+                username: '',
+                age: '',
+                gender: '',
+                arr: []
+            },
+            methods: {
+                fn() {
+                    if (this.rowId) {
+                        this.arr.forEach(item => {
+                            if (item.id === this.rowId) {
+                                item.name = this.username
+                                item.age = this.age
+                                item.gender = this.gender
+                            }
+                        })
+                        this.rowId = null
+                    } else {
+                        this.arr.push({ id: +new Date(), name: this.username, age: this.age, gender: this.gender })
+                    }
+                    this.username = ''
+                    this.age = ''
+                    this.gender = ''
+                },
+                del(id) {
+                    this.arr = this.arr.filter(item => item.id !== id)
+                },
+                edit(id) {
+                    this.rowId = id
+                    const arr = this.arr.find(item => item.id = id)
+                    this.username = arr.name
+                    this.age = arr.age
+                    this.gender = arr.gender
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

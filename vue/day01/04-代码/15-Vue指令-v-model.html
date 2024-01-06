@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    账户：<input v-model="username" type="text"> <br><br>
+    密码：<input v-model="password" type="password"> <br><br>
+    <button @click="login">登录</button>
+    <button @click="reset">重置</button>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    /*
+      v-model 应用于表单元素
+      input / textarea / select / 单选框 / 复选框 
+      目的: 快速获取 / 设置 表单元素的值
+    */ 
+    const app = new Vue({
+      el: '#app',
+      data: {
+        username: '', // 用户名
+        password: '' // 密码
+      },
+      methods: {
+        login() {
+          // 获取表单元素的值
+          console.log(this.username);
+          console.log(this.password);
+        },
+        reset() {
+          // 清除表单元素的值
+          this.username = ''
+          this.password = ''
+        }
+      }
+    })
+  </script>
+</body>
+</html>

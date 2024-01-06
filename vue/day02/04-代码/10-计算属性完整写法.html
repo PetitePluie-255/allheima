@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    姓：<input type="text" v-model="firstName"><br>
+    名：<input type="text" v-model="lastName"><br>
+    <p>姓名：{{ fullName }}</p>
+    <button @click="changeName">修改姓名</button>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        firstName: '',
+        lastName: ''
+      },
+      // 基本写法. 只能获取, 不能设置/修改
+      // computed: {
+      //   fullName() {
+      //     return this.firstName + this.lastName
+      //   }
+      // },
+      // 实现对于计算属性的修改 - 必须写完整写法
+      computed:{
+        fullName: {
+          // 获取
+          get() {
+            console.log('依赖的数据发生变化了');
+            return this.firstName + this.lastName
+          },
+          // 设置
+          set(value) {
+            // value 修改后的fullName的值
+            console.log(value);
+            // 处理自己的业务逻辑 - 干啥 
+            // 分隔姓名 
+            // this.firstName = value.substring(从哪开始, 到哪)
+            // value[0]  substr / slice
+            this.firstName = value.substring(0, 1) // 截取首位
+            this.lastName = value.substring(1)  // 截取到最后
+          }
+        }
+      },
+      methods: {
+        changeName() {
+          this.fullName = '张姗姗'
+        }
+      }
+    })
+  </script>
+</body>
+</html>

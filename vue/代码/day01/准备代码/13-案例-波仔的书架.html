@@ -11,7 +11,7 @@
   <div id="app">
     <h3>小黑的书架</h3>
     <ul>
-      <li v-for="item in booksList">
+      <li v-for="item in booksList" :key="item.id">
         <span>{{item.name}}</span>
         <span>{{item.author}}</span>
         <button>删除</button>

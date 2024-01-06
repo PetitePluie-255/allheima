@@ -1,0 +1,814 @@
+{
+    "code": 0,
+    "message": "Success",
+    "zpData": {
+        "sampleCount": 3480782,
+        "salaryByMonth": [
+            {
+                "cityName": null,
+                "year": "2022年",
+                "showYear": true,
+                "month": "10月",
+                "monthAveSalary": 14120,
+                "title": "Oct",
+                "grow": false,
+                "percent": 1.96,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2022年",
+                "showYear": false,
+                "month": "11月",
+                "monthAveSalary": 14256,
+                "title": "Nov",
+                "grow": true,
+                "percent": 0.96,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2022年",
+                "showYear": false,
+                "month": "12月",
+                "monthAveSalary": 14466,
+                "title": "Dec",
+                "grow": true,
+                "percent": 1.47,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": true,
+                "month": "1月",
+                "monthAveSalary": 13963,
+                "title": "Jan",
+                "grow": false,
+                "percent": 3.48,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "2月",
+                "monthAveSalary": 13986,
+                "title": "Feb",
+                "grow": true,
+                "percent": 0.16,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "3月",
+                "monthAveSalary": 14163,
+                "title": "Mar",
+                "grow": true,
+                "percent": 1.27,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "4月",
+                "monthAveSalary": 14073,
+                "title": "Apr",
+                "grow": false,
+                "percent": 0.64,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "5月",
+                "monthAveSalary": 13980,
+                "title": "May",
+                "grow": false,
+                "percent": 0.66,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "6月",
+                "monthAveSalary": 13713,
+                "title": "Jun",
+                "grow": false,
+                "percent": 1.91,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "7月",
+                "monthAveSalary": 13640,
+                "title": "Jul",
+                "grow": false,
+                "percent": 0.53,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "8月",
+                "monthAveSalary": 13826,
+                "title": "Aug",
+                "grow": true,
+                "percent": 1.36,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            },
+            {
+                "cityName": null,
+                "year": "2023年",
+                "showYear": false,
+                "month": "9月",
+                "monthAveSalary": 14016,
+                "title": "Sept",
+                "grow": true,
+                "percent": 1.37,
+                "effectiveJobCount": 0,
+                "effectiveJobGrowthRatio": 0.0,
+                "effectiveJobGrowthOneMonth": 0,
+                "effectiveJobGrowthTwoMonth": 0
+            }
+        ],
+        "salaryByAge": [
+            {
+                "ageRange": "24岁以下",
+                "percent": 30,
+                "people": 1057976,
+                "percentDecimal": 0.303948,
+                "index": 0
+            },
+            {
+                "ageRange": "25岁-29岁",
+                "percent": 57,
+                "people": 1983550,
+                "percentDecimal": 0.569858,
+                "index": 1
+            },
+            {
+                "ageRange": "30岁-34岁",
+                "percent": 11,
+                "people": 384136,
+                "percentDecimal": 0.110359,
+                "index": 2
+            },
+            {
+                "ageRange": "35岁-39岁",
+                "percent": 1,
+                "people": 47051,
+                "percentDecimal": 0.013517,
+                "index": 3
+            },
+            {
+                "ageRange": "40岁-44岁",
+                "percent": 0,
+                "people": 6521,
+                "percentDecimal": 0.001873,
+                "index": 4
+            },
+            {
+                "ageRange": "45岁以上",
+                "percent": 1,
+                "people": 1548,
+                "percentDecimal": 4.45E-4,
+                "index": 5
+            }
+        ],
+        "salaryByWorkExp": [
+            {
+                "percent": 1,
+                "aveSalary": 10000,
+                "workExp": "1年以内",
+                "percentDecimal": 0.005779,
+                "index": 0
+            },
+            {
+                "percent": 19,
+                "aveSalary": 11500,
+                "workExp": "1-3年",
+                "percentDecimal": 0.188889,
+                "index": 1
+            },
+            {
+                "percent": 61,
+                "aveSalary": 13800,
+                "workExp": "3-5年",
+                "percentDecimal": 0.614142,
+                "index": 2
+            },
+            {
+                "percent": 19,
+                "aveSalary": 16000,
+                "workExp": "5-10年",
+                "percentDecimal": 0.189401,
+                "index": 3
+            },
+            {
+                "percent": 0,
+                "aveSalary": 18900,
+                "workExp": "10年以上",
+                "percentDecimal": 0.001789,
+                "index": 4
+            }
+        ],
+        "salaryByDistributed": [
+            {
+                "salaryRange": "<12.32",
+                "percent": 21,
+                "people": 0,
+                "percentDecimal": 0.20863,
+                "index": 0
+            },
+            {
+                "salaryRange": "12.32-16.88",
+                "percent": 28,
+                "people": 0,
+                "percentDecimal": 0.283847,
+                "index": 1
+            },
+            {
+                "salaryRange": "16.88-21.43",
+                "percent": 23,
+                "people": 0,
+                "percentDecimal": 0.230741,
+                "index": 2
+            },
+            {
+                "salaryRange": "21.43-25.99",
+                "percent": 14,
+                "people": 0,
+                "percentDecimal": 0.13639,
+                "index": 3
+            },
+            {
+                "salaryRange": ">25.99",
+                "percent": 14,
+                "people": 0,
+                "percentDecimal": 0.140392,
+                "index": 4
+            }
+        ],
+        "salaryByPoints": [
+            {
+                "name": "10分位",
+                "title": "低端",
+                "salary": 100439,
+                "point": 10
+            },
+            {
+                "name": "25分位",
+                "title": "中低端",
+                "salary": 128720,
+                "point": 25
+            },
+            {
+                "name": "50分位",
+                "title": "中端",
+                "salary": 168680,
+                "point": 50
+            },
+            {
+                "name": "75分位",
+                "title": "中高端",
+                "salary": 221160,
+                "point": 75
+            },
+            {
+                "name": "90分位",
+                "title": "高端",
+                "salary": 282640,
+                "point": 90
+            }
+        ],
+        "salaryByCity": [
+            {
+                "provinceId": 101010000,
+                "value": 14046,
+                "name": "北京",
+                "cityList": [
+                    {
+                        "cityId": 101010100,
+                        "cityName": "北京",
+                        "cityAveMonthSalary": 14046
+                    }
+                ]
+            },
+            {
+                "provinceId": 101020000,
+                "value": 13921,
+                "name": "上海",
+                "cityList": [
+                    {
+                        "cityId": 101020100,
+                        "cityName": "上海",
+                        "cityAveMonthSalary": 13921
+                    }
+                ]
+            },
+            {
+                "provinceId": 101030000,
+                "value": 8999,
+                "name": "天津",
+                "cityList": [
+                    {
+                        "cityId": 101030100,
+                        "cityName": "天津",
+                        "cityAveMonthSalary": 8999
+                    }
+                ]
+            },
+            {
+                "provinceId": 101040000,
+                "value": 9007,
+                "name": "重庆",
+                "cityList": [
+                    {
+                        "cityId": 101040100,
+                        "cityName": "重庆",
+                        "cityAveMonthSalary": 9007
+                    }
+                ]
+            },
+            {
+                "provinceId": 101050000,
+                "value": 6528,
+                "name": "黑龙江",
+                "cityList": [
+                    {
+                        "cityId": 101050100,
+                        "cityName": "哈尔滨",
+                        "cityAveMonthSalary": 6528
+                    }
+                ]
+            },
+            {
+                "provinceId": 101060000,
+                "value": 7810,
+                "name": "吉林",
+                "cityList": [
+                    {
+                        "cityId": 101060100,
+                        "cityName": "长春",
+                        "cityAveMonthSalary": 7810
+                    }
+                ]
+            },
+            {
+                "provinceId": 101070000,
+                "value": 7324,
+                "name": "辽宁",
+                "cityList": [
+                    {
+                        "cityId": 101070100,
+                        "cityName": "沈阳",
+                        "cityAveMonthSalary": 7055
+                    },
+                    {
+                        "cityId": 101070200,
+                        "cityName": "大连",
+                        "cityAveMonthSalary": 7594
+                    }
+                ]
+            },
+            {
+                "provinceId": 101090000,
+                "value": 7762,
+                "name": "河北",
+                "cityList": [
+                    {
+                        "cityId": 101090100,
+                        "cityName": "石家庄",
+                        "cityAveMonthSalary": 7203
+                    },
+                    {
+                        "cityId": 101090200,
+                        "cityName": "保定",
+                        "cityAveMonthSalary": 7923
+                    },
+                    {
+                        "cityId": 101090600,
+                        "cityName": "廊坊",
+                        "cityAveMonthSalary": 8161
+                    }
+                ]
+            },
+            {
+                "provinceId": 101100000,
+                "value": 6597,
+                "name": "山西",
+                "cityList": [
+                    {
+                        "cityId": 101100100,
+                        "cityName": "太原",
+                        "cityAveMonthSalary": 6597
+                    }
+                ]
+            },
+            {
+                "provinceId": 101110000,
+                "value": 9909,
+                "name": "陕西",
+                "cityList": [
+                    {
+                        "cityId": 101110100,
+                        "cityName": "西安",
+                        "cityAveMonthSalary": 9909
+                    }
+                ]
+            },
+            {
+                "provinceId": 101120000,
+                "value": 7968,
+                "name": "山东",
+                "cityList": [
+                    {
+                        "cityId": 101120100,
+                        "cityName": "济南",
+                        "cityAveMonthSalary": 8008
+                    },
+                    {
+                        "cityId": 101120200,
+                        "cityName": "青岛",
+                        "cityAveMonthSalary": 8954
+                    },
+                    {
+                        "cityId": 101120500,
+                        "cityName": "烟台",
+                        "cityAveMonthSalary": 6943
+                    }
+                ]
+            },
+            {
+                "provinceId": 101160000,
+                "value": 7459,
+                "name": "甘肃",
+                "cityList": [
+                    {
+                        "cityId": 101160100,
+                        "cityName": "兰州",
+                        "cityAveMonthSalary": 7459
+                    }
+                ]
+            },
+            {
+                "provinceId": 101180000,
+                "value": 8237,
+                "name": "河南",
+                "cityList": [
+                    {
+                        "cityId": 101180100,
+                        "cityName": "郑州",
+                        "cityAveMonthSalary": 8237
+                    }
+                ]
+            },
+            {
+                "provinceId": 101190000,
+                "value": 8761,
+                "name": "江苏",
+                "cityList": [
+                    {
+                        "cityId": 101190100,
+                        "cityName": "南京",
+                        "cityAveMonthSalary": 10903
+                    },
+                    {
+                        "cityId": 101190200,
+                        "cityName": "无锡",
+                        "cityAveMonthSalary": 9426
+                    },
+                    {
+                        "cityId": 101190400,
+                        "cityName": "苏州",
+                        "cityAveMonthSalary": 10391
+                    },
+                    {
+                        "cityId": 101190500,
+                        "cityName": "南通",
+                        "cityAveMonthSalary": 7801
+                    },
+                    {
+                        "cityId": 101190600,
+                        "cityName": "扬州",
+                        "cityAveMonthSalary": 8041
+                    },
+                    {
+                        "cityId": 101190800,
+                        "cityName": "徐州",
+                        "cityAveMonthSalary": 6613
+                    },
+                    {
+                        "cityId": 101191100,
+                        "cityName": "常州",
+                        "cityAveMonthSalary": 8156
+                    }
+                ]
+            },
+            {
+                "provinceId": 101200000,
+                "value": 10066,
+                "name": "湖北",
+                "cityList": [
+                    {
+                        "cityId": 101200100,
+                        "cityName": "武汉",
+                        "cityAveMonthSalary": 10066
+                    }
+                ]
+            },
+            {
+                "provinceId": 101210000,
+                "value": 8513,
+                "name": "浙江",
+                "cityList": [
+                    {
+                        "cityId": 101210100,
+                        "cityName": "杭州",
+                        "cityAveMonthSalary": 12056
+                    },
+                    {
+                        "cityId": 101210300,
+                        "cityName": "嘉兴",
+                        "cityAveMonthSalary": 8407
+                    },
+                    {
+                        "cityId": 101210400,
+                        "cityName": "宁波",
+                        "cityAveMonthSalary": 9071
+                    },
+                    {
+                        "cityId": 101210500,
+                        "cityName": "绍兴",
+                        "cityAveMonthSalary": 7595
+                    },
+                    {
+                        "cityId": 101210600,
+                        "cityName": "台州",
+                        "cityAveMonthSalary": 7423
+                    },
+                    {
+                        "cityId": 101210700,
+                        "cityName": "温州",
+                        "cityAveMonthSalary": 6573
+                    },
+                    {
+                        "cityId": 101210900,
+                        "cityName": "金华",
+                        "cityAveMonthSalary": 8468
+                    }
+                ]
+            },
+            {
+                "provinceId": 101220000,
+                "value": 9282,
+                "name": "安徽",
+                "cityList": [
+                    {
+                        "cityId": 101220100,
+                        "cityName": "合肥",
+                        "cityAveMonthSalary": 9282
+                    }
+                ]
+            },
+            {
+                "provinceId": 101230000,
+                "value": 6539,
+                "name": "福建",
+                "cityList": [
+                    {
+                        "cityId": 101230100,
+                        "cityName": "福州",
+                        "cityAveMonthSalary": 8132
+                    },
+                    {
+                        "cityId": 101230200,
+                        "cityName": "厦门",
+                        "cityAveMonthSalary": 9005
+                    },
+                    {
+                        "cityId": 101230500,
+                        "cityName": "泉州",
+                        "cityAveMonthSalary": 6539
+                    }
+                ]
+            },
+            {
+                "provinceId": 101240000,
+                "value": 6917,
+                "name": "江西",
+                "cityList": [
+                    {
+                        "cityId": 101240100,
+                        "cityName": "南昌",
+                        "cityAveMonthSalary": 7673
+                    }
+                ]
+            },
+            {
+                "provinceId": 101250000,
+                "value": 9002,
+                "name": "湖南",
+                "cityList": [
+                    {
+                        "cityId": 101250100,
+                        "cityName": "长沙",
+                        "cityAveMonthSalary": 9002
+                    }
+                ]
+            },
+            {
+                "provinceId": 101260000,
+                "value": 7046,
+                "name": "贵州",
+                "cityList": [
+                    {
+                        "cityId": 101260100,
+                        "cityName": "贵阳",
+                        "cityAveMonthSalary": 7046
+                    }
+                ]
+            },
+            {
+                "provinceId": 101270000,
+                "value": 9866,
+                "name": "四川",
+                "cityList": [
+                    {
+                        "cityId": 101270100,
+                        "cityName": "成都",
+                        "cityAveMonthSalary": 9866
+                    }
+                ]
+            },
+            {
+                "provinceId": 101280000,
+                "value": 9276,
+                "name": "广东",
+                "cityList": [
+                    {
+                        "cityId": 101280100,
+                        "cityName": "广州",
+                        "cityAveMonthSalary": 10438
+                    },
+                    {
+                        "cityId": 101280300,
+                        "cityName": "惠州",
+                        "cityAveMonthSalary": 8177
+                    },
+                    {
+                        "cityId": 101280600,
+                        "cityName": "深圳",
+                        "cityAveMonthSalary": 12710
+                    },
+                    {
+                        "cityId": 101280700,
+                        "cityName": "珠海",
+                        "cityAveMonthSalary": 9485
+                    },
+                    {
+                        "cityId": 101280800,
+                        "cityName": "佛山",
+                        "cityAveMonthSalary": 8795
+                    },
+                    {
+                        "cityId": 101281600,
+                        "cityName": "东莞",
+                        "cityAveMonthSalary": 8660
+                    },
+                    {
+                        "cityId": 101281700,
+                        "cityName": "中山",
+                        "cityAveMonthSalary": 6665
+                    }
+                ]
+            },
+            {
+                "provinceId": 101290000,
+                "value": 7193,
+                "name": "云南",
+                "cityList": [
+                    {
+                        "cityId": 101290100,
+                        "cityName": "昆明",
+                        "cityAveMonthSalary": 7193
+                    }
+                ]
+            },
+            {
+                "provinceId": 101300000,
+                "value": 6458,
+                "name": "广西",
+                "cityList": [
+                    {
+                        "cityId": 101300100,
+                        "cityName": "南宁",
+                        "cityAveMonthSalary": 6458
+                    }
+                ]
+            },
+            {
+                "provinceId": 101310000,
+                "value": 8105,
+                "name": "海南",
+                "cityList": [
+                    {
+                        "cityId": 101310100,
+                        "cityName": "海口",
+                        "cityAveMonthSalary": 8105
+                    }
+                ]
+            },
+            {
+                "provinceId": 101080000,
+                "value": 4839,
+                "name": "内蒙古",
+                "cityList": null
+            },
+            {
+                "provinceId": 101130000,
+                "value": 5798,
+                "name": "新疆",
+                "cityList": null
+            },
+            {
+                "provinceId": 101150000,
+                "value": 6381,
+                "name": "青海",
+                "cityList": null
+            },
+            {
+                "provinceId": 101170000,
+                "value": 7569,
+                "name": "宁夏",
+                "cityList": null
+            },
+            {
+                "provinceId": 101340000,
+                "value": 9415,
+                "name": "台湾",
+                "cityList": null
+            },
+            {
+                "provinceId": 101140000,
+                "value": 4999,
+                "name": "西藏",
+                "cityList": null
+            },
+            {
+                "provinceId": 101320000,
+                "value": 15112,
+                "name": "香港",
+                "cityList": null
+            },
+            {
+                "provinceId": 101330000,
+                "value": 14159,
+                "name": "澳门",
+                "cityList": null
+            }
+        ]
+    }
+}

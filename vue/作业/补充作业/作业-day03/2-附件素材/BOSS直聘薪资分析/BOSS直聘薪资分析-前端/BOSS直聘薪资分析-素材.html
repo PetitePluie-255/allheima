@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>BOSS直聘薪资分析</title>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <header class="header">
+            <div class="logo">BOSS直聘</div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#" class="nav-link">首页</a></li>
+                    <li><a href="#" class="nav-link">薪资</a></li>
+                    <li><a href="#" class="nav-link">公司</a></li>
+                    <li><a href="#" class="nav-link">APP下载</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="intro">
+                <h1 class="main-title">
+                    北京Java薪资分析:9月平均月薪￥15337
+                </h1>
+                <p class="intro-text">数据来源：该岗位近一年<span style="color:#00b38a;">3615664</span>份样本数据</p>
+                <p class="intro-tip"> 薪酬查询数据来源于BOSS直聘注册用户提供的薪酬数据，是使用者了解市场薪酬水平的参考工具，不作为岗位定薪标准</p>
+            </section>
+
+            <section class="filter-section">
+                <div class="filter-wrap">
+                    <div class="custom-select" @mouseleave="showCityList = false" @click="showCityList=true">
+                        <input type="text" placeholder="请选择城市" value="北京" readonly>
+                        <div class="options-container" v-show="showCityList">
+                            <div class="option">北京</div>
+                            <div class="option">上海</div>
+                            <div class="option">深圳</div>
+                        </div>
+                    </div>
+                    <div class="custom-select" @mouseleave="showPositionList = false" @click="showPositionList=true">
+                        <input type="text" placeholder="请选择岗位" value="Java" readonly>
+                        <div class="options-container" v-show="showPositionList">
+                            <div class="option">Java</div>
+                            <div class="option">前端</div>
+                            <div class="option">测试</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="search-button">查询</button>
+            </section>
+            <!-- 线图位置 -->
+            <section class="chart-section">
+                <header>年薪总收入分位</header>
+                <div id="line" class="chart"></div>
+            </section>
+            <section class="chart-section-wrap">
+                 <!-- 柱图位置 -->
+                 <section class="chart-section">
+                    <header>任职年龄分布</header>
+                    <div id="bar" class="chart"></div>
+                </section>
+                <!-- 饼图位置 -->
+                <section class="chart-section">
+                    <header>工作年限薪酬分布</header>
+                    <div id="pie" class="chart"></div>
+                </section>
+            </section>
+            <!-- 地图位置 -->
+            <section class="chart-section">
+                <header>职位平均月薪的城市分布</header>
+                <div id="map" class="chart"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text" style="color: #808080;">©BOSS直聘薪资查询</p>
+        </footer>
+    </div>
+    <script src="./lib/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/china.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

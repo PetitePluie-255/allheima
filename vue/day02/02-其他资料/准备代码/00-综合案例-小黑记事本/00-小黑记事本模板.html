@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>记事本</title>
+</head>
+
+<body>
+
+  <!-- 主体区域 -->
+  <section id="app">
+    <!-- 输入框 -->
+    <header class="header">
+      <h1>小黑记事本</h1>
+      <input v-model="content" placeholder="请输入任务" class="new-todo" />
+      <button @click="add" class="add">添加任务</button>
+    </header>
+    <!-- 列表区域 -->
+    <section class="main">
+      <ul class="todo-list">
+        <li class="todo" v-for="(item, index) in todoList" :key="item.id">
+          <div class="view">
+            <span class="index">{{ index + 1 }}.</span> <label>{{item.name}}</label>
+            <button @click="del(item.id)" class="destroy"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!-- 统计和清空 -->
+    <footer class="footer" v-show="todoList.length">
+      <!-- 统计 -->
+      <span class="todo-count">合 计:<strong> {{ todoList.length }} </strong></span>
+      <!-- 清空 -->
+      <button @click="clear" class="clear-completed">
+        清空任务
+      </button>
+    </footer>
+  </section>
+
+  <!-- 底部 -->
+  <script src="./../vue.js"></script>
+  <script>
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todoList: [
+          {id: 1, name: '吃火锅'},
+          {id: 2, name: '敲代码'},
+          {id: 3, name: '学vue'},
+        ],
+        content: '' // 任务名称
+      },
+      methods: {
+        del(id) {
+          this.todoList = this.todoList.filter(item => item.id !== id)
+        },
+        add() {
+          /*
+            1. 给按钮注册点击事件
+            2. 通过v-model 给表单元素进行双向绑定
+            3. 获取到输入框的值
+            4. 添加到数组中 末尾 push / 开头 unshift
+          */ 
+         if (!this.content.trim()) return alert('任务名称不能为空')
+         console.log(this.content);
+         this.todoList.unshift({
+           id: +new Date(), // 时间戳
+           name: this.content
+         })
+         this.content = ''
+        },
+        clear() {
+          this.todoList = []
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    textarea {
+      display: block;
+      width: 240px;
+      height: 100px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <h3>小黑学习网</h3>
+
+    姓名：
+      <input v-model="userForm.username" type="text"> 
+      <br><br>
+
+    是否单身：
+      <input v-model="userForm.isSingle" type="checkbox"> 
+      <br><br>
+
+    <!-- 
+      前置理解：
+        1. name:  给单选框加上 name 属性 可以分组 → 同一组互相会互斥
+        2. value: 给单选框加上 value 属性，用于提交给后台的数据
+    -->
+    性别: 
+      <input name="gender" v-model="userForm.gender" value="1" type="radio">男
+      <input name="gender" v-model="userForm.gender" value="0" type="radio">女
+      <br><br>
+
+    <!-- 
+      前置理解：
+        1. option 需要设置 value 值，提交给后台
+        2. select 的 value 值，关联了选中的 option 的 value 值
+    -->
+    所在城市:
+      <select v-model="userForm.cityId">
+        <option value="1001">北京</option>
+        <option value="1002">上海</option>
+        <option value="1003">成都</option>
+        <option value="1004">南京</option>
+      </select>
+      <br><br>
+
+    自我描述：
+      <textarea v-model="userForm.intro"></textarea> 
+
+    <button @click="submit">立即注册</button>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        userForm: {
+          username: '',  // 姓名
+          isSingle: false,  // 是否单身
+          gender: '-1', // 性别
+          cityId: '1001', // 选择城市
+          intro: '' // 自我介绍
+        }
+      },
+      methods: {
+        submit() {
+          console.log(this.userForm);
+        }
+      }
+    })
+  </script>
+</body>
+</html>

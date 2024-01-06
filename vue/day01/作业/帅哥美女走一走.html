@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul id="app">
+            <li v-for="(item,index) in list" :key="index">{{item}}</li>
+        </ul>
+        <button @click="take">走一走</button>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                list: ["帅哥", "美女", "程序猿"],
+            },
+            methods:{
+                take(){
+                    const str=this.list[0]
+                    this.list.splice(0,1)
+                    this.list.push(str)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

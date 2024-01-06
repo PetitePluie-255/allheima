@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <p v-html="msg"></p>
+    <p v-html="msg1"></p>
+    <p v-text="msg"></p>
+    <p v-text="msg1"></p>
+  </div>
+  
+  <script src="./vue.js"></script>
+  <script>
+    /**
+     Vue 会根据不同的【指令】，针对标签实现不同的【功能】
+     指令：带有 v- 前缀 的 特殊 标签属性
+     v-html: 
+     作用：设置元素的 innerHTML
+     语法：v-html = "表达式 " 
+    **/
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'hello',
+        msg1: `
+          <a href="http://www.itcast.cn">学it, 来黑马</a>
+        `
+      }
+    })
+
+  </script>
+
+</body>
+</html>

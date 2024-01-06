@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <label v-for="(item,index) in list" :key="index"><input type="checkbox" v-model="arrChecked" :value="item">{{item}}</label>
+        <ul>
+            <li v-for="(item,index) in arrChecked" :key="index">{{item}}</li>
+        </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                arrChecked:[],
+                isChecked: false,
+                list: ["科幻", "喜剧", "动漫", "冒险", "科技", "军事", "娱乐", "奇闻"]
+                // list: [
+                //     { id: +new Date(), name: "科幻", isChecked:false },
+                //     { id: +new Date(), name: "喜剧", isChecked:false },
+                //     { id: +new Date(), name: "动漫", isChecked:false },
+                //     { id: +new Date(), name: "冒险", isChecked:false },
+                //     { id: +new Date(), name: "科技", isChecked:false },
+                //     { id: +new Date(), name: "军事", isChecked:false },
+                //     { id: +new Date(), name: "娱乐", isChecked:false },
+                //     { id: +new Date(), name: "奇闻", isChecked:false },
+                // ],
+            },
+            // computed:{
+            //     select(){
+            //         return this.list.filter(item=>item.isChecked===true)
+
+            //     }
+            // }
+        })
+    </script>
+</body>
+
+</html>
